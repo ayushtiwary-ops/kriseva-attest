@@ -1,0 +1,1010 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/ed3unq",
+    "id": "ed3unq",
+    "slide": 10,
+    "layoutId": "2752032a-23fa-440b-b894-62f7a90253fa",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#0A1F44",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Arial",
+      "Courier New",
+      "Georgia"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "2752032a-23fa-440b-b894-62f7a90253fa",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/mpwnapk3",
+      "id": "1",
+      "name": "brand-10",
+      "bbox": [
+        56,
+        24,
+        300,
+        24
+      ],
+      "geometry": "rect",
+      "text": "KRISEVA  /  ATTEST",
+      "textPreview": "KRISEVA  /  ATTEST",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Courier New",
+        "color": "#F3EDE0",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "KRISEVA  /  ATTEST"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "KRISEVA  /  ATTEST",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Courier New",
+            "color": "#F3EDE0",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "KRISEVA  /  ATTEST",
+              "fontSize": 15,
+              "typeface": "Courier New",
+              "color": "#F3EDE0",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9s76543u",
+      "id": "2",
+      "name": "title-10",
+      "bbox": [
+        56,
+        60,
+        1168,
+        62
+      ],
+      "geometry": "rect",
+      "text": "Use eight weeks to lock the wedge, or reject it",
+      "textPreview": "Use eight weeks to lock the wedge, or reject it",
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 48,
+        "typeface": "Georgia",
+        "color": "#F3EDE0",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Use eight weeks to lock the wedge, or reject it"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Use eight weeks to lock the wedge, or reject it",
+          "resolvedTextStyle": {
+            "fontSize": 48,
+            "typeface": "Georgia",
+            "color": "#F3EDE0",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Use eight weeks to lock the wedge, or reject it",
+              "fontSize": 48,
+              "typeface": "Georgia",
+              "color": "#F3EDE0",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8re5cz29",
+      "id": "3",
+      "name": "footer-rule-10",
+      "bbox": [
+        56,
+        666,
+        1168,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#F3EDE0",
+      "lineWidth": 1
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zm5ozalc",
+      "id": "4",
+      "name": "footer-source-10",
+      "bbox": [
+        56,
+        678,
+        760,
+        22
+      ],
+      "geometry": "rect",
+      "text": "SOURCES IN SPEAKER NOTES · RESEARCH-STAGE PROTOTYPE",
+      "textPreview": "SOURCES IN SPEAKER NOTES · RESEARCH-STAGE PROTOTYPE",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Courier New",
+        "color": "#F3EDE0",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SOURCES IN SPEAKER NOTES · RESEARCH-STAGE PROTOTYPE"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SOURCES IN SPEAKER NOTES · RESEARCH-STAGE PROTOTYPE",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Courier New",
+            "color": "#F3EDE0",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "SOURCES IN SPEAKER NOTES · RESEARCH-STAGE PROTOTYPE",
+              "fontSize": 13,
+              "typeface": "Courier New",
+              "color": "#F3EDE0",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ylwn65k7",
+      "id": "5",
+      "name": "footer-page-10",
+      "bbox": [
+        1120,
+        678,
+        104,
+        22
+      ],
+      "geometry": "rect",
+      "text": "10 / 10",
+      "textPreview": "10 / 10",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Courier New",
+        "color": "#F3EDE0",
+        "bold": true,
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "10 / 10"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "10 / 10",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Courier New",
+            "color": "#F3EDE0",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "10 / 10",
+              "fontSize": 13,
+              "typeface": "Courier New",
+              "color": "#F3EDE0",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lon61k3i",
+      "id": "6",
+      "name": "ask-spine",
+      "bbox": [
+        540,
+        164,
+        0,
+        420
+      ],
+      "geometry": "line",
+      "lineColor": "#A87229",
+      "lineWidth": 2
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0ne58f2x",
+      "id": "7",
+      "name": "ask-access-label",
+      "bbox": [
+        62,
+        178,
+        420,
+        30
+      ],
+      "geometry": "rect",
+      "text": "ACCESS",
+      "textPreview": "ACCESS",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Courier New",
+        "color": "#A87229",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ACCESS"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ACCESS",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Courier New",
+            "color": "#A87229",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ACCESS",
+              "fontSize": 22,
+              "typeface": "Courier New",
+              "color": "#A87229",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bylovalg",
+      "id": "8",
+      "name": "ask-access-copy",
+      "bbox": [
+        62,
+        226,
+        420,
+        152
+      ],
+      "geometry": "rect",
+      "text": "2 FME officers + 2 administrators + 1 independent compliance provider",
+      "textPreview": "2 FME officers + 2 administrators + 1 independent compliance provider",
+      "resolvedFontSize": 32,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 32,
+        "typeface": "Georgia",
+        "color": "#F3EDE0",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 4,
+        "lines": [
+          {
+            "index": 1,
+            "text": "2 FME officers + 2"
+          },
+          {
+            "index": 2,
+            "text": "administrators + 1"
+          },
+          {
+            "index": 3,
+            "text": "independent compliance"
+          },
+          {
+            "index": 4,
+            "text": "provider"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "2 FME officers + 2 administrators + 1 independent compliance provider",
+          "resolvedTextStyle": {
+            "fontSize": 32,
+            "typeface": "Georgia",
+            "color": "#F3EDE0",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "2 FME officers + 2 administrators + 1 independent compliance provider",
+              "fontSize": 32,
+              "typeface": "Georgia",
+              "color": "#F3EDE0",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qxcn25kv",
+      "id": "9",
+      "name": "ask-falsify",
+      "bbox": [
+        62,
+        470,
+        400,
+        94
+      ],
+      "geometry": "rect",
+      "text": "Help us falsify quickly.",
+      "textPreview": "Help us falsify quickly.",
+      "resolvedFontSize": 26,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 26,
+        "typeface": "Georgia",
+        "color": "#F3EDE0",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Help us falsify quickly."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Help us falsify quickly.",
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Georgia",
+            "color": "#F3EDE0",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Help us falsify quickly.",
+              "fontSize": 26,
+              "typeface": "Georgia",
+              "color": "#F3EDE0",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4bulofqh",
+      "id": "10",
+      "name": "ask-challenge-label",
+      "bbox": [
+        602,
+        178,
+        560,
+        30
+      ],
+      "geometry": "rect",
+      "text": "CHALLENGE",
+      "textPreview": "CHALLENGE",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Courier New",
+        "color": "#A87229",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "CHALLENGE"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "CHALLENGE",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Courier New",
+            "color": "#A87229",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "CHALLENGE",
+              "fontSize": 22,
+              "typeface": "Courier New",
+              "color": "#A87229",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5c32h07m",
+      "id": "11",
+      "name": "ask-challenge-copy",
+      "bbox": [
+        602,
+        222,
+        580,
+        112
+      ],
+      "geometry": "rect",
+      "text": "Is upstream evidence work outside DRR or bundled services?",
+      "textPreview": "Is upstream evidence work outside DRR or bundled services?",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 28,
+        "typeface": "Georgia",
+        "color": "#F3EDE0",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Is upstream evidence work outside DRR or"
+          },
+          {
+            "index": 2,
+            "text": "bundled services?"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Is upstream evidence work outside DRR or bundled services?",
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "typeface": "Georgia",
+            "color": "#F3EDE0",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Is upstream evidence work outside DRR or bundled services?",
+              "fontSize": 28,
+              "typeface": "Georgia",
+              "color": "#F3EDE0",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ips3m58b",
+      "id": "12",
+      "name": "ask-test-label",
+      "bbox": [
+        602,
+        370,
+        180,
+        30
+      ],
+      "geometry": "rect",
+      "text": "TEST",
+      "textPreview": "TEST",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Courier New",
+        "color": "#A87229",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "TEST"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "TEST",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Courier New",
+            "color": "#A87229",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "TEST",
+              "fontSize": 22,
+              "typeface": "Courier New",
+              "color": "#A87229",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3a1kfapw",
+      "id": "13",
+      "name": "ask-test-copy",
+      "bbox": [
+        602,
+        408,
+        560,
+        74
+      ],
+      "geometry": "rect",
+      "text": "One controlled synthetic workflow only if discovery survives",
+      "textPreview": "One controlled synthetic workflow only if discovery survives",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 23,
+        "typeface": "Arial",
+        "color": "#F3EDE0",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "One controlled synthetic workflow only if discovery"
+          },
+          {
+            "index": 2,
+            "text": "survives"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "One controlled synthetic workflow only if discovery survives",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "typeface": "Arial",
+            "color": "#F3EDE0",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "One controlled synthetic workflow only if discovery survives",
+              "fontSize": 23,
+              "typeface": "Arial",
+              "color": "#F3EDE0",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gnalkvq5",
+      "id": "14",
+      "name": "ask-decide-label",
+      "bbox": [
+        602,
+        520,
+        180,
+        30
+      ],
+      "geometry": "rect",
+      "text": "DECIDE",
+      "textPreview": "DECIDE",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Courier New",
+        "color": "#A87229",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "DECIDE"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "DECIDE",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Courier New",
+            "color": "#A87229",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "DECIDE",
+              "fontSize": 22,
+              "typeface": "Courier New",
+              "color": "#A87229",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hoj2d07q",
+      "id": "15",
+      "name": "ask-decide-copy",
+      "bbox": [
+        760,
+        514,
+        400,
+        50
+      ],
+      "geometry": "rect",
+      "text": "Lock or reject by week 8",
+      "textPreview": "Lock or reject by week 8",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 28,
+        "typeface": "Georgia",
+        "color": "#A87229",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Lock or reject by week 8"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Lock or reject by week 8",
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "typeface": "Georgia",
+            "color": "#A87229",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Lock or reject by week 8",
+              "fontSize": 28,
+              "typeface": "Georgia",
+              "color": "#A87229",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

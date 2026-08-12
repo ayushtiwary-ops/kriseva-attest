@@ -1,0 +1,9 @@
+.worktrees/
+.superpowers/
+node_modules/
+test-results/
+playwright-report/
+.DS_Store
+artifacts/hub-qa-*.png
+.gstack/
+.tmp/

@@ -1,0 +1,19 @@
+{
+  "source": "deck/KRISEVA_ATTEST_GIFT_2026.pptx",
+  "renderer": "@oai/artifact-tool",
+  "slideCount": 10,
+  "slideSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "pdf": "deck/KRISEVA_ATTEST_GIFT_2026.pdf",
+  "pdfPages": 10,
+  "montage": "artifacts/deck/deck-montage.png",
+  "reproducibility": {
+    "contract": "visual-semantic",
+    "excludes": [
+      "byte-identical PPTX or PDF archives",
+      "stable package metadata or internal object IDs"
+    ]
+  }
+}

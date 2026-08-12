@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>KRISEVA ATTEST · evidence review wireframes</title>
+    <link rel="stylesheet" href="wireframes.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#wireframe-board">Skip to wireframe board</a>
+    <header class="board-header">
+      <div>
+        <p class="classification">Low-fidelity information architecture · 12 August 2026</p>
+        <h1>KRISEVA ATTEST · evidence review wireframes</h1>
+        <p class="board-subtitle">Six low-fidelity screens for a bounded, human-reviewed evidence workbench.</p>
+      </div>
+      <aside class="board-boundary" aria-label="Prototype boundary">
+        <strong>SYNTHETIC DEMO DATA</strong>
+        <span>RESEARCH-STAGE INTERFACE · NOT A REGULATORY FILING · HUMAN DECISION REQUIRED</span>
+      </aside>
+    </header>
+    <nav class="screen-index" aria-label="Wireframe screen index">
+      <ol>
+          <li><a href="#case-dashboard">01 · Case dashboard</a></li>
+          <li><a href="#source-workspace">02 · Source-to-field workspace</a></li>
+          <li><a href="#conflict-queue">03 · Conflict queue</a></li>
+          <li><a href="#agent-trace">04 · Agent trace</a></li>
+          <li><a href="#review-signoff">05 · Review and sign-off</a></li>
+          <li><a href="#evidence-receipt">06 · Evidence receipt</a></li>
+      </ol>
+    </nav>
+    <main class="wireframe-board" id="wireframe-board" tabindex="-1">
+      <article class="wireframe-sheet" id="case-dashboard" aria-labelledby="case-dashboard-title" tabindex="-1">
+        <header class="sheet-header">
+          <div>
+            <p class="folio">Screen 01 / 06</p>
+            <h2 id="case-dashboard-title">Case dashboard</h2>
+          </div>
+          <dl class="screen-contract">
+            <div class="contract-item">
+              <dt>Task</dt>
+              <dd>Orient a reviewer to one synthetic case, its source inventory, and the three-field evidence state.</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Primary action</dt>
+              <dd>Open source-to-field workspace</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Error / empty state</dt>
+              <dd>Before review: keep all three fields PENDING. Never infer progress from source count.</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Mobile collapse</dt>
+              <dd>Collapse inventory below the field index; keep the human-decision boundary above the fold.</dd>
+            </div>
+          </dl>
+        </header>
+        <div class="frame-stage">
+          <aside class="evidence-index" aria-label="Case context">
+            <p class="case-line">SYNTHETIC DEMO DATA</p>
+            <p class="case-name">Meridian Horizon Fund Management IFSC Pvt Ltd</p>
+            <p>Q2 2026</p>
+            <p class="status-line">RESEARCH-STAGE INTERFACE · NOT A REGULATORY FILING · HUMAN DECISION REQUIRED</p>
+          </aside>
+          <div class="stage-body">
+            <div class="stage-toolbar">
+              <span class="marker">SYNTHETIC DEMO DATA</span>
+              <button class="stage-action" type="button">Open source-to-field workspace</button>
+            </div>
+            <div class="evidence-spread">
+                <section class="evidence-panel">
+                  <p class="panel-label">Case register</p>
+                  <h3>Q2 2026 · pre-submission evidence review</h3>
+                  <p class="panel-body">3 synthetic sources · 3 whitelisted fields</p>
+                  <p class="panel-meta">CASE / meridian-horizon-q2-2026</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Field index</p>
+                  <h3>01 Closing NAV</h3>
+                  <p class="panel-body">SUPPORTED · two normalized values agree</p>
+                  <p class="panel-meta">INR 12,500,000</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Field index</p>
+                  <h3>02 Committed capital</h3>
+                  <p class="panel-body">CONFLICTING · no default winner</p>
+                  <p class="panel-meta">INR 50,000,000 ≠ INR 48,000,000</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Field index</p>
+                  <h3>03 Investor complaints closed</h3>
+                  <p class="panel-body">UNSUPPORTED · evidence request required</p>
+                  <p class="panel-meta">NO CANDIDATE SOURCE</p>
+                </section>
+            </div>
+            <p class="stage-notice">LOW-FIDELITY STATE · Exact source coordinates and human decisions remain the focal points.</p>
+          </div>
+        </div>
+      </article>
+      <article class="wireframe-sheet" id="source-workspace" aria-labelledby="source-workspace-title" tabindex="-1">
+        <header class="sheet-header">
+          <div>
+            <p class="folio">Screen 02 / 06</p>
+            <h2 id="source-workspace-title">Source-to-field workspace</h2>
+          </div>
+          <dl class="screen-contract">
+            <div class="contract-item">
+              <dt>Task</dt>
+              <dd>Compare a proposed field value with exact page, row, sheet, and cell coordinates before a human acts.</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Primary action</dt>
+              <dd>Send disagreement to conflict queue</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Error / empty state</dt>
+              <dd>If a source preview cannot load, retain its fingerprint and mark the candidate unavailable; do not guess.</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Mobile collapse</dt>
+              <dd>Show one source at a time; stack coordinates directly above the review action.</dd>
+            </div>
+          </dl>
+        </header>
+        <div class="frame-stage">
+          <aside class="evidence-index" aria-label="Case context">
+            <p class="case-line">SYNTHETIC DEMO DATA</p>
+            <p class="case-name">Meridian Horizon Fund Management IFSC Pvt Ltd</p>
+            <p>Q2 2026</p>
+            <p class="status-line">RESEARCH-STAGE INTERFACE · NOT A REGULATORY FILING · HUMAN DECISION REQUIRED</p>
+          </aside>
+          <div class="stage-body">
+            <div class="stage-toolbar">
+              <span class="marker">SYNTHETIC DEMO DATA</span>
+              <button class="stage-action" type="button">Send disagreement to conflict queue</button>
+            </div>
+            <div class="evidence-spread">
+                <section class="evidence-panel">
+                  <p class="panel-label">Selected field</p>
+                  <h3>Committed capital</h3>
+                  <p class="panel-body">Agent path: deterministic evidence comparison</p>
+                  <p class="panel-meta">STATUS / CONFLICTING</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Candidate A</p>
+                  <h3>INR 50,000,000</h3>
+                  <p class="panel-body">Administrator statement</p>
+                  <p class="panel-meta">PAGE 2 · ROW COMMITTED CAPITAL</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Candidate B</p>
+                  <h3>INR 48,000,000</h3>
+                  <p class="panel-body">Board schedule</p>
+                  <p class="panel-meta">SCHEDULE A · CELL C11</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Source custody</p>
+                  <h3>Fingerprints retained</h3>
+                  <p class="panel-body">synthetic:admin-statement:9b2d7f</p>
+                  <p class="panel-meta">synthetic:board-schedule:4f71aa</p>
+                </section>
+            </div>
+            <p class="stage-notice">LOW-FIDELITY STATE · Exact source coordinates and human decisions remain the focal points.</p>
+          </div>
+        </div>
+      </article>
+      <article class="wireframe-sheet" id="conflict-queue" aria-labelledby="conflict-queue-title" tabindex="-1">
+        <header class="sheet-header">
+          <div>
+            <p class="folio">Screen 03 / 06</p>
+            <h2 id="conflict-queue-title">Conflict queue</h2>
+          </div>
+          <dl class="screen-contract">
+            <div class="contract-item">
+              <dt>Task</dt>
+              <dd>Make a disagreement impossible to miss and require a named human to select, correct, reject, or defer.</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Primary action</dt>
+              <dd>Record human decision</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Error / empty state</dt>
+              <dd>Block the action until reviewer, source selection, and decision reason are present.</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Mobile collapse</dt>
+              <dd>Stack candidates without reordering; repeat each coordinate beside its value.</dd>
+            </div>
+          </dl>
+        </header>
+        <div class="frame-stage">
+          <aside class="evidence-index" aria-label="Case context">
+            <p class="case-line">SYNTHETIC DEMO DATA</p>
+            <p class="case-name">Meridian Horizon Fund Management IFSC Pvt Ltd</p>
+            <p>Q2 2026</p>
+            <p class="status-line">RESEARCH-STAGE INTERFACE · NOT A REGULATORY FILING · HUMAN DECISION REQUIRED</p>
+          </aside>
+          <div class="stage-body">
+            <div class="stage-toolbar">
+              <span class="marker">SYNTHETIC DEMO DATA</span>
+              <button class="stage-action" type="button">Record human decision</button>
+            </div>
+            <div class="evidence-spread">
+                <section class="evidence-panel">
+                  <p class="panel-label">Conflict 01 / 01</p>
+                  <h3>Two sources disagree</h3>
+                  <p class="panel-body">Committed capital has two unequal normalized values.</p>
+                  <p class="panel-meta">NO DEFAULT WINNER</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Candidate A</p>
+                  <h3>INR 50,000,000</h3>
+                  <p class="panel-body">Administrator statement</p>
+                  <p class="panel-meta">PAGE 2 · ROW COMMITTED CAPITAL</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Candidate B</p>
+                  <h3>INR 48,000,000</h3>
+                  <p class="panel-body">Board schedule</p>
+                  <p class="panel-meta">SCHEDULE A · CELL C11</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Decision record</p>
+                  <h3>Reviewer name required</h3>
+                  <p class="panel-body">Reason required · selection required</p>
+                  <p class="panel-meta">ACCEPT / CORRECT / REJECT / DEFER</p>
+                </section>
+            </div>
+            <p class="stage-notice">LOW-FIDELITY STATE · Exact source coordinates and human decisions remain the focal points.</p>
+          </div>
+        </div>
+      </article>
+      <article class="wireframe-sheet" id="agent-trace" aria-labelledby="agent-trace-title" tabindex="-1">
+        <header class="sheet-header">
+          <div>
+            <p class="folio">Screen 04 / 06</p>
+            <h2 id="agent-trace-title">Agent trace</h2>
+          </div>
+          <dl class="screen-contract">
+            <div class="contract-item">
+              <dt>Task</dt>
+              <dd>Expose the bounded comparison path, inputs used, candidate output, and explicit abstention.</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Primary action</dt>
+              <dd>Return to unresolved fields</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Error / empty state</dt>
+              <dd>If evidence is absent, end the trace at ABSTAIN. Do not synthesize a value or a source.</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Mobile collapse</dt>
+              <dd>Render the trace as a numbered vertical record; never hide source fingerprints in a drawer.</dd>
+            </div>
+          </dl>
+        </header>
+        <div class="frame-stage">
+          <aside class="evidence-index" aria-label="Case context">
+            <p class="case-line">SYNTHETIC DEMO DATA</p>
+            <p class="case-name">Meridian Horizon Fund Management IFSC Pvt Ltd</p>
+            <p>Q2 2026</p>
+            <p class="status-line">RESEARCH-STAGE INTERFACE · NOT A REGULATORY FILING · HUMAN DECISION REQUIRED</p>
+          </aside>
+          <div class="stage-body">
+            <div class="stage-toolbar">
+              <span class="marker">SYNTHETIC DEMO DATA</span>
+              <button class="stage-action" type="button">Return to unresolved fields</button>
+            </div>
+            <div class="evidence-spread">
+                <section class="evidence-panel">
+                  <p class="panel-label">Step 01 · intake</p>
+                  <h3>Load whitelisted fields</h3>
+                  <p class="panel-body">Closing NAV · Committed capital · Complaints closed</p>
+                  <p class="panel-meta">FIXED SYNTHETIC CASE</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Step 02 · compare</p>
+                  <h3>Normalize candidate values</h3>
+                  <p class="panel-body">Equality only; source count does not resolve disagreement.</p>
+                  <p class="panel-meta">DETERMINISTIC PATH</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Step 03 · propose</p>
+                  <h3>Surface support or conflict</h3>
+                  <p class="panel-body">Proposal only; no filing or compliance conclusion.</p>
+                  <p class="panel-meta">HUMAN REVIEW BOUNDARY</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Step 04 · abstain</p>
+                  <h3>Investor complaints closed</h3>
+                  <p class="panel-body">No candidate evidence is present.</p>
+                  <p class="panel-meta">OUTPUT / UNSUPPORTED</p>
+                </section>
+            </div>
+            <p class="stage-notice">LOW-FIDELITY STATE · Exact source coordinates and human decisions remain the focal points.</p>
+          </div>
+        </div>
+      </article>
+      <article class="wireframe-sheet" id="review-signoff" aria-labelledby="review-signoff-title" tabindex="-1">
+        <header class="sheet-header">
+          <div>
+            <p class="folio">Screen 05 / 06</p>
+            <h2 id="review-signoff-title">Review and sign-off</h2>
+          </div>
+          <dl class="screen-contract">
+            <div class="contract-item">
+              <dt>Task</dt>
+              <dd>Review accepted, corrected, rejected, and deferred decisions before producing a local evidence receipt.</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Primary action</dt>
+              <dd>Resolve conflict before sign-off</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Error / empty state</dt>
+              <dd>Sign-off remains blocked while the capital conflict lacks a named reviewer and reason.</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Mobile collapse</dt>
+              <dd>Place blocked state before the decision table; move each row into a labeled definition list.</dd>
+            </div>
+          </dl>
+        </header>
+        <div class="frame-stage">
+          <aside class="evidence-index" aria-label="Case context">
+            <p class="case-line">SYNTHETIC DEMO DATA</p>
+            <p class="case-name">Meridian Horizon Fund Management IFSC Pvt Ltd</p>
+            <p>Q2 2026</p>
+            <p class="status-line">RESEARCH-STAGE INTERFACE · NOT A REGULATORY FILING · HUMAN DECISION REQUIRED</p>
+          </aside>
+          <div class="stage-body">
+            <div class="stage-toolbar">
+              <span class="marker">SYNTHETIC DEMO DATA</span>
+              <button class="stage-action" type="button">Resolve conflict before sign-off</button>
+            </div>
+            <div class="evidence-spread">
+                <section class="evidence-panel">
+                  <p class="panel-label">Decision ledger</p>
+                  <h3>Closing NAV</h3>
+                  <p class="panel-body">Awaiting human action</p>
+                  <p class="panel-meta">SUPPORTED EVIDENCE · NOT SIGNED OFF</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Decision ledger</p>
+                  <h3>Committed capital</h3>
+                  <p class="panel-body">Reviewer and reason missing</p>
+                  <p class="panel-meta">BLOCKING CONFLICT</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Decision ledger</p>
+                  <h3>Investor complaints closed</h3>
+                  <p class="panel-body">Evidence request remains open</p>
+                  <p class="panel-meta">UNRESOLVED · NON-BLOCKING EXPORT</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Sign-off gate</p>
+                  <h3>Not ready for sign-off</h3>
+                  <p class="panel-body">Named human decision required for the conflict.</p>
+                  <p class="panel-meta">EXPORT MAY RETAIN UNRESOLVED ITEMS</p>
+                </section>
+            </div>
+            <p class="stage-notice">LOW-FIDELITY STATE · Exact source coordinates and human decisions remain the focal points.</p>
+          </div>
+        </div>
+      </article>
+      <article class="wireframe-sheet" id="evidence-receipt" aria-labelledby="evidence-receipt-title" tabindex="-1">
+        <header class="sheet-header">
+          <div>
+            <p class="folio">Screen 06 / 06</p>
+            <h2 id="evidence-receipt-title">Evidence receipt</h2>
+          </div>
+          <dl class="screen-contract">
+            <div class="contract-item">
+              <dt>Task</dt>
+              <dd>Package source fingerprints, candidate coordinates, human decisions, and unresolved items into a printable local record.</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Primary action</dt>
+              <dd>Export local evidence receipt</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Error / empty state</dt>
+              <dd>If unresolved items remain, export them prominently; never describe the receipt as approval or verification.</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Mobile collapse</dt>
+              <dd>Use a single-column manifest; preserve fingerprints as wrapping mono text without horizontal scrolling.</dd>
+            </div>
+          </dl>
+        </header>
+        <div class="frame-stage">
+          <aside class="evidence-index" aria-label="Case context">
+            <p class="case-line">SYNTHETIC DEMO DATA</p>
+            <p class="case-name">Meridian Horizon Fund Management IFSC Pvt Ltd</p>
+            <p>Q2 2026</p>
+            <p class="status-line">RESEARCH-STAGE INTERFACE · NOT A REGULATORY FILING · HUMAN DECISION REQUIRED</p>
+          </aside>
+          <div class="stage-body">
+            <div class="stage-toolbar">
+              <span class="marker">SYNTHETIC DEMO DATA</span>
+              <button class="stage-action" type="button">Export local evidence receipt</button>
+            </div>
+            <div class="evidence-spread">
+                <section class="evidence-panel">
+                  <p class="panel-label">Receipt scope</p>
+                  <h3>meridian-horizon-q2-2026</h3>
+                  <p class="panel-body">Research-stage synthetic case</p>
+                  <p class="panel-meta">NOT A REGULATORY FILING</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Input fingerprint</p>
+                  <h3>Administrator statement</h3>
+                  <p class="panel-body">Page 2 · capital summary</p>
+                  <p class="panel-meta">synthetic:admin-statement:9b2d7f</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Input fingerprint</p>
+                  <h3>Internal ledger extract</h3>
+                  <p class="panel-body">NAV ledger · cell F18</p>
+                  <p class="panel-meta">synthetic:ledger:38a4c1</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Unresolved register</p>
+                  <h3>2 items require attention</h3>
+                  <p class="panel-body">Committed capital · Investor complaints closed</p>
+                  <p class="panel-meta">HUMAN DECISION REQUIRED</p>
+                </section>
+            </div>
+            <p class="stage-notice">LOW-FIDELITY STATE · Exact source coordinates and human decisions remain the focal points.</p>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,809 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/ps7ugs",
+    "id": "ps7ugs",
+    "slide": 3,
+    "layoutId": "2752032a-23fa-440b-b894-62f7a90253fa",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#DED6C9",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Arial",
+      "Courier New",
+      "Georgia"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "2752032a-23fa-440b-b894-62f7a90253fa",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/v2dwfm9o",
+      "id": "1",
+      "name": "brand-3",
+      "bbox": [
+        56,
+        24,
+        300,
+        24
+      ],
+      "geometry": "rect",
+      "text": "KRISEVA  /  ATTEST",
+      "textPreview": "KRISEVA  /  ATTEST",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Courier New",
+        "color": "#0A1F44",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "KRISEVA  /  ATTEST"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "KRISEVA  /  ATTEST",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Courier New",
+            "color": "#0A1F44",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "KRISEVA  /  ATTEST",
+              "fontSize": 15,
+              "typeface": "Courier New",
+              "color": "#0A1F44",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w3md8rat",
+      "id": "2",
+      "name": "title-3",
+      "bbox": [
+        56,
+        60,
+        1168,
+        62
+      ],
+      "geometry": "rect",
+      "text": "DRR targets submission; evidence starts upstream",
+      "textPreview": "DRR targets submission; evidence starts upstream",
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 48,
+        "typeface": "Georgia",
+        "color": "#0A1F44",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "DRR targets submission; evidence starts upstream"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "DRR targets submission; evidence starts upstream",
+          "resolvedTextStyle": {
+            "fontSize": 48,
+            "typeface": "Georgia",
+            "color": "#0A1F44",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "DRR targets submission; evidence starts upstream",
+              "fontSize": 48,
+              "typeface": "Georgia",
+              "color": "#0A1F44",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/h4vehwre",
+      "id": "3",
+      "name": "footer-rule-3",
+      "bbox": [
+        56,
+        666,
+        1168,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#0A1F44",
+      "lineWidth": 1
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/i54va1sz",
+      "id": "4",
+      "name": "footer-source-3",
+      "bbox": [
+        56,
+        678,
+        760,
+        22
+      ],
+      "geometry": "rect",
+      "text": "SOURCES IN SPEAKER NOTES · RESEARCH-STAGE PROTOTYPE",
+      "textPreview": "SOURCES IN SPEAKER NOTES · RESEARCH-STAGE PROTOTYPE",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Courier New",
+        "color": "#625B53",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SOURCES IN SPEAKER NOTES · RESEARCH-STAGE PROTOTYPE"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SOURCES IN SPEAKER NOTES · RESEARCH-STAGE PROTOTYPE",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Courier New",
+            "color": "#625B53",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "SOURCES IN SPEAKER NOTES · RESEARCH-STAGE PROTOTYPE",
+              "fontSize": 13,
+              "typeface": "Courier New",
+              "color": "#625B53",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/j6dwj69k",
+      "id": "5",
+      "name": "footer-page-3",
+      "bbox": [
+        1120,
+        678,
+        104,
+        22
+      ],
+      "geometry": "rect",
+      "text": "03 / 10",
+      "textPreview": "03 / 10",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Courier New",
+        "color": "#0A1F44",
+        "bold": true,
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "03 / 10"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "03 / 10",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Courier New",
+            "color": "#0A1F44",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "03 / 10",
+              "fontSize": 13,
+              "typeface": "Courier New",
+              "color": "#0A1F44",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/47mdcba5",
+      "id": "6",
+      "name": "boundary-left",
+      "bbox": [
+        0,
+        140,
+        640,
+        526
+      ],
+      "geometry": "rect",
+      "fillColor": "#0A1F44",
+      "lineColor": "#0A1F44",
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/58velgrq",
+      "id": "7",
+      "name": "boundary-spine",
+      "bbox": [
+        640,
+        140,
+        0,
+        526
+      ],
+      "geometry": "line",
+      "lineColor": "#A87229",
+      "lineWidth": 2
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/69ovelsb",
+      "id": "8",
+      "name": "boundary-drr",
+      "bbox": [
+        62,
+        184,
+        500,
+        84
+      ],
+      "geometry": "rect",
+      "text": "DRR",
+      "textPreview": "DRR",
+      "resolvedFontSize": 64,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 64,
+        "typeface": "Georgia",
+        "color": "#F3EDE0",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "DRR"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "DRR",
+          "resolvedTextStyle": {
+            "fontSize": 64,
+            "typeface": "Georgia",
+            "color": "#F3EDE0",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "DRR",
+              "fontSize": 64,
+              "typeface": "Georgia",
+              "color": "#F3EDE0",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ruxwn69g",
+      "id": "9",
+      "name": "boundary-drr-copy",
+      "bbox": [
+        66,
+        292,
+        500,
+        120
+      ],
+      "geometry": "rect",
+      "text": "Structured reporting channels, validation and submission infrastructure",
+      "textPreview": "Structured reporting channels, validation and submission infrastructure",
+      "resolvedFontSize": 27,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 27,
+        "typeface": "Georgia",
+        "color": "#F3EDE0",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Structured reporting channels, validation"
+          },
+          {
+            "index": 2,
+            "text": "and submission infrastructure"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Structured reporting channels, validation and submission infrastructure",
+          "resolvedTextStyle": {
+            "fontSize": 27,
+            "typeface": "Georgia",
+            "color": "#F3EDE0",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Structured reporting channels, validation and submission infrastructure",
+              "fontSize": 27,
+              "typeface": "Georgia",
+              "color": "#F3EDE0",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7mtgju9s",
+      "id": "10",
+      "name": "boundary-absence",
+      "bbox": [
+        66,
+        520,
+        500,
+        48
+      ],
+      "geometry": "rect",
+      "text": "Public absence is not proof.",
+      "textPreview": "Public absence is not proof.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Arial",
+        "color": "#A87229",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Public absence is not proof."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Public absence is not proof.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Arial",
+            "color": "#A87229",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Public absence is not proof.",
+              "fontSize": 22,
+              "typeface": "Arial",
+              "color": "#A87229",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6lkzqps7",
+      "id": "11",
+      "name": "boundary-attest",
+      "bbox": [
+        704,
+        184,
+        500,
+        84
+      ],
+      "geometry": "rect",
+      "text": "ATTEST",
+      "textPreview": "ATTEST",
+      "resolvedFontSize": 64,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 64,
+        "typeface": "Georgia",
+        "color": "#0A1F44",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ATTEST"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ATTEST",
+          "resolvedTextStyle": {
+            "fontSize": 64,
+            "typeface": "Georgia",
+            "color": "#0A1F44",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ATTEST",
+              "fontSize": 64,
+              "typeface": "Georgia",
+              "color": "#0A1F44",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tovyl4ry",
+      "id": "12",
+      "name": "boundary-attest-copy",
+      "bbox": [
+        708,
+        292,
+        500,
+        120
+      ],
+      "geometry": "rect",
+      "text": "Provider-neutral source references, disagreement and human review",
+      "textPreview": "Provider-neutral source references, disagreement and human review",
+      "resolvedFontSize": 27,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 27,
+        "typeface": "Georgia",
+        "color": "#0F0E0B",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Provider-neutral source references,"
+          },
+          {
+            "index": 2,
+            "text": "disagreement and human review"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Provider-neutral source references, disagreement and human review",
+          "resolvedTextStyle": {
+            "fontSize": 27,
+            "typeface": "Georgia",
+            "color": "#0F0E0B",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Provider-neutral source references, disagreement and human review",
+              "fontSize": 27,
+              "typeface": "Georgia",
+              "color": "#0F0E0B",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/snmhszad",
+      "id": "13",
+      "name": "boundary-limit",
+      "bbox": [
+        708,
+        478,
+        500,
+        78
+      ],
+      "geometry": "rect",
+      "text": "No filing. No DRR connection. No claimed gap.",
+      "textPreview": "No filing. No DRR connection. No claimed gap.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Arial",
+        "color": "#96491A",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "No filing. No DRR connection. No claimed gap."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "No filing. No DRR connection. No claimed gap.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Arial",
+            "color": "#96491A",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "No filing. No DRR connection. No claimed gap.",
+              "fontSize": 22,
+              "typeface": "Arial",
+              "color": "#96491A",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

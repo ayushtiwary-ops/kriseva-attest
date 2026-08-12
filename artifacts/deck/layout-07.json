@@ -1,0 +1,818 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/gdmzu6",
+    "id": "gdmzu6",
+    "slide": 7,
+    "layoutId": "2752032a-23fa-440b-b894-62f7a90253fa",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#DED6C9",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Arial",
+      "Courier New",
+      "Georgia"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "2752032a-23fa-440b-b894-62f7a90253fa",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nylszqh4",
+      "id": "1",
+      "name": "brand-7",
+      "bbox": [
+        56,
+        24,
+        300,
+        24
+      ],
+      "geometry": "rect",
+      "text": "KRISEVA  /  ATTEST",
+      "textPreview": "KRISEVA  /  ATTEST",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Courier New",
+        "color": "#0A1F44",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "KRISEVA  /  ATTEST"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "KRISEVA  /  ATTEST",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Courier New",
+            "color": "#0A1F44",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "KRISEVA  /  ATTEST",
+              "fontSize": 15,
+              "typeface": "Courier New",
+              "color": "#0A1F44",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ozu98bip",
+      "id": "2",
+      "name": "title-7",
+      "bbox": [
+        56,
+        60,
+        1168,
+        62
+      ],
+      "geometry": "rect",
+      "text": "The current build exposes the full evidence record",
+      "textPreview": "The current build exposes the full evidence record",
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 48,
+        "typeface": "Georgia",
+        "color": "#0A1F44",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The current build exposes the full evidence record"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The current build exposes the full evidence record",
+          "resolvedTextStyle": {
+            "fontSize": 48,
+            "typeface": "Georgia",
+            "color": "#0A1F44",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The current build exposes the full evidence record",
+              "fontSize": 48,
+              "typeface": "Georgia",
+              "color": "#0A1F44",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/903a1gzu",
+      "id": "3",
+      "name": "footer-rule-7",
+      "bbox": [
+        56,
+        666,
+        1168,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#0A1F44",
+      "lineWidth": 1
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/e9sr2107",
+      "id": "4",
+      "name": "footer-source-7",
+      "bbox": [
+        56,
+        678,
+        760,
+        22
+      ],
+      "geometry": "rect",
+      "text": "SOURCES IN SPEAKER NOTES · RESEARCH-STAGE PROTOTYPE",
+      "textPreview": "SOURCES IN SPEAKER NOTES · RESEARCH-STAGE PROTOTYPE",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Courier New",
+        "color": "#625B53",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SOURCES IN SPEAKER NOTES · RESEARCH-STAGE PROTOTYPE"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SOURCES IN SPEAKER NOTES · RESEARCH-STAGE PROTOTYPE",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Courier New",
+            "color": "#625B53",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "SOURCES IN SPEAKER NOTES · RESEARCH-STAGE PROTOTYPE",
+              "fontSize": 13,
+              "typeface": "Courier New",
+              "color": "#625B53",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zal8v6hs",
+      "id": "5",
+      "name": "footer-page-7",
+      "bbox": [
+        1120,
+        678,
+        104,
+        22
+      ],
+      "geometry": "rect",
+      "text": "07 / 10",
+      "textPreview": "07 / 10",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Courier New",
+        "color": "#0A1F44",
+        "bold": true,
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "07 / 10"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "07 / 10",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Courier New",
+            "color": "#0A1F44",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "07 / 10",
+              "fontSize": 13,
+              "typeface": "Courier New",
+              "color": "#0A1F44",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0vu94bid",
+      "id": "6",
+      "name": "prototype-proof-label",
+      "bbox": [
+        60,
+        134,
+        340,
+        24
+      ],
+      "geometry": "rect",
+      "text": "CURRENT LOCAL BUILD",
+      "textPreview": "CURRENT LOCAL BUILD",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Courier New",
+        "color": "#A87229",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "CURRENT LOCAL BUILD"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "CURRENT LOCAL BUILD",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Courier New",
+            "color": "#A87229",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "CURRENT LOCAL BUILD",
+              "fontSize": 22,
+              "typeface": "Courier New",
+              "color": "#A87229",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/4nedon6x",
+      "id": "7",
+      "bbox": [
+        60,
+        170,
+        742,
+        378
+      ],
+      "geometry": "rect",
+      "alt": "Current KRISEVA ATTEST conflict queue showing two synthetic source values and a named human decision form",
+      "contentType": "image/png",
+      "imageCrop": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0.47
+      },
+      "imageFit": "cover",
+      "imageMask": {
+        "geometry": "rect"
+      },
+      "asset": {
+        "assetId": "acf32716-bbc3-463f-92fb-59043c08dba4",
+        "contentType": "image/png",
+        "byteLength": 254337
+      }
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/q5sry10b",
+      "id": "8",
+      "name": "prototype-conflict-border",
+      "bbox": [
+        60,
+        170,
+        742,
+        378
+      ],
+      "geometry": "rect",
+      "lineColor": "#0A1F44",
+      "lineWidth": 1
+    },
+    {
+      "order": 9,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/uhcvidov",
+      "id": "9",
+      "bbox": [
+        830,
+        170,
+        390,
+        378
+      ],
+      "geometry": "rect",
+      "alt": "Current KRISEVA ATTEST evidence receipt showing fingerprints, preserved candidates and unresolved evidence",
+      "contentType": "image/png",
+      "imageCrop": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0.52
+      },
+      "imageFit": "cover",
+      "imageMask": {
+        "geometry": "rect"
+      },
+      "asset": {
+        "assetId": "b6eb9cee-1033-4880-904a-bc102a896b61",
+        "contentType": "image/png",
+        "byteLength": 326568
+      }
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jilkfy9c",
+      "id": "10",
+      "name": "prototype-receipt-border",
+      "bbox": [
+        830,
+        170,
+        390,
+        378
+      ],
+      "geometry": "rect",
+      "lineColor": "#0A1F44",
+      "lineWidth": 1
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ihcj6t8r",
+      "id": "11",
+      "name": "prototype-callout-1",
+      "bbox": [
+        60,
+        570,
+        210,
+        62
+      ],
+      "geometry": "rect",
+      "text": "Conflict stays side by side.",
+      "textPreview": "Conflict stays side by side.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Arial",
+        "color": "#0A1F44",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Conflict stays side"
+          },
+          {
+            "index": 2,
+            "text": "by side."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Conflict stays side by side.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Arial",
+            "color": "#0A1F44",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Conflict stays side by side.",
+              "fontSize": 22,
+              "typeface": "Arial",
+              "color": "#0A1F44",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5k32h8r2",
+      "id": "12",
+      "name": "prototype-callout-2",
+      "bbox": [
+        284,
+        570,
+        210,
+        62
+      ],
+      "geometry": "rect",
+      "text": "Human reason is required.",
+      "textPreview": "Human reason is required.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Arial",
+        "color": "#0A1F44",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Human reason is"
+          },
+          {
+            "index": 2,
+            "text": "required."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Human reason is required.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Arial",
+            "color": "#0A1F44",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Human reason is required.",
+              "fontSize": 22,
+              "typeface": "Arial",
+              "color": "#0A1F44",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kju183qx",
+      "id": "13",
+      "name": "prototype-callout-3",
+      "bbox": [
+        508,
+        570,
+        340,
+        62
+      ],
+      "geometry": "rect",
+      "text": "Receipt retains fingerprints, both candidates and unresolved evidence.",
+      "textPreview": "Receipt retains fingerprints, both candidates and unresolved evidence.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Arial",
+        "color": "#0A1F44",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Receipt retains fingerprints, both"
+          },
+          {
+            "index": 2,
+            "text": "candidates and unresolved"
+          },
+          {
+            "index": 3,
+            "text": "evidence."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Receipt retains fingerprints, both candidates and unresolved evidence.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Arial",
+            "color": "#0A1F44",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Receipt retains fingerprints, both candidates and unresolved evidence.",
+              "fontSize": 22,
+              "typeface": "Arial",
+              "color": "#0A1F44",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7m5kjip8",
+      "id": "14",
+      "name": "prototype-callout-4",
+      "bbox": [
+        862,
+        570,
+        290,
+        62
+      ],
+      "geometry": "rect",
+      "text": "Synthetic data only · no filing · no regulator connection",
+      "textPreview": "Synthetic data only · no filing · no regulator connection",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Arial",
+        "color": "#96491A",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Synthetic data only · no filing"
+          },
+          {
+            "index": 2,
+            "text": "· no regulator connection"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Synthetic data only · no filing · no regulator connection",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Arial",
+            "color": "#96491A",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Synthetic data only · no filing · no regulator connection",
+              "fontSize": 22,
+              "typeface": "Arial",
+              "color": "#96491A",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

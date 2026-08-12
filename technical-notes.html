@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Technical and operating boundaries for the KRISEVA ATTEST synthetic prototype.">
+    <title>KRISEVA ATTEST · technical notes</title>
+    <link rel="stylesheet" href="styles/tokens.css">
+    <link rel="stylesheet" href="styles/hub.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#technical-notes">Skip to technical notes</a>
+    <header class="masthead">
+      <div class="wordmark" aria-label="KRISEVA ATTEST">
+        <span>KRISEVA</span>
+        <strong>ATTEST</strong>
+      </div>
+      <p class="classification">TECHNICAL EVIDENCE · SYNTHETIC PROTOTYPE</p>
+    </header>
+
+    <main id="technical-notes" class="notes-page" tabindex="-1">
+      <section class="notes-hero" aria-labelledby="notes-title">
+        <p class="eyebrow">Architecture / operating limits</p>
+        <h1 id="notes-title">Technical notes</h1>
+        <p class="notes-lede">A dependency-light static demonstration for reviewing one fixed synthetic evidence case. This page describes only what the repository implements and verifies locally.</p>
+        <a class="artifact-link notes-return" href="./">Return to submission dossier</a>
+      </section>
+
+      <section class="notes-section" aria-labelledby="architecture-title">
+        <p class="eyebrow">01 / Architecture</p>
+        <h2 id="architecture-title">A static, inspectable review path.</h2>
+        <p>The hub is plain HTML and CSS. The prototype uses browser ES modules, a fixed synthetic JSON fixture, and pure JavaScript state transitions. No backend is required for the demonstration.</p>
+      </section>
+
+      <section class="notes-section" aria-labelledby="boundaries-title">
+        <p class="eyebrow">02 / Boundaries</p>
+        <h2 id="boundaries-title">The demonstration stops at evidence and human review.</h2>
+        <ul class="notes-list">
+          <li>The case is fictional and visibly marked as synthetic demo data.</li>
+          <li>The review is a recorded deterministic prototype trace with no live model call.</li>
+          <li>The prototype does not write or submit an official return.</li>
+          <li>It is not connected to IFSCA systems or DRR interfaces.</li>
+          <li>A human decision with a reviewer and reason is required for a material conflict.</li>
+        </ul>
+      </section>
+
+      <section class="notes-section" aria-labelledby="flow-title">
+        <p class="eyebrow">03 / Data flow</p>
+        <h2 id="flow-title">Six deterministic steps retain the source record.</h2>
+        <ol class="notes-flow">
+          <li><span><strong>Load.</strong> One fictional entity, three fictional sources, and three whitelisted fields enter from the fixed fixture.</span></li>
+          <li><span><strong>Derive.</strong> Candidate presence and normalized-value equality produce supported, conflicting, or unsupported states.</span></li>
+          <li><span><strong>Review.</strong> The browser renders the six-screen workflow and holds current session state in memory.</span></li>
+          <li><span><strong>Decide.</strong> A reviewer action records a decision without replacing the original conflict candidates.</span></li>
+          <li><span><strong>Export.</strong> Bounded JSON or printable HTML retains fingerprints, candidates, decisions, and unresolved items.</span></li>
+          <li><span><strong>Reset.</strong> Reloading the fixture clears current browser-session decisions.</span></li>
+        </ol>
+      </section>
+
+      <section class="notes-section notes-verification" aria-labelledby="verification-title">
+        <p class="eyebrow">04 / Local verification</p>
+        <h2 id="verification-title">Checks describe this repository only.</h2>
+        <p>Browser tests reject remote resource requests and exercise accessibility, keyboard behavior, local links, and visual containment. Unit tests exercise non-mutating state transitions, conflict preservation, reviewer requirements, manifest bounds, and deterministic export.</p>
+        <p>These checks are not evidence for a real regulated deployment.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>KRISEVA ATTEST / RESEARCH-STAGE SYNTHETIC PROTOTYPE</p>
+      <p>Evidence before assertion. Human decision before export.</p>
+    </footer>
+  </body>
+</html>

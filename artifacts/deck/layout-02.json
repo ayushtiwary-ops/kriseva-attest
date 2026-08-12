@@ -1,0 +1,783 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/tez8ro",
+    "id": "tez8ro",
+    "slide": 2,
+    "layoutId": "2752032a-23fa-440b-b894-62f7a90253fa",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#DED6C9",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Arial",
+      "Courier New",
+      "Georgia"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "2752032a-23fa-440b-b894-62f7a90253fa",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/snm5wrat",
+      "id": "1",
+      "name": "brand-2",
+      "bbox": [
+        56,
+        24,
+        300,
+        24
+      ],
+      "geometry": "rect",
+      "text": "KRISEVA  /  ATTEST",
+      "textPreview": "KRISEVA  /  ATTEST",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Courier New",
+        "color": "#0A1F44",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "KRISEVA  /  ATTEST"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "KRISEVA  /  ATTEST",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Courier New",
+            "color": "#0A1F44",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "KRISEVA  /  ATTEST",
+              "fontSize": 15,
+              "typeface": "Courier New",
+              "color": "#0A1F44",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7mdo3mt8",
+      "id": "2",
+      "name": "title-2",
+      "bbox": [
+        56,
+        60,
+        1168,
+        62
+      ],
+      "geometry": "rect",
+      "text": "A human still owns the source question",
+      "textPreview": "A human still owns the source question",
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 48,
+        "typeface": "Georgia",
+        "color": "#0A1F44",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "A human still owns the source question"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "A human still owns the source question",
+          "resolvedTextStyle": {
+            "fontSize": 48,
+            "typeface": "Georgia",
+            "color": "#0A1F44",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "A human still owns the source question",
+              "fontSize": 48,
+              "typeface": "Georgia",
+              "color": "#0A1F44",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6l4nuhsn",
+      "id": "3",
+      "name": "footer-rule-2",
+      "bbox": [
+        56,
+        666,
+        1168,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#0A1F44",
+      "lineWidth": 1
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5kv61cb2",
+      "id": "4",
+      "name": "footer-source-2",
+      "bbox": [
+        56,
+        678,
+        760,
+        22
+      ],
+      "geometry": "rect",
+      "text": "SOURCES IN SPEAKER NOTES · RESEARCH-STAGE PROTOTYPE",
+      "textPreview": "SOURCES IN SPEAKER NOTES · RESEARCH-STAGE PROTOTYPE",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Courier New",
+        "color": "#625B53",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SOURCES IN SPEAKER NOTES · RESEARCH-STAGE PROTOTYPE"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SOURCES IN SPEAKER NOTES · RESEARCH-STAGE PROTOTYPE",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Courier New",
+            "color": "#625B53",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "SOURCES IN SPEAKER NOTES · RESEARCH-STAGE PROTOTYPE",
+              "fontSize": 13,
+              "typeface": "Courier New",
+              "color": "#625B53",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kjm5s7ux",
+      "id": "5",
+      "name": "footer-page-2",
+      "bbox": [
+        1120,
+        678,
+        104,
+        22
+      ],
+      "geometry": "rect",
+      "text": "02 / 10",
+      "textPreview": "02 / 10",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Courier New",
+        "color": "#0A1F44",
+        "bold": true,
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "02 / 10"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "02 / 10",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Courier New",
+            "color": "#0A1F44",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "02 / 10",
+              "fontSize": 13,
+              "typeface": "Courier New",
+              "color": "#0A1F44",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jidoz2tc",
+      "id": "6",
+      "name": "accountability-divider",
+      "bbox": [
+        704,
+        150,
+        0,
+        430
+      ],
+      "geometry": "line",
+      "lineColor": "#A87229",
+      "lineWidth": 2
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ix4nqhcr",
+      "id": "7",
+      "name": "accountability-label",
+      "bbox": [
+        64,
+        154,
+        500,
+        28
+      ],
+      "geometry": "rect",
+      "text": "ACCOUNTABILITY QUESTION",
+      "textPreview": "ACCOUNTABILITY QUESTION",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Courier New",
+        "color": "#A87229",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ACCOUNTABILITY QUESTION"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ACCOUNTABILITY QUESTION",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Courier New",
+            "color": "#A87229",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ACCOUNTABILITY QUESTION",
+              "fontSize": 22,
+              "typeface": "Courier New",
+              "color": "#A87229",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pgz6dgbm",
+      "id": "8",
+      "name": "accountability-structured",
+      "bbox": [
+        64,
+        198,
+        560,
+        48
+      ],
+      "geometry": "rect",
+      "text": "Structured returns do not remove the source question.",
+      "textPreview": "Structured returns do not remove the source question.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Arial",
+        "color": "#0A1F44",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Structured returns do not remove the source"
+          },
+          {
+            "index": 2,
+            "text": "question."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Structured returns do not remove the source question.",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "typeface": "Arial",
+            "color": "#0A1F44",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Structured returns do not remove the source question.",
+              "fontSize": 24,
+              "typeface": "Arial",
+              "color": "#0A1F44",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4f6p4ba1",
+      "id": "9",
+      "name": "accountability-question",
+      "bbox": [
+        64,
+        274,
+        580,
+        160
+      ],
+      "geometry": "rect",
+      "text": "Which source supports this reported field?",
+      "textPreview": "Which source supports this reported field?",
+      "resolvedFontSize": 48,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 48,
+        "typeface": "Georgia",
+        "color": "#0F0E0B",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Which source supports this"
+          },
+          {
+            "index": 2,
+            "text": "reported field?"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Which source supports this reported field?",
+          "resolvedTextStyle": {
+            "fontSize": 48,
+            "typeface": "Georgia",
+            "color": "#0F0E0B",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Which source supports this reported field?",
+              "fontSize": 48,
+              "typeface": "Georgia",
+              "color": "#0F0E0B",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/65wjyhcn",
+      "id": "10",
+      "name": "accountability-source-rule-1",
+      "bbox": [
+        760,
+        194,
+        400,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#7E786E",
+      "lineWidth": 1
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/76pkrmt8",
+      "id": "11",
+      "name": "accountability-source-rule-2",
+      "bbox": [
+        760,
+        260,
+        400,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#7E786E",
+      "lineWidth": 1
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/s7y10rut",
+      "id": "12",
+      "name": "accountability-source-rule-3",
+      "bbox": [
+        760,
+        326,
+        400,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#7E786E",
+      "lineWidth": 1
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ts72twbe",
+      "id": "13",
+      "name": "accountability-evidence",
+      "bbox": [
+        760,
+        360,
+        410,
+        96
+      ],
+      "geometry": "rect",
+      "text": "Statements, ledgers and schedules can disagree or leave evidence missing.",
+      "textPreview": "Statements, ledgers and schedules can disagree or leave evidence missing.",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "Georgia",
+        "color": "#0A1F44",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Statements, ledgers and schedules can"
+          },
+          {
+            "index": 2,
+            "text": "disagree or leave evidence missing."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Statements, ledgers and schedules can disagree or leave evidence missing.",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "typeface": "Georgia",
+            "color": "#0A1F44",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Statements, ledgers and schedules can disagree or leave evidence missing.",
+              "fontSize": 24,
+              "typeface": "Georgia",
+              "color": "#0A1F44",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/y1wjuhcr",
+      "id": "14",
+      "name": "accountability-unknowns",
+      "bbox": [
+        760,
+        492,
+        410,
+        92
+      ],
+      "geometry": "rect",
+      "text": "The operator, buyer, frequency, pain and willingness to pay remain unvalidated.",
+      "textPreview": "The operator, buyer, frequency, pain and willingness to pay remain unvalidated.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Arial",
+        "color": "#625B53",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The operator, buyer, frequency, pain and"
+          },
+          {
+            "index": 2,
+            "text": "willingness to pay remain unvalidated."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The operator, buyer, frequency, pain and willingness to pay remain unvalidated.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Arial",
+            "color": "#625B53",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The operator, buyer, frequency, pain and willingness to pay remain unvalidated.",
+              "fontSize": 22,
+              "typeface": "Arial",
+              "color": "#625B53",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

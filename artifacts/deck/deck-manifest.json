@@ -1,0 +1,219 @@
+{
+  "product": "KRISEVA ATTEST",
+  "slideSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "editableSource": "scripts/build-deck.mjs",
+  "contentContract": "deck/DECK_CONTENT.md",
+  "visualSystem": {
+    "colors": {
+      "paper": "#DED6C9",
+      "raised": "#F3EDE0",
+      "navy": "#0A1F44",
+      "ink": "#0F0E0B",
+      "brass": "#A87229",
+      "green": "#215B43",
+      "rust": "#96491A",
+      "muted": "#625B53",
+      "rule": "#7E786E"
+    },
+    "fonts": {
+      "display": "Georgia",
+      "body": "Arial",
+      "mono": "Courier New"
+    },
+    "maxRadius": 2,
+    "gradients": false
+  },
+  "reproducibility": {
+    "contract": "visual-semantic",
+    "guarantees": [
+      "ordered visible text and source notes",
+      "named layout and physical typography",
+      "materially equivalent rendered slides"
+    ],
+    "excludes": [
+      "byte-identical PPTX or PDF archives",
+      "stable package metadata or internal object IDs"
+    ]
+  },
+  "slides": [
+    {
+      "number": 1,
+      "title": "KRISEVA ATTEST",
+      "body": [
+        "A bounded source-to-field evidence workbench for human review.",
+        "Application product lock. Company wedge not locked.",
+        "Research-stage prototype · synthetic data · no filing · no regulator connection"
+      ],
+      "bodyWordCount": 24,
+      "sources": [
+        "repo:docs/superpowers/specs/2026-08-12-attest-submission-system-design.md",
+        "repo:docs/PRODUCT_DECISION.md"
+      ]
+    },
+    {
+      "number": 2,
+      "title": "A human still owns the source question",
+      "body": [
+        "ACCOUNTABILITY QUESTION",
+        "Structured returns do not remove the source question.",
+        "Which source supports this reported field?",
+        "Statements, ledgers and schedules can disagree or leave evidence missing.",
+        "The operator, buyer, frequency, pain and willingness to pay remain unvalidated."
+      ],
+      "bodyWordCount": 37,
+      "sources": [
+        "workspace:10_GIFT_CITY/00_CONTROL/STATUS.md",
+        "workspace:10_GIFT_CITY/00_CONTROL/DECISION_LOG.md",
+        "repo:docs/superpowers/specs/2026-08-12-attest-submission-system-design.md"
+      ]
+    },
+    {
+      "number": 3,
+      "title": "DRR targets submission; evidence starts upstream",
+      "body": [
+        "DRR",
+        "Structured reporting channels, validation and submission infrastructure",
+        "ATTEST",
+        "Provider-neutral source references, disagreement and human review",
+        "No filing. No DRR connection. No claimed gap.",
+        "Public absence is not proof."
+      ],
+      "bodyWordCount": 29,
+      "sources": [
+        "https://www.ifsca.gov.in/Document/Tender/concept-note_drr-consultation_2003202520032025073433.pdf",
+        "https://www.ifsca.gov.in/CommonDirect/ViewFile?fileName=Award_of_Contract_under_RFPs_for_DRR_Solution_and_ERP_System_20260309_0153.pdf&id=d575554ec59b09e7fde503d3a82787c7",
+        "https://bsmedia.business-standard.com/_media/bs/data/announcements/bse/29012026/13c21166-8138-4630-a8b3-4f6b2202472e.pdf"
+      ]
+    },
+    {
+      "number": 4,
+      "title": "One fictional case makes three evidence states visible",
+      "body": [
+        "Meridian Horizon Fund Management IFSC Pvt Ltd · Q2 2026 · fictional",
+        "Closing NAV · SUPPORTED · INR 12.5M agrees across two sources",
+        "Committed capital · CONFLICTING · INR 50M vs INR 48M",
+        "Investor complaints closed · UNSUPPORTED · no candidate evidence"
+      ],
+      "bodyWordCount": 35,
+      "sources": [
+        "repo:data/synthetic-case.json",
+        "repo:src/case-engine.js"
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Preserve the handoff, not just the answer",
+      "body": [
+        "01 SOURCE · exact page, region or cell",
+        "02 COMPARE · preserve agreement and disagreement",
+        "03 ESCALATE · no default winner",
+        "04 DECIDE · named reviewer and reason",
+        "05 RETAIN · local JSON and printable HTML manifest"
+      ],
+      "bodyWordCount": 32,
+      "sources": [
+        "repo:docs/superpowers/specs/2026-08-12-attest-submission-system-design.md",
+        "repo:src/case-engine.js",
+        "repo:src/manifest.js"
+      ]
+    },
+    {
+      "number": 6,
+      "title": "The prototype knows when to stop",
+      "body": [
+        "RECORDED DETERMINISTIC PROTOTYPE TRACE",
+        "PROPOSE · candidate evidence and exact references",
+        "ABSTAIN · no candidate evidence; request more",
+        "DECIDE · only a named human can accept, correct, reject or defer",
+        "No live model. No compliance conclusion."
+      ],
+      "bodyWordCount": 33,
+      "sources": [
+        "repo:prototype/app.js",
+        "repo:artifacts/prototype-trace-1440.png",
+        "repo:docs/superpowers/specs/2026-08-12-attest-submission-system-design.md"
+      ]
+    },
+    {
+      "number": 7,
+      "title": "The current build exposes the full evidence record",
+      "body": [
+        "CURRENT LOCAL BUILD",
+        "Conflict stays side by side.",
+        "Human reason is required.",
+        "Receipt retains fingerprints, both candidates and unresolved evidence.",
+        "Synthetic data only · no filing · no regulator connection"
+      ],
+      "bodyWordCount": 28,
+      "sources": [
+        "repo:artifacts/prototype-conflict-1440.png",
+        "repo:artifacts/prototype-receipt-1440.png",
+        "repo:.superpowers/sdd/2026-08-12-attest-submission-system/task-5-report.md"
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Revenue here is a sensitivity test, not a forecast",
+      "body": [
+        "ILLUSTRATIVE ARR SENSITIVITY",
+        "Entities · ₹3L · ₹6L · ₹12L",
+        "5 · ₹15L · ₹30L · ₹60L",
+        "20 · ₹60L · ₹1.2Cr · ₹2.4Cr",
+        "50 · ₹1.5Cr · ₹3Cr · ₹6Cr",
+        "Gates · buyer · bundling · legal · paid test · support economics",
+        "Not TAM, forecast or willingness-to-pay evidence."
+      ],
+      "bodyWordCount": 36,
+      "sources": [
+        "repo:docs/BUSINESS_VIABILITY.md",
+        "repo:docs/superpowers/specs/2026-08-12-attest-submission-system-design.md"
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Equal contribution means equal accountability",
+      "body": [
+        "AYUSH TIWARY",
+        "Engineering, integration, test evidence and packaging.",
+        "FINANCE & BUSINESS ANALYSIS OWNER",
+        "Case consistency, buyer hypotheses, pricing research, workflow QA, pitch and demo contribution.",
+        "Proposed contributor · pending written acceptance and public attribution."
+      ],
+      "bodyWordCount": 32,
+      "sources": [
+        "repo:docs/CONTRIBUTOR_SCOPE.md",
+        "repo:docs/superpowers/specs/2026-08-12-attest-submission-system-design.md"
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Use eight weeks to lock the wedge, or reject it",
+      "body": [
+        "ACCESS · 2 FME officers + 2 administrators + 1 independent compliance provider",
+        "CHALLENGE · Is upstream evidence work outside DRR or bundled services?",
+        "TEST · One controlled synthetic workflow only if discovery survives",
+        "DECIDE · Lock or reject by week 8",
+        "Help us falsify quickly."
+      ],
+      "bodyWordCount": 40,
+      "sources": [
+        "https://www.giftifih.in/young-builders-program",
+        "repo:docs/MEETING_BRIEF_2026-08-12.md",
+        "repo:docs/PRODUCT_DECISION.md"
+      ]
+    }
+  ],
+  "embeddedScreenshots": [
+    {
+      "path": "artifacts/prototype-conflict-1440.png",
+      "sha256": "d00471f0a294be593143897beae8cace63c04e9fd1e56bde90b84b73872e3ecd"
+    },
+    {
+      "path": "artifacts/prototype-receipt-1440.png",
+      "sha256": "de30b9b9ab01b318fe3977d354fd66350c3e83861af6026ec09a42a1b629c43a"
+    }
+  ]
+}

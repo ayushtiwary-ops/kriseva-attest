@@ -1,0 +1,160 @@
+{
+  "product": "KRISEVA ATTEST",
+  "case": {
+    "id": "meridian-horizon-q2-2026",
+    "name": "Meridian Horizon Fund Management IFSC Pvt Ltd",
+    "reportingPeriod": "Q2 2026",
+    "synthetic": true,
+    "dataMarker": "SYNTHETIC DEMO DATA"
+  },
+  "metadata": {
+    "researchStage": true,
+    "synthetic": true,
+    "notARegulatoryFiling": true,
+    "humanDecisionRequired": true
+  },
+  "generatedAt": "2026-08-12T10:00:00.000Z",
+  "sources": [
+    {
+      "id": "administrator-statement",
+      "label": "Administrator statement",
+      "reference": "Page 2, capital summary",
+      "fingerprint": "synthetic:admin-statement:9b2d7f",
+      "dataMarker": "SYNTHETIC DEMO DATA"
+    },
+    {
+      "id": "internal-ledger",
+      "label": "Internal ledger extract",
+      "reference": "NAV ledger, cell F18",
+      "fingerprint": "synthetic:ledger:38a4c1",
+      "dataMarker": "SYNTHETIC DEMO DATA"
+    },
+    {
+      "id": "board-schedule",
+      "label": "Board schedule",
+      "reference": "Schedule A, cell C11",
+      "fingerprint": "synthetic:board-schedule:4f71aa",
+      "dataMarker": "SYNTHETIC DEMO DATA"
+    }
+  ],
+  "sourceFingerprints": [
+    {
+      "id": "administrator-statement",
+      "fingerprint": "synthetic:admin-statement:9b2d7f"
+    },
+    {
+      "id": "internal-ledger",
+      "fingerprint": "synthetic:ledger:38a4c1"
+    },
+    {
+      "id": "board-schedule",
+      "fingerprint": "synthetic:board-schedule:4f71aa"
+    }
+  ],
+  "fields": [
+    {
+      "id": "closing-nav",
+      "label": "Closing NAV",
+      "agentPath": "deterministic evidence comparison",
+      "candidates": [
+        {
+          "id": "admin-closing-nav",
+          "sourceId": "administrator-statement",
+          "value": "INR 12,500,000",
+          "normalizedValue": "12500000",
+          "reference": "Page 2, row Closing NAV"
+        },
+        {
+          "id": "ledger-closing-nav",
+          "sourceId": "internal-ledger",
+          "value": "12,500,000 INR",
+          "normalizedValue": "12500000",
+          "reference": "NAV ledger, cell F18"
+        }
+      ],
+      "status": "SUPPORTED",
+      "selectedCandidateId": null
+    },
+    {
+      "id": "committed-capital",
+      "label": "Committed capital",
+      "agentPath": "deterministic evidence comparison",
+      "candidates": [
+        {
+          "id": "admin-committed",
+          "sourceId": "administrator-statement",
+          "value": "INR 50,000,000",
+          "normalizedValue": "50000000",
+          "reference": "Page 2, row Committed capital"
+        },
+        {
+          "id": "board-committed",
+          "sourceId": "board-schedule",
+          "value": "INR 48,000,000",
+          "normalizedValue": "48000000",
+          "reference": "Schedule A, cell C11"
+        }
+      ],
+      "status": "CONFLICTING",
+      "selectedCandidateId": "admin-committed"
+    },
+    {
+      "id": "investor-complaints-closed",
+      "label": "Investor complaints closed",
+      "agentPath": "deterministic abstention: no candidate evidence",
+      "candidates": [],
+      "status": "UNSUPPORTED",
+      "selectedCandidateId": null
+    }
+  ],
+  "humanDecisions": [
+    {
+      "fieldId": "committed-capital",
+      "action": "ACCEPT",
+      "candidateId": "admin-committed",
+      "reviewer": "Rhea Menon",
+      "reason": "Synthetic reviewer decision.",
+      "recordedAt": "2026-08-12T09:30:00.000Z"
+    }
+  ],
+  "unresolvedItems": [
+    {
+      "id": "committed-capital",
+      "label": "Committed capital",
+      "agentPath": "deterministic evidence comparison",
+      "candidates": [
+        {
+          "id": "admin-committed",
+          "sourceId": "administrator-statement",
+          "value": "INR 50,000,000",
+          "normalizedValue": "50000000",
+          "reference": "Page 2, row Committed capital"
+        },
+        {
+          "id": "board-committed",
+          "sourceId": "board-schedule",
+          "value": "INR 48,000,000",
+          "normalizedValue": "48000000",
+          "reference": "Schedule A, cell C11"
+        }
+      ],
+      "status": "CONFLICTING",
+      "selectedCandidateId": "admin-committed"
+    },
+    {
+      "id": "investor-complaints-closed",
+      "label": "Investor complaints closed",
+      "agentPath": "deterministic abstention: no candidate evidence",
+      "candidates": [],
+      "status": "UNSUPPORTED",
+      "selectedCandidateId": null
+    }
+  ],
+  "disclosures": [
+    "RESEARCH-STAGE PROTOTYPE",
+    "SYNTHETIC DEMO DATA",
+    "NOT A REGULATORY FILING",
+    "NOT CONNECTED TO IFSCA SYSTEMS",
+    "NAMED HUMAN DECISION REQUIRED"
+  ]
+}

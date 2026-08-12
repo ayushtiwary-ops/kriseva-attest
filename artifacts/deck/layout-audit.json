@@ -1,0 +1,88 @@
+{
+  "slideSize": {
+    "width": 1280,
+    "height": 720
+  },
+  "slides": [
+    {
+      "number": 1,
+      "offCanvas": [],
+      "bodyWordCount": 24,
+      "titleFontSize": 76,
+      "minimumBodyFontSize": 22,
+      "elementCount": 11
+    },
+    {
+      "number": 2,
+      "offCanvas": [],
+      "bodyWordCount": 37,
+      "titleFontSize": 48,
+      "minimumBodyFontSize": 22,
+      "elementCount": 14
+    },
+    {
+      "number": 3,
+      "offCanvas": [],
+      "bodyWordCount": 29,
+      "titleFontSize": 48,
+      "minimumBodyFontSize": 22,
+      "elementCount": 13
+    },
+    {
+      "number": 4,
+      "offCanvas": [],
+      "bodyWordCount": 35,
+      "titleFontSize": 48,
+      "minimumBodyFontSize": 22,
+      "elementCount": 21
+    },
+    {
+      "number": 5,
+      "offCanvas": [],
+      "bodyWordCount": 32,
+      "titleFontSize": 48,
+      "minimumBodyFontSize": 22,
+      "elementCount": 16
+    },
+    {
+      "number": 6,
+      "offCanvas": [],
+      "bodyWordCount": 33,
+      "titleFontSize": 48,
+      "minimumBodyFontSize": 22,
+      "elementCount": 15
+    },
+    {
+      "number": 7,
+      "offCanvas": [],
+      "bodyWordCount": 28,
+      "titleFontSize": 48,
+      "minimumBodyFontSize": 22,
+      "elementCount": 14
+    },
+    {
+      "number": 8,
+      "offCanvas": [],
+      "bodyWordCount": 36,
+      "titleFontSize": 48,
+      "minimumBodyFontSize": 22,
+      "elementCount": 29
+    },
+    {
+      "number": 9,
+      "offCanvas": [],
+      "bodyWordCount": 32,
+      "titleFontSize": 48,
+      "minimumBodyFontSize": 22,
+      "elementCount": 12
+    },
+    {
+      "number": 10,
+      "offCanvas": [],
+      "bodyWordCount": 40,
+      "titleFontSize": 48,
+      "minimumBodyFontSize": 22,
+      "elementCount": 15
+    }
+  ]
+}

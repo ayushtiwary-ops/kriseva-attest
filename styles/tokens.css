@@ -1,0 +1,24 @@
+:root {
+  --kriseva-paper: #ded6c9;
+  --kriseva-paper-raised: #f3ede0;
+  --kriseva-navy: #0a1f44;
+  --kriseva-ink: #0f0e0b;
+  --kriseva-brass: #a87229;
+
+  --wire-paper: #f4f4f1;
+  --wire-sheet: #ffffff;
+  --wire-ink: #111111;
+  --wire-muted: #5d5d5a;
+  --wire-rule: #20201f;
+  --wire-rule-soft: #b9b9b4;
+  --wire-fill: #e4e4df;
+  --wire-fill-dark: #272725;
+
+  --font-display: Georgia, 'Times New Roman', serif;
+  --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --text-body: 17px;
+  --text-small: 14px;
+  --rule: 1px;
+  --radius: 2px;
+}
