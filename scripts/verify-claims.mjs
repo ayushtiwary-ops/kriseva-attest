@@ -38,6 +38,7 @@ export const DEFAULT_PUBLIC_FILES = Object.freeze([
   'artifacts/deck/README.md',
   'package.json',
   'README.md',
+  'DEMO_WALKTHROUGH.md',
   'ARCHITECTURE.md',
   'SECURITY.md',
   'PRIVACY.md',

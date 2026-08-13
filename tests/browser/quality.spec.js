@@ -208,12 +208,12 @@ test('receipt downloads deterministic, bounded JSON and printable HTML with audi
   ]);
   expect(manifest.humanDecisions).toEqual([expect.objectContaining({
     fieldId: 'committed-capital',
-    reviewer: 'Demo Reviewer',
+    reviewer: 'Priya Nair',
     reason: 'Administrator figure ties to the executed subscription register; earlier schedule superseded.',
     recordedAt: fixedRecordedAt,
   })]);
   expect(manifest.principalOfficerConfirmation).toEqual({
-    officerName: 'Demo Officer',
+    officerName: 'Rohan Mehta',
     confirmed: true,
     recordedAt: fixedOfficerConfirmedAt,
   });
@@ -230,11 +230,11 @@ test('receipt downloads deterministic, bounded JSON and printable HTML with audi
     '@media print',
     'USD 25,000,000',
     'USD 24,000,000',
-    'Demo Reviewer',
+    'Priya Nair',
     'Administrator figure ties to the executed subscription register; earlier schedule superseded.',
     'Investor complaints closed',
     'NOT A REGULATORY FILING',
-    'Demo Officer',
+    'Rohan Mehta',
     'Confirming Principal Officer',
     manifest.integrity.digest,
   ]) expect(printable).toContain(requiredText);
@@ -256,9 +256,9 @@ for (const [captureState, contract] of Object.entries(captureStates)) {
       await expect(page.getByText('ABSTAIN', { exact: true })).toBeVisible();
     }
     if (contract.decision) {
-      await expect(page.getByText('Demo Reviewer', { exact: true })).toBeVisible();
+      await expect(page.getByText('Priya Nair', { exact: true })).toBeVisible();
       await expect(page.getByText(fixedRecordedAt, { exact: true })).toBeVisible();
-      await expect(page.getByText('Demo Officer', { exact: true })).toBeVisible();
+      await expect(page.getByText('Rohan Mehta', { exact: true })).toBeVisible();
       await expect(page.getByText(fixedOfficerConfirmedAt, { exact: true })).toBeVisible();
       await expect(page.getByText('Deciding reviewer', { exact: true })).toBeVisible();
       await expect(page.getByText('Confirming Principal Officer', { exact: true })).toBeVisible();
@@ -279,7 +279,7 @@ test('unknown capture query cannot bypass default protection and ordinary visits
   await page.goto(`${LOCAL_ORIGIN}/prototype/`);
   await expect(page).toHaveURL(/\/prototype\/#dashboard$/u);
   await expect(page.locator('.field-index .status-pending')).toHaveCount(3);
-  await expect(page.getByText('Demo Reviewer', { exact: true })).toHaveCount(0);
+  await expect(page.getByText('Priya Nair', { exact: true })).toHaveCount(0);
 });
 
 test('inherited capture names are rejected and never announce capture readiness', async ({ page }) => {

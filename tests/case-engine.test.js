@@ -85,7 +85,7 @@ for (const [action, expectedCandidateId] of [
     const decided = recordDecision(reviewed, 'committed-capital', {
       action,
       candidateId: 'admin-committed',
-      reviewer: 'Demo Reviewer',
+      reviewer: 'Priya Nair',
       reason: 'Synthetic reviewer decision.',
       recordedAt: '2026-08-12T12:00:00+05:30'
     });

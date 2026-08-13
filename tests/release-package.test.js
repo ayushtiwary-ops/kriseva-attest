@@ -110,6 +110,7 @@ test('public release scan covers every shipped narrative and browser data class'
     'artifacts/deck/deck-manifest.json',
     'ARTIFACT_INDEX.md',
     'docs/QA_REPORT.md',
+    'DEMO_WALKTHROUGH.md',
   ];
   for (const file of requiredPublicFiles) {
     assert.equal(DEFAULT_PUBLIC_FILES.includes(file), true, `${file} is outside the public scan`);
@@ -159,6 +160,7 @@ test('GitHub-ready export contains the release and excludes private founder hand
     'docs/CLAIMS_REGISTER.md',
     'docs/QA_REPORT.md',
     'CHECKSUMS.sha256',
+    'DEMO_WALKTHROUGH.md',
   ]) assert.ok((await stat(resolve(destination, publicFile))).isFile(), `${publicFile} missing`);
 
   for (const privateFile of [

@@ -184,6 +184,19 @@ textarea:focus-visible,
   color: #f2d49c;
 }
 
+.step-strip {
+  background: var(--kriseva-paper);
+  border-bottom: 1px solid rgba(10, 31, 68, 0.35);
+  color: var(--kriseva-navy);
+  font-family: var(--font-mono);
+  font-size: var(--text-small);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin: 0;
+  overflow-wrap: anywhere;
+  padding: 0.55rem clamp(1rem, 3vw, 3rem);
+}
+
 .announcement {
   height: 0;
   overflow: hidden;
@@ -1277,6 +1290,10 @@ form .primary-action {
 
   .prototype-boundary {
     text-align: left;
+  }
+
+  .step-strip {
+    padding: 0.55rem 1rem;
   }
 
   .screen-navigation {

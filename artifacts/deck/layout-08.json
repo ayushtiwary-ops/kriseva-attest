@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/ocqc5n",
-    "id": "ocqc5n",
+    "aid": "sl/5boyhm",
+    "id": "5boyhm",
     "slide": 8,
-    "layoutId": "bfa218db-1244-411c-9cb4-5df8bf7c6084",
+    "layoutId": "785e4828-53fe-45e0-9666-a23d9261118d",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "520395b2-1046-43ca-80b5-6e86de7f8558",
+    "masterLayoutId": "34fa3ed7-97ac-4174-814c-be587f0d63f9",
     "masterLayoutName": "Master",
     "backgroundColor": "#F3EDE0",
     "frame": {
@@ -47,15 +47,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "bfa218db-1244-411c-9cb4-5df8bf7c6084",
+      "id": "785e4828-53fe-45e0-9666-a23d9261118d",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "520395b2-1046-43ca-80b5-6e86de7f8558",
+      "parentLayoutId": "34fa3ed7-97ac-4174-814c-be587f0d63f9",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "520395b2-1046-43ca-80b5-6e86de7f8558",
+      "id": "34fa3ed7-97ac-4174-814c-be587f0d63f9",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -66,7 +66,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/dw3y5s7y",
+      "aid": "sh/2tg7ixgz",
       "id": "1",
       "name": "brand-8",
       "bbox": [
@@ -136,7 +136,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/qtsfudon",
+      "aid": "sh/pwrqtsfa",
       "id": "2",
       "name": "title-8",
       "bbox": [
@@ -203,7 +203,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ru1g3ip8",
+      "aid": "sh/ovipknyp",
       "id": "3",
       "name": "footer-rule-8",
       "bbox": [
@@ -220,7 +220,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/0jux0n6p",
+      "aid": "sh/fqponix8",
       "id": "4",
       "name": "footer-source-8",
       "bbox": [
@@ -287,7 +287,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/lk3y9s7a",
+      "aid": "sh/epg7edgn",
       "id": "5",
       "name": "footer-page-8",
       "bbox": [
@@ -357,7 +357,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/excfyxoj",
+      "aid": "sh/1s7qpsfe",
       "id": "6",
       "name": "sensitivity-label",
       "bbox": [
@@ -427,7 +427,7 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/zilg72p4",
+      "aid": "sh/0rypgnyt",
       "id": "7",
       "name": "sensitivity-row-0",
       "bbox": [
@@ -444,7 +444,7 @@
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/gnaxo365",
+      "aid": "sh/r25ojyxc",
       "id": "8",
       "name": "sensitivity-0-0",
       "bbox": [
@@ -514,7 +514,7 @@
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/hojyx87q",
+      "aid": "sh/q1w7adgr",
       "id": "9",
       "name": "sensitivity-0-1",
       "bbox": [
@@ -584,7 +584,7 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/xsjq50r6",
+      "aid": "sh/oz6dsnat",
       "id": "10",
       "name": "sensitivity-0-2",
       "bbox": [
@@ -654,7 +654,7 @@
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/cra9cva1",
+      "aid": "sh/9kzulsre",
       "id": "11",
       "name": "sensitivity-row-1",
       "bbox": [
@@ -671,7 +671,7 @@
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/bq183q9g",
+      "aid": "sh/mxovqxs3",
       "id": "12",
       "name": "sensitivity-1-0",
       "bbox": [
@@ -741,7 +741,7 @@
       "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/apsralsv",
+      "aid": "sh/nyxcj29o",
       "id": "13",
       "name": "sensitivity-1-1",
       "bbox": [
@@ -808,7 +808,7 @@
       "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/lw3q90ri",
+      "aid": "sh/0v6donax",
       "id": "14",
       "name": "sensitivity-1-2",
       "bbox": [
@@ -875,7 +875,7 @@
       "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/kvu9gfax",
+      "aid": "sh/1wfuhsri",
       "id": "15",
       "name": "sensitivity-row-2",
       "bbox": [
@@ -892,7 +892,7 @@
       "order": 16,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/zu187a9c",
+      "aid": "sh/etobmdsr",
       "id": "16",
       "name": "sensitivity-2-0",
       "bbox": [
@@ -962,7 +962,7 @@
       "order": 17,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ytsre5sr",
+      "aid": "sh/zuxcfi9c",
       "id": "17",
       "name": "sensitivity-2-1",
       "bbox": [
@@ -1029,7 +1029,7 @@
       "order": 18,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/t03adkre",
+      "aid": "sh/krad07q1",
       "id": "18",
       "name": "sensitivity-2-2",
       "bbox": [
@@ -1096,7 +1096,7 @@
       "order": 19,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/8zu9kfat",
+      "aid": "sh/lsjutcrm",
       "id": "19",
       "name": "sensitivity-divider",
       "bbox": [
@@ -1113,7 +1113,7 @@
       "order": 20,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/sfm1wn2h",
+      "aid": "sh/t8fudcjq",
       "id": "20",
       "name": "sensitivity-gates",
       "bbox": [
@@ -1188,7 +1188,7 @@
       "order": 21,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/dgv25s32",
+      "aid": "sh/s76dk7i5",
       "id": "21",
       "name": "footer-sensitivity-hypothesis-label",
       "bbox": [
@@ -1258,7 +1258,7 @@
       "order": 22,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/qd4judkb",
+      "aid": "sh/76xcb210",
       "id": "22",
       "name": "sensitivity-hypothesis",
       "bbox": [
@@ -1336,7 +1336,7 @@
       "order": 23,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/redk3ilw",
+      "aid": "sh/654vix0f",
       "id": "23",
       "name": "sensitivity-disclaimer",
       "bbox": [

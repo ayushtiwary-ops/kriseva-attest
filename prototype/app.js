@@ -16,6 +16,7 @@ import {
   renderEvidenceIndex,
   renderMain,
   renderReviewDrawer,
+  renderStepStrip,
   renderTopNavigation
 } from '../src/dom-renderers.js';
 
@@ -64,6 +65,13 @@ const root = document.querySelector('#prototype-root');
 const navigation = document.querySelector('#screen-navigation');
 const announcement = document.querySelector('#announcement');
 const headerReset = document.querySelector('#header-reset');
+// The guided step strip is created here (not in prototype/index.html) so the
+// static markup stays untouched; it is a persistent sibling inserted once,
+// then re-rendered on every route change alongside the top navigation.
+const stepStrip = document.createElement('p');
+stepStrip.className = 'step-strip';
+stepStrip.id = 'step-strip';
+navigation.insertAdjacentElement('afterend', stepStrip);
 let fixture;
 let state;
 let pendingFocus = false;
@@ -163,7 +171,7 @@ async function handleDecisionSubmit(event) {
 function validateSignOff(form, reviewerName) {
   const officerName = form.elements.officerName;
   const confirmed = form.elements.confirmed;
-  if (!officerName.value.trim()) return { message: 'Enter the Principal Officer (demo) name.', target: officerName };
+  if (!officerName.value.trim()) return { message: 'Enter the Principal Officer (demo persona) name.', target: officerName };
   if (officerName.value.trim().toLowerCase() === reviewerName.trim().toLowerCase()) {
     return {
       message: 'Maker-checker separation: the confirming officer must differ from the deciding reviewer.',
@@ -306,6 +314,7 @@ async function render(requestedRoute = routeFromHash()) {
   const pendingGates = pendingSignOffGates(state);
   const manifest = await buildBrowserManifest();
   navigation.innerHTML = renderTopNavigation(route);
+  stepStrip.textContent = renderStepStrip(route);
   root.innerHTML = `<div class="workspace" data-route="${route}">
     ${renderEvidenceIndex(state, reviewed)}
     <main class="active-screen" id="app-screen" aria-labelledby="active-screen-title">
@@ -361,7 +370,7 @@ try {
     state = recordDecision(state, 'committed-capital', {
       action: 'ACCEPT',
       candidateId: 'admin-committed',
-      reviewer: 'Demo Reviewer',
+      reviewer: 'Priya Nair',
       reason: 'Administrator figure ties to the executed subscription register; earlier schedule superseded.',
       recordedAt: RECORDED_AT
     });
@@ -373,7 +382,7 @@ try {
     for (const flagId of flagIds) {
       state = recordRiskDisposition(state, flagId, {
         action: 'ACKNOWLEDGE',
-        disposerName: 'Demo Officer',
+        disposerName: 'Priya Nair',
         reason: 'Reviewed and acknowledged for this synthetic demo case.',
         recordedAt: DISPOSITIONED_AT
       });
@@ -381,7 +390,7 @@ try {
   }
   if (capturePreset?.signedOff) {
     state = recordSignOff(state, {
-      officerName: 'Demo Officer',
+      officerName: 'Rohan Mehta',
       confirmed: true,
       recordedAt: OFFICER_CONFIRMED_AT
     });

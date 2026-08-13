@@ -15,6 +15,19 @@ const SCREEN_NAMES = {
   'evidence-receipt': 'Evidence receipt'
 };
 
+// Guided step strip: one label per screen, in the same fixed order as
+// SCREEN_NAMES / ROUTES (app.js). Rendered as a slim persistent line under
+// the top navigation so a first-time reviewer always knows where they are.
+const STEP_LABELS = {
+  dashboard: 'Open the case',
+  'source-workspace': 'Inspect the evidence',
+  'conflict-queue': 'Decide the conflict',
+  'agent-trace': 'Read the trace',
+  'risk-board': 'Disposition the flags',
+  'review-signoff': 'Confirm sign-off',
+  'evidence-receipt': 'Export the receipt'
+};
+
 export const PROTOTYPE_BOUNDARY = 'RESEARCH-STAGE PROTOTYPE · SYNTHETIC DEMO DATA · NOT A REGULATORY FILING · NO REGULATOR CONNECTION';
 
 export function escapeHtml(value) {
@@ -364,7 +377,7 @@ function signoffMain(state, { conflictDecided, canSignOff, pendingGates }) {
         ? 'A second named role confirms the evidence record for all three fields. This officer must differ from the deciding reviewer.'
         : `Blocked until ${remainingGateCopy} ${pendingGates.length > 1 ? 'are' : 'is'} recorded.`}</p>
       <form id="signoff-form" novalidate>
-        <label for="officer-name">Principal Officer (demo)</label>
+        <label for="officer-name">Principal Officer (demo persona)</label>
         <input id="officer-name" name="officerName" autocomplete="off"${disabled} value="${escapeHtml(officer?.officerName ?? '')}">
         <label class="officer-checkbox">
           <input type="checkbox" id="officer-confirm" name="confirmed"${disabled}${officer?.confirmed ? ' checked' : ''}>
@@ -459,7 +472,7 @@ function conflictForm(state) {
         ${field.candidates.map((candidate, index) => `<option value="${escapeHtml(candidate.id)}">Candidate ${index === 0 ? 'A' : 'B'} · ${escapeHtml(candidate.value)}</option>`).join('')}
       </select>
       <p class="field-guidance" id="candidate-guidance">Required for accept or correct. Not attributed for reject or defer.</p>
-      <label for="reviewer">Reviewer</label>
+      <label for="reviewer">Reviewer, Compliance Officer (demo persona)</label>
       <input id="reviewer" name="reviewer" autocomplete="off">
       <label for="decision-reason">Decision reason</label>
       <textarea id="decision-reason" name="reason" rows="5"></textarea>
@@ -504,4 +517,13 @@ export function renderReviewDrawer(route, state, { reviewed, conflictDecided, ca
 
 export function renderTopNavigation(route) {
   return Object.entries(SCREEN_NAMES).map(([slug, name], index) => `<a href="#${slug}" ${slug === route ? 'aria-current="page"' : ''}><span>0${index + 1}</span>${escapeHtml(name)}</a>`).join('');
+}
+
+// Plain text (not markup): app.js sets this directly via textContent onto
+// the persistent #step-strip element it creates alongside the top nav.
+export function renderStepStrip(route) {
+  const routes = Object.keys(SCREEN_NAMES);
+  const stepIndex = routes.includes(route) ? routes.indexOf(route) : 0;
+  const label = STEP_LABELS[route] ?? STEP_LABELS.dashboard;
+  return `Step ${stepIndex + 1} of ${routes.length}: ${label}`;
 }

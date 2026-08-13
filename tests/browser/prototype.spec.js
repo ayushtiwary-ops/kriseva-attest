@@ -31,14 +31,14 @@ async function recordConflictDecision(page) {
   await page.getByRole('link', { name: /1 conflict/i }).click();
   await page.getByLabel('Accept selected source').check();
   await page.getByLabel('Select source').selectOption('admin-committed');
-  await page.getByLabel('Reviewer').fill('Demo Reviewer');
+  await page.getByLabel('Reviewer').fill('Priya Nair');
   await page.getByLabel('Decision reason').fill('Administrator figure ties to the executed subscription register; earlier schedule superseded.');
   await page.getByRole('button', { name: 'Record human decision' }).click();
 }
 
-async function confirmSignOff(page, officerName = 'Demo Officer') {
+async function confirmSignOff(page, officerName = 'Rohan Mehta') {
   await page.locator('.screen-navigation a[href="#review-signoff"]').click();
-  await page.getByLabel('Principal Officer (demo)').fill(officerName);
+  await page.getByLabel('Principal Officer (demo persona)').fill(officerName);
   await page.getByLabel('I confirm the evidence record for all three fields has been reviewed').check();
   await page.getByRole('button', { name: 'Confirm sign-off' }).click();
 }
@@ -48,7 +48,7 @@ async function confirmSignOff(page, officerName = 'Demo Officer') {
 // re-rendered after each submission (the just-dispositioned flag becomes a
 // record instead of a form), so this repeatedly submits whichever form is
 // still open until none remain.
-async function dispositionAllFlags(page, disposerName = 'Demo Officer') {
+async function dispositionAllFlags(page, disposerName = 'Priya Nair') {
   await page.locator('.screen-navigation a[href="#risk-board"]').click();
   await expect(page.getByRole('heading', { name: 'Risk and anomaly board' })).toBeVisible();
   while (await page.locator('.disposition-form').count() > 0) {
@@ -77,17 +77,17 @@ test('reviewer can inspect a conflict, decide with reason, disposition every ano
   await expect(page.getByText('Two sources disagree')).toBeVisible();
   await page.getByLabel('Accept selected source').check();
   await page.getByLabel('Select source').selectOption('admin-committed');
-  await page.getByLabel('Reviewer').fill('Demo Reviewer');
+  await page.getByLabel('Reviewer').fill('Priya Nair');
   await page.getByLabel('Decision reason').fill('Administrator figure ties to the executed subscription register; earlier schedule superseded.');
   await page.getByRole('button', { name: 'Record human decision' }).click();
   await dispositionAllFlags(page);
-  await confirmSignOff(page, 'Demo Officer');
+  await confirmSignOff(page, 'Rohan Mehta');
   await page.locator('.screen-navigation a[href="#evidence-receipt"]').click();
 
   const receipt = page.locator('.active-screen');
   await expect(receipt.getByText('Human decision recorded')).toBeVisible();
-  await expect(receipt.getByText('Demo Reviewer', { exact: true })).toBeVisible();
-  await expect(receipt.getByText('Demo Officer', { exact: true })).toBeVisible();
+  await expect(receipt.getByText('Priya Nair', { exact: true })).toBeVisible();
+  await expect(receipt.getByText('Rohan Mehta', { exact: true })).toBeVisible();
   await expect(receipt.getByText('Deciding reviewer', { exact: true })).toBeVisible();
   await expect(receipt.getByText('Confirming Principal Officer', { exact: true })).toBeVisible();
   await expect(receipt.getByText('Risk summary: 4 anomaly flags · 0 open · 4 dispositioned.', { exact: true })).toBeVisible();
@@ -101,7 +101,7 @@ test('Principal Officer confirmation is blocked until the conflict decision exis
   await runReview(page);
   await page.getByRole('link', { name: 'Review and sign-off' }).click();
 
-  await expect(page.getByLabel('Principal Officer (demo)')).toBeDisabled();
+  await expect(page.getByLabel('Principal Officer (demo persona)')).toBeDisabled();
   await expect(page.getByLabel('I confirm the evidence record for all three fields has been reviewed')).toBeDisabled();
   await expect(page.getByRole('button', { name: 'Confirm sign-off' })).toBeDisabled();
 });
@@ -113,12 +113,12 @@ test('maker-checker separation blocks a confirming officer who matches the decid
   await dispositionAllFlags(page);
   await page.locator('.screen-navigation a[href="#review-signoff"]').click();
 
-  await page.getByLabel('Principal Officer (demo)').fill('  demo reviewer  ');
+  await page.getByLabel('Principal Officer (demo persona)').fill('  priya nair  ');
   await page.getByLabel('I confirm the evidence record for all three fields has been reviewed').check();
   await page.getByRole('button', { name: 'Confirm sign-off' }).click();
 
   await expect(page.getByText('Maker-checker separation: the confirming officer must differ from the deciding reviewer.')).toBeVisible();
-  await expect(page.getByLabel('Principal Officer (demo)')).toBeFocused();
+  await expect(page.getByLabel('Principal Officer (demo persona)')).toBeFocused();
   await page.locator('.screen-navigation a[href="#evidence-receipt"]').click();
   await expect(page.getByRole('button', { name: 'Download JSON evidence manifest' })).toBeDisabled();
 });
@@ -134,7 +134,7 @@ test('evidence receipt exports stay disabled until the Principal Officer sign-of
   await expect(page.getByText(/Principal Officer confirmation pending/i)).toBeVisible();
 
   await dispositionAllFlags(page);
-  await confirmSignOff(page, 'Demo Officer');
+  await confirmSignOff(page, 'Rohan Mehta');
   await page.locator('.screen-navigation a[href="#evidence-receipt"]').click();
   await expect(page.getByRole('button', { name: 'Download JSON evidence manifest' })).toBeEnabled();
   await expect(page.getByRole('button', { name: 'Download printable HTML evidence manifest' })).toBeEnabled();
@@ -184,7 +184,7 @@ test('conflict form has no defaults and focuses each missing control without mut
   await submit.click();
   await expect(page.getByLabel('Reviewer')).toBeFocused();
 
-  await page.getByLabel('Reviewer').fill('Demo Reviewer');
+  await page.getByLabel('Reviewer').fill('Priya Nair');
   await submit.click();
   await expect(page.getByLabel('Decision reason')).toBeFocused();
 
@@ -200,7 +200,7 @@ test('filled review controls retain readable foreground and background contrast'
   await openConflictForm(page);
   await page.getByLabel('Accept selected source').check();
   await page.getByLabel('Select source').selectOption('admin-committed');
-  await page.getByLabel('Reviewer').fill('Demo Reviewer');
+  await page.getByLabel('Reviewer').fill('Priya Nair');
   await page.getByLabel('Decision reason').fill('Readable decision text must remain visible.');
 
   const contrast = await page.locator('#candidate-select, #reviewer, #decision-reason').evaluateAll((controls) => {
@@ -237,7 +237,7 @@ for (const action of ['Defer pending evidence', 'Reject proposed field']) {
     await page.getByLabel(action).check();
     await expect(page.getByLabel('Select source')).toBeDisabled();
     await expect(page.getByLabel('Select source')).toHaveValue('');
-    await page.getByLabel('Reviewer').fill('Demo Reviewer');
+    await page.getByLabel('Reviewer').fill('Priya Nair');
     await page.getByLabel('Decision reason').fill('More evidence is required before choosing a source.');
     await page.getByRole('button', { name: 'Record human decision' }).click();
     await page.locator('.screen-navigation a[href="#evidence-receipt"]').click();
@@ -252,7 +252,7 @@ for (const action of ['Accept selected source', 'Correct with selected source'])
     await openConflictForm(page);
     await page.getByLabel(action).check();
     await page.getByLabel('Select source').selectOption('admin-committed');
-    await page.getByLabel('Reviewer').fill('Demo Reviewer');
+    await page.getByLabel('Reviewer').fill('Priya Nair');
     await page.getByLabel('Decision reason').fill('The selected source governs this synthetic decision.');
     await page.getByRole('button', { name: 'Record human decision' }).click();
     await page.locator('.screen-navigation a[href="#evidence-receipt"]').click();
@@ -303,7 +303,7 @@ test('receipt retains both candidates, reason, fingerprints, unsupported item, a
   await runReview(page);
   await recordConflictDecision(page);
   await dispositionAllFlags(page);
-  await confirmSignOff(page, 'Demo Officer');
+  await confirmSignOff(page, 'Rohan Mehta');
   await page.locator('.screen-navigation a[href="#evidence-receipt"]').click();
 
   const receipt = page.locator('.active-screen');
@@ -332,7 +332,7 @@ test('receipt retains both candidates, reason, fingerprints, unsupported item, a
 
   await expect(receipt.getByText('Deciding reviewer', { exact: true })).toBeVisible();
   await expect(receipt.getByText('Confirming Principal Officer', { exact: true })).toBeVisible();
-  await expect(receipt.getByText('Demo Officer', { exact: true })).toBeVisible();
+  await expect(receipt.getByText('Rohan Mehta', { exact: true })).toBeVisible();
   await expect(receipt.getByText('Risk summary: 4 anomaly flags · 0 open · 4 dispositioned.', { exact: true })).toBeVisible();
   const digestText = await receipt.locator('#manifest-digest').innerText();
   expect(digestText).toMatch(/^[0-9a-f]{16}$/u);
@@ -418,6 +418,16 @@ function assertConsecutive(list, ...expectedRun) {
   expect(list.slice(startIndex, startIndex + expectedRun.length)).toEqual(expectedRun);
 }
 
+test('guided step strip shows the correct step number and label on two screens', async ({ page }) => {
+  await openPrototype(page);
+  await expect(page.locator('#step-strip')).toHaveText('Step 1 of 7: Open the case');
+
+  await runReview(page);
+  await page.locator('.screen-navigation a[href="#risk-board"]').click();
+  await expect(page.getByRole('heading', { name: 'Risk and anomaly board' })).toBeVisible();
+  await expect(page.locator('#step-strip')).toHaveText('Step 5 of 7: Disposition the flags');
+});
+
 test('risk and anomaly board shows severity, lens, explanation, and exact reference for each flag', async ({ page }) => {
   await openPrototype(page);
   await runReview(page);
@@ -453,7 +463,7 @@ test('the conflict-resolved-toward-higher-value flag only appears once the highe
   await page.getByRole('link', { name: /1 conflict/i }).click();
   await page.getByLabel('Accept selected source').check();
   await page.getByLabel('Select source').selectOption('board-committed'); // the lower candidate
-  await page.getByLabel('Reviewer').fill('Demo Reviewer');
+  await page.getByLabel('Reviewer').fill('Priya Nair');
   await page.getByLabel('Decision reason').fill('The lower schedule figure governs this synthetic decision.');
   await page.getByRole('button', { name: 'Record human decision' }).click();
   await page.locator('.screen-navigation a[href="#risk-board"]').click();
@@ -494,12 +504,12 @@ test('sign-off stays blocked with a named-gate message until every anomaly flag 
 
   await expect(page.getByRole('heading', { name: 'Officer confirmation required' })).toBeVisible();
   await expect(page.getByText(/Blocked until .*anomaly flag.* is recorded\.|Blocked until .*anomaly flag.* are recorded\./)).toBeVisible();
-  await expect(page.getByLabel('Principal Officer (demo)')).toBeDisabled();
+  await expect(page.getByLabel('Principal Officer (demo persona)')).toBeDisabled();
 
   await dispositionAllFlags(page);
   await page.locator('.screen-navigation a[href="#review-signoff"]').click();
   await expect(page.getByRole('heading', { name: 'All 4 anomaly flags dispositioned' })).toBeVisible();
-  await expect(page.getByLabel('Principal Officer (demo)')).toBeEnabled();
+  await expect(page.getByLabel('Principal Officer (demo persona)')).toBeEnabled();
 });
 
 test('risk preset capture shows flags visible with exactly one flag dispositioned', async ({ page }) => {

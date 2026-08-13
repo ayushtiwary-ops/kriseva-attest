@@ -209,11 +209,11 @@
   "embeddedScreenshots": [
     {
       "path": "artifacts/prototype-conflict-1440.png",
-      "sha256": "8dbeacbf601f4572d947bfc17efeb4bc0254c468e9ca18e0a1a277e8b1226aa8"
+      "sha256": "41d14f0f8777bd79bb0e7fa6948561b25b56d74e4aa3d485eaf83262134a555d"
     },
     {
       "path": "artifacts/prototype-receipt-1440.png",
-      "sha256": "68d3e9b05db4ffe8959eb8a34a1807f045bbc70c6f4810c09c6c0f759ac12065"
+      "sha256": "39923c61c46bbb88e97a730a0299ae4cb4171081b714a1ace50a58c79b9bc5f0"
     }
   ]
 }
