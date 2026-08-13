@@ -27,6 +27,19 @@ export only; it is not evidence of binary reproducibility.
 - The cover's dark sidebar now also carries the published live-hub URL
   (`ayushtiwary-ops.github.io/kriseva-attest`), matching the same address in
   `README.md` and `ARTIFACT_INDEX.md`.
+- 2026-08-13 positioning audit: body line 1 was rewritten from "A bounded
+  source-to-field evidence workbench for human review." to "An entity-side
+  evidence-integrity and human-accountability layer for AI-assisted
+  regulatory reporting in GIFT IFSC.", the exact recommended positioning
+  statement from `docs/RESEARCH_BRIEF_2026-08-13.md` (Question 13). This
+  replaces the prior workbench framing as the lead category everywhere the
+  hub, README, technical notes, and this cover state the category; "Evidence
+  Integrity Layer" remains only as the internal architecture name one level
+  down (see `docs/notebooklm/NLM_02_SOLUTION_EVIDENCE_INTEGRITY_LAYER.md`),
+  never as the cover's lead line. Slide-body word count after the change:
+  39 of 40 words. Slide 3's DRR-boundary wording was reviewed against the
+  same brief and left unchanged; it already states DRR's scope precisely
+  and carries the "Public absence is not proof." hedge.
 
 ## Slide 2 · Accountability question
 

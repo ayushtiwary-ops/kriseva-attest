@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/wrad4v",
-    "id": "wrad4v",
+    "aid": "sl/zyxzk8",
+    "id": "zyxzk8",
     "slide": 6,
-    "layoutId": "ef19debf-5ea8-4d56-81f6-c75b74b317a1",
+    "layoutId": "bfa218db-1244-411c-9cb4-5df8bf7c6084",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "d8ea7324-5969-4081-a45a-f7cccced84e6",
+    "masterLayoutId": "520395b2-1046-43ca-80b5-6e86de7f8558",
     "masterLayoutName": "Master",
     "backgroundColor": "#0A1F44",
     "frame": {
@@ -46,15 +46,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "ef19debf-5ea8-4d56-81f6-c75b74b317a1",
+      "id": "bfa218db-1244-411c-9cb4-5df8bf7c6084",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "d8ea7324-5969-4081-a45a-f7cccced84e6",
+      "parentLayoutId": "520395b2-1046-43ca-80b5-6e86de7f8558",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "d8ea7324-5969-4081-a45a-f7cccced84e6",
+      "id": "520395b2-1046-43ca-80b5-6e86de7f8558",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -65,7 +65,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/47uh4za1",
+      "aid": "sh/algbil87",
       "id": "1",
       "name": "brand-6",
       "bbox": [
@@ -135,7 +135,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/j6lgvutg",
+      "aid": "sh/xo7ud07i",
       "id": "2",
       "name": "title-6",
       "bbox": [
@@ -202,7 +202,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/i5cz2psv",
+      "aid": "sh/wnytkvqd",
       "id": "3",
       "name": "footer-rule-6",
       "bbox": [
@@ -219,7 +219,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/tcny14by",
+      "aid": "sh/ny5s7qpg",
       "id": "4",
       "name": "footer-source-6",
       "bbox": [
@@ -286,7 +286,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/sbeh8zad",
+      "aid": "sh/mxwbel8v",
       "id": "5",
       "name": "footer-page-6",
       "bbox": [
@@ -356,7 +356,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ra5gzuts",
+      "aid": "sh/9k7a907m",
       "id": "6",
       "name": "agent-trace-label",
       "bbox": [
@@ -426,7 +426,7 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/69wz6ps7",
+      "aid": "sh/8zetgvq1",
       "id": "7",
       "name": "agent-trace-spine",
       "bbox": [
@@ -443,7 +443,7 @@
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/9gjypkbe",
+      "aid": "sh/7u9cjap0",
       "id": "8",
       "name": "agent-propose",
       "bbox": [
@@ -513,7 +513,7 @@
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/8faxwfat",
+      "aid": "sh/6t0bq58f",
       "id": "9",
       "name": "agent-propose-copy",
       "bbox": [
@@ -580,7 +580,7 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ydkvqlsz",
+      "aid": "sh/wzels3u9",
       "id": "10",
       "name": "agent-abstain",
       "bbox": [
@@ -647,7 +647,7 @@
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/zetcjq9k",
+      "aid": "sh/h0nm18bu",
       "id": "11",
       "name": "agent-abstain-copy",
       "bbox": [
@@ -714,7 +714,7 @@
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/0f2dsva5",
+      "aid": "sh/uxw3qdc3",
       "id": "12",
       "name": "agent-decide",
       "bbox": [
@@ -784,7 +784,7 @@
       "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/lgvul0ra",
+      "aid": "sh/vy5kzito",
       "id": "13",
       "name": "agent-decide-copy",
       "bbox": [
@@ -855,7 +855,7 @@
       "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/mh4vu5sv",
+      "aid": "sh/8vulo3ud",
       "id": "14",
       "name": "agent-boundary-rule",
       "bbox": [
@@ -872,7 +872,7 @@
       "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/n2dcna9g",
+      "aid": "sh/9w32x8bi",
       "id": "15",
       "name": "agent-boundary-copy",
       "bbox": [

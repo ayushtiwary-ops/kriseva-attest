@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/kvsfj6",
-    "id": "kvsfj6",
+    "aid": "sl/rzy64n",
+    "id": "rzy64n",
     "slide": 2,
-    "layoutId": "ef19debf-5ea8-4d56-81f6-c75b74b317a1",
+    "layoutId": "bfa218db-1244-411c-9cb4-5df8bf7c6084",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "d8ea7324-5969-4081-a45a-f7cccced84e6",
+    "masterLayoutId": "520395b2-1046-43ca-80b5-6e86de7f8558",
     "masterLayoutName": "Master",
     "backgroundColor": "#DED6C9",
     "frame": {
@@ -47,15 +47,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "ef19debf-5ea8-4d56-81f6-c75b74b317a1",
+      "id": "bfa218db-1244-411c-9cb4-5df8bf7c6084",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "d8ea7324-5969-4081-a45a-f7cccced84e6",
+      "parentLayoutId": "520395b2-1046-43ca-80b5-6e86de7f8558",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "d8ea7324-5969-4081-a45a-f7cccced84e6",
+      "id": "520395b2-1046-43ca-80b5-6e86de7f8558",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -66,7 +66,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/mx4filsb",
+      "aid": "sh/x0fup0z6",
       "id": "1",
       "name": "brand-2",
       "bbox": [
@@ -136,7 +136,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/90fedgrm",
+      "aid": "sh/axobel0f",
       "id": "2",
       "name": "title-2",
       "bbox": [
@@ -203,7 +203,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/8z6xkva1",
+      "aid": "sh/byxcnqh0",
       "id": "3",
       "name": "footer-rule-2",
       "bbox": [
@@ -220,7 +220,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/zudw769k",
+      "aid": "sh/ovmtcbip",
       "id": "4",
       "name": "footer-source-2",
       "bbox": [
@@ -287,7 +287,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/y94fe1sz",
+      "aid": "sh/9wvalgzu",
       "id": "5",
       "name": "footer-page-2",
       "bbox": [
@@ -357,7 +357,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/lwve9grq",
+      "aid": "sh/mt4ba10j",
       "id": "6",
       "name": "accountability-divider",
       "bbox": [
@@ -374,7 +374,7 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/0vmxgba5",
+      "aid": "sh/nudsj6h4",
       "id": "7",
       "name": "accountability-label",
       "bbox": [
@@ -444,7 +444,7 @@
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/jqxwja9o",
+      "aid": "sh/0rmt8bid",
       "id": "8",
       "name": "accountability-structured",
       "bbox": [
@@ -518,7 +518,7 @@
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ipofq5s3",
+      "aid": "sh/1svahgzy",
       "id": "9",
       "name": "accountability-question",
       "bbox": [
@@ -589,7 +589,7 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/0r2dkz25",
+      "aid": "sh/18vqxcna",
       "id": "10",
       "name": "footer-accountability-caption-1",
       "bbox": [
@@ -659,7 +659,7 @@
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/1sbud43q",
+      "aid": "sh/g7m9o76p",
       "id": "11",
       "name": "accountability-source-rule-1",
       "bbox": [
@@ -676,7 +676,7 @@
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ep0vipkf",
+      "aid": "sh/f6t8v254",
       "id": "12",
       "name": "footer-accountability-caption-2",
       "bbox": [
@@ -746,7 +746,7 @@
       "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/zq9cbulk",
+      "aid": "sh/e5krmxoj",
       "id": "13",
       "name": "accountability-source-rule-2",
       "bbox": [
@@ -763,7 +763,7 @@
       "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/c3idgz29",
+      "aid": "sh/t4bqtsny",
       "id": "14",
       "name": "footer-accountability-caption-3",
       "bbox": [
@@ -833,7 +833,7 @@
       "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/doru9k3u",
+      "aid": "sh/s329kn6t",
       "id": "15",
       "name": "accountability-source-rule-3",
       "bbox": [
@@ -850,7 +850,7 @@
       "order": 16,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/q10vepk3",
+      "aid": "sh/rit8ri58",
       "id": "16",
       "name": "accountability-evidence",
       "bbox": [
@@ -921,7 +921,7 @@
       "order": 17,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/r29c7ulo",
+      "aid": "sh/6hkrixon",
       "id": "17",
       "name": "accountability-unknowns",
       "bbox": [

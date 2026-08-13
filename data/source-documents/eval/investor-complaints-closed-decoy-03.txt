@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Windrow Capital Fund — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Windrow Capital Fund
+Investor queries logged during the quarter: 9
+Investor complaints closed during the quarter: 3

@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Brackenridge Fund — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Brackenridge Fund
+Custodian NAV certificate, page 1.
+Closing NAV: USD 11,400,000 as at quarter end.

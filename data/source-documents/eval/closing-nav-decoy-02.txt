@@ -1,0 +1,5 @@
+SYNTHETIC DEMO DATA — Baywatch Emerging Fund — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Baywatch Emerging Fund
+Subscriptions during period: USD 900,000
+Redemptions during period: USD 250,000
+Closing NAV: USD 13,050,000

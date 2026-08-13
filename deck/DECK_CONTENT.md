@@ -14,7 +14,7 @@ source footers, and page labels are excluded from the 40-word body limit.
       "layout": "cover",
       "title": "KRISEVA ATTEST",
       "body": [
-        "A bounded source-to-field evidence workbench for human review.",
+        "An entity-side evidence-integrity and human-accountability layer for AI-assisted regulatory reporting in GIFT IFSC.",
         "This prototype is final for this application. Whether it becomes the company's product is deliberately still open.",
         "Research-stage prototype · synthetic data · no filing · no regulator connection"
       ],

@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Windrow Capital Fund — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Windrow Capital Fund
+Source: Custodian NAV certificate, page 1.
+Closing NAV: USD 9,150,000

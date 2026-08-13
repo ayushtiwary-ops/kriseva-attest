@@ -1,0 +1,905 @@
+{
+  "generatedAt": "2026-08-13T13:51:22.413Z",
+  "instances": [
+    {
+      "id": "closing-nav-clean-01",
+      "field": "closing-nav",
+      "variant": "clean",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/closing-nav-clean-01.txt",
+      "documentLabel": "Solstice Bridge Fund II — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 13,050,000",
+        "normalizedValue": "13050000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "closing-nav-clean-02",
+      "field": "closing-nav",
+      "variant": "clean",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/closing-nav-clean-02.txt",
+      "documentLabel": "Vantage Meridian Fund III — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "$13,050,000",
+        "normalizedValue": "13050000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "closing-nav-clean-03",
+      "field": "closing-nav",
+      "variant": "clean",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/closing-nav-clean-03.txt",
+      "documentLabel": "Northgate Horizon Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "13,050,000 USD",
+        "normalizedValue": "13050000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "closing-nav-clean-04",
+      "field": "closing-nav",
+      "variant": "clean",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/closing-nav-clean-04.txt",
+      "documentLabel": "Amberlyn Growth Fund I — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "US$13,050,000",
+        "normalizedValue": "13050000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "closing-nav-clean-05",
+      "field": "closing-nav",
+      "variant": "clean",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/closing-nav-clean-05.txt",
+      "documentLabel": "Cascade Point Fund IV — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD13,050,000",
+        "normalizedValue": "13050000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "closing-nav-clean-06",
+      "field": "closing-nav",
+      "variant": "clean",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/closing-nav-clean-06.txt",
+      "documentLabel": "Riverstone Alpha Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "13050000 USD",
+        "normalizedValue": "13050000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "closing-nav-decoy-01",
+      "field": "closing-nav",
+      "variant": "decoy",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/closing-nav-decoy-01.txt",
+      "documentLabel": "Thornfield Capital Fund II — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 13,050,000",
+        "normalizedValue": "13050000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "closing-nav-decoy-02",
+      "field": "closing-nav",
+      "variant": "decoy",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/closing-nav-decoy-02.txt",
+      "documentLabel": "Baywatch Emerging Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 13,050,000",
+        "normalizedValue": "13050000",
+        "location": "L5"
+      },
+      "notes": null
+    },
+    {
+      "id": "closing-nav-decoy-03",
+      "field": "closing-nav",
+      "variant": "decoy",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/closing-nav-decoy-03.txt",
+      "documentLabel": "Copperline Fund III — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 13,050,000",
+        "normalizedValue": "13050000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "closing-nav-decoy-04",
+      "field": "closing-nav",
+      "variant": "decoy",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/closing-nav-decoy-04.txt",
+      "documentLabel": "Estuary Ridge Fund I — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 13,050,000",
+        "normalizedValue": "13050000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "closing-nav-missing-01",
+      "field": "closing-nav",
+      "variant": "missing",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/closing-nav-missing-01.txt",
+      "documentLabel": "Palisade Crossing Fund — synthetic eval extract",
+      "expected": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null
+      },
+      "notes": null
+    },
+    {
+      "id": "closing-nav-missing-02",
+      "field": "closing-nav",
+      "variant": "missing",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/closing-nav-missing-02.txt",
+      "documentLabel": "Marrow Creek Fund II — synthetic eval extract",
+      "expected": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null
+      },
+      "notes": null
+    },
+    {
+      "id": "closing-nav-missing-03",
+      "field": "closing-nav",
+      "variant": "missing",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/closing-nav-missing-03.txt",
+      "documentLabel": "Kestrel Summit Fund — synthetic eval extract",
+      "expected": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null
+      },
+      "notes": null
+    },
+    {
+      "id": "closing-nav-missing-04",
+      "field": "closing-nav",
+      "variant": "missing",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/closing-nav-missing-04.txt",
+      "documentLabel": "Larkspur Point Fund III — synthetic eval extract",
+      "expected": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null
+      },
+      "notes": null
+    },
+    {
+      "id": "closing-nav-conflict-1-1",
+      "field": "closing-nav",
+      "variant": "conflict",
+      "conflictGroup": "cg-closing-nav-01",
+      "documentPath": "data/source-documents/eval/closing-nav-conflict-1-1.txt",
+      "documentLabel": "Windrow Capital Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 9,200,000",
+        "normalizedValue": "9200000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "closing-nav-conflict-1-2",
+      "field": "closing-nav",
+      "variant": "conflict",
+      "conflictGroup": "cg-closing-nav-01",
+      "documentPath": "data/source-documents/eval/closing-nav-conflict-1-2.txt",
+      "documentLabel": "Windrow Capital Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 9,150,000",
+        "normalizedValue": "9150000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "closing-nav-conflict-2-1",
+      "field": "closing-nav",
+      "variant": "conflict",
+      "conflictGroup": "cg-closing-nav-02",
+      "documentPath": "data/source-documents/eval/closing-nav-conflict-2-1.txt",
+      "documentLabel": "Fernbrook Alpha Fund II — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 21,750,000",
+        "normalizedValue": "21750000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "closing-nav-conflict-2-2",
+      "field": "closing-nav",
+      "variant": "conflict",
+      "conflictGroup": "cg-closing-nav-02",
+      "documentPath": "data/source-documents/eval/closing-nav-conflict-2-2.txt",
+      "documentLabel": "Fernbrook Alpha Fund II — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 21,900,000",
+        "normalizedValue": "21900000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "closing-nav-format-edge-01",
+      "field": "closing-nav",
+      "variant": "format-edge",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/closing-nav-format-edge-01.txt",
+      "documentLabel": "Glasswing Horizon Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 13,050,000",
+        "normalizedValue": "13050000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "closing-nav-format-edge-02",
+      "field": "closing-nav",
+      "variant": "format-edge",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/closing-nav-format-edge-02.txt",
+      "documentLabel": "Ironwood Bridge Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 13,050,000",
+        "normalizedValue": "13050000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "committed-capital-clean-01",
+      "field": "committed-capital",
+      "variant": "clean",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/committed-capital-clean-01.txt",
+      "documentLabel": "Halcyon Meridian Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 30,000,000",
+        "normalizedValue": "30000000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "committed-capital-clean-02",
+      "field": "committed-capital",
+      "variant": "clean",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/committed-capital-clean-02.txt",
+      "documentLabel": "Driftwood Point Fund II — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "$30,000,000",
+        "normalizedValue": "30000000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "committed-capital-clean-03",
+      "field": "committed-capital",
+      "variant": "clean",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/committed-capital-clean-03.txt",
+      "documentLabel": "Southbank Vista Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "30,000,000 USD",
+        "normalizedValue": "30000000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "committed-capital-clean-04",
+      "field": "committed-capital",
+      "variant": "clean",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/committed-capital-clean-04.txt",
+      "documentLabel": "Quarrystone Fund I — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "US$30,000,000",
+        "normalizedValue": "30000000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "committed-capital-clean-05",
+      "field": "committed-capital",
+      "variant": "clean",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/committed-capital-clean-05.txt",
+      "documentLabel": "Millbrook Alpha Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD30,000,000",
+        "normalizedValue": "30000000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "committed-capital-clean-06",
+      "field": "committed-capital",
+      "variant": "clean",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/committed-capital-clean-06.txt",
+      "documentLabel": "Redcliff Horizon Fund II — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "30000000 USD",
+        "normalizedValue": "30000000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "committed-capital-decoy-01",
+      "field": "committed-capital",
+      "variant": "decoy",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/committed-capital-decoy-01.txt",
+      "documentLabel": "Stonecrop Growth Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 30,000,000",
+        "normalizedValue": "30000000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "committed-capital-decoy-02",
+      "field": "committed-capital",
+      "variant": "decoy",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/committed-capital-decoy-02.txt",
+      "documentLabel": "Wrenfield Bridge Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 30,000,000",
+        "normalizedValue": "30000000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "committed-capital-decoy-03",
+      "field": "committed-capital",
+      "variant": "decoy",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/committed-capital-decoy-03.txt",
+      "documentLabel": "Osprey Point Fund III — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 30,000,000",
+        "normalizedValue": "30000000",
+        "location": "L5"
+      },
+      "notes": null
+    },
+    {
+      "id": "committed-capital-decoy-04",
+      "field": "committed-capital",
+      "variant": "decoy",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/committed-capital-decoy-04.txt",
+      "documentLabel": "Cinderline Capital Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 30,000,000",
+        "normalizedValue": "30000000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "committed-capital-missing-01",
+      "field": "committed-capital",
+      "variant": "missing",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/committed-capital-missing-01.txt",
+      "documentLabel": "Tallowmere Fund II — synthetic eval extract",
+      "expected": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null
+      },
+      "notes": null
+    },
+    {
+      "id": "committed-capital-missing-02",
+      "field": "committed-capital",
+      "variant": "missing",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/committed-capital-missing-02.txt",
+      "documentLabel": "Brackenridge Fund — synthetic eval extract",
+      "expected": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null
+      },
+      "notes": null
+    },
+    {
+      "id": "committed-capital-missing-03",
+      "field": "committed-capital",
+      "variant": "missing",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/committed-capital-missing-03.txt",
+      "documentLabel": "Solstice Bridge Fund II — synthetic eval extract",
+      "expected": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null
+      },
+      "notes": null
+    },
+    {
+      "id": "committed-capital-missing-04",
+      "field": "committed-capital",
+      "variant": "missing",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/committed-capital-missing-04.txt",
+      "documentLabel": "Vantage Meridian Fund III — synthetic eval extract",
+      "expected": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null
+      },
+      "notes": null
+    },
+    {
+      "id": "committed-capital-conflict-1-1",
+      "field": "committed-capital",
+      "variant": "conflict",
+      "conflictGroup": "cg-committed-capital-01",
+      "documentPath": "data/source-documents/eval/committed-capital-conflict-1-1.txt",
+      "documentLabel": "Northgate Horizon Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 15,500,000",
+        "normalizedValue": "15500000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "committed-capital-conflict-1-2",
+      "field": "committed-capital",
+      "variant": "conflict",
+      "conflictGroup": "cg-committed-capital-01",
+      "documentPath": "data/source-documents/eval/committed-capital-conflict-1-2.txt",
+      "documentLabel": "Northgate Horizon Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 15,000,000",
+        "normalizedValue": "15000000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "committed-capital-conflict-2-1",
+      "field": "committed-capital",
+      "variant": "conflict",
+      "conflictGroup": "cg-committed-capital-02",
+      "documentPath": "data/source-documents/eval/committed-capital-conflict-2-1.txt",
+      "documentLabel": "Amberlyn Growth Fund I — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 42,000,000",
+        "normalizedValue": "42000000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "committed-capital-conflict-2-2",
+      "field": "committed-capital",
+      "variant": "conflict",
+      "conflictGroup": "cg-committed-capital-02",
+      "documentPath": "data/source-documents/eval/committed-capital-conflict-2-2.txt",
+      "documentLabel": "Amberlyn Growth Fund I — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 40,500,000",
+        "normalizedValue": "40500000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "committed-capital-format-edge-01",
+      "field": "committed-capital",
+      "variant": "format-edge",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/committed-capital-format-edge-01.txt",
+      "documentLabel": "Cascade Point Fund IV — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 30,000,000",
+        "normalizedValue": "30000000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "committed-capital-format-edge-02",
+      "field": "committed-capital",
+      "variant": "format-edge",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/committed-capital-format-edge-02.txt",
+      "documentLabel": "Riverstone Alpha Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "USD 30,000,000",
+        "normalizedValue": "30000000",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "investor-complaints-closed-clean-01",
+      "field": "investor-complaints-closed",
+      "variant": "clean",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/investor-complaints-closed-clean-01.txt",
+      "documentLabel": "Thornfield Capital Fund II — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "3",
+        "normalizedValue": "3",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "investor-complaints-closed-clean-02",
+      "field": "investor-complaints-closed",
+      "variant": "clean",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/investor-complaints-closed-clean-02.txt",
+      "documentLabel": "Baywatch Emerging Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "Five (5)",
+        "normalizedValue": "5",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "investor-complaints-closed-clean-03",
+      "field": "investor-complaints-closed",
+      "variant": "clean",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/investor-complaints-closed-clean-03.txt",
+      "documentLabel": "Copperline Fund III — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "02",
+        "normalizedValue": "2",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "investor-complaints-closed-clean-04",
+      "field": "investor-complaints-closed",
+      "variant": "clean",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/investor-complaints-closed-clean-04.txt",
+      "documentLabel": "Estuary Ridge Fund I — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "7",
+        "normalizedValue": "7",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "investor-complaints-closed-clean-05",
+      "field": "investor-complaints-closed",
+      "variant": "clean",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/investor-complaints-closed-clean-05.txt",
+      "documentLabel": "Palisade Crossing Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "Nil (0)",
+        "normalizedValue": "0",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "investor-complaints-closed-clean-06",
+      "field": "investor-complaints-closed",
+      "variant": "clean",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/investor-complaints-closed-clean-06.txt",
+      "documentLabel": "Marrow Creek Fund II — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "1",
+        "normalizedValue": "1",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "investor-complaints-closed-decoy-01",
+      "field": "investor-complaints-closed",
+      "variant": "decoy",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/investor-complaints-closed-decoy-01.txt",
+      "documentLabel": "Kestrel Summit Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "2",
+        "normalizedValue": "2",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "investor-complaints-closed-decoy-02",
+      "field": "investor-complaints-closed",
+      "variant": "decoy",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/investor-complaints-closed-decoy-02.txt",
+      "documentLabel": "Larkspur Point Fund III — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "4",
+        "normalizedValue": "4",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "investor-complaints-closed-decoy-03",
+      "field": "investor-complaints-closed",
+      "variant": "decoy",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/investor-complaints-closed-decoy-03.txt",
+      "documentLabel": "Windrow Capital Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "3",
+        "normalizedValue": "3",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "investor-complaints-closed-decoy-04",
+      "field": "investor-complaints-closed",
+      "variant": "decoy",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/investor-complaints-closed-decoy-04.txt",
+      "documentLabel": "Fernbrook Alpha Fund II — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "6",
+        "normalizedValue": "6",
+        "location": "L3"
+      },
+      "notes": null
+    },
+    {
+      "id": "investor-complaints-closed-missing-01",
+      "field": "investor-complaints-closed",
+      "variant": "missing",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/investor-complaints-closed-missing-01.txt",
+      "documentLabel": "Glasswing Horizon Fund — synthetic eval extract",
+      "expected": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null
+      },
+      "notes": null
+    },
+    {
+      "id": "investor-complaints-closed-missing-02",
+      "field": "investor-complaints-closed",
+      "variant": "missing",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/investor-complaints-closed-missing-02.txt",
+      "documentLabel": "Ironwood Bridge Fund — synthetic eval extract",
+      "expected": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null
+      },
+      "notes": null
+    },
+    {
+      "id": "investor-complaints-closed-missing-03",
+      "field": "investor-complaints-closed",
+      "variant": "missing",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/investor-complaints-closed-missing-03.txt",
+      "documentLabel": "Halcyon Meridian Fund — synthetic eval extract",
+      "expected": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null
+      },
+      "notes": null
+    },
+    {
+      "id": "investor-complaints-closed-missing-04",
+      "field": "investor-complaints-closed",
+      "variant": "missing",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/investor-complaints-closed-missing-04.txt",
+      "documentLabel": "Driftwood Point Fund II — synthetic eval extract",
+      "expected": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null
+      },
+      "notes": null
+    },
+    {
+      "id": "investor-complaints-closed-missing-05",
+      "field": "investor-complaints-closed",
+      "variant": "missing",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/investor-complaints-closed-missing-05.txt",
+      "documentLabel": "Southbank Vista Fund — synthetic eval extract",
+      "expected": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null
+      },
+      "notes": null
+    },
+    {
+      "id": "investor-complaints-closed-missing-06",
+      "field": "investor-complaints-closed",
+      "variant": "missing",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/investor-complaints-closed-missing-06.txt",
+      "documentLabel": "Quarrystone Fund I — synthetic eval extract",
+      "expected": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null
+      },
+      "notes": null
+    },
+    {
+      "id": "investor-complaints-closed-conflict-1-1",
+      "field": "investor-complaints-closed",
+      "variant": "conflict",
+      "conflictGroup": "cg-investor-complaints-closed-01",
+      "documentPath": "data/source-documents/eval/investor-complaints-closed-conflict-1-1.txt",
+      "documentLabel": "Millbrook Alpha Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "4",
+        "normalizedValue": "4",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "investor-complaints-closed-conflict-1-2",
+      "field": "investor-complaints-closed",
+      "variant": "conflict",
+      "conflictGroup": "cg-investor-complaints-closed-01",
+      "documentPath": "data/source-documents/eval/investor-complaints-closed-conflict-1-2.txt",
+      "documentLabel": "Millbrook Alpha Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "5",
+        "normalizedValue": "5",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "investor-complaints-closed-format-edge-01",
+      "field": "investor-complaints-closed",
+      "variant": "format-edge",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/investor-complaints-closed-format-edge-01.txt",
+      "documentLabel": "Redcliff Horizon Fund II — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "6",
+        "normalizedValue": "6",
+        "location": "L4"
+      },
+      "notes": null
+    },
+    {
+      "id": "investor-complaints-closed-format-edge-02",
+      "field": "investor-complaints-closed",
+      "variant": "format-edge",
+      "conflictGroup": null,
+      "documentPath": "data/source-documents/eval/investor-complaints-closed-format-edge-02.txt",
+      "documentLabel": "Stonecrop Growth Fund — synthetic eval extract",
+      "expected": {
+        "found": true,
+        "value": "2",
+        "normalizedValue": "2",
+        "location": "L4"
+      },
+      "notes": null
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Cascade Point Fund IV — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Cascade Point Fund IV
+Reporting period: Quarter ended 30 June 2026
+Closing NAV: USD13,050,000

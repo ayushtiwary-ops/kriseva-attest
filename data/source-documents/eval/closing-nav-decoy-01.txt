@@ -1,0 +1,5 @@
+SYNTHETIC DEMO DATA — Thornfield Capital Fund II — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Thornfield Capital Fund II
+Opening NAV: USD 12,700,000
+Closing NAV: USD 13,050,000
+Prepared for internal review only.

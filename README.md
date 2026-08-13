@@ -1,6 +1,6 @@
 # KRISEVA ATTEST
 
-KRISEVA ATTEST is a research-stage, human-reviewed evidence-workbench prototype for one fictional reporting case. It demonstrates three bounded outcomes: supported evidence, conflicting evidence, and unsupported evidence. A named human records the material decision.
+KRISEVA ATTEST is an entity-side evidence-integrity and human-accountability layer for AI-assisted regulatory reporting in GIFT IFSC, demonstrated here as a research-stage, human-reviewed prototype for one fictional reporting case. It demonstrates three bounded outcomes: supported evidence, conflicting evidence, and unsupported evidence. A named human records the material decision.
 
 The repository is the published submission package for the GIFT IFIH Young Builders' Program application. It is not a regulatory filing, is not connected to IFSCA systems, and uses synthetic demo data only.
 
@@ -9,7 +9,7 @@ The repository is the published submission package for the GIFT IFIH Young Build
 
 ## Why this exists
 
-ATTEST is an audit-grade accountability contract for agent-assisted reporting: every proposed value binds to an exact source, disagreement stays visible instead of being resolved silently, and only a named human can decide. We built and test-hardened the harness before putting a model inside it. The honest boundary statements on every screen are not a promise; they are machine-enforced by the claims scanner and 150+ automated checks.
+ATTEST is an entity-side evidence-integrity and human-accountability layer for AI-assisted regulatory reporting in GIFT IFSC: every proposed value binds to an exact source, disagreement stays visible instead of being resolved silently, and only a named human can decide. A generic assistant answers a prompt once; it does not persist that source binding, retain conflicting candidates, or force a named decision before export. We built and test-hardened the harness, PROPOSE, ABSTAIN, DECIDE, before putting a model inside it. The honest boundary statements on every screen are not a promise; they are machine-enforced by the claims scanner and 219 automated checks (126 unit, 93 browser).
 
 ## Run locally
 
@@ -48,7 +48,7 @@ The demonstration does not interpret regulation, decide compliance, populate an 
 
 - `index.html` - JS-free submission dossier and artifact index.
 - `technical-notes.html` - browser-readable architecture and operating boundaries.
-- `prototype/` - interactive six-screen synthetic review workflow.
+- `prototype/` - interactive seven-screen synthetic review workflow, including the risk and anomaly board.
 - `wireframes/` - grayscale information-architecture board.
 - `data/` - fictional case and deterministic export oracle.
 - `src/` - pure review and manifest modules.

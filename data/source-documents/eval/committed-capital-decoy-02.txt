@@ -1,0 +1,5 @@
+SYNTHETIC DEMO DATA — Wrenfield Bridge Fund — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Wrenfield Bridge Fund
+Closing NAV: USD 19,500,000
+Committed capital: USD 30,000,000
+Committed capital is a separate figure from Closing NAV.

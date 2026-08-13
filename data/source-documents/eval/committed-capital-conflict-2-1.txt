@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Amberlyn Growth Fund I — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Amberlyn Growth Fund I
+Source: Administrator statement, page 2.
+Committed capital: USD 42,000,000

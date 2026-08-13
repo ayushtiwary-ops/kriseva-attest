@@ -4,6 +4,7 @@
     "name": "Meridian Horizon Fund I",
     "fme": "Meridian Horizon Fund Management IFSC Pvt Ltd",
     "reportingPeriod": "Quarter ended 30 June 2026",
+    "quarterEndDate": "2026-06-30",
     "synthetic": true,
     "dataMarker": "SYNTHETIC DEMO DATA"
   },
@@ -13,6 +14,7 @@
       "label": "Administrator statement",
       "reference": "Page 2, capital summary",
       "fingerprint": "synthetic:admin-statement:9b2d7f",
+      "documentDate": "2026-07-03",
       "dataMarker": "SYNTHETIC DEMO DATA"
     },
     {
@@ -20,6 +22,7 @@
       "label": "Internal ledger extract",
       "reference": "NAV ledger, cell F18",
       "fingerprint": "synthetic:ledger:38a4c1",
+      "documentDate": "2026-07-01",
       "dataMarker": "SYNTHETIC DEMO DATA"
     },
     {
@@ -27,6 +30,15 @@
       "label": "Subscription register extract",
       "reference": "Schedule A, cell C11",
       "fingerprint": "synthetic:board-schedule:4f71aa",
+      "documentDate": "2026-05-12",
+      "dataMarker": "SYNTHETIC DEMO DATA"
+    },
+    {
+      "id": "nav-custodian-confirmation",
+      "label": "NAV custodian confirmation",
+      "reference": "Custodian NAV certificate, page 1",
+      "fingerprint": "synthetic:ledger:38a4c1",
+      "documentDate": "2026-07-02",
       "dataMarker": "SYNTHETIC DEMO DATA"
     }
   ],

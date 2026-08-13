@@ -19,6 +19,7 @@ export const PUBLIC_ROOT_FILES = Object.freeze([
   'ARTIFACT_INDEX.md',
   'CHECKSUMS.sha256',
   'CONTRIBUTING.md',
+  'EVAL.md',
   'LICENSE',
   'PRIVACY.md',
   'README.md',

@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Driftwood Point Fund II — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Driftwood Point Fund II
+Reporting period: Quarter ended 30 June 2026
+Committed capital: $30,000,000

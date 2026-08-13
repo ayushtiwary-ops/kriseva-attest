@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Halcyon Meridian Fund — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Halcyon Meridian Fund
+Reporting period: Quarter ended 30 June 2026
+Committed capital: USD 30,000,000

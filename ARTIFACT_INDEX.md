@@ -8,8 +8,8 @@
 
 | Artifact | Canonical local path | Purpose | Evidence maturity | Publication state |
 |---|---|---|---|---|
-| Interactive prototype | `prototype/index.html` | Six-screen human-reviewed synthetic evidence workflow and local manifest export | Local release candidate; automated browser and state checks | Published via the consolidated hub (12 August 2026) |
-| Wireframes | `wireframes/index.html`; `artifacts/KRISEVA_ATTEST_WIREFRAMES.pdf` | Six-screen information architecture at desktop and mobile widths | Local release candidate; deterministic same-runtime captures | Published via the consolidated hub (12 August 2026) |
+| Interactive prototype | `prototype/index.html` | Seven-screen human-reviewed evidence integrity workflow (compliance assembly, deterministic risk indicators, fraud-analysis flags) and local manifest export | Local release candidate; automated browser and state checks | Published via the consolidated hub (12 August 2026) |
+| Wireframes | `wireframes/index.html`; `artifacts/KRISEVA_ATTEST_WIREFRAMES.pdf` | Seven-screen information architecture at desktop and mobile widths | Local release candidate; deterministic same-runtime captures | Published via the consolidated hub (12 August 2026) |
 | Demo video | `video/KRISEVA_ATTEST_DEMO_90S.mp4`; `video/captions.srt` | Captioned 90-second walkthrough of the fictional case | Local release candidate; 1080p H.264/AAC media contract | Published via the consolidated hub (12 August 2026) |
 | Pitch deck | `deck/KRISEVA_ATTEST_GIFT_2026.pdf`; `deck/KRISEVA_ATTEST_GIFT_2026.pptx` | Ten-slide evaluator narrative plus editable source | Local release candidate; rendered and visually inspected | Published via the consolidated hub (12 August 2026) |
 | Technical notes | `technical-notes.html`; `ARCHITECTURE.md`; `SECURITY.md`; `PRIVACY.md` | Static architecture, state flow, security, privacy, and operating limits | Local release candidate; browser-readable and claim-scanned | Published via the consolidated hub (12 August 2026) |

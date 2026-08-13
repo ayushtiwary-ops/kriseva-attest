@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Vantage Meridian Fund III — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Vantage Meridian Fund III
+Reporting period: Quarter ended 30 June 2026
+Closing NAV: $13,050,000

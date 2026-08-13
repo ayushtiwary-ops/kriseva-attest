@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Redcliff Horizon Fund II — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Redcliff Horizon Fund II
+Reporting period: Quarter ended 30 June 2026
+Investor complaints closed (Q2 2026): 6

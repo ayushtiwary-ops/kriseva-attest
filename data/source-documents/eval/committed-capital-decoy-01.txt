@@ -1,0 +1,5 @@
+SYNTHETIC DEMO DATA — Stonecrop Growth Fund — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Stonecrop Growth Fund
+Called capital to date: USD 21,000,000
+Committed capital: USD 30,000,000
+Uncalled capital: USD 9,000,000

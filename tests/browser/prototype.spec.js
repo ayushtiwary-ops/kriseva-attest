@@ -10,6 +10,7 @@ const routeNames = {
   'source-workspace': 'Source-to-field workspace',
   'conflict-queue': 'Conflict queue',
   'agent-trace': 'Agent trace',
+  'risk-board': 'Risk and anomaly board',
   'review-signoff': 'Review and sign-off',
   'evidence-receipt': 'Evidence receipt'
 };
@@ -36,10 +37,28 @@ async function recordConflictDecision(page) {
 }
 
 async function confirmSignOff(page, officerName = 'Demo Officer') {
-  await page.getByRole('link', { name: 'Review and sign-off' }).click();
+  await page.locator('.screen-navigation a[href="#review-signoff"]').click();
   await page.getByLabel('Principal Officer (demo)').fill(officerName);
   await page.getByLabel('I confirm the evidence record for all three fields has been reviewed').check();
   await page.getByRole('button', { name: 'Confirm sign-off' }).click();
+}
+
+// Dispositions every currently-open anomaly flag on the risk and anomaly
+// board with ACKNOWLEDGE, a disposer name, and a reason. The forms are
+// re-rendered after each submission (the just-dispositioned flag becomes a
+// record instead of a form), so this repeatedly submits whichever form is
+// still open until none remain.
+async function dispositionAllFlags(page, disposerName = 'Demo Officer') {
+  await page.locator('.screen-navigation a[href="#risk-board"]').click();
+  await expect(page.getByRole('heading', { name: 'Risk and anomaly board' })).toBeVisible();
+  while (await page.locator('.disposition-form').count() > 0) {
+    const form = page.locator('.disposition-form').first();
+    await form.getByLabel('Acknowledge with reason').check();
+    await form.getByLabel('Disposer name').fill(disposerName);
+    await form.getByLabel('Disposition reason').fill('Reviewed and acknowledged for this synthetic demo case.');
+    await form.getByRole('button', { name: 'Record disposition' }).click();
+    await expect(page.locator('#announcement')).toHaveText('Disposition recorded for this anomaly flag.');
+  }
 }
 
 async function openConflictForm(page) {
@@ -49,7 +68,7 @@ async function openConflictForm(page) {
   await expect(page.getByRole('heading', { name: 'Record the conflict decision' })).toBeVisible();
 }
 
-test('reviewer can inspect a conflict, decide with reason, confirm sign-off, and reach a fully signed receipt', async ({ page }) => {
+test('reviewer can inspect a conflict, decide with reason, disposition every anomaly flag, confirm sign-off, and reach a fully signed receipt', async ({ page }) => {
   const response = await openPrototype(page);
   expect(response?.status()).toBe(200);
 
@@ -61,6 +80,7 @@ test('reviewer can inspect a conflict, decide with reason, confirm sign-off, and
   await page.getByLabel('Reviewer').fill('Demo Reviewer');
   await page.getByLabel('Decision reason').fill('Administrator figure ties to the executed subscription register; earlier schedule superseded.');
   await page.getByRole('button', { name: 'Record human decision' }).click();
+  await dispositionAllFlags(page);
   await confirmSignOff(page, 'Demo Officer');
   await page.locator('.screen-navigation a[href="#evidence-receipt"]').click();
 
@@ -70,6 +90,7 @@ test('reviewer can inspect a conflict, decide with reason, confirm sign-off, and
   await expect(receipt.getByText('Demo Officer', { exact: true })).toBeVisible();
   await expect(receipt.getByText('Deciding reviewer', { exact: true })).toBeVisible();
   await expect(receipt.getByText('Confirming Principal Officer', { exact: true })).toBeVisible();
+  await expect(receipt.getByText('Risk summary: 4 anomaly flags · 0 open · 4 dispositioned.', { exact: true })).toBeVisible();
   await expect(receipt.locator('#manifest-digest')).toHaveText(/^[0-9a-f]{16}$/u);
   await expect(page.getByRole('button', { name: 'Download JSON evidence manifest' })).toBeEnabled();
   await expect(page.getByRole('button', { name: 'Download printable HTML evidence manifest' })).toBeEnabled();
@@ -89,7 +110,8 @@ test('maker-checker separation blocks a confirming officer who matches the decid
   await openPrototype(page);
   await runReview(page);
   await recordConflictDecision(page);
-  await page.getByRole('link', { name: 'Review and sign-off' }).click();
+  await dispositionAllFlags(page);
+  await page.locator('.screen-navigation a[href="#review-signoff"]').click();
 
   await page.getByLabel('Principal Officer (demo)').fill('  demo reviewer  ');
   await page.getByLabel('I confirm the evidence record for all three fields has been reviewed').check();
@@ -111,6 +133,7 @@ test('evidence receipt exports stay disabled until the Principal Officer sign-of
   await expect(page.getByRole('button', { name: 'Download printable HTML evidence manifest' })).toBeDisabled();
   await expect(page.getByText(/Principal Officer confirmation pending/i)).toBeVisible();
 
+  await dispositionAllFlags(page);
   await confirmSignOff(page, 'Demo Officer');
   await page.locator('.screen-navigation a[href="#evidence-receipt"]').click();
   await expect(page.getByRole('button', { name: 'Download JSON evidence manifest' })).toBeEnabled();
@@ -279,6 +302,7 @@ test('receipt retains both candidates, reason, fingerprints, unsupported item, a
   await openPrototype(page);
   await runReview(page);
   await recordConflictDecision(page);
+  await dispositionAllFlags(page);
   await confirmSignOff(page, 'Demo Officer');
   await page.locator('.screen-navigation a[href="#evidence-receipt"]').click();
 
@@ -294,14 +318,22 @@ test('receipt retains both candidates, reason, fingerprints, unsupported item, a
     'synthetic:ledger:38a4c1',
     'synthetic:board-schedule:4f71aa'
   ]) {
-    await expect(receipt.getByText(fingerprint, { exact: true })).toBeVisible();
+    // synthetic:ledger:38a4c1 is deliberately shared by two distinct sources
+    // (the planted duplicate-fingerprint anomaly), so it appears twice here;
+    // .first() confirms visibility without requiring a unique match.
+    await expect(receipt.getByText(fingerprint, { exact: true }).first()).toBeVisible();
   }
+  // The duplicate-fingerprint anomaly source itself is also listed, and the
+  // shared fingerprint text appears exactly twice (once per source).
+  await expect(receipt.getByText('NAV custodian confirmation', { exact: true })).toBeVisible();
+  await expect(receipt.getByText('synthetic:ledger:38a4c1', { exact: true })).toHaveCount(2);
   await expect(receipt.getByRole('heading', { name: 'Investor complaints closed' })).toBeVisible();
   await expect(receipt.getByText(/No candidate source. No value synthesized./)).toBeVisible();
 
   await expect(receipt.getByText('Deciding reviewer', { exact: true })).toBeVisible();
   await expect(receipt.getByText('Confirming Principal Officer', { exact: true })).toBeVisible();
   await expect(receipt.getByText('Demo Officer', { exact: true })).toBeVisible();
+  await expect(receipt.getByText('Risk summary: 4 anomaly flags · 0 open · 4 dispositioned.', { exact: true })).toBeVisible();
   const digestText = await receipt.locator('#manifest-digest').innerText();
   expect(digestText).toMatch(/^[0-9a-f]{16}$/u);
 
@@ -362,15 +394,125 @@ test('skip link, hash navigation, and browser history preserve keyboard focus', 
   await expect(page.getByRole('heading', { name: 'Agent trace' })).toBeFocused();
 });
 
-test('all six reviewed screens have no serious or critical accessibility violations', async ({ page }) => {
+test('all seven reviewed screens have no serious or critical accessibility violations', async ({ page }) => {
   await openPrototype(page);
   await runReview(page);
-  for (const route of ['dashboard', 'source-workspace', 'conflict-queue', 'agent-trace', 'review-signoff', 'evidence-receipt']) {
+  for (const route of ['dashboard', 'source-workspace', 'conflict-queue', 'agent-trace', 'risk-board', 'review-signoff', 'evidence-receipt']) {
     await page.locator(`.screen-navigation a[href="#${route}"]`).click();
     await expect(page.getByRole('heading', { name: routeNames[route] })).toBeVisible();
     const results = await new AxeBuilder({ page }).analyze();
     expect(results.violations.filter(({ impact }) => ['serious', 'critical'].includes(impact))).toEqual([]);
   }
+});
+
+test('the risk and anomaly board sits between agent trace and review and sign-off in navigation order', async ({ page }) => {
+  await openPrototype(page);
+  await runReview(page);
+  const hrefs = await page.locator('.screen-navigation a').evaluateAll((links) => links.map((link) => link.getAttribute('href')));
+  assertConsecutive(hrefs, '#agent-trace', '#risk-board', '#review-signoff');
+});
+
+function assertConsecutive(list, ...expectedRun) {
+  const startIndex = list.indexOf(expectedRun[0]);
+  expect(startIndex).toBeGreaterThanOrEqual(0);
+  expect(list.slice(startIndex, startIndex + expectedRun.length)).toEqual(expectedRun);
+}
+
+test('risk and anomaly board shows severity, lens, explanation, and exact reference for each flag', async ({ page }) => {
+  await openPrototype(page);
+  await runReview(page);
+  await recordConflictDecision(page); // ACCEPT the higher candidate: all four designed flags are active
+  await page.locator('.screen-navigation a[href="#risk-board"]').click();
+  await expect(page.getByRole('heading', { name: 'Risk and anomaly board' })).toBeVisible();
+
+  const board = page.locator('.active-screen');
+  for (const [title, severity, lens] of [
+    ['No evidence coverage', 'HIGH', 'COMPLIANCE'],
+    ['Duplicate document fingerprint', 'HIGH', 'FRAUD ANALYSIS'],
+    ['Conflict resolved toward higher value', 'MEDIUM', 'FRAUD ANALYSIS'],
+    ['Stale source', 'LOW', 'RISK']
+  ]) {
+    const card = board.locator('.flag-card').filter({ hasText: title });
+    await expect(card.getByRole('heading', { name: title })).toBeVisible();
+    await expect(card.getByText(severity, { exact: true })).toBeVisible();
+    await expect(card.getByText(lens, { exact: true })).toBeVisible();
+  }
+  await expect(board.getByText('Two distinct claimed sources carry an identical document fingerprint.', { exact: true })).toBeVisible();
+  await expect(board.getByText(
+    'The recorded decision accepted the higher of two conflicting values; the reason is retained for review.',
+    { exact: true }
+  )).toBeVisible();
+  await expect(board.locator('.indicator-card')).toHaveCount(6);
+  await expect(board.getByText('2/3', { exact: true })).toBeVisible();
+  await expect(board.getByText('1/3', { exact: true })).toBeVisible();
+});
+
+test('the conflict-resolved-toward-higher-value flag only appears once the higher candidate is accepted', async ({ page }) => {
+  await openPrototype(page);
+  await runReview(page);
+  await page.getByRole('link', { name: /1 conflict/i }).click();
+  await page.getByLabel('Accept selected source').check();
+  await page.getByLabel('Select source').selectOption('board-committed'); // the lower candidate
+  await page.getByLabel('Reviewer').fill('Demo Reviewer');
+  await page.getByLabel('Decision reason').fill('The lower schedule figure governs this synthetic decision.');
+  await page.getByRole('button', { name: 'Record human decision' }).click();
+  await page.locator('.screen-navigation a[href="#risk-board"]').click();
+
+  await expect(page.getByRole('heading', { name: 'No evidence coverage' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Conflict resolved toward higher value' })).toHaveCount(0);
+});
+
+test('disposition form requires an action, a disposer name, and a reason before it is recorded', async ({ page }) => {
+  await openPrototype(page);
+  await runReview(page);
+  await page.locator('.screen-navigation a[href="#risk-board"]').click();
+
+  const form = page.locator('.disposition-form').first();
+  const submit = form.getByRole('button', { name: 'Record disposition' });
+  await submit.click();
+  await expect(form.getByLabel('Escalate for investigation')).toBeFocused();
+  await expect(form.getByText('Choose a disposition action.')).toBeVisible();
+
+  await form.getByLabel('Acknowledge with reason').check();
+  await submit.click();
+  await expect(form.getByLabel('Disposer name')).toBeFocused();
+
+  await form.getByLabel('Disposer name').fill('Kavya Rao');
+  await submit.click();
+  await expect(form.getByLabel('Disposition reason')).toBeFocused();
+
+  await form.getByLabel('Disposition reason').fill('Reviewed for this synthetic demo case.');
+  await submit.click();
+  await expect(page.locator('#announcement')).toHaveText('Disposition recorded for this anomaly flag.');
+});
+
+test('sign-off stays blocked with a named-gate message until every anomaly flag is dispositioned, then opens', async ({ page }) => {
+  await openPrototype(page);
+  await runReview(page);
+  await recordConflictDecision(page);
+  await page.locator('.screen-navigation a[href="#review-signoff"]').click();
+
+  await expect(page.getByRole('heading', { name: 'Officer confirmation required' })).toBeVisible();
+  await expect(page.getByText(/Blocked until .*anomaly flag.* is recorded\.|Blocked until .*anomaly flag.* are recorded\./)).toBeVisible();
+  await expect(page.getByLabel('Principal Officer (demo)')).toBeDisabled();
+
+  await dispositionAllFlags(page);
+  await page.locator('.screen-navigation a[href="#review-signoff"]').click();
+  await expect(page.getByRole('heading', { name: 'All 4 anomaly flags dispositioned' })).toBeVisible();
+  await expect(page.getByLabel('Principal Officer (demo)')).toBeEnabled();
+});
+
+test('risk preset capture shows flags visible with exactly one flag dispositioned', async ({ page }) => {
+  await installLocalRoute(page, projectRoot);
+  const response = await page.goto(`${LOCAL_ORIGIN}/prototype/?capture=risk`);
+  expect(response?.status()).toBe(200);
+  await page.locator('#prototype-root[data-capture-ready="true"][data-capture-state="risk"]').waitFor();
+
+  await expect(page.getByRole('heading', { name: 'Risk and anomaly board' })).toBeVisible();
+  await expect(page.locator('.flag-card')).toHaveCount(4);
+  await expect(page.locator('.disposition-form')).toHaveCount(3);
+  await expect(page.locator('.disposition-record')).toHaveCount(1);
+  await expect(page.getByRole('heading', { name: 'Stale source' })).toBeVisible();
 });
 
 for (const width of [390, 768, 1440]) {

@@ -1,0 +1,18 @@
+"SYNTHETIC DEMO DATA - Meridian Horizon Fund I - NAV Ledger Extract - As of 1 July 2026",Category,Description,Currency,Period,Amount (USD)
+1,Opening,Opening NAV,USD,Q2 2026,11850000
+2,Capital,Subscriptions received,USD,Q2 2026,650000
+3,Capital,Redemptions paid,USD,Q2 2026,-100000
+4,Expense,Management fees,USD,Q2 2026,-60000
+5,Expense,Fund operating expenses,USD,Q2 2026,-15000
+6,P&L,Realized gains Q2,USD,Q2 2026,45000
+7,P&L,Realized losses Q2,USD,Q2 2026,-5000
+8,P&L,Unrealized gains Q2,USD,Q2 2026,30000
+9,P&L,Unrealized losses Q2,USD,Q2 2026,-4000
+10,Income,Interest income,USD,Q2 2026,7000
+11,Adjustment,FX translation adjustment,USD,Q2 2026,-1000
+12,Accrual,Audit fee accrual,USD,Q2 2026,-3000
+13,Accrual,Custody fee accrual,USD,Q2 2026,-2000
+14,Accrual,Administration fee accrual,USD,Q2 2026,-2000
+15,Adjustment,Other adjustments,USD,Q2 2026,1000
+16,Rounding,Rounding adjustment,USD,Q2 2026,9000
+Closing,Closing NAV,Closing net asset value,USD,Q2 2026,"12,400,000 USD"

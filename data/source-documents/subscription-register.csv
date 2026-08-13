@@ -1,0 +1,11 @@
+"SYNTHETIC DEMO DATA - Schedule A: Investor Subscription Register (Meridian Horizon Fund I, not a real fund) - As at 12 May 2026",,,
+Investor,Commitment Date,Committed Capital (USD),Class
+Investor 1 (synthetic),2025-01-15,4000000,Class A
+Investor 2 (synthetic),2025-02-20,3500000,Class A
+Investor 3 (synthetic),2025-03-10,3000000,Class A
+Investor 4 (synthetic),2025-04-05,2800000,Class B
+Investor 5 (synthetic),2025-05-18,2700000,Class B
+Investor 6 (synthetic),2025-06-30,2600000,Class B
+Investor 7 (synthetic),2025-08-12,2600000,Class C
+Investor 8 (synthetic),2025-09-25,2800000,Class C
+TOTAL,,"USD 24,000,000",

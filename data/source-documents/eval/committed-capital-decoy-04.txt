@@ -1,0 +1,5 @@
+SYNTHETIC DEMO DATA — Cinderline Capital Fund — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Cinderline Capital Fund
+Target fund size: USD 35,000,000
+Committed capital: USD 30,000,000
+Target size differs from committed capital as of this period.

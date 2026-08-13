@@ -410,9 +410,45 @@ section {
 .method-section,
 .artifacts-section,
 .boundary-section,
+.scope-section,
 .team-section,
 .faq-section {
   padding: clamp(56px, 7vw, 96px) 0;
+}
+
+.scope-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--kriseva-navy);
+  border-left: 1px solid var(--kriseva-navy);
+}
+
+.scope-box {
+  min-width: 0;
+  padding: 24px;
+  border-right: 1px solid var(--kriseva-navy);
+  border-bottom: 1px solid var(--kriseva-navy);
+}
+
+.scope-box-attest {
+  background: var(--kriseva-paper-raised);
+}
+
+.scope-box h3 {
+  margin: 16px 0 0;
+  color: var(--kriseva-navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.scope-caption {
+  margin: 22px 0 0;
+  font-size: 17px;
 }
 
 .section-heading {
@@ -712,6 +748,7 @@ footer p {
   .method-grid,
   .artifact-grid,
   .boundary-grid,
+  .scope-grid,
   .faq-grid {
     grid-template-columns: 1fr;
   }

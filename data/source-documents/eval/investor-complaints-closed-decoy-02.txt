@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Larkspur Point Fund III — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Larkspur Point Fund III
+Investor complaints open at period end: 1
+Investor complaints closed during the quarter: 4

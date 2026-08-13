@@ -1,0 +1,5 @@
+SYNTHETIC DEMO DATA — Palisade Crossing Fund — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Palisade Crossing Fund
+Schedule A: Investor Subscription Register
+Investor 1: USD 2,000,000
+Investor 2: USD 1,500,000

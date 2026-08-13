@@ -1,0 +1,5 @@
+SYNTHETIC DEMO DATA — Kestrel Summit Fund — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Kestrel Summit Fund
+Fee schedule extract.
+Management fee: 1.5% per annum.
+Performance fee: 15% above hurdle.

@@ -1,3 +1,5 @@
+import { buildAnomalyFindings, computeRiskIndicators } from './risk-engine.js';
+
 const DISCLOSURES = [
   'RESEARCH-STAGE PROTOTYPE',
   'SYNTHETIC DEMO DATA',
@@ -55,6 +57,8 @@ export function buildManifest(state, { generatedAt } = {}) {
     sourceFingerprints: (state.sources ?? []).map(({ id, fingerprint }) => ({ id, fingerprint })),
     fields: structuredClone(state.fields ?? []),
     humanDecisions: structuredClone(state.decisions ?? []),
+    riskIndicators: computeRiskIndicators(state),
+    anomalyFindings: buildAnomalyFindings(state),
     principalOfficerConfirmation: state.signOff ? structuredClone(state.signOff) : null,
     unresolvedItems: state.fields
       .filter((field) => field.status !== 'SUPPORTED')
@@ -176,6 +180,8 @@ export function manifestToHtml(manifest) {
   const fields = manifest.fields ?? [];
   const decisions = manifest.humanDecisions ?? [];
   const officer = manifest.principalOfficerConfirmation ?? null;
+  const riskIndicators = manifest.riskIndicators ?? [];
+  const anomalyFindings = manifest.anomalyFindings ?? [];
   const unresolvedItems = manifest.unresolvedItems ?? [];
   const integrity = manifest.integrity ?? null;
 
@@ -231,6 +237,26 @@ export function manifestToHtml(manifest) {
     ${officer?.confirmed ? `<table><thead><tr><th>Role</th><th>Principal Officer</th><th>Confirmed at</th></tr></thead><tbody>
       <tr><td>Confirming Principal Officer</td><td>${escapeHtml(officer.officerName)}</td><td>${escapeHtml(officer.recordedAt)}</td></tr>
     </tbody></table>` : '<p>No Principal Officer confirmation recorded.</p>'}
+  </section>
+  <section>
+    <h2>Risk indicators</h2>
+    <table><thead><tr><th>Indicator</th><th>Value</th><th>Explanation</th><th>Evidence reference</th></tr></thead><tbody>
+      ${riskIndicators.map((indicator) => `<tr><td>${escapeHtml(indicator.label)}</td><td>${escapeHtml(indicator.value)}</td><td>${escapeHtml(indicator.explanation)}</td><td>${escapeHtml(indicator.reference)}</td></tr>`).join('')}
+    </tbody></table>
+  </section>
+  <section>
+    <h2>Anomaly flags</h2>
+    ${anomalyFindings.length === 0 ? '<p>No anomaly flags on this evidence record.</p>' : anomalyFindings.map((finding) => `<article>
+      <h3>${escapeHtml(finding.flag)}</h3>
+      <p class="status">${escapeHtml(finding.severity)} · ${escapeHtml(finding.lens)}</p>
+      <p>${escapeHtml(finding.explanation)}</p>
+      <p>Reference: ${escapeHtml(finding.reference)}</p>
+      ${finding.disposition
+        ? `<table><thead><tr><th>Role</th><th>Action</th><th>Disposer</th><th>Reason</th><th>Recorded at</th></tr></thead><tbody>
+            <tr><td>Disposing reviewer</td><td>${escapeHtml(finding.disposition.action)}</td><td>${escapeHtml(finding.disposition.disposerName)}</td><td>${escapeHtml(finding.disposition.reason)}</td><td>${escapeHtml(finding.disposition.recordedAt)}</td></tr>
+          </tbody></table>`
+        : '<p>No disposition recorded. This flag remains open.</p>'}
+    </article>`).join('')}
   </section>
   <section>
     <h2>Unresolved items</h2>

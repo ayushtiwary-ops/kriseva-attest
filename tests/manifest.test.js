@@ -1,7 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
-import { loadCase, runEvidenceReview, recordDecision, recordSignOff } from '../src/case-engine.js';
+import {
+  loadCase,
+  runEvidenceReview,
+  recordDecision,
+  recordRiskDisposition,
+  recordSignOff
+} from '../src/case-engine.js';
+import { computeAnomalyFlags } from '../src/risk-engine.js';
 import {
   buildManifest,
   manifestToHtml,
@@ -16,14 +23,29 @@ import expectedManifest from '../data/expected-manifest.json' with { type: 'json
 // Per the design brief: node:crypto in tests, Web Crypto in the browser.
 const sha256Hex = (text) => createHash('sha256').update(text, 'utf8').digest('hex');
 
-function signedOffFixture() {
-  const decided = recordDecision(runEvidenceReview(loadCase(fixture)), 'committed-capital', {
+// decidedFixture() accepts the higher candidate (admin-committed, USD
+// 25,000,000), so all four designed anomaly flags are active by that point.
+function decidedFixture() {
+  return recordDecision(runEvidenceReview(loadCase(fixture)), 'committed-capital', {
     action: 'ACCEPT',
     candidateId: 'admin-committed',
     reviewer: 'Rhea Menon',
     reason: 'Synthetic reviewer decision.',
     recordedAt: '2026-08-12T09:30:00.000Z'
   });
+}
+
+function dispositionAllFlags(state, recordedAt = '2026-08-12T09:35:00.000Z') {
+  return computeAnomalyFlags(state).reduce((accumulatedState, flag) => recordRiskDisposition(accumulatedState, flag.id, {
+    action: 'ACKNOWLEDGE',
+    disposerName: 'Kavya Rao',
+    reason: 'Reviewed and acknowledged for this synthetic demo case.',
+    recordedAt
+  }), state);
+}
+
+function signedOffFixture() {
+  const decided = dispositionAllFlags(decidedFixture());
   return recordSignOff(decided, {
     officerName: 'Devika Nair',
     confirmed: true,
@@ -107,6 +129,40 @@ test('printable manifest makes disclosures, unresolved evidence, both named acto
   assert.match(html, /sha256/i);
 });
 
+test('printable manifest makes risk indicators and anomaly flag dispositions visible', () => {
+  const html = manifestToHtml(expectedManifest);
+
+  assert.match(html, /Risk indicators/);
+  assert.match(html, /Evidence coverage/);
+  assert.match(html, /Anomaly flags/);
+  assert.match(html, /Duplicate document fingerprint/);
+  assert.match(html, /Stale source/);
+  assert.match(html, /Disposing reviewer/i);
+  for (const finding of expectedManifest.anomalyFindings) {
+    assert.match(html, new RegExp(finding.flag.replaceAll(/[.*+?^${}()|[\]\\]/gu, '\\$&')));
+    if (finding.disposition) assert.match(html, new RegExp(finding.disposition.disposerName));
+  }
+});
+
+test('manifest includes riskIndicators (six entries) and anomalyFindings (one per active flag, each carrying its disposition)', () => {
+  const decided = decidedFixture();
+  const manifest = buildManifest(decided, { generatedAt: '2026-08-12T10:00:00.000Z' });
+
+  assert.equal(manifest.riskIndicators.length, 6);
+  for (const indicator of manifest.riskIndicators) {
+    assert.ok(typeof indicator.value === 'string' && indicator.value.length > 0);
+    assert.ok(indicator.explanation.length > 0);
+    assert.ok(indicator.reference.length > 0);
+  }
+
+  assert.equal(manifest.anomalyFindings.length, 4);
+  assert.ok(manifest.anomalyFindings.every((finding) => finding.disposition === null));
+
+  const dispositioned = dispositionAllFlags(decided);
+  const signedOffManifest = buildManifest(dispositioned, { generatedAt: '2026-08-12T10:00:00.000Z' });
+  assert.ok(signedOffManifest.anomalyFindings.every((finding) => finding.disposition?.disposerName === 'Kavya Rao'));
+});
+
 test('sha256HexSync (pure-JS fallback) matches node:crypto for representative inputs', () => {
   for (const sample of [
     '',
@@ -158,13 +214,45 @@ test('manifest integrity digest changes when any field is altered (tamper detect
     (draft) => { draft.fields[1].candidates[0].value = 'USD 99,000,000'; },
     (draft) => { draft.principalOfficerConfirmation.officerName = 'Someone Else'; },
     (draft) => { draft.humanDecisions[0].reason = 'A different reason.'; },
-    (draft) => { draft.disclosures = draft.disclosures.slice(0, -1); }
+    (draft) => { draft.disclosures = draft.disclosures.slice(0, -1); },
+    (draft) => { draft.riskIndicators[0].value = 'tampered'; },
+    (draft) => { draft.anomalyFindings[0].disposition.reason = 'A different disposition reason.'; },
+    (draft) => { draft.anomalyFindings[0].disposition.disposerName = 'Someone Else'; },
+    (draft) => { draft.anomalyFindings = draft.anomalyFindings.slice(1); }
   ]) {
     const tampered = structuredClone(manifest);
     tamper(tampered);
     const tamperedDigest = await computeManifestIntegrity(tampered, { sha256Hex });
     assert.notEqual(tamperedDigest.digest, original.digest);
   }
+});
+
+test('manifest integrity digest covers dispositions: recording, escalating, or removing one changes the digest', async () => {
+  const decided = decidedFixture();
+  const flags = computeAnomalyFlags(decided);
+
+  const undispositioned = buildManifest(decided, { generatedAt: '2026-08-12T10:00:00.000Z' });
+  const undispositionedDigest = await computeManifestIntegrity(undispositioned, { sha256Hex });
+
+  const oneDispositioned = recordRiskDisposition(decided, flags[0].id, {
+    action: 'ACKNOWLEDGE',
+    disposerName: 'Kavya Rao',
+    reason: 'Reviewed for this synthetic demo case.',
+    recordedAt: '2026-08-12T09:35:00.000Z'
+  });
+  const oneDispositionedManifest = buildManifest(oneDispositioned, { generatedAt: '2026-08-12T10:00:00.000Z' });
+  const oneDispositionedDigest = await computeManifestIntegrity(oneDispositionedManifest, { sha256Hex });
+  assert.notEqual(oneDispositionedDigest.digest, undispositionedDigest.digest);
+
+  const escalatedInstead = recordRiskDisposition(decided, flags[0].id, {
+    action: 'ESCALATE',
+    disposerName: 'Kavya Rao',
+    reason: 'Escalated for a second look.',
+    recordedAt: '2026-08-12T09:35:00.000Z'
+  });
+  const escalatedManifest = buildManifest(escalatedInstead, { generatedAt: '2026-08-12T10:00:00.000Z' });
+  const escalatedDigest = await computeManifestIntegrity(escalatedManifest, { sha256Hex });
+  assert.notEqual(escalatedDigest.digest, oneDispositionedDigest.digest);
 });
 
 test('withManifestIntegrity defaults to the pure-JS sha256 implementation when no hasher is supplied', async () => {

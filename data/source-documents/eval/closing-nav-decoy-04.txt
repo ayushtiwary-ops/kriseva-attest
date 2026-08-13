@@ -1,0 +1,5 @@
+SYNTHETIC DEMO DATA — Estuary Ridge Fund I — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Estuary Ridge Fund I
+Prior quarter NAV: USD 12,900,000
+Closing NAV: USD 13,050,000
+Quarter-on-quarter movement summarized separately.

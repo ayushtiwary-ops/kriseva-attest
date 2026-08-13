@@ -42,7 +42,7 @@ function renderScreen(screen) {
       <article class="wireframe-sheet" id="${escapeHtml(screen.slug)}" aria-labelledby="${escapeHtml(screen.slug)}-title" tabindex="-1">
         <header class="sheet-header">
           <div>
-            <p class="folio">Screen ${escapeHtml(screen.number)} / 06</p>
+            <p class="folio">Screen ${escapeHtml(screen.number)} / ${String(screens.length).padStart(2, '0')}</p>
             <h2 id="${escapeHtml(screen.slug)}-title">${escapeHtml(screen.name)}</h2>
           </div>
           <dl class="screen-contract">${renderContract(screen)}
@@ -203,7 +203,7 @@ function renderSvgScreen(screen, x, y, width, height, mobile) {
   const panelHeight = panelsHeight / panelRows;
   const output = [
     `<rect x="${x}" y="${y}" width="${width}" height="${height}" fill="#ffffff" stroke="#111111" stroke-width="1"/>`,
-    svgText(`SCREEN ${screen.number} / 06`, x + pad, y + 30, { fontFamily: 'monospace', fontSize: 14, fontWeight: 700, maxCharacters: 30 }),
+    svgText(`SCREEN ${screen.number} / ${String(screens.length).padStart(2, '0')}`, x + pad, y + 30, { fontFamily: 'monospace', fontSize: 14, fontWeight: 700, maxCharacters: 30 }),
     svgText(screen.name, x + pad, y + 78, { fontFamily: 'Georgia, serif', fontSize: mobile ? 32 : 42, maxCharacters: mobile ? 20 : 28, maxLines: 2, lineHeight: mobile ? 36 : 46 }),
     `<line x1="${x}" y1="${contractTop}" x2="${x + width}" y2="${contractTop}" stroke="#111111"/>`,
   ];

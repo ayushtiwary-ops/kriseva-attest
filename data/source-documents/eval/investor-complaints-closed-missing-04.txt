@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Driftwood Point Fund II — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Driftwood Point Fund II
+Custodian NAV certificate.
+Closing NAV: USD 10,200,000 as at quarter end.

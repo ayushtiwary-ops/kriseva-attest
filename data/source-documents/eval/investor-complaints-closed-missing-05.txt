@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Southbank Vista Fund — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Southbank Vista Fund
+Fee schedule extract.
+Management fee: 1.75% per annum.

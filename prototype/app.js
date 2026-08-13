@@ -1,13 +1,17 @@
 import { buildManifest, manifestToHtml, withManifestIntegrity, sha256HexSync } from '../src/manifest.js';
+import { replayEnvelope } from '../scripts/execution-envelope.mjs';
 import {
   canSignOff,
   hasConflictDecision,
   loadCase,
+  pendingSignOffGates,
   recordDecision,
+  recordRiskDisposition,
   recordSignOff,
   resetCase,
   runEvidenceReview
 } from '../src/case-engine.js';
+import { computeAnomalyFlags } from '../src/risk-engine.js';
 import {
   renderEvidenceIndex,
   renderMain,
@@ -20,20 +24,26 @@ const ROUTES = new Set([
   'source-workspace',
   'conflict-queue',
   'agent-trace',
+  'risk-board',
   'review-signoff',
   'evidence-receipt'
 ]);
 const PROTECTED_ROUTES = new Set([...ROUTES].filter((route) => route !== 'dashboard'));
 const RECORDED_AT = '2026-08-12T12:00:00+05:30';
+const DISPOSITIONED_AT = '2026-08-12T12:05:30+05:30';
 const OFFICER_CONFIRMED_AT = '2026-08-12T12:10:00+05:30';
 const GENERATED_AT = '2026-08-12T12:05:00+05:30';
 const EXPORT_STEM = 'kriseva-attest-meridian-horizon-q2-2026-evidence-manifest';
+// dispositionFlagIds: 'all' dispositions every currently-active flag; an
+// array dispositions only those flag ids (used by the 'risk' preset to leave
+// some flags visibly open); omitted means no dispositions are recorded.
 const CAPTURE_PRESETS = {
-  dashboard: { route: 'dashboard', reviewed: false, decided: false },
-  workspace: { route: 'source-workspace', reviewed: true, decided: false },
-  conflict: { route: 'conflict-queue', reviewed: true, decided: false },
-  trace: { route: 'agent-trace', reviewed: true, decided: false },
-  receipt: { route: 'evidence-receipt', reviewed: true, decided: true }
+  dashboard: { route: 'dashboard', reviewed: false, decided: false, signedOff: false },
+  workspace: { route: 'source-workspace', reviewed: true, decided: false, signedOff: false },
+  conflict: { route: 'conflict-queue', reviewed: true, decided: false, signedOff: false },
+  trace: { route: 'agent-trace', reviewed: true, decided: false, signedOff: false },
+  risk: { route: 'risk-board', reviewed: true, decided: true, signedOff: false, dispositionFlagIds: ['stale-source'] },
+  receipt: { route: 'evidence-receipt', reviewed: true, decided: true, signedOff: true, dispositionFlagIds: 'all' }
 };
 
 // Prefer the real Web Crypto API (available in secure browsing contexts:
@@ -57,6 +67,8 @@ const headerReset = document.querySelector('#header-reset');
 let fixture;
 let state;
 let pendingFocus = false;
+let recordedRunEnvelope = null;
+let recordedRunReplay = null;
 const requestedCapture = new URLSearchParams(window.location.search).get('capture');
 const capturePreset = requestedCapture && Object.hasOwn(CAPTURE_PRESETS, requestedCapture)
   ? CAPTURE_PRESETS[requestedCapture]
@@ -162,6 +174,40 @@ function validateSignOff(form, reviewerName) {
   return null;
 }
 
+function validateDispositionForm(form) {
+  const action = form.querySelector('input[name="action"]:checked');
+  const disposerName = form.elements.disposerName;
+  const reason = form.elements.reason;
+  if (!action) return { message: 'Choose a disposition action.', target: form.querySelector('input[name="action"]') };
+  if (!disposerName.value.trim()) return { message: 'Enter the disposer name.', target: disposerName };
+  if (!reason.value.trim()) return { message: 'Enter a disposition reason.', target: reason };
+  return null;
+}
+
+async function handleDispositionSubmit(event) {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const flagId = form.dataset.flagId;
+  const error = validateDispositionForm(form);
+  const errorRegion = form.querySelector(`#disposition-error-${flagId}`);
+  if (error) {
+    errorRegion.textContent = error.message;
+    error.target.focus();
+    return;
+  }
+
+  const formData = new FormData(form);
+  state = recordRiskDisposition(state, flagId, {
+    action: formData.get('action'),
+    disposerName: formData.get('disposerName'),
+    reason: formData.get('reason'),
+    recordedAt: DISPOSITIONED_AT
+  });
+  await render('risk-board');
+  announce('Disposition recorded for this anomaly flag.');
+  document.querySelector('#active-screen-title')?.focus();
+}
+
 async function handleSignOffSubmit(event) {
   event.preventDefault();
   const form = event.currentTarget;
@@ -217,6 +263,9 @@ function bindInteractions(manifest) {
     syncCandidateControl();
   }
   document.querySelector('#decision-form')?.addEventListener('submit', handleDecisionSubmit);
+  document.querySelectorAll('.disposition-form').forEach((form) => {
+    form.addEventListener('submit', handleDispositionSubmit);
+  });
   document.querySelector('#signoff-form')?.addEventListener('submit', handleSignOffSubmit);
   document.querySelector('#reset-demo')?.addEventListener('click', resetDemo);
   document.querySelector('#download-manifest-json')?.addEventListener('click', () => {
@@ -254,12 +303,13 @@ async function render(requestedRoute = routeFromHash()) {
   const reviewed = isReviewed();
   const conflictDecided = hasConflictDecision(state);
   const gateCleared = canSignOff(state);
+  const pendingGates = pendingSignOffGates(state);
   const manifest = await buildBrowserManifest();
   navigation.innerHTML = renderTopNavigation(route);
   root.innerHTML = `<div class="workspace" data-route="${route}">
     ${renderEvidenceIndex(state, reviewed)}
     <main class="active-screen" id="app-screen" aria-labelledby="active-screen-title">
-      ${renderMain(route, state, { reviewed, conflictDecided, canSignOff: gateCleared, manifest })}
+      ${renderMain(route, state, { reviewed, conflictDecided, canSignOff: gateCleared, pendingGates, manifest, envelope: recordedRunEnvelope, replay: recordedRunReplay })}
     </main>
     <aside class="review-drawer" aria-label="Human review panel">
       ${renderReviewDrawer(route, state, { reviewed, conflictDecided, canSignOff: gateCleared })}
@@ -315,12 +365,42 @@ try {
       reason: 'Administrator figure ties to the executed subscription register; earlier schedule superseded.',
       recordedAt: RECORDED_AT
     });
+  }
+  if (capturePreset?.dispositionFlagIds) {
+    const flagIds = capturePreset.dispositionFlagIds === 'all'
+      ? computeAnomalyFlags(state).map((flag) => flag.id)
+      : capturePreset.dispositionFlagIds;
+    for (const flagId of flagIds) {
+      state = recordRiskDisposition(state, flagId, {
+        action: 'ACKNOWLEDGE',
+        disposerName: 'Demo Officer',
+        reason: 'Reviewed and acknowledged for this synthetic demo case.',
+        recordedAt: DISPOSITIONED_AT
+      });
+    }
+  }
+  if (capturePreset?.signedOff) {
     state = recordSignOff(state, {
       officerName: 'Demo Officer',
       confirmed: true,
       recordedAt: OFFICER_CONFIRMED_AT
     });
   }
+  // The recorded live-run envelope is a supplementary panel on the agent-trace
+  // screen, not the local case fixture: a missing or unreadable envelope must
+  // not take down the rest of the prototype, so its failure is caught here
+  // rather than by the outer try/catch.
+  try {
+    const envelopeResponse = await fetch('../data/live-run-envelope.json');
+    if (envelopeResponse.ok) {
+      recordedRunEnvelope = await envelopeResponse.json();
+      recordedRunReplay = await replayEnvelope(recordedRunEnvelope, { sha256Hex });
+    }
+  } catch {
+    recordedRunEnvelope = null;
+    recordedRunReplay = null;
+  }
+
   const initialRoute = capturePreset?.route ?? routeFromHash();
   if (capturePreset || !window.location.hash || !ROUTES.has(window.location.hash.slice(1))) {
     window.history.replaceState(null, '', routeUrl(initialRoute));

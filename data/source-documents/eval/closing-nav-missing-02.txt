@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Marrow Creek Fund II — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Marrow Creek Fund II
+AML/CFT and KYC status note.
+All investor onboarding checks complete for the reporting period.

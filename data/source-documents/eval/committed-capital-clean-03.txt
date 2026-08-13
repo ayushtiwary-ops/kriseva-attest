@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Southbank Vista Fund — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Southbank Vista Fund
+Reporting period: Quarter ended 30 June 2026
+Committed capital: 30,000,000 USD

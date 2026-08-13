@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Copperline Fund III — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Copperline Fund III
+Reporting period: Quarter ended 30 June 2026
+Investor complaints closed: 02

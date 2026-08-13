@@ -1,0 +1,1514 @@
+{
+  "meta": {
+    "model": "claude-haiku-4-5-20251001",
+    "canonicalModel": "claude-haiku-4-5",
+    "effort": "low",
+    "runDate": "2026-08-13",
+    "totalInstances": 60,
+    "totalCalls": 60,
+    "errorCount": 0,
+    "retriedCount": 0
+  },
+  "results": [
+    {
+      "id": "closing-nav-clean-01",
+      "fieldId": "closing-nav",
+      "documentId": "closing-nav-clean-01",
+      "promptSha256": "a18ca76ae294cfe86eeff1af971be2fc84c2d068e35b155f644d138a054fdb04",
+      "extraction": {
+        "found": true,
+        "value": "USD 13,050,000",
+        "normalizedValue": "13050000",
+        "location": "L4",
+        "quote": "Closing NAV: USD 13,050,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "926b94b7-bd62-4795-b1cd-31b93d6f49f4",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 9846,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "closing-nav-clean-02",
+      "fieldId": "closing-nav",
+      "documentId": "closing-nav-clean-02",
+      "promptSha256": "a1364fb5b1dc555f421779ee9d5aa9d35b21c94ba8604630580cb554a3bf8a73",
+      "extraction": {
+        "found": true,
+        "value": "$13,050,000",
+        "normalizedValue": "13050000",
+        "location": "L4",
+        "quote": "Closing NAV: $13,050,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "f8dcde0b-af4c-4906-8a65-1f47b3d2620f",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 11041,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "closing-nav-clean-03",
+      "fieldId": "closing-nav",
+      "documentId": "closing-nav-clean-03",
+      "promptSha256": "df51f422034ff898f504a2e59541a6f8b54c6d833ea534c004f71b80ded017eb",
+      "extraction": {
+        "found": true,
+        "value": "13,050,000 USD",
+        "normalizedValue": "13050000",
+        "location": "L4",
+        "quote": "Closing NAV: 13,050,000 USD",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "8cb87852-fb74-4a34-912f-0638e979e995",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 10169,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "closing-nav-clean-04",
+      "fieldId": "closing-nav",
+      "documentId": "closing-nav-clean-04",
+      "promptSha256": "c0c4f62f3df4f7b8bcf9ae7a5498d629a20f2180e8d3e72a818f973a5ae584a3",
+      "extraction": {
+        "found": true,
+        "value": "US$13,050,000",
+        "normalizedValue": "13050000",
+        "location": "L4",
+        "quote": "Closing NAV: US$13,050,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "ab27d1c3-90bc-4782-a707-9ee291df1ebd",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 10687,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "closing-nav-clean-05",
+      "fieldId": "closing-nav",
+      "documentId": "closing-nav-clean-05",
+      "promptSha256": "47b153462e50e7ad0e882285355189cc4db3e039d598d9c58a4ac0ab75077ebd",
+      "extraction": {
+        "found": true,
+        "value": "USD13,050,000",
+        "normalizedValue": "13050000",
+        "location": "L4",
+        "quote": "Closing NAV: USD13,050,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "58edb3bb-5880-488e-b44b-cda46abea02d",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 9455,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "closing-nav-clean-06",
+      "fieldId": "closing-nav",
+      "documentId": "closing-nav-clean-06",
+      "promptSha256": "4189253cdce204e72f2484369d96d91152187719f880c6ca7d6e7f3f681e3248",
+      "extraction": {
+        "found": true,
+        "value": "13050000 USD",
+        "normalizedValue": "13050000",
+        "location": "L4",
+        "quote": "Closing NAV: 13050000 USD",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "dddef70f-a304-40e4-9629-570803bc90a9",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 9241,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "closing-nav-decoy-01",
+      "fieldId": "closing-nav",
+      "documentId": "closing-nav-decoy-01",
+      "promptSha256": "075f6dbc8ab8311df0b3304624b24af4ba74952621bb0e0f7418dd971809196b",
+      "extraction": {
+        "found": true,
+        "value": "USD 13,050,000",
+        "normalizedValue": "13050000",
+        "location": "L4",
+        "quote": "Closing NAV: USD 13,050,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "d36b2016-85ac-4085-a8bf-a8e7a6afaf89",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 10710,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "closing-nav-decoy-02",
+      "fieldId": "closing-nav",
+      "documentId": "closing-nav-decoy-02",
+      "promptSha256": "5b21dae26e6a29ca2f64e8aac33abf1360e418c41b7e63140a90275441098549",
+      "extraction": {
+        "found": true,
+        "value": "USD 13,050,000",
+        "normalizedValue": "13050000",
+        "location": "L5",
+        "quote": "Closing NAV: USD 13,050,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "f1021bde-10e0-490f-af08-7fe595c78688",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 11447,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "closing-nav-decoy-03",
+      "fieldId": "closing-nav",
+      "documentId": "closing-nav-decoy-03",
+      "promptSha256": "a45142c8f9ee1971ca88493fb21f4559bfb2aaf193d821f6fcd59f698e79c4d6",
+      "extraction": {
+        "found": true,
+        "value": "USD 13,050,000",
+        "normalizedValue": "13050000",
+        "location": "L4",
+        "quote": "Closing NAV: USD 13,050,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "2ec6b69e-93f1-4c9f-ae23-d9879cff9c55",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 10586,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "closing-nav-decoy-04",
+      "fieldId": "closing-nav",
+      "documentId": "closing-nav-decoy-04",
+      "promptSha256": "e568fda77dfd7fc6865c098aa2702df7e67058b2ec2f29da1d93a84addeb1cd1",
+      "extraction": {
+        "found": true,
+        "value": "USD 13,050,000",
+        "normalizedValue": "13050000",
+        "location": "L4",
+        "quote": "Closing NAV: USD 13,050,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "79d51740-5843-47ed-b3a7-5f6b8a63e0b7",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 9585,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "closing-nav-missing-01",
+      "fieldId": "closing-nav",
+      "documentId": "closing-nav-missing-01",
+      "promptSha256": "2725a1ba0e1ca166cc11db00cc66861ea07804280dda5191dcfa120c2e45b80c",
+      "extraction": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null,
+        "quote": null,
+        "reason": "The document does not state a Closing NAV field. It contains only an Investor Subscription Register listing subscription amounts, not fund NAV data."
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "fcb85057-8744-44ad-b91e-fb0f1d04b4aa",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 7985,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "closing-nav-missing-02",
+      "fieldId": "closing-nav",
+      "documentId": "closing-nav-missing-02",
+      "promptSha256": "f09d5046c0bab441c773cb1d11c972229e3c676c4077c7c23a09b447e9d0a1fc",
+      "extraction": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null,
+        "quote": null,
+        "reason": "Closing NAV field not stated in document"
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "e5c8197b-1e7a-45e5-a2f2-000a59189505",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 8217,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "closing-nav-missing-03",
+      "fieldId": "closing-nav",
+      "documentId": "closing-nav-missing-03",
+      "promptSha256": "d2a76014baff9dc50e51a47cf1324fa80887a7f5fa703bbf6cc4b50ca3c7e0f8",
+      "extraction": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null,
+        "quote": null,
+        "reason": "Closing NAV is not stated in this document. Document contains only fund name and fee schedule information (management and performance fees)."
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "6c5f55e0-46fe-4571-86a3-5fe5a3ce111c",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 9459,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "closing-nav-missing-04",
+      "fieldId": "closing-nav",
+      "documentId": "closing-nav-missing-04",
+      "promptSha256": "7d57bdddf5e23002b1fb6becdd68ddcf83ff6dd7a77eb8fa518c5c2bc58a9e6b",
+      "extraction": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null,
+        "quote": null,
+        "reason": "Closing NAV is not stated in this document"
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "a6bb051c-d1c8-4424-85b1-6dd5ac45c82d",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 8436,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "closing-nav-conflict-1-1",
+      "fieldId": "closing-nav",
+      "documentId": "closing-nav-conflict-1-1",
+      "promptSha256": "7a1a9c72cd81073f4d7a737334bde9d358cf7b23ef19c2ac8cd5b0ad7a675446",
+      "extraction": {
+        "found": true,
+        "value": "USD 9,200,000",
+        "normalizedValue": "9200000",
+        "location": "L4",
+        "quote": "Closing NAV: USD 9,200,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "c6a36394-8ac3-405b-94ab-bd59539e3a2c",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 9856,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "closing-nav-conflict-1-2",
+      "fieldId": "closing-nav",
+      "documentId": "closing-nav-conflict-1-2",
+      "promptSha256": "db8958b2854b0bb02e45798d9f45d251073ff231624360410791fd464f61b00b",
+      "extraction": {
+        "found": true,
+        "value": "USD 9,150,000",
+        "normalizedValue": "9150000",
+        "location": "L4",
+        "quote": "Closing NAV: USD 9,150,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "8ccddebf-2a38-4d3e-a4a4-951f787c3e0c",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 7550,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "closing-nav-conflict-2-1",
+      "fieldId": "closing-nav",
+      "documentId": "closing-nav-conflict-2-1",
+      "promptSha256": "d37a563db2c174c923b722a207db43acb90dc6c660dea9c931607aa875531a47",
+      "extraction": {
+        "found": true,
+        "value": "USD 21,750,000",
+        "normalizedValue": "21750000",
+        "location": "L4",
+        "quote": "Closing NAV: USD 21,750,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "f1eb3a14-5e36-4eae-87c0-6b9b87411d8a",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 8645,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "closing-nav-conflict-2-2",
+      "fieldId": "closing-nav",
+      "documentId": "closing-nav-conflict-2-2",
+      "promptSha256": "91e1710a6b59d51bd7600140c7c421c23927e757ba04a8d7d3467c586924b73a",
+      "extraction": {
+        "found": true,
+        "value": "USD 21,900,000",
+        "normalizedValue": "21900000",
+        "location": "L4",
+        "quote": "Closing NAV: USD 21,900,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "6ec45b36-e5a3-4a5a-a03e-a2f4c0442651",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 8037,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "closing-nav-format-edge-01",
+      "fieldId": "closing-nav",
+      "documentId": "closing-nav-format-edge-01",
+      "promptSha256": "bb51b9cf94dc6435e009a873111d543dac3cf436ac9240220b8b604fa7bb1918",
+      "extraction": {
+        "found": true,
+        "value": "USD 13,050,000",
+        "normalizedValue": "13050000",
+        "location": "L4",
+        "quote": "Closing NAV (provisional): USD 13,050,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "227e14a0-0e2e-42f3-a0c5-6b2c05b3c5a6",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 8357,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "closing-nav-format-edge-02",
+      "fieldId": "closing-nav",
+      "documentId": "closing-nav-format-edge-02",
+      "promptSha256": "1c837e6cf0c3c71cd75ed76498a47cdf2863c333e5921bba34f724b736cde8c5",
+      "extraction": {
+        "found": true,
+        "value": "USD 13,050,000",
+        "normalizedValue": "13050000",
+        "location": "L4",
+        "quote": "Closing NAV — USD 13,050,000 (subject to audit)",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "fd062ab7-fc40-4e01-a8c2-789ffdc62860",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 11582,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "committed-capital-clean-01",
+      "fieldId": "committed-capital",
+      "documentId": "committed-capital-clean-01",
+      "promptSha256": "7553618d4f1eac5f0bef10244d072d5a21c416b05dc35fcbc9c17de49ffb5344",
+      "extraction": {
+        "found": true,
+        "value": "USD 30,000,000",
+        "normalizedValue": "30000000",
+        "location": "L4",
+        "quote": "Committed capital: USD 30,000,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "be6c2692-ea7e-49fa-a8b4-fb230951f44d",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 9457,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "committed-capital-clean-02",
+      "fieldId": "committed-capital",
+      "documentId": "committed-capital-clean-02",
+      "promptSha256": "087ec9ba2edb340f49f95c82c0a9f14c5e9d31e723d30fe6ba70b05c7e5394d3",
+      "extraction": {
+        "found": true,
+        "value": "$30,000,000",
+        "normalizedValue": "30000000",
+        "location": "L4",
+        "quote": "Committed capital: $30,000,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "46d92c92-69bb-40fa-9a12-191858a72b02",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 10151,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "committed-capital-clean-03",
+      "fieldId": "committed-capital",
+      "documentId": "committed-capital-clean-03",
+      "promptSha256": "65c05c6840e3a3105424ddf4661d477d699a0fcf36caef23a35d09fd855263b1",
+      "extraction": {
+        "found": true,
+        "value": "30,000,000 USD",
+        "normalizedValue": "30000000",
+        "location": "L4",
+        "quote": "Committed capital: 30,000,000 USD",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "612b9dd0-451a-449e-88d5-5141a0e8ed78",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 8995,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "committed-capital-clean-04",
+      "fieldId": "committed-capital",
+      "documentId": "committed-capital-clean-04",
+      "promptSha256": "dd4da3e114752ae221c4fbf2eb6efb0943fc1e017266439ade90dfa12b112423",
+      "extraction": {
+        "found": true,
+        "value": "US$30,000,000",
+        "normalizedValue": "30000000",
+        "location": "L4",
+        "quote": "Committed capital: US$30,000,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "1854926e-a290-44dd-93ba-82d22b1e46d2",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 10006,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "committed-capital-clean-05",
+      "fieldId": "committed-capital",
+      "documentId": "committed-capital-clean-05",
+      "promptSha256": "132c8b98e739495aea8c84bacaa6eb2d07f8dd4351c09f9de670d7df1a13bad2",
+      "extraction": {
+        "found": true,
+        "value": "USD30,000,000",
+        "normalizedValue": "30000000",
+        "location": "L4",
+        "quote": "Committed capital: USD30,000,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "1fc0f494-cb75-4907-bda1-8d0b61c404e6",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 7624,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "committed-capital-clean-06",
+      "fieldId": "committed-capital",
+      "documentId": "committed-capital-clean-06",
+      "promptSha256": "09865532f31440af5ce37c821e750e3445b6105e26e2ef0ea8b75cf0e9aa1bb6",
+      "extraction": {
+        "found": true,
+        "value": "30000000 USD",
+        "normalizedValue": "30000000",
+        "location": "L4",
+        "quote": "Committed capital: 30000000 USD",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "aff713f2-5a72-4701-8d3c-82f54ece6d01",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 8841,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "committed-capital-decoy-01",
+      "fieldId": "committed-capital",
+      "documentId": "committed-capital-decoy-01",
+      "promptSha256": "6a84cc4c74b427003d6365e015a048d653cacf274cde2fa1f774b880a68fb823",
+      "extraction": {
+        "found": true,
+        "value": "USD 30,000,000",
+        "normalizedValue": "30000000",
+        "location": "L4",
+        "quote": "Committed capital: USD 30,000,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "0609ed11-6168-4198-ae42-9ddc70e027cf",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 9397,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "committed-capital-decoy-02",
+      "fieldId": "committed-capital",
+      "documentId": "committed-capital-decoy-02",
+      "promptSha256": "011a1b3cd91ca5b8724519102f987d4064e609c6906428ae0cfb1ca789f9afd7",
+      "extraction": {
+        "found": true,
+        "value": "USD 30,000,000",
+        "normalizedValue": "30000000",
+        "location": "L4",
+        "quote": "Committed capital: USD 30,000,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "314f229b-2c0a-4865-bda3-0daacda87c64",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 10563,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "committed-capital-decoy-03",
+      "fieldId": "committed-capital",
+      "documentId": "committed-capital-decoy-03",
+      "promptSha256": "e0e448cbbc5e337df38bb08813495c89f6438734726020bde4ecb7ff618b942f",
+      "extraction": {
+        "found": true,
+        "value": "USD 30,000,000",
+        "normalizedValue": "30000000",
+        "location": "L5",
+        "quote": "Committed capital: USD 30,000,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "da24a8b4-8283-45b7-b5c0-ae2f78fee483",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 9956,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "committed-capital-decoy-04",
+      "fieldId": "committed-capital",
+      "documentId": "committed-capital-decoy-04",
+      "promptSha256": "464a48c662307f31e248a92d42146615f38b8ee52d258552c2bfa47206420030",
+      "extraction": {
+        "found": true,
+        "value": "USD 30,000,000",
+        "normalizedValue": "30000000",
+        "location": "L4",
+        "quote": "Committed capital: USD 30,000,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "ddcac7f0-556d-47ca-824c-73104a01b7fc",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 10017,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "committed-capital-missing-01",
+      "fieldId": "committed-capital",
+      "documentId": "committed-capital-missing-01",
+      "promptSha256": "a34f6d8ae8634ae8eed91f53f4e801da1311c7bf3e0fc1a62494c4ec3ac8ea45",
+      "extraction": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null,
+        "quote": null,
+        "reason": "Field 'Committed capital' is not stated in this document. Only Opening NAV and Closing NAV are provided."
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "952829b9-df3b-4d28-a8fd-f5f0060e9e48",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 12631,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "committed-capital-missing-02",
+      "fieldId": "committed-capital",
+      "documentId": "committed-capital-missing-02",
+      "promptSha256": "d60353abd9b6e1ab7abeb825afec2b8f936fdaee367f5bcd65c592efb195c84f",
+      "extraction": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null,
+        "quote": null,
+        "reason": "Document contains Closing NAV but does not state committed capital"
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "2f92d811-1370-4634-b1a4-798be0d3492a",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 10770,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "committed-capital-missing-03",
+      "fieldId": "committed-capital",
+      "documentId": "committed-capital-missing-03",
+      "promptSha256": "3ef37ff92854fcd3d08d28767f4d91443dfc7cc255b4617a95ae98b4668f5b79",
+      "extraction": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null,
+        "quote": null,
+        "reason": "Field 'Committed capital' is not stated in this document"
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "b1d5c15c-b191-4c06-a478-113188895b3d",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 9593,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "committed-capital-missing-04",
+      "fieldId": "committed-capital",
+      "documentId": "committed-capital-missing-04",
+      "promptSha256": "984711af9b639606e803f917c20b200bb1b816e5ae219e7931c7f182a859fe19",
+      "extraction": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null,
+        "quote": null,
+        "reason": "Field not stated in this document"
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "1feb181d-840b-42ab-805f-df376b827a8b",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 10769,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "committed-capital-conflict-1-1",
+      "fieldId": "committed-capital",
+      "documentId": "committed-capital-conflict-1-1",
+      "promptSha256": "2f41c33543a8aeb192070ebf6218bdb194f73db6daa1e380e59923bd9cdb4e32",
+      "extraction": {
+        "found": true,
+        "value": "USD 15,500,000",
+        "normalizedValue": "15500000",
+        "location": "L4",
+        "quote": "Committed capital: USD 15,500,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "47c75a2d-d4cd-4fd0-ae3a-c92ab9c29f6e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 10152,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "committed-capital-conflict-1-2",
+      "fieldId": "committed-capital",
+      "documentId": "committed-capital-conflict-1-2",
+      "promptSha256": "4062ae59a3d42952ff11bff97489c58f30ad7b6108baaca36565b7e9e77e47ad",
+      "extraction": {
+        "found": true,
+        "value": "USD 15,000,000",
+        "normalizedValue": "15000000",
+        "location": "L4",
+        "quote": "Committed capital: USD 15,000,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "4d1c9ec5-82ef-4a44-aab7-8e37dc7a13ae",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 11992,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "committed-capital-conflict-2-1",
+      "fieldId": "committed-capital",
+      "documentId": "committed-capital-conflict-2-1",
+      "promptSha256": "0e8bf77bd96303cd1a02668fbc88b32eedbc2442430b98bb27e3b13958314d3f",
+      "extraction": {
+        "found": true,
+        "value": "USD 42,000,000",
+        "normalizedValue": "42000000",
+        "location": "L4",
+        "quote": "Committed capital: USD 42,000,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "7b14e4a3-8fdb-4ae5-81a3-54c7ebe7959c",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 9679,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "committed-capital-conflict-2-2",
+      "fieldId": "committed-capital",
+      "documentId": "committed-capital-conflict-2-2",
+      "promptSha256": "b76c3baa9c612b1950887a5fbc388ea05bf8f38c3962816b8d8bb13f73bdcfa2",
+      "extraction": {
+        "found": true,
+        "value": "USD 40,500,000",
+        "normalizedValue": "40500000",
+        "location": "L4",
+        "quote": "Committed capital: USD 40,500,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "8d6bb53b-0024-4799-8d65-b315e1984613",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 11963,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "committed-capital-format-edge-01",
+      "fieldId": "committed-capital",
+      "documentId": "committed-capital-format-edge-01",
+      "promptSha256": "191261a6e737a2a454d9ffb47be8ff6ff96d7a5f7a784c31d46f6ef744d34e3a",
+      "extraction": {
+        "found": true,
+        "value": "USD 30,000,000",
+        "normalizedValue": "30000000",
+        "location": "L4",
+        "quote": "Committed capital (as amended): USD 30,000,000",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "da0d292a-3fd8-4a45-8f40-7f489e75a292",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 7915,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "committed-capital-format-edge-02",
+      "fieldId": "committed-capital",
+      "documentId": "committed-capital-format-edge-02",
+      "promptSha256": "7ae82550f70fe29aa6b0bcb1d5aaa9b75ddf4993b83778bda56b28a07cbaecf9",
+      "extraction": {
+        "found": true,
+        "value": "USD 30,000,000",
+        "normalizedValue": "30000000",
+        "location": "L4",
+        "quote": "Committed capital — USD 30,000,000 (all classes)",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "33af5118-d675-4622-aea0-e450e693ca2f",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 13135,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed-clean-01",
+      "fieldId": "investor-complaints-closed",
+      "documentId": "investor-complaints-closed-clean-01",
+      "promptSha256": "1c765b2d6adcd59093e986bc2501dd0ba4965d646c3957747939bdbd77550c48",
+      "extraction": {
+        "found": true,
+        "value": "3",
+        "normalizedValue": "3",
+        "location": "L4",
+        "quote": "Investor complaints closed during the quarter: 3",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "3da82e60-bf21-4718-a829-a08e40476712",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 11119,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed-clean-02",
+      "fieldId": "investor-complaints-closed",
+      "documentId": "investor-complaints-closed-clean-02",
+      "promptSha256": "11c3488beaf706529b28bb8884f67736bceda8d8b896c0c7cba3b9a6a5cb6435",
+      "extraction": {
+        "found": true,
+        "value": "Five (5)",
+        "normalizedValue": "5",
+        "location": "L4",
+        "quote": "Complaints closed: Five (5)",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "1f2d5d2f-5660-4a68-a373-61d137f5abcf",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 9632,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed-clean-03",
+      "fieldId": "investor-complaints-closed",
+      "documentId": "investor-complaints-closed-clean-03",
+      "promptSha256": "20cfe7297fcb5f0cc246a9297cbbd99bc9d0eb66b67a077cc92bb894a9b528f2",
+      "extraction": {
+        "found": true,
+        "value": "02",
+        "normalizedValue": "2",
+        "location": "L4",
+        "quote": "Investor complaints closed: 02",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "790b5beb-97ee-4138-a83b-41368f8b076e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 10529,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed-clean-04",
+      "fieldId": "investor-complaints-closed",
+      "documentId": "investor-complaints-closed-clean-04",
+      "promptSha256": "d85ec9ebff8489fba44575789eb51f0b40cf8828e02332551e70f8ad0f1d1a11",
+      "extraction": {
+        "found": true,
+        "value": "7",
+        "normalizedValue": "7",
+        "location": "L4",
+        "quote": "7 investor complaints were closed this quarter.",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "7f02783a-ae21-4f55-8c07-5fe5553b93b3",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 13022,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed-clean-05",
+      "fieldId": "investor-complaints-closed",
+      "documentId": "investor-complaints-closed-clean-05",
+      "promptSha256": "c96dcf85eb5a7e242b0b2eba59858dc9360bee5921f775a6f5cfe16fc3ddd059",
+      "extraction": {
+        "found": true,
+        "value": "Nil (0)",
+        "normalizedValue": "0",
+        "location": "L4",
+        "quote": "Investor complaints closed: Nil (0)",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "5a12f598-ce7a-4806-8027-c6567c8d0fb7",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 9626,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed-clean-06",
+      "fieldId": "investor-complaints-closed",
+      "documentId": "investor-complaints-closed-clean-06",
+      "promptSha256": "c1218897c2ff44022a7727b2b72e2da76ff4af301e3057fffffec676c6cc58af",
+      "extraction": {
+        "found": true,
+        "value": "1",
+        "normalizedValue": "1",
+        "location": "L4",
+        "quote": "Investor complaints closed: 1",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "ab16407f-687a-4edb-8f88-042090a6eabf",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 9945,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed-decoy-01",
+      "fieldId": "investor-complaints-closed",
+      "documentId": "investor-complaints-closed-decoy-01",
+      "promptSha256": "a312303a9e30b2999c22c26c8c60b3a01c79e1caab60fe1d8f1ecce37a654764",
+      "extraction": {
+        "found": true,
+        "value": "2",
+        "normalizedValue": "2",
+        "location": "L4",
+        "quote": "Investor complaints closed during the quarter: 2",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "02139d1a-b45c-4cd5-b26d-c53271d1564e",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 10357,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed-decoy-02",
+      "fieldId": "investor-complaints-closed",
+      "documentId": "investor-complaints-closed-decoy-02",
+      "promptSha256": "f15a69ad874748d7a7b9bcc459b727067218ad7a2d69831444b8463a343ec29a",
+      "extraction": {
+        "found": true,
+        "value": "4",
+        "normalizedValue": "4",
+        "location": "L4",
+        "quote": "Investor complaints closed during the quarter: 4",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "254419f1-f95a-4051-8ad1-b0a329d6921a",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 9940,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed-decoy-03",
+      "fieldId": "investor-complaints-closed",
+      "documentId": "investor-complaints-closed-decoy-03",
+      "promptSha256": "29d864809ae91f16173e83ef131a7e4fa8ef5f3777c481026743db99807ac187",
+      "extraction": {
+        "found": true,
+        "value": "3",
+        "normalizedValue": "3",
+        "location": "L4",
+        "quote": "Investor complaints closed during the quarter: 3",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "b3318655-5bc6-4b8e-a7b7-dc35f17a40ab",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 9500,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed-decoy-04",
+      "fieldId": "investor-complaints-closed",
+      "documentId": "investor-complaints-closed-decoy-04",
+      "promptSha256": "0b732060b02a1c07aac77582196b99457e91f72f18516b8b545621d53ec0f02a",
+      "extraction": {
+        "found": true,
+        "value": "6",
+        "normalizedValue": "6",
+        "location": "L3",
+        "quote": "Investor complaints closed during the quarter: 6",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "9ded8661-dbbe-4b93-b6e8-1ed604531496",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 9072,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed-missing-01",
+      "fieldId": "investor-complaints-closed",
+      "documentId": "investor-complaints-closed-missing-01",
+      "promptSha256": "fea930855b59ed3689a0b0d1003c59e26bfb43f11e5a4cff81b55b50767da11d",
+      "extraction": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null,
+        "quote": null,
+        "reason": "Field not present in document"
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "73185cb7-1446-4f73-a043-1e94eccf76a2",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 10119,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed-missing-02",
+      "fieldId": "investor-complaints-closed",
+      "documentId": "investor-complaints-closed-missing-02",
+      "promptSha256": "cfe0d11d7fbc099e8200176ea49980dd0ebaa8a29f08455f36cc6ee213ce2f18",
+      "extraction": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null,
+        "quote": null,
+        "reason": "Field 'Investor complaints closed' is not stated in this document. The document contains only fund identification and NAV ledger data."
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "fac0db97-8984-42c4-95ad-8a4b30e482aa",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 8739,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed-missing-03",
+      "fieldId": "investor-complaints-closed",
+      "documentId": "investor-complaints-closed-missing-03",
+      "promptSha256": "26bd0b0ab705c3c0969e9c787612cd59e33bbb0e8e584efadfb7f2380ed21a1c",
+      "extraction": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null,
+        "quote": null,
+        "reason": "The document is a subscription register extract containing only investor investment amounts; no field related to investor complaints or complaints closed is present."
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "ba8546ee-fb0b-4b7e-8cc2-4b21b54b473c",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 8646,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed-missing-04",
+      "fieldId": "investor-complaints-closed",
+      "documentId": "investor-complaints-closed-missing-04",
+      "promptSha256": "7da33badf7b73ea72de2aad87ef797fe403548ebd6ffba429043e44377ed592c",
+      "extraction": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null,
+        "quote": null,
+        "reason": "The field 'Investor complaints closed' is not stated in this document."
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "b63169cd-c1ad-4510-bad8-ab6a83a8b0dc",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 12431,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed-missing-05",
+      "fieldId": "investor-complaints-closed",
+      "documentId": "investor-complaints-closed-missing-05",
+      "promptSha256": "ca234280fcb18d0b20cd5d7700ff7eed70e20e41bf68de89703bb7f1d3c536a4",
+      "extraction": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null,
+        "quote": null,
+        "reason": "Field not stated in document"
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "6053470b-f3eb-4f36-9560-ea3872097641",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 9934,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed-missing-06",
+      "fieldId": "investor-complaints-closed",
+      "documentId": "investor-complaints-closed-missing-06",
+      "promptSha256": "6f1e8d8b41a56478ee69541d97985360e34b21adb0be9cf96bac364f84dd1c19",
+      "extraction": {
+        "found": false,
+        "value": null,
+        "normalizedValue": null,
+        "location": null,
+        "quote": null,
+        "reason": "The document does not state this field. It contains only board minutes regarding a quarterly valuation policy approval."
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "c7f0646e-2b49-4d43-b2e9-cd52cc356abe",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 8882,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed-conflict-1-1",
+      "fieldId": "investor-complaints-closed",
+      "documentId": "investor-complaints-closed-conflict-1-1",
+      "promptSha256": "39e78e6c1e5842466a2251e610ca8407ec4be9db879f569eb284de2adc73da4f",
+      "extraction": {
+        "found": true,
+        "value": "4",
+        "normalizedValue": "4",
+        "location": "L4",
+        "quote": "Investor complaints closed during the quarter: 4",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "98e4503a-a0a4-4cf6-be59-eeb4bf40b0b2",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 12413,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed-conflict-1-2",
+      "fieldId": "investor-complaints-closed",
+      "documentId": "investor-complaints-closed-conflict-1-2",
+      "promptSha256": "197362c56cf746e9bea9a0a729a67527a2883bd9671e4c20928e574b69027f8c",
+      "extraction": {
+        "found": true,
+        "value": "5",
+        "normalizedValue": "5",
+        "location": "L4",
+        "quote": "Investor complaints closed during the quarter: 5",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "abe22142-ebcf-42f6-a492-9d4ac2633d16",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 10290,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed-format-edge-01",
+      "fieldId": "investor-complaints-closed",
+      "documentId": "investor-complaints-closed-format-edge-01",
+      "promptSha256": "1af506b18a609efb4a30da4bfd5714d7a48c58a424a2a84f50384cde9b732f78",
+      "extraction": {
+        "found": true,
+        "value": "6",
+        "normalizedValue": "6",
+        "location": "L4",
+        "quote": "Investor complaints closed (Q2 2026): 6",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "c6ce5621-5010-4194-8c01-83a5c46d4228",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 7386,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed-format-edge-02",
+      "fieldId": "investor-complaints-closed",
+      "documentId": "investor-complaints-closed-format-edge-02",
+      "promptSha256": "e70787feaef00e0600b3568470a267cca675250984165b05242deb547c499add",
+      "extraction": {
+        "found": true,
+        "value": "2",
+        "normalizedValue": "2",
+        "location": "L4",
+        "quote": "No. of investor complaints closed = 2",
+        "reason": null
+      },
+      "modelReportedId": "claude-haiku-4-5-20251001",
+      "canonicalModel": "claude-haiku-4-5",
+      "provider": "firstParty",
+      "sessionId": "465b65dc-257f-4b0a-8680-4f750a725ba7",
+      "attempts": [
+        {
+          "attempt": 1,
+          "durationMs": 12274,
+          "ok": true
+        }
+      ]
+    }
+  ]
+}

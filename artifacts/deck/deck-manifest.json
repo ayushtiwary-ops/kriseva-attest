@@ -43,11 +43,11 @@
       "number": 1,
       "title": "KRISEVA ATTEST",
       "body": [
-        "A bounded source-to-field evidence workbench for human review.",
+        "An entity-side evidence-integrity and human-accountability layer for AI-assisted regulatory reporting in GIFT IFSC.",
         "This prototype is final for this application. Whether it becomes the company's product is deliberately still open.",
         "Research-stage prototype · synthetic data · no filing · no regulator connection"
       ],
-      "bodyWordCount": 34,
+      "bodyWordCount": 39,
       "sources": [
         "repo:docs/superpowers/specs/2026-08-12-attest-submission-system-design.md",
         "repo:docs/PRODUCT_DECISION.md"
@@ -209,11 +209,11 @@
   "embeddedScreenshots": [
     {
       "path": "artifacts/prototype-conflict-1440.png",
-      "sha256": "dada646b7271f87f0ec5bfeff83f15f6292a009d593763bef988836df08fe4f8"
+      "sha256": "8dbeacbf601f4572d947bfc17efeb4bc0254c468e9ca18e0a1a277e8b1226aa8"
     },
     {
       "path": "artifacts/prototype-receipt-1440.png",
-      "sha256": "2504f780e6bcc0ee56741afdd0fe6f2c594852c37d3691dc48cf0edb83fdcf15"
+      "sha256": "68d3e9b05db4ffe8959eb8a34a1807f045bbc70c6f4810c09c6c0f759ac12065"
     }
   ]
 }

@@ -1,0 +1,5 @@
+SYNTHETIC DEMO DATA — Ironwood Bridge Fund — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Ironwood Bridge Fund
+NAV ledger extract.
+Opening NAV: USD 9,800,000
+Closing NAV: USD 10,200,000

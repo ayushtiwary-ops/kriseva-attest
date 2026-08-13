@@ -1,0 +1,5 @@
+SYNTHETIC DEMO DATA — Copperline Fund III — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Copperline Fund III
+Committed capital: USD 28,000,000
+Closing NAV: USD 13,050,000
+Committed capital is a separate figure from Closing NAV.

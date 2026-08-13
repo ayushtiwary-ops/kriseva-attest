@@ -22,7 +22,7 @@
       <section class="notes-hero" aria-labelledby="notes-title">
         <p class="eyebrow">Architecture / operating limits</p>
         <h1 id="notes-title">Technical notes</h1>
-        <p class="notes-lede">A dependency-light static demonstration for reviewing one fixed synthetic evidence case. This page describes only what the repository implements and verifies locally.</p>
+        <p class="notes-lede">KRISEVA ATTEST is an entity-side evidence-integrity and human-accountability layer for AI-assisted regulatory reporting in GIFT IFSC. This page is a dependency-light static demonstration for reviewing one fixed synthetic evidence case; it describes only what the repository implements and verifies locally.</p>
         <a class="artifact-link notes-return" href="./">Return to submission dossier</a>
       </section>
 
@@ -41,7 +41,7 @@
           <li>The prototype does not write or submit an official return.</li>
           <li>It is not connected to IFSCA systems or DRR interfaces.</li>
           <li>A human decision with a reviewer and reason is required for a material conflict.</li>
-          <li>Pilot agentic step (future intent, not built): model-driven source extraction and candidate proposal, operating inside the same PROPOSE / ABSTAIN / DECIDE boundary shown by the deterministic trace.</li>
+          <li>Pilot agentic step (future intent, not built): model-driven source extraction and candidate proposal, operating inside the same PROPOSE / ABSTAIN / DECIDE boundary shown by the deterministic trace. The planned residency architecture targets Amazon Bedrock as the model layer, using secured AWS startup credits and AWS technical mentorship available through the programme; no AWS component runs in the current build, which stays deliberately zero-infrastructure, static, and local.</li>
         </ul>
       </section>
 
@@ -49,17 +49,25 @@
         <p class="eyebrow">03 / Data flow</p>
         <h2 id="flow-title">Six deterministic steps retain the source record.</h2>
         <ol class="notes-flow">
-          <li><span><strong>Load.</strong> One fictional entity, three fictional sources, and three whitelisted fields enter from the fixed fixture.</span></li>
+          <li><span><strong>Load.</strong> One fictional entity, four fictional sources, and three whitelisted fields enter from the fixed fixture.</span></li>
           <li><span><strong>Derive.</strong> Candidate presence and normalized-value equality produce supported, conflicting, or unsupported states.</span></li>
-          <li><span><strong>Review.</strong> The browser renders the six-screen workflow and holds current session state in memory.</span></li>
+          <li><span><strong>Review.</strong> The browser renders the seven-screen workflow and holds current session state in memory.</span></li>
           <li><span><strong>Decide.</strong> A reviewer action records a decision without replacing the original conflict candidates.</span></li>
-          <li><span><strong>Export.</strong> Bounded JSON or printable HTML retains fingerprints, candidates, decisions, and unresolved items.</span></li>
+          <li><span><strong>Export.</strong> Bounded JSON or printable HTML retains fingerprints, candidates, decisions, risk indicators, anomaly-flag dispositions, and unresolved items.</span></li>
           <li><span><strong>Reset.</strong> Reloading the fixture clears current browser-session decisions.</span></li>
         </ol>
       </section>
 
+      <section class="notes-section" aria-labelledby="risk-surface-title">
+        <p class="eyebrow">04 / Risk and fraud analysis surface</p>
+        <h2 id="risk-surface-title">A deterministic flag engine, not a model.</h2>
+        <p>The risk and anomaly board runs a fixed rule set over the same evidence record used for compliance assembly: it checks candidate coverage per field, compares document fingerprints across claimed-distinct sources, checks source document dates against the quarter end, and reads the direction of a recorded conflict decision. Each check either fires or it does not; there is no scoring model and no live model call.</p>
+        <p>A firing check becomes an anomaly flag: a severity, a lens (compliance, risk, or fraud analysis), a plain-English explanation, and the exact source or field reference it derives from. A flag is a deterministic integrity check, not an accusation. The prototype never resolves a flag itself; a named human must escalate it for investigation or acknowledge it with a reason before Principal Officer sign-off can proceed, and that disposition is retained in the evidence manifest alongside the flag.</p>
+        <p>Model-assisted extraction and candidate proposal inside this same flag boundary remains future intent, not built behavior.</p>
+      </section>
+
       <section class="notes-section notes-verification" aria-labelledby="verification-title">
-        <p class="eyebrow">04 / Local verification</p>
+        <p class="eyebrow">05 / Local verification</p>
         <h2 id="verification-title">Checks describe this repository only.</h2>
         <p>Browser tests reject remote resource requests and exercise accessibility, keyboard behavior, local links, and visual containment. Unit tests exercise non-mutating state transitions, conflict preservation, reviewer requirements, manifest bounds, and deterministic export.</p>
         <p>These checks are not evidence for a real regulated deployment.</p>

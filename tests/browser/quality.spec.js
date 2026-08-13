@@ -10,6 +10,7 @@ const screens = [
   'Source-to-field workspace',
   'Conflict queue',
   'Agent trace',
+  'Risk and anomaly board',
   'Review and sign-off',
   'Evidence receipt',
 ];
@@ -18,6 +19,7 @@ const captureStates = {
   workspace: { route: 'source-workspace', reviewed: true, decision: false },
   conflict: { route: 'conflict-queue', reviewed: true, decision: false },
   trace: { route: 'agent-trace', reviewed: true, decision: false },
+  risk: { route: 'risk-board', reviewed: true, decision: false },
   receipt: { route: 'evidence-receipt', reviewed: true, decision: true },
 };
 const fixedRecordedAt = '2026-08-12T12:00:00+05:30';

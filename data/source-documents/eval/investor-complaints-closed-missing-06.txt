@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Quarrystone Fund I — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Quarrystone Fund I
+Board minutes extract.
+The board approved the quarterly valuation policy.

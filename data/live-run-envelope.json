@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "product": "KRISEVA ATTEST",
+  "runId": "live-run-2026-08-13T13-56-43-278Z",
+  "runTimestamp": "2026-08-13T13:56:43.278Z",
+  "disclosure": "Recorded execution of a live model run. Replay is deterministic; the model proposed, humans decided.",
+  "synthetic": true,
+  "dataMarker": "SYNTHETIC DEMO DATA",
+  "model": {
+    "reportedId": "claude-haiku-4-5-20251001",
+    "canonicalModel": "claude-haiku-4-5",
+    "provider": "firstParty"
+  },
+  "instruction": {
+    "templateVersion": "kriseva-attest-field-extraction-v1",
+    "templateSha256": "b242ceb4f9f95a59a7318c2bc310359eda4573015efbdf1c05096cb43aab108a"
+  },
+  "documents": [
+    {
+      "id": "administrator-statement",
+      "label": "Administrator statement",
+      "path": "data/source-documents/administrator-statement.md",
+      "documentDate": "2026-07-03",
+      "declaredFingerprint": "synthetic:admin-statement:9b2d7f",
+      "contentSha256": "09302163c091b591fc094a90bcab8d3a6c9e7bfe4cd5ff6d43764b9bf307a541",
+      "bytes": 1041
+    },
+    {
+      "id": "internal-ledger",
+      "label": "Internal ledger extract",
+      "path": "data/source-documents/internal-ledger.csv",
+      "documentDate": "2026-07-01",
+      "declaredFingerprint": "synthetic:ledger:38a4c1",
+      "contentSha256": "64746f92aede17f8e94332252e60c277b4e56ce3779073854b36f5595dcf425c",
+      "bytes": 977
+    },
+    {
+      "id": "board-schedule",
+      "label": "Subscription register extract",
+      "path": "data/source-documents/subscription-register.csv",
+      "documentDate": "2026-05-12",
+      "declaredFingerprint": "synthetic:board-schedule:4f71aa",
+      "contentSha256": "8a3d97b3eae9cbe8798ddc8b195b2fb76ee2a6e76a1ccbd4f29efcda3af2e2d6",
+      "bytes": 613
+    },
+    {
+      "id": "nav-custodian-confirmation",
+      "label": "NAV custodian confirmation",
+      "path": "data/source-documents/custodian-confirmation.txt",
+      "documentDate": "2026-07-02",
+      "declaredFingerprint": "synthetic:ledger:38a4c1",
+      "contentSha256": "e5618ada7e4f74631bf35393fbbd7daa1069cc64aebe14a51438b4bf85b1e4c2",
+      "bytes": 689
+    }
+  ],
+  "fields": [
+    {
+      "id": "closing-nav",
+      "label": "Closing NAV",
+      "candidates": [
+        {
+          "documentId": "administrator-statement",
+          "value": "USD 12,400,000",
+          "normalizedValue": "12400000",
+          "location": "L24",
+          "quote": "Closing NAV: USD 12,400,000",
+          "promptSha256": "7843d52e91e088bed6a1fccff2f177fad8b5861bd5a41224ec25a0b9a095cb74"
+        },
+        {
+          "documentId": "internal-ledger",
+          "value": "12,400,000 USD",
+          "normalizedValue": "12400000",
+          "location": "L18",
+          "quote": "Closing NAV,Closing net asset value,USD,Q2 2026,\"12,400,000 USD\"",
+          "promptSha256": "a8f261bedb4a312ae270f39fb0a72da2e55ecdfa1442e5548a432c3839621e51"
+        },
+        {
+          "documentId": "nav-custodian-confirmation",
+          "value": "12,400,000 USD",
+          "normalizedValue": "12400000",
+          "location": "L14",
+          "quote": "Closing NAV: 12,400,000 USD",
+          "promptSha256": "0a3e21abc90d53ff206aa3a622907cb32de3dd16279bc1505956c323dea95090"
+        }
+      ],
+      "abstentions": [
+        {
+          "documentId": "board-schedule",
+          "reason": "Closing NAV is not stated in this document. The document contains only a subscription register with investor commitments and total committed capital (USD 24,000,000), not fund NAV.",
+          "promptSha256": "eb2cd020f495edf10f8a413fb65a600b99e6fc4e6fc978b68b0fd8d300afe753"
+        }
+      ]
+    },
+    {
+      "id": "committed-capital",
+      "label": "Committed capital",
+      "candidates": [
+        {
+          "documentId": "administrator-statement",
+          "value": "USD 25,000,000",
+          "normalizedValue": "25000000",
+          "location": "L25",
+          "quote": "Committed capital: USD 25,000,000",
+          "promptSha256": "20566ac32fe7ca2ffdad1c026facb0c01a64c6a8cc9ccc9c1418de52deb4f645"
+        },
+        {
+          "documentId": "board-schedule",
+          "value": "USD 24,000,000",
+          "normalizedValue": "24000000",
+          "location": "L11",
+          "quote": "TOTAL,,\"USD 24,000,000\",",
+          "promptSha256": "5154e18235eb109cb7384e7a986e83b23501cac87eb56d5e7fd0fb50734db8b9"
+        }
+      ],
+      "abstentions": [
+        {
+          "documentId": "internal-ledger",
+          "reason": "The document contains NAV ledger movements for Q2 2026 but does not explicitly state a 'Committed capital' field.",
+          "promptSha256": "4b1d0a40438080004b408d050fa9f867fcb3a1eaa1728a74c90e57bd721ae030"
+        },
+        {
+          "documentId": "nav-custodian-confirmation",
+          "reason": "The document does not state committed capital; it only provides Closing NAV for the reporting period.",
+          "promptSha256": "1befb23e67fb2a6522d998f85946e2f14e76fee5c26af7a5162d476d1906aa72"
+        }
+      ]
+    },
+    {
+      "id": "investor-complaints-closed",
+      "label": "Investor complaints closed",
+      "candidates": [],
+      "abstentions": [
+        {
+          "documentId": "administrator-statement",
+          "reason": "The document does not contain any statement of investor complaints closed. The administrator statement covers fund overview, capital summary, and notes, but does not include complaint-related metrics.",
+          "promptSha256": "51bf076237578b6e4ed53b12ea5c7f2680038c4706177386ea67a211e147fffe"
+        },
+        {
+          "documentId": "internal-ledger",
+          "reason": "This document is a NAV ledger extract containing only financial line items (capital, expenses, P&L, income, accruals). The field 'Investor complaints closed' is not stated in this document.",
+          "promptSha256": "fcc9868e28ce4e9ffc850285d240a022ba2192a77fcdbcd36a90c7e237c0d846"
+        },
+        {
+          "documentId": "board-schedule",
+          "reason": "Document is a subscription register containing investor commitment data (dates, capital amounts, classes) with no mention of investor complaints or complaint closures.",
+          "promptSha256": "d8d6a97fb45aee801876b1f9827fad3b4730fc2573f81907fd409d3f6e5cd3ad"
+        },
+        {
+          "documentId": "nav-custodian-confirmation",
+          "reason": "Field 'Investor complaints closed' is not stated in this NAV custodian confirmation document, which contains only NAV reporting",
+          "promptSha256": "0ae804eb8c208ee2859a76a19cb644e1cc053070426984d8d26552049a9f9978"
+        }
+      ]
+    }
+  ],
+  "validators": [
+    {
+      "id": "closing-nav-currency-format",
+      "label": "Closing NAV: currency format",
+      "outcome": "PASS",
+      "detail": "VALID_FORMAT",
+      "explanation": "All 3 candidate value(s) for Closing NAV matched a recognized USD currency format.",
+      "reference": "Field · closing-nav · candidates from administrator-statement, internal-ledger, nav-custodian-confirmation"
+    },
+    {
+      "id": "closing-nav-cross-document-equality",
+      "label": "Closing NAV: cross-document equality",
+      "outcome": "PASS",
+      "detail": "MATCH",
+      "explanation": "3 candidate(s) across 3 document(s) agree on a normalized value for Closing NAV.",
+      "reference": "Field · closing-nav · documents administrator-statement, internal-ledger, nav-custodian-confirmation"
+    },
+    {
+      "id": "closing-nav-evidence-coverage",
+      "label": "Closing NAV: evidence coverage",
+      "outcome": "PASS",
+      "detail": "COVERED",
+      "explanation": "Closing NAV is supported by 3 candidate(s).",
+      "reference": "Field · closing-nav (Closing NAV) · 3 of 4 documents produced a candidate"
+    },
+    {
+      "id": "committed-capital-currency-format",
+      "label": "Committed capital: currency format",
+      "outcome": "PASS",
+      "detail": "VALID_FORMAT",
+      "explanation": "All 2 candidate value(s) for Committed capital matched a recognized USD currency format.",
+      "reference": "Field · committed-capital · candidates from administrator-statement, board-schedule"
+    },
+    {
+      "id": "committed-capital-cross-document-equality",
+      "label": "Committed capital: cross-document equality",
+      "outcome": "FLAG",
+      "detail": "CONFLICT",
+      "explanation": "Candidates for Committed capital disagree: administrator-statement=USD 25,000,000 vs board-schedule=USD 24,000,000.",
+      "reference": "Field · committed-capital · documents administrator-statement, board-schedule"
+    },
+    {
+      "id": "committed-capital-evidence-coverage",
+      "label": "Committed capital: evidence coverage",
+      "outcome": "PASS",
+      "detail": "COVERED",
+      "explanation": "Committed capital is supported by 2 candidate(s).",
+      "reference": "Field · committed-capital (Committed capital) · 2 of 4 documents produced a candidate"
+    },
+    {
+      "id": "investor-complaints-closed-currency-format",
+      "label": "Investor complaints closed: currency format",
+      "outcome": "PASS",
+      "detail": "VALID_FORMAT",
+      "explanation": "All 0 candidate value(s) for Investor complaints closed matched a recognized USD currency format.",
+      "reference": "Field · investor-complaints-closed · candidates from none"
+    },
+    {
+      "id": "investor-complaints-closed-cross-document-equality",
+      "label": "Investor complaints closed: cross-document equality",
+      "outcome": "FLAG",
+      "detail": "NO_CANDIDATES",
+      "explanation": "No document produced a candidate value for Investor complaints closed.",
+      "reference": "Field · investor-complaints-closed · documents none"
+    },
+    {
+      "id": "investor-complaints-closed-evidence-coverage",
+      "label": "Investor complaints closed: evidence coverage",
+      "outcome": "FLAG",
+      "detail": "NO_EVIDENCE_COVERAGE",
+      "explanation": "Investor complaints closed has zero candidate evidence across all 4 source documents; no value was synthesized in its place.",
+      "reference": "Field · investor-complaints-closed (Investor complaints closed) · 0 of 4 documents produced a candidate"
+    },
+    {
+      "id": "duplicate-fingerprint-check",
+      "label": "Duplicate document fingerprint",
+      "outcome": "FLAG",
+      "detail": "DUPLICATE_FINGERPRINT",
+      "explanation": "Two distinct claimed source documents carry an identical declared document fingerprint.",
+      "reference": "Documents · internal-ledger & nav-custodian-confirmation · fingerprint synthetic:ledger:38a4c1"
+    },
+    {
+      "id": "stale-source-check",
+      "label": "Stale source",
+      "outcome": "FLAG",
+      "detail": "STALE_SOURCE",
+      "explanation": "Subscription register extract is dated more than 30 days before the quarter end.",
+      "reference": "Source · board-schedule (Subscription register extract) · document date 2026-05-12 · quarter end 2026-06-30 · 49 days stale"
+    }
+  ],
+  "notes": [],
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "f2c48537626d4b5c14d861740e71f730fd848dcdbe227910b92a48d12232a8c4"
+  }
+}

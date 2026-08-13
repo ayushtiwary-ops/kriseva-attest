@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Quarrystone Fund I — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Quarrystone Fund I
+Reporting period: Quarter ended 30 June 2026
+Committed capital: US$30,000,000

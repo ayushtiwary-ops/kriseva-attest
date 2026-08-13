@@ -1,0 +1,19 @@
+SYNTHETIC DEMO DATA — NOT A REAL CUSTODIAN, NOT A REAL FUND, NOT A REGULATORY FILING
+
+CUSTODIAN NAV CERTIFICATE
+Page 1 of 1
+
+Custodian: Horizon Trust & Custody Services (synthetic, demonstration only)
+Fund: Meridian Horizon Fund I
+Certificate date: 2 July 2026
+Reporting period: Quarter ended 30 June 2026
+
+We confirm that, based on our records as custodian, the Fund's Closing NAV for the
+period ended 30 June 2026 was:
+
+Closing NAV: 12,400,000 USD
+
+This certificate is prepared solely for the KRISEVA ATTEST research-stage
+demonstration and does not describe a real custodian, a real fund, or a real
+investor relationship. No signature, seal, or authentication is implied or
+provided.

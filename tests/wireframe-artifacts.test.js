@@ -9,11 +9,12 @@ const screenNames = [
   'Source-to-field workspace',
   'Conflict queue',
   'Agent trace',
+  'Risk and anomaly board',
   'Review and sign-off',
   'Evidence receipt',
 ];
 
-test('wireframe board exposes six semantic screens and deterministic exports', async () => {
+test('wireframe board exposes seven semantic screens and deterministic exports', async () => {
   const html = await readFile(resolve(projectRoot, 'wireframes/index.html'), 'utf8').catch(() => '');
   const missing = [];
 
@@ -26,8 +27,8 @@ test('wireframe board exposes six semantic screens and deterministic exports', a
 
   for (const label of ['Task', 'Primary action', 'Error / empty state', 'Mobile collapse']) {
     const occurrences = html.match(new RegExp(`>${label}<`, 'gu'))?.length || 0;
-    if (occurrences !== 6) {
-      missing.push(`label:${label}:${occurrences}/6`);
+    if (occurrences !== 7) {
+      missing.push(`label:${label}:${occurrences}/7`);
     }
   }
 
@@ -58,7 +59,7 @@ test('mobile SVG reserves enough vertical space for stacked evidence rows', asyn
   const panelHeights = [...svg.matchAll(/height="([\d.]+)" fill="#[fF]4[fF]4[fF]1" stroke="#[bB]9[bB]9[bB]4"/gu)]
     .map((match) => Number(match[1]));
 
-  assert.equal(panelHeights.length, 12);
+  assert.equal(panelHeights.length, 14);
   assert.equal(panelHeights.every((height) => height >= 230), true);
 });
 
@@ -71,7 +72,7 @@ test('mobile SVG text bounds stay inside rows and banner labels do not intersect
 
   assert.equal(textBounds.length >= 48, true);
   assert.equal(textBounds.every(({ textBottom, ownerBottom }) => textBottom <= ownerBottom - 16), true);
-  assert.equal(bannerBoxes.length, 12);
+  assert.equal(bannerBoxes.length, 14);
 
   for (let index = 0; index < bannerBoxes.length; index += 2) {
     const [firstX, firstY, firstWidth, firstHeight] = bannerBoxes[index];
@@ -90,7 +91,7 @@ test('mobile SVG evidence-panel text blocks keep ordered vertical gaps', async (
     .map((match) => ({ owner: match[1], order: Number(match[2]), top: Number(match[3]), bottom: Number(match[4]) }));
   const groups = Map.groupBy(blocks, (block) => block.owner);
 
-  assert.equal(groups.size, 24);
+  assert.equal(groups.size, 28);
   for (const group of groups.values()) {
     group.sort((left, right) => left.order - right.order);
     assert.equal(group.length, 4);

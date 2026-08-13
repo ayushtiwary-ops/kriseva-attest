@@ -1,0 +1,5 @@
+SYNTHETIC DEMO DATA — Halcyon Meridian Fund — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Halcyon Meridian Fund
+Subscription register extract.
+Investor 1: USD 3,000,000
+Investor 2: USD 2,000,000

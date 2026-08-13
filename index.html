@@ -23,9 +23,9 @@
     <main id="submission-dossier" tabindex="-1">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">Source-to-field review / bounded demonstration</p>
-          <h1 id="hero-title">Show the evidence behind a reported field, and stop when the record disagrees.</h1>
-          <p class="hero-summary">KRISEVA ATTEST is a human-reviewed evidence workbench for one fictional reporting case. The demonstration compares candidate values, exposes conflict or missing support, and records a named human decision.</p>
+          <p class="eyebrow">Entity-side evidence integrity / human accountability</p>
+          <h1 id="hero-title">Show the evidence behind a reported field. Stop when the record disagrees.</h1>
+          <p class="hero-summary">KRISEVA ATTEST is an entity-side evidence-integrity and human-accountability layer for AI-assisted regulatory reporting in GIFT IFSC. The demonstration compares candidate values, exposes conflict or missing support, and records a named human decision before anything is treated as settled.</p>
           <p class="hero-summary">Built for compliance teams at fund management entities (FMEs) in GIFT IFSC assembling evidence for periodic IFSCA returns. Fields are illustrative of those reported in FME periodic returns under the IFSCA (Fund Management) Regulations, 2025.</p>
           <a class="primary-action" href="prototype/">Launch interactive prototype</a>
         </div>
@@ -82,7 +82,7 @@
           <li>
             <span class="step-number">02 / ESCALATE</span>
             <h3>Stop at conflict or absence</h3>
-            <p>Unequal values remain conflicting. Missing evidence produces an explicit abstention.</p>
+            <p>Unequal values remain conflicting. Missing evidence produces an explicit abstention. The same evidence record powers compliance assembly, deterministic risk indicators, and fraud-analysis flags, each closed by a named human.</p>
           </li>
           <li>
             <span class="step-number">03 / RECORD</span>
@@ -101,7 +101,7 @@
           <article class="artifact-card active-artifact" data-artifact="prototype">
             <p class="artifact-status">ACTIVE / LOCAL</p>
             <h3>Interactive prototype</h3>
-            <p class="artifact-description">Review the six-screen synthetic workflow and download a local evidence manifest.</p>
+            <p class="artifact-description">Review the seven-screen synthetic workflow and download a local evidence manifest.</p>
             <a class="artifact-link" href="prototype/">Launch interactive prototype</a>
           </article>
           <article class="artifact-card active-artifact" data-artifact="wireframes">
@@ -151,6 +151,28 @@
         </div>
       </section>
 
+      <section class="scope-section" aria-labelledby="scope-title">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">Operating scope / no integration claimed</p>
+          <h2 id="scope-title">Where ATTEST sits, and where it stops.</h2>
+        </div>
+        <div class="scope-grid">
+          <article class="scope-box">
+            <p class="evidence-reference">SOURCE</p>
+            <h3>Underlying books, registers, statements</h3>
+          </article>
+          <article class="scope-box scope-box-attest">
+            <p class="evidence-reference">KRISEVA ATTEST</p>
+            <h3>Evidence acquisition, extraction proposals, conflicts, human decision, manifest</h3>
+          </article>
+          <article class="scope-box">
+            <p class="evidence-reference">REGULATORY SUBMISSION CHANNEL / DRR</p>
+            <h3>Taxonomy, submission, validation, supervisory consumption</h3>
+          </article>
+        </div>
+        <p class="scope-caption">Entity-side, before submission. No DRR connection claimed.</p>
+      </section>
+
       <section class="team-section" aria-labelledby="team-title">
         <p class="eyebrow">Build responsibility</p>
         <h2 id="team-title">Founder-owned engineering and integration.</h2>
@@ -165,7 +187,7 @@
         <div class="faq-grid">
           <article class="faq-card">
             <h3>What is actually different here?</h3>
-            <p>Not a feature list: an accountability contract. Every reported value carries its exact source, competing candidates stay visible instead of being resolved silently, a named human must give a reason before a conflict closes, and the evidence exports as a portable manifest. We call this a hypothesis, not a validated moat.</p>
+            <p>Not a feature list: an accountability contract. Public materials already show adjacent capabilities, lineage, audit trails, exception workflows, and agent evidence logs, at vendors including Regnology, Workiva, IRIS, Duco, and Hadrius; we do not claim otherwise. The differentiated object is the combination: exact source region, every conflicting candidate preserved, a named human reason before a conflict closes, and a portable manifest, applied to FME regulatory reporting. That full combination is not located in the public materials reviewed. We call it a hypothesis, not a validated moat.</p>
           </article>
           <article class="faq-card">
             <h3>Why can't ChatGPT or Copilot do this?</h3>
@@ -177,7 +199,7 @@
           </article>
           <article class="faq-card">
             <h3>Where is the agentic AI?</h3>
-            <p>Nowhere in the running code today, and the screens say so. What exists is the contract any agent must obey: propose a value with exact references, abstain when evidence is missing, and let only a named human decide. Putting a model inside that boundary is the eight-week build target.</p>
+            <p>Nowhere in the running code today, and the screens say so. What exists is the contract any agent must obey: propose a value with exact references, abstain when evidence is missing, and let only a named human decide. IFSCA's July 2026 AI Survey names source-referenced document extraction as an observed IFSC AI use case and human-in-the-loop oversight as the most widely adopted production safeguard; that is the shape of the model we plan to put inside this boundary.</p>
           </article>
           <article class="faq-card">
             <h3>Is human-in-the-loop an admission the AI failed?</h3>

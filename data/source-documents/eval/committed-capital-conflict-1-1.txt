@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Northgate Horizon Fund — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Northgate Horizon Fund
+Source: Administrator statement, page 2.
+Committed capital: USD 15,500,000

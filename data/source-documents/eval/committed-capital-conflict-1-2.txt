@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Northgate Horizon Fund — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Northgate Horizon Fund
+Source: Subscription register extract, Schedule A.
+Committed capital: USD 15,000,000

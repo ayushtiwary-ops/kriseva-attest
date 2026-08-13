@@ -1,3 +1,5 @@
+import { allFlagsDispositioned, computeAnomalyFlags, validateDisposition } from './risk-engine.js';
+
 const MATERIAL_ACTIONS = new Set(['ACCEPT', 'CORRECT', 'REJECT', 'DEFER']);
 
 function normalizeValue(candidate) {
@@ -37,6 +39,7 @@ export function loadCase(caseData) {
       selectedCandidateId: null
     })),
     decisions: [],
+    riskDispositions: [],
     signOff: null
   };
 }
@@ -101,6 +104,37 @@ export function recordDecision(state, fieldId, decision) {
   };
 }
 
+// Records a named human's disposition (escalate or acknowledge, with a
+// reason) of a currently-active anomaly flag. Mirrors recordDecision: the
+// flag must currently be firing, the disposition must be materially
+// complete, and the disposition is appended (never mutated) so a later
+// disposition for the same flag simply becomes the latest one on record.
+export function recordRiskDisposition(state, flagId, disposition) {
+  const activeFlags = computeAnomalyFlags(state);
+  if (!activeFlags.some((flag) => flag.id === flagId)) {
+    throw new Error(`Unknown or inactive anomaly flag: ${flagId}`);
+  }
+
+  const error = validateDisposition(disposition);
+  if (error) {
+    throw new Error(`A disposition action, disposer name, and reason are required: ${error.message}`);
+  }
+
+  const nextState = structuredClone(state);
+  const recordedDisposition = {
+    flagId,
+    action: disposition.action,
+    disposerName: disposition.disposerName.trim(),
+    reason: disposition.reason.trim(),
+    ...(disposition.recordedAt == null ? {} : { recordedAt: disposition.recordedAt })
+  };
+
+  return {
+    ...nextState,
+    riskDispositions: [...(nextState.riskDispositions ?? []), recordedDisposition]
+  };
+}
+
 // The conflict-decision gate: true once evidence review has run and every
 // CONFLICTING field carries a materially complete decision (reviewer + reason).
 // This is the maker half of maker-checker and its semantics are unchanged from
@@ -130,11 +164,15 @@ function latestConflictReviewer(state) {
 
 // The checker half of maker-checker: a second named role (the Principal
 // Officer) positively confirms the evidence record for all three fields.
-// Blocked until the conflict decision exists, and rejected if the confirming
-// officer is the same person as the deciding reviewer.
+// Blocked until the conflict decision exists and every currently-active
+// anomaly flag carries a disposition, and rejected if the confirming officer
+// is the same person as the deciding reviewer.
 export function recordSignOff(state, signOff) {
   if (!hasConflictDecision(state)) {
     throw new Error('Sign-off requires the conflict decision to be recorded first.');
+  }
+  if (!allFlagsDispositioned(state)) {
+    throw new Error('Sign-off requires every active anomaly flag to have a disposition first.');
   }
 
   const officerName = String(signOff?.officerName ?? '').trim();
@@ -161,10 +199,20 @@ export function recordSignOff(state, signOff) {
   };
 }
 
-// Full sign-off gate: the conflict decision AND a confirmed, distinct
-// Principal Officer record. The receipt screen and both exports require this.
+// Full sign-off gate: the conflict decision, every active anomaly flag
+// dispositioned, AND a confirmed, distinct Principal Officer record. The
+// receipt screen and both exports require this.
 export function canSignOff(state) {
-  return hasConflictDecision(state) && Boolean(state.signOff?.confirmed);
+  return hasConflictDecision(state) && allFlagsDispositioned(state) && Boolean(state.signOff?.confirmed);
+}
+
+// Ordered list of gate ids still blocking the officer-confirmation form, for
+// UI messaging ("which gates remain"). Empty once the form is usable.
+export function pendingSignOffGates(state) {
+  const gates = [];
+  if (!hasConflictDecision(state)) gates.push('conflict-decision');
+  if (!allFlagsDispositioned(state)) gates.push('anomaly-dispositions');
+  return gates;
 }
 
 export function resetCase(caseData) {

@@ -79,7 +79,7 @@ async function captureWireframes() {
   );
 }
 
-const prototypeCaptureStates = ['dashboard', 'workspace', 'conflict', 'trace', 'receipt'];
+const prototypeCaptureStates = ['dashboard', 'workspace', 'conflict', 'trace', 'risk', 'receipt'];
 const prototypeViewports = [
   { width: 390, height: 844 },
   { width: 768, height: 1024 },

@@ -4,10 +4,13 @@ import {
   loadCase,
   runEvidenceReview,
   recordDecision,
+  recordRiskDisposition,
   recordSignOff,
   hasConflictDecision,
-  canSignOff
+  canSignOff,
+  pendingSignOffGates
 } from '../src/case-engine.js';
+import { computeAnomalyFlags } from '../src/risk-engine.js';
 import fixture from '../data/synthetic-case.json' with { type: 'json' };
 
 function decidedFixture(reviewer = 'Rhea Menon') {
@@ -18,6 +21,22 @@ function decidedFixture(reviewer = 'Rhea Menon') {
     reason: 'Synthetic reviewer decision.',
     recordedAt: '2026-08-12T09:30:00.000Z'
   });
+}
+
+// decidedFixture() accepts the higher candidate, so all four designed
+// anomaly flags are active by that point. This helper dispositions every
+// currently-active flag so the sign-off gate opens.
+function dispositionAllFlags(state, recordedAt = '2026-08-12T09:40:00.000Z') {
+  return computeAnomalyFlags(state).reduce((accumulatedState, flag) => recordRiskDisposition(accumulatedState, flag.id, {
+    action: 'ACKNOWLEDGE',
+    disposerName: 'Kavya Rao',
+    reason: 'Reviewed and acknowledged for this synthetic demo case.',
+    recordedAt
+  }), state);
+}
+
+function readyForSignOff(reviewer = 'Rhea Menon') {
+  return dispositionAllFlags(decidedFixture(reviewer));
 }
 
 test('review preserves supported, conflicting, and unsupported states', () => {
@@ -116,9 +135,30 @@ test('recordSignOff requires the conflict decision to exist first', () => {
   }), /conflict decision/i);
 });
 
-test('recordSignOff requires a non-empty Principal Officer name', () => {
-  const decided = decidedFixture();
+test('recordSignOff is blocked until every active anomaly flag has a disposition, even with a conflict decision on file', () => {
+  const decided = decidedFixture(); // higher-value ACCEPT: all four flags are active
   assert.throws(() => recordSignOff(decided, {
+    officerName: 'Arjun Verma',
+    confirmed: true,
+    recordedAt: '2026-08-12T09:45:00.000Z'
+  }), /active anomaly flag/i);
+  assert.equal(canSignOff(decided), false);
+});
+
+test('pendingSignOffGates names conflict-decision and anomaly-dispositions in order, clearing as each gate closes', () => {
+  const reviewed = runEvidenceReview(loadCase(fixture));
+  assert.deepEqual(pendingSignOffGates(reviewed), ['conflict-decision', 'anomaly-dispositions']);
+
+  const decided = decidedFixture();
+  assert.deepEqual(pendingSignOffGates(decided), ['anomaly-dispositions']);
+
+  const dispositioned = dispositionAllFlags(decided);
+  assert.deepEqual(pendingSignOffGates(dispositioned), []);
+});
+
+test('recordSignOff requires a non-empty Principal Officer name', () => {
+  const ready = readyForSignOff();
+  assert.throws(() => recordSignOff(ready, {
     officerName: '   ',
     confirmed: true,
     recordedAt: '2026-08-12T09:45:00.000Z'
@@ -126,8 +166,8 @@ test('recordSignOff requires a non-empty Principal Officer name', () => {
 });
 
 test('recordSignOff requires the confirmation checkbox to be checked', () => {
-  const decided = decidedFixture();
-  assert.throws(() => recordSignOff(decided, {
+  const ready = readyForSignOff();
+  assert.throws(() => recordSignOff(ready, {
     officerName: 'Arjun Verma',
     confirmed: false,
     recordedAt: '2026-08-12T09:45:00.000Z'
@@ -135,8 +175,8 @@ test('recordSignOff requires the confirmation checkbox to be checked', () => {
 });
 
 test('recordSignOff blocked when the officer name matches the deciding reviewer (trimmed, case-insensitive)', () => {
-  const decided = decidedFixture('Rhea Menon');
-  assert.throws(() => recordSignOff(decided, {
+  const ready = readyForSignOff('Rhea Menon');
+  assert.throws(() => recordSignOff(ready, {
     officerName: '  rhea menon  ',
     confirmed: true,
     recordedAt: '2026-08-12T09:45:00.000Z'
@@ -144,14 +184,15 @@ test('recordSignOff blocked when the officer name matches the deciding reviewer 
 });
 
 test('recordSignOff allowed and clears the sign-off gate when the officer name is distinct', () => {
-  const decided = decidedFixture('Rhea Menon');
-  const signedOff = recordSignOff(decided, {
+  const ready = readyForSignOff('Rhea Menon');
+  const signedOff = recordSignOff(ready, {
     officerName: 'Arjun Verma',
     confirmed: true,
     recordedAt: '2026-08-12T09:45:00.000Z'
   });
 
   assert.equal(canSignOff(signedOff), true);
+  assert.deepEqual(pendingSignOffGates(signedOff), []);
   assert.deepEqual(signedOff.signOff, {
     officerName: 'Arjun Verma',
     confirmed: true,
@@ -160,8 +201,8 @@ test('recordSignOff allowed and clears the sign-off gate when the officer name i
 });
 
 test('recordSignOff trims the officer name before storing it', () => {
-  const decided = decidedFixture('Rhea Menon');
-  const signedOff = recordSignOff(decided, {
+  const ready = readyForSignOff('Rhea Menon');
+  const signedOff = recordSignOff(ready, {
     officerName: '  Arjun Verma  ',
     confirmed: true,
     recordedAt: '2026-08-12T09:45:00.000Z'

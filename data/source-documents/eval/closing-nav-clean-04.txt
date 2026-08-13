@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Amberlyn Growth Fund I — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Amberlyn Growth Fund I
+Reporting period: Quarter ended 30 June 2026
+Closing NAV: US$13,050,000

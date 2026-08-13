@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Marrow Creek Fund II — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Marrow Creek Fund II
+Reporting period: Quarter ended 30 June 2026
+Investor complaints closed: 1

@@ -13,7 +13,7 @@
       <div>
         <p class="classification">Low-fidelity information architecture · 12 August 2026</p>
         <h1>KRISEVA ATTEST · evidence review wireframes</h1>
-        <p class="board-subtitle">Six low-fidelity screens for a bounded, human-reviewed evidence workbench.</p>
+        <p class="board-subtitle">Seven low-fidelity screens for a bounded, human-reviewed evidence integrity workbench.</p>
       </div>
       <aside class="board-boundary" aria-label="Prototype boundary">
         <strong>SYNTHETIC DEMO DATA</strong>
@@ -26,15 +26,16 @@
           <li><a href="#source-workspace">02 · Source-to-field workspace</a></li>
           <li><a href="#conflict-queue">03 · Conflict queue</a></li>
           <li><a href="#agent-trace">04 · Agent trace</a></li>
-          <li><a href="#review-signoff">05 · Review and sign-off</a></li>
-          <li><a href="#evidence-receipt">06 · Evidence receipt</a></li>
+          <li><a href="#risk-board">05 · Risk and anomaly board</a></li>
+          <li><a href="#review-signoff">06 · Review and sign-off</a></li>
+          <li><a href="#evidence-receipt">07 · Evidence receipt</a></li>
       </ol>
     </nav>
     <main class="wireframe-board" id="wireframe-board" tabindex="-1">
       <article class="wireframe-sheet" id="case-dashboard" aria-labelledby="case-dashboard-title" tabindex="-1">
         <header class="sheet-header">
           <div>
-            <p class="folio">Screen 01 / 06</p>
+            <p class="folio">Screen 01 / 07</p>
             <h2 id="case-dashboard-title">Case dashboard</h2>
           </div>
           <dl class="screen-contract">
@@ -102,7 +103,7 @@
       <article class="wireframe-sheet" id="source-workspace" aria-labelledby="source-workspace-title" tabindex="-1">
         <header class="sheet-header">
           <div>
-            <p class="folio">Screen 02 / 06</p>
+            <p class="folio">Screen 02 / 07</p>
             <h2 id="source-workspace-title">Source-to-field workspace</h2>
           </div>
           <dl class="screen-contract">
@@ -170,7 +171,7 @@
       <article class="wireframe-sheet" id="conflict-queue" aria-labelledby="conflict-queue-title" tabindex="-1">
         <header class="sheet-header">
           <div>
-            <p class="folio">Screen 03 / 06</p>
+            <p class="folio">Screen 03 / 07</p>
             <h2 id="conflict-queue-title">Conflict queue</h2>
           </div>
           <dl class="screen-contract">
@@ -238,7 +239,7 @@
       <article class="wireframe-sheet" id="agent-trace" aria-labelledby="agent-trace-title" tabindex="-1">
         <header class="sheet-header">
           <div>
-            <p class="folio">Screen 04 / 06</p>
+            <p class="folio">Screen 04 / 07</p>
             <h2 id="agent-trace-title">Agent trace</h2>
           </div>
           <dl class="screen-contract">
@@ -303,10 +304,78 @@
           </div>
         </div>
       </article>
+      <article class="wireframe-sheet" id="risk-board" aria-labelledby="risk-board-title" tabindex="-1">
+        <header class="sheet-header">
+          <div>
+            <p class="folio">Screen 05 / 07</p>
+            <h2 id="risk-board-title">Risk and anomaly board</h2>
+          </div>
+          <dl class="screen-contract">
+            <div class="contract-item">
+              <dt>Task</dt>
+              <dd>Show deterministic risk indicators and anomaly flags computed from the same evidence record, each closed by a named human disposition.</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Primary action</dt>
+              <dd>Disposition remaining flags</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Error / empty state</dt>
+              <dd>A flag stays open, visible, and un-resolved until a named human escalates or acknowledges it with a reason.</dd>
+            </div>
+            <div class="contract-item">
+              <dt>Mobile collapse</dt>
+              <dd>Stack indicator cards one per row; keep each flag card whole with its disposition form directly beneath it.</dd>
+            </div>
+          </dl>
+        </header>
+        <div class="frame-stage">
+          <aside class="evidence-index" aria-label="Case context">
+            <p class="case-line">SYNTHETIC DEMO DATA</p>
+            <p class="case-name">Meridian Horizon Fund I</p>
+            <p class="case-name">Meridian Horizon Fund Management IFSC Pvt Ltd</p>
+            <p>Quarter ended 30 June 2026</p>
+            <p class="status-line">RESEARCH-STAGE INTERFACE · NOT A REGULATORY FILING · HUMAN DECISION REQUIRED</p>
+          </aside>
+          <div class="stage-body">
+            <div class="stage-toolbar">
+              <span class="marker">SYNTHETIC DEMO DATA</span>
+              <button class="stage-action" type="button">Disposition remaining flags</button>
+            </div>
+            <div class="evidence-spread">
+                <section class="evidence-panel">
+                  <p class="panel-label">Risk indicator</p>
+                  <h3>Evidence coverage</h3>
+                  <p class="panel-body">2/3 fields carry candidate evidence</p>
+                  <p class="panel-meta">COMPLIANCE LENS</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Anomaly flag · HIGH</p>
+                  <h3>Duplicate document fingerprint</h3>
+                  <p class="panel-body">Two distinct claimed sources share one fingerprint.</p>
+                  <p class="panel-meta">FRAUD ANALYSIS LENS</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Anomaly flag · MEDIUM</p>
+                  <h3>Conflict resolved toward higher value</h3>
+                  <p class="panel-body">Fires only once the higher candidate is accepted.</p>
+                  <p class="panel-meta">FRAUD ANALYSIS LENS</p>
+                </section>
+                <section class="evidence-panel">
+                  <p class="panel-label">Disposition</p>
+                  <h3>Escalate or acknowledge</h3>
+                  <p class="panel-body">Disposer name and reason required before sign-off.</p>
+                  <p class="panel-meta">NAMED HUMAN REQUIRED</p>
+                </section>
+            </div>
+            <p class="stage-notice">LOW-FIDELITY STATE · Exact source coordinates and human decisions remain the focal points.</p>
+          </div>
+        </div>
+      </article>
       <article class="wireframe-sheet" id="review-signoff" aria-labelledby="review-signoff-title" tabindex="-1">
         <header class="sheet-header">
           <div>
-            <p class="folio">Screen 05 / 06</p>
+            <p class="folio">Screen 06 / 07</p>
             <h2 id="review-signoff-title">Review and sign-off</h2>
           </div>
           <dl class="screen-contract">
@@ -320,7 +389,7 @@
             </div>
             <div class="contract-item">
               <dt>Error / empty state</dt>
-              <dd>Sign-off remains blocked while the capital conflict lacks a named reviewer and reason.</dd>
+              <dd>Sign-off remains blocked while the capital conflict lacks a named reviewer and reason, or any anomaly flag lacks a disposition.</dd>
             </div>
             <div class="contract-item">
               <dt>Mobile collapse</dt>
@@ -363,7 +432,7 @@
                 <section class="evidence-panel">
                   <p class="panel-label">Principal Officer confirmation</p>
                   <h3>Second named role required</h3>
-                  <p class="panel-body">Officer (demo) name and confirmation checkbox. Blocked until the conflict is decided.</p>
+                  <p class="panel-body">Officer (demo) name and confirmation checkbox. Blocked until the conflict is decided and every flag is dispositioned.</p>
                   <p class="panel-meta">MAKER-CHECKER SEPARATION REQUIRED</p>
                 </section>
             </div>
@@ -374,13 +443,13 @@
       <article class="wireframe-sheet" id="evidence-receipt" aria-labelledby="evidence-receipt-title" tabindex="-1">
         <header class="sheet-header">
           <div>
-            <p class="folio">Screen 06 / 06</p>
+            <p class="folio">Screen 07 / 07</p>
             <h2 id="evidence-receipt-title">Evidence receipt</h2>
           </div>
           <dl class="screen-contract">
             <div class="contract-item">
               <dt>Task</dt>
-              <dd>Package source fingerprints, candidate coordinates, human decisions, and unresolved items into a printable local record.</dd>
+              <dd>Package source fingerprints, candidate coordinates, human decisions, risk indicators, and unresolved items into a printable local record.</dd>
             </div>
             <div class="contract-item">
               <dt>Primary action</dt>
@@ -429,8 +498,8 @@
                   <p class="panel-meta">synthetic:ledger:38a4c1</p>
                 </section>
                 <section class="evidence-panel">
-                  <p class="panel-label">Unresolved register</p>
-                  <h3>2 items require attention</h3>
+                  <p class="panel-label">Risk summary</p>
+                  <h3>4 anomaly flags · 0 open</h3>
                   <p class="panel-body">Committed capital · Investor complaints closed</p>
                   <p class="panel-meta">HUMAN DECISION REQUIRED</p>
                 </section>

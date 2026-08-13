@@ -1,0 +1,5 @@
+SYNTHETIC DEMO DATA — Glasswing Horizon Fund — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Glasswing Horizon Fund
+Administrator statement extract.
+Closing NAV: USD 10,200,000
+Committed capital: USD 18,000,000

@@ -1,0 +1,5 @@
+SYNTHETIC DEMO DATA — Osprey Point Fund III — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Osprey Point Fund III
+Class A commitments: USD 18,000,000
+Class B commitments: USD 12,000,000
+Committed capital: USD 30,000,000

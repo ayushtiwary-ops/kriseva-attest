@@ -1,0 +1,4 @@
+SYNTHETIC DEMO DATA — Fernbrook Alpha Fund II — synthetic eval document (not a real fund, not a regulatory filing)
+Fund: Fernbrook Alpha Fund II
+Source: Custodian NAV certificate, page 1.
+Closing NAV: USD 21,900,000

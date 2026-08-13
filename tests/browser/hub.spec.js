@@ -16,7 +16,7 @@ test('root serves the complete six-artifact submission hub', async ({ page }) =>
   expect(response?.status()).toBe(200);
 
   await expect(page.getByRole('heading', {
-    name: 'Show the evidence behind a reported field, and stop when the record disagrees.',
+    name: 'Show the evidence behind a reported field. Stop when the record disagrees.',
   })).toBeVisible();
 
   for (const disclosure of [
