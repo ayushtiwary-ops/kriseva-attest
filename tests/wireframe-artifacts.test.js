@@ -50,7 +50,7 @@ test('desktop SVG wraps long evidence labels within their columns', async () => 
 
   assert.doesNotMatch(svg, />03 Investor complaints closed<\/tspan>/u);
   assert.doesNotMatch(svg, />meridian-horizon-q2-2026<\/tspan>/u);
-  assert.doesNotMatch(svg, />Meridian Horizon Fund Management IFSC Pvt Ltd · Q2 2026<\/tspan>/u);
+  assert.doesNotMatch(svg, />Meridian Horizon Fund I · Quarter ended 30 June 2026<\/tspan>/u);
 });
 
 test('mobile SVG reserves enough vertical space for stacked evidence rows', async () => {

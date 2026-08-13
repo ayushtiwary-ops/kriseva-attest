@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/ed3unq",
-    "id": "ed3unq",
+    "aid": "sl/bxkahn",
+    "id": "bxkahn",
     "slide": 10,
-    "layoutId": "2752032a-23fa-440b-b894-62f7a90253fa",
+    "layoutId": "ef19debf-5ea8-4d56-81f6-c75b74b317a1",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+    "masterLayoutId": "d8ea7324-5969-4081-a45a-f7cccced84e6",
     "masterLayoutName": "Master",
     "backgroundColor": "#0A1F44",
     "frame": {
@@ -47,15 +47,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "2752032a-23fa-440b-b894-62f7a90253fa",
+      "id": "ef19debf-5ea8-4d56-81f6-c75b74b317a1",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "parentLayoutId": "d8ea7324-5969-4081-a45a-f7cccced84e6",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "id": "d8ea7324-5969-4081-a45a-f7cccced84e6",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -66,7 +66,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/mpwnapk3",
+      "aid": "sh/apgratoz",
       "id": "1",
       "name": "brand-10",
       "bbox": [
@@ -136,7 +136,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/9s76543u",
+      "aid": "sh/xs7a587q",
       "id": "2",
       "name": "title-10",
       "bbox": [
@@ -203,7 +203,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/8re5cz29",
+      "aid": "sh/cry9c365",
       "id": "3",
       "name": "footer-rule-10",
       "bbox": [
@@ -220,7 +220,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/zm5ozalc",
+      "aid": "sh/n258zypo",
       "id": "4",
       "name": "footer-source-10",
       "bbox": [
@@ -287,7 +287,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ylwn65k7",
+      "aid": "sh/21wr6to3",
       "id": "5",
       "name": "footer-page-10",
       "bbox": [
@@ -357,7 +357,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/lon61k3i",
+      "aid": "sh/po7q1o7e",
       "id": "6",
       "name": "ask-spine",
       "bbox": [
@@ -374,7 +374,7 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/0ne58f2x",
+      "aid": "sh/o3y98j6t",
       "id": "7",
       "name": "ask-access-label",
       "bbox": [
@@ -444,22 +444,22 @@
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/bylovalg",
+      "aid": "sh/7y9sbips",
       "id": "8",
       "name": "ask-access-copy",
       "bbox": [
         62,
         226,
         420,
-        152
+        220
       ],
       "geometry": "rect",
-      "text": "2 FME officers + 2 administrators + 1 independent compliance provider",
-      "textPreview": "2 FME officers + 2 administrators + 1 independent compliance provider",
-      "resolvedFontSize": 32,
+      "text": "2 FME (fund management entity) officers + 2 administrators + 1 independent compliance provider",
+      "textPreview": "2 FME (fund management entity) officers + 2 administrators + 1 independent compliance provider",
+      "resolvedFontSize": 30,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 32,
+        "fontSize": 30,
         "typeface": "Georgia",
         "color": "#F3EDE0",
         "alignment": "left",
@@ -478,28 +478,28 @@
         "lines": [
           {
             "index": 1,
-            "text": "2 FME officers + 2"
+            "text": "2 FME (fund management"
           },
           {
             "index": 2,
-            "text": "administrators + 1"
+            "text": "entity) officers + 2"
           },
           {
             "index": 3,
-            "text": "independent compliance"
+            "text": "administrators + 1 independent"
           },
           {
             "index": 4,
-            "text": "provider"
+            "text": "compliance provider"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "2 FME officers + 2 administrators + 1 independent compliance provider",
+          "text": "2 FME (fund management entity) officers + 2 administrators + 1 independent compliance provider",
           "resolvedTextStyle": {
-            "fontSize": 32,
+            "fontSize": 30,
             "typeface": "Georgia",
             "color": "#F3EDE0",
             "alignment": "left"
@@ -507,8 +507,8 @@
           "runs": [
             {
               "index": 1,
-              "text": "2 FME officers + 2 administrators + 1 independent compliance provider",
-              "fontSize": 32,
+              "text": "2 FME (fund management entity) officers + 2 administrators + 1 independent compliance provider",
+              "fontSize": 30,
               "typeface": "Georgia",
               "color": "#F3EDE0",
               "alignment": "left"
@@ -523,7 +523,7 @@
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/qxcn25kv",
+      "aid": "sh/mx0rido7",
       "id": "9",
       "name": "ask-falsify",
       "bbox": [
@@ -590,7 +590,7 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4bulofqh",
+      "aid": "sh/47yt4vit",
       "id": "10",
       "name": "ask-challenge-label",
       "bbox": [
@@ -660,7 +660,7 @@
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/5c32h07m",
+      "aid": "sh/587ux0je",
       "id": "11",
       "name": "ask-challenge-copy",
       "bbox": [
@@ -670,8 +670,8 @@
         112
       ],
       "geometry": "rect",
-      "text": "Is upstream evidence work outside DRR or bundled services?",
-      "textPreview": "Is upstream evidence work outside DRR or bundled services?",
+      "text": "Is upstream evidence outside DRR/bundled services?",
+      "textPreview": "Is upstream evidence outside DRR/bundled services?",
       "resolvedFontSize": 28,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -694,18 +694,18 @@
         "lines": [
           {
             "index": 1,
-            "text": "Is upstream evidence work outside DRR or"
+            "text": "Is upstream evidence outside DRR/bundled"
           },
           {
             "index": 2,
-            "text": "bundled services?"
+            "text": "services?"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "Is upstream evidence work outside DRR or bundled services?",
+          "text": "Is upstream evidence outside DRR/bundled services?",
           "resolvedTextStyle": {
             "fontSize": 28,
             "typeface": "Georgia",
@@ -715,7 +715,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "Is upstream evidence work outside DRR or bundled services?",
+              "text": "Is upstream evidence outside DRR/bundled services?",
               "fontSize": 28,
               "typeface": "Georgia",
               "color": "#F3EDE0",
@@ -731,7 +731,7 @@
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ips3m58b",
+      "aid": "sh/i5gb2l0n",
       "id": "12",
       "name": "ask-test-label",
       "bbox": [
@@ -801,7 +801,7 @@
       "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/3a1kfapw",
+      "aid": "sh/j6psvq18",
       "id": "13",
       "name": "ask-test-copy",
       "bbox": [
@@ -872,7 +872,7 @@
       "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/gnalkvq5",
+      "aid": "sh/w3yt0vih",
       "id": "14",
       "name": "ask-decide-label",
       "bbox": [
@@ -942,7 +942,7 @@
       "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/hoj2d07q",
+      "aid": "sh/h47at0j2",
       "id": "15",
       "name": "ask-decide-copy",
       "bbox": [
@@ -997,6 +997,73 @@
               "fontSize": 28,
               "typeface": "Georgia",
               "color": "#A87229",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u1wbyl0r",
+      "id": "16",
+      "name": "footer-ask-links",
+      "bbox": [
+        62,
+        628,
+        1120,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Live: ayushtiwary-ops.github.io/kriseva-attest  ·  Code: github.com/ayushtiwary-ops/kriseva-attest",
+      "textPreview": "Live: ayushtiwary-ops.github.io/kriseva-attest  ·  Code: github.com/ayushtiwary-ops/kriseva-attest",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Courier New",
+        "color": "#F3EDE0",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Live: ayushtiwary-ops.github.io/kriseva-attest  ·  Code: github.com/ayushtiwary-ops/kriseva-attest"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Live: ayushtiwary-ops.github.io/kriseva-attest  ·  Code: github.com/ayushtiwary-ops/kriseva-attest",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Courier New",
+            "color": "#F3EDE0",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Live: ayushtiwary-ops.github.io/kriseva-attest  ·  Code: github.com/ayushtiwary-ops/kriseva-attest",
+              "fontSize": 13,
+              "typeface": "Courier New",
+              "color": "#F3EDE0",
               "alignment": "left"
             }
           ],

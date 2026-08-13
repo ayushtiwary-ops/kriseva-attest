@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/gdmzu6",
-    "id": "gdmzu6",
+    "aid": "sl/7mpiat",
+    "id": "7mpiat",
     "slide": 7,
-    "layoutId": "2752032a-23fa-440b-b894-62f7a90253fa",
+    "layoutId": "ef19debf-5ea8-4d56-81f6-c75b74b317a1",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+    "masterLayoutId": "d8ea7324-5969-4081-a45a-f7cccced84e6",
     "masterLayoutName": "Master",
     "backgroundColor": "#DED6C9",
     "frame": {
@@ -47,15 +47,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "2752032a-23fa-440b-b894-62f7a90253fa",
+      "id": "ef19debf-5ea8-4d56-81f6-c75b74b317a1",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "parentLayoutId": "d8ea7324-5969-4081-a45a-f7cccced84e6",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "id": "d8ea7324-5969-4081-a45a-f7cccced84e6",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -66,7 +66,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/nylszqh4",
+      "aid": "sh/czul07el",
       "id": "1",
       "name": "brand-7",
       "bbox": [
@@ -136,7 +136,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ozu98bip",
+      "aid": "sh/rylk72d0",
       "id": "2",
       "name": "title-7",
       "bbox": [
@@ -203,7 +203,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/903a1gzu",
+      "aid": "sh/qxc3yxwf",
       "id": "3",
       "name": "footer-rule-7",
       "bbox": [
@@ -220,7 +220,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/e9sr2107",
+      "aid": "sh/14n2dcv2",
       "id": "4",
       "name": "footer-source-7",
       "bbox": [
@@ -287,7 +287,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/zal8v6hs",
+      "aid": "sh/03el47ex",
       "id": "5",
       "name": "footer-page-7",
       "bbox": [
@@ -357,7 +357,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/0vu94bid",
+      "aid": "sh/z2lkb2dc",
       "id": "6",
       "name": "prototype-proof-label",
       "bbox": [
@@ -427,45 +427,39 @@
       "order": 7,
       "kind": "image",
       "scope": "slide",
-      "aid": "im/4nedon6x",
+      "aid": "im/v2hwnq5s",
       "id": "7",
       "bbox": [
-        60,
+        103,
         170,
-        742,
-        378
+        378,
+        385
       ],
       "geometry": "rect",
-      "alt": "Current KRISEVA ATTEST conflict queue showing two synthetic source values and a named human decision form",
+      "alt": "Current KRISEVA ATTEST candidate comparison card showing both synthetic source values, their exact references and input fingerprints",
       "contentType": "image/png",
-      "imageCrop": {
-        "left": 0,
-        "top": 0,
-        "right": 0,
-        "bottom": 0.47
-      },
       "imageFit": "cover",
       "imageMask": {
         "geometry": "rect"
       },
       "asset": {
-        "assetId": "acf32716-bbc3-463f-92fb-59043c08dba4",
+        "assetId": "15508812-3d94-45e3-81c6-9b3fc0a6d554",
         "contentType": "image/png",
-        "byteLength": 254337
+        "byteLength": 55250
       }
     },
     {
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/q5sry10b",
+      "aid": "sh/9snmhcve",
       "id": "8",
       "name": "prototype-conflict-border",
       "bbox": [
-        60,
+        103,
         170,
-        742,
-        378
+        378,
+        385
       ],
       "geometry": "rect",
       "lineColor": "#0A1F44",
@@ -475,45 +469,39 @@
       "order": 9,
       "kind": "image",
       "scope": "slide",
-      "aid": "im/uhcvidov",
+      "aid": "im/90zelgnm",
       "id": "9",
       "bbox": [
-        830,
+        521,
         170,
-        390,
-        378
+        656,
+        385
       ],
       "geometry": "rect",
-      "alt": "Current KRISEVA ATTEST evidence receipt showing fingerprints, preserved candidates and unresolved evidence",
+      "alt": "Current KRISEVA ATTEST evidence receipt showing the reviewer decision reason, recorded timestamp and Confirming Principal Officer confirmation",
       "contentType": "image/png",
-      "imageCrop": {
-        "left": 0,
-        "top": 0,
-        "right": 0,
-        "bottom": 0.52
-      },
       "imageFit": "cover",
       "imageMask": {
         "geometry": "rect"
       },
       "asset": {
-        "assetId": "b6eb9cee-1033-4880-904a-bc102a896b61",
+        "assetId": "082aa2f7-dd65-4c24-a7a2-f03b454d51d8",
         "contentType": "image/png",
-        "byteLength": 326568
+        "byteLength": 38140
       }
     },
     {
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/jilkfy9c",
+      "aid": "sh/y1grixgb",
       "id": "10",
       "name": "prototype-receipt-border",
       "bbox": [
-        830,
+        521,
         170,
-        390,
-        378
+        656,
+        385
       ],
       "geometry": "rect",
       "lineColor": "#0A1F44",
@@ -523,7 +511,7 @@
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ihcj6t8r",
+      "aid": "sh/z2p8b2xw",
       "id": "11",
       "name": "prototype-callout-1",
       "bbox": [
@@ -597,7 +585,7 @@
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/5k32h8r2",
+      "aid": "sh/k3y9k7yh",
       "id": "12",
       "name": "prototype-callout-2",
       "bbox": [
@@ -671,7 +659,7 @@
       "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/kju183qx",
+      "aid": "sh/l47qdcfm",
       "id": "13",
       "name": "prototype-callout-3",
       "bbox": [
@@ -746,7 +734,7 @@
       "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/7m5kjip8",
+      "aid": "sh/m50rmxg7",
       "id": "14",
       "name": "prototype-callout-4",
       "bbox": [

@@ -1,7 +1,24 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { loadCase, runEvidenceReview, recordDecision, canSignOff } from '../src/case-engine.js';
+import {
+  loadCase,
+  runEvidenceReview,
+  recordDecision,
+  recordSignOff,
+  hasConflictDecision,
+  canSignOff
+} from '../src/case-engine.js';
 import fixture from '../data/synthetic-case.json' with { type: 'json' };
+
+function decidedFixture(reviewer = 'Rhea Menon') {
+  return recordDecision(runEvidenceReview(loadCase(fixture)), 'committed-capital', {
+    action: 'ACCEPT',
+    candidateId: 'admin-committed',
+    reviewer,
+    reason: 'Synthetic reviewer decision.',
+    recordedAt: '2026-08-12T09:30:00.000Z'
+  });
+}
 
 test('review preserves supported, conflicting, and unsupported states', () => {
   const reviewed = runEvidenceReview(loadCase(fixture));
@@ -74,4 +91,81 @@ test('decisions require evidence review first', () => {
     reason: 'Synthetic reviewer decision.',
     recordedAt: '2026-08-12T09:30:00.000Z'
   }), /reviewed/i);
+});
+
+test('hasConflictDecision is false before evidence review and before a decision', () => {
+  assert.equal(hasConflictDecision(loadCase(fixture)), false);
+  assert.equal(hasConflictDecision(runEvidenceReview(loadCase(fixture))), false);
+});
+
+test('hasConflictDecision is true once the conflict decision is recorded, independent of sign-off', () => {
+  assert.equal(hasConflictDecision(decidedFixture()), true);
+});
+
+test('sign-off is blocked without a Principal Officer confirmation even after the conflict is decided', () => {
+  const decided = decidedFixture();
+  assert.equal(canSignOff(decided), false);
+});
+
+test('recordSignOff requires the conflict decision to exist first', () => {
+  const reviewed = runEvidenceReview(loadCase(fixture));
+  assert.throws(() => recordSignOff(reviewed, {
+    officerName: 'Arjun Verma',
+    confirmed: true,
+    recordedAt: '2026-08-12T09:45:00.000Z'
+  }), /conflict decision/i);
+});
+
+test('recordSignOff requires a non-empty Principal Officer name', () => {
+  const decided = decidedFixture();
+  assert.throws(() => recordSignOff(decided, {
+    officerName: '   ',
+    confirmed: true,
+    recordedAt: '2026-08-12T09:45:00.000Z'
+  }), /officer name/i);
+});
+
+test('recordSignOff requires the confirmation checkbox to be checked', () => {
+  const decided = decidedFixture();
+  assert.throws(() => recordSignOff(decided, {
+    officerName: 'Arjun Verma',
+    confirmed: false,
+    recordedAt: '2026-08-12T09:45:00.000Z'
+  }), /confirm/i);
+});
+
+test('recordSignOff blocked when the officer name matches the deciding reviewer (trimmed, case-insensitive)', () => {
+  const decided = decidedFixture('Rhea Menon');
+  assert.throws(() => recordSignOff(decided, {
+    officerName: '  rhea menon  ',
+    confirmed: true,
+    recordedAt: '2026-08-12T09:45:00.000Z'
+  }), /maker-checker separation: the confirming officer must differ from the deciding reviewer/i);
+});
+
+test('recordSignOff allowed and clears the sign-off gate when the officer name is distinct', () => {
+  const decided = decidedFixture('Rhea Menon');
+  const signedOff = recordSignOff(decided, {
+    officerName: 'Arjun Verma',
+    confirmed: true,
+    recordedAt: '2026-08-12T09:45:00.000Z'
+  });
+
+  assert.equal(canSignOff(signedOff), true);
+  assert.deepEqual(signedOff.signOff, {
+    officerName: 'Arjun Verma',
+    confirmed: true,
+    recordedAt: '2026-08-12T09:45:00.000Z'
+  });
+});
+
+test('recordSignOff trims the officer name before storing it', () => {
+  const decided = decidedFixture('Rhea Menon');
+  const signedOff = recordSignOff(decided, {
+    officerName: '  Arjun Verma  ',
+    confirmed: true,
+    recordedAt: '2026-08-12T09:45:00.000Z'
+  });
+
+  assert.equal(signedOff.signOff.officerName, 'Arjun Verma');
 });

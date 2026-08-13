@@ -1,5 +1,13 @@
-import { buildManifest, manifestToHtml } from '../src/manifest.js';
-import { canSignOff, loadCase, recordDecision, resetCase, runEvidenceReview } from '../src/case-engine.js';
+import { buildManifest, manifestToHtml, withManifestIntegrity, sha256HexSync } from '../src/manifest.js';
+import {
+  canSignOff,
+  hasConflictDecision,
+  loadCase,
+  recordDecision,
+  recordSignOff,
+  resetCase,
+  runEvidenceReview
+} from '../src/case-engine.js';
 import {
   renderEvidenceIndex,
   renderMain,
@@ -17,6 +25,7 @@ const ROUTES = new Set([
 ]);
 const PROTECTED_ROUTES = new Set([...ROUTES].filter((route) => route !== 'dashboard'));
 const RECORDED_AT = '2026-08-12T12:00:00+05:30';
+const OFFICER_CONFIRMED_AT = '2026-08-12T12:10:00+05:30';
 const GENERATED_AT = '2026-08-12T12:05:00+05:30';
 const EXPORT_STEM = 'kriseva-attest-meridian-horizon-q2-2026-evidence-manifest';
 const CAPTURE_PRESETS = {
@@ -26,6 +35,20 @@ const CAPTURE_PRESETS = {
   trace: { route: 'agent-trace', reviewed: true, decided: false },
   receipt: { route: 'evidence-receipt', reviewed: true, decided: true }
 };
+
+// Prefer the real Web Crypto API (available in secure browsing contexts:
+// https, or http://localhost). Fall back to the pure-JS implementation for
+// contexts Web Crypto refuses to run in (e.g. the deterministic test/capture
+// origin, which is plain http on a non-localhost hostname). Both paths
+// produce byte-identical SHA-256 digests for identical input.
+async function sha256Hex(text) {
+  if (window.crypto?.subtle) {
+    const bytes = new TextEncoder().encode(text);
+    const digestBuffer = await window.crypto.subtle.digest('SHA-256', bytes);
+    return [...new Uint8Array(digestBuffer)].map((byte) => byte.toString(16).padStart(2, '0')).join('');
+  }
+  return sha256HexSync(text);
+}
 
 const root = document.querySelector('#prototype-root');
 const navigation = document.querySelector('#screen-navigation');
@@ -59,17 +82,17 @@ function routeUrl(route) {
   return `${window.location.pathname}${window.location.search}#${route}`;
 }
 
-function setHash(route, { replace = false, focus = true } = {}) {
+async function setHash(route, { replace = false, focus = true } = {}) {
   pendingFocus = focus;
   const nextHash = `#${route}`;
   if (window.location.hash === nextHash) {
-    render(route);
+    await render(route);
     if (focus) focusActiveHeading();
     return;
   }
   if (replace) window.history.replaceState(null, '', routeUrl(route));
   else window.location.hash = route;
-  if (replace) render(route);
+  if (replace) await render(route);
 }
 
 function enforceRoute(route) {
@@ -101,7 +124,7 @@ function validateDecision(form) {
   return null;
 }
 
-function handleDecisionSubmit(event) {
+async function handleDecisionSubmit(event) {
   event.preventDefault();
   const form = event.currentTarget;
   const error = validateDecision(form);
@@ -120,8 +143,44 @@ function handleDecisionSubmit(event) {
     reason: formData.get('reason'),
     recordedAt: RECORDED_AT
   });
-  render('conflict-queue');
+  await render('conflict-queue');
   announce('Decision saved. Conflict gate cleared.');
+  document.querySelector('#active-screen-title')?.focus();
+}
+
+function validateSignOff(form, reviewerName) {
+  const officerName = form.elements.officerName;
+  const confirmed = form.elements.confirmed;
+  if (!officerName.value.trim()) return { message: 'Enter the Principal Officer (demo) name.', target: officerName };
+  if (officerName.value.trim().toLowerCase() === reviewerName.trim().toLowerCase()) {
+    return {
+      message: 'Maker-checker separation: the confirming officer must differ from the deciding reviewer.',
+      target: officerName
+    };
+  }
+  if (!confirmed.checked) return { message: 'Confirm the evidence record for all three fields has been reviewed.', target: confirmed };
+  return null;
+}
+
+async function handleSignOffSubmit(event) {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const reviewerName = state.decisions.at(-1)?.reviewer ?? '';
+  const error = validateSignOff(form, reviewerName);
+  const errorRegion = form.querySelector('#signoff-error');
+  if (error) {
+    errorRegion.textContent = error.message;
+    error.target.focus();
+    return;
+  }
+
+  state = recordSignOff(state, {
+    officerName: form.elements.officerName.value,
+    confirmed: form.elements.confirmed.checked,
+    recordedAt: OFFICER_CONFIRMED_AT
+  });
+  await render('review-signoff');
+  announce('Principal Officer sign-off recorded. The evidence record now carries both named actors.');
   document.querySelector('#active-screen-title')?.focus();
 }
 
@@ -138,10 +197,10 @@ function downloadManifest(contents, type, filename) {
 }
 
 function bindInteractions(manifest) {
-  document.querySelector('#run-review')?.addEventListener('click', () => {
+  document.querySelector('#run-review')?.addEventListener('click', async () => {
     state = runEvidenceReview(state);
     announce('Evidence review recorded: 1 supported, 1 conflicting, 1 unsupported.');
-    setHash('source-workspace');
+    await setHash('source-workspace');
   });
   const decisionForm = document.querySelector('#decision-form');
   if (decisionForm) {
@@ -158,6 +217,7 @@ function bindInteractions(manifest) {
     syncCandidateControl();
   }
   document.querySelector('#decision-form')?.addEventListener('submit', handleDecisionSubmit);
+  document.querySelector('#signoff-form')?.addEventListener('submit', handleSignOffSubmit);
   document.querySelector('#reset-demo')?.addEventListener('click', resetDemo);
   document.querySelector('#download-manifest-json')?.addEventListener('click', () => {
     downloadManifest(
@@ -175,9 +235,9 @@ function bindInteractions(manifest) {
   });
 }
 
-function buildBrowserManifest() {
+async function buildBrowserManifest() {
   const manifest = buildManifest(state, { generatedAt: GENERATED_AT });
-  return {
+  const withDisplayMetadata = {
     ...manifest,
     metadata: {
       research_stage: true,
@@ -186,21 +246,23 @@ function buildBrowserManifest() {
       human_decision_required: true
     }
   };
+  return withManifestIntegrity(withDisplayMetadata, { sha256Hex });
 }
 
-function render(requestedRoute = routeFromHash()) {
+async function render(requestedRoute = routeFromHash()) {
   const route = enforceRoute(requestedRoute);
   const reviewed = isReviewed();
+  const conflictDecided = hasConflictDecision(state);
   const gateCleared = canSignOff(state);
-  const manifest = buildBrowserManifest();
+  const manifest = await buildBrowserManifest();
   navigation.innerHTML = renderTopNavigation(route);
   root.innerHTML = `<div class="workspace" data-route="${route}">
     ${renderEvidenceIndex(state, reviewed)}
     <main class="active-screen" id="app-screen" aria-labelledby="active-screen-title">
-      ${renderMain(route, state, { reviewed, canSignOff: gateCleared, manifest })}
+      ${renderMain(route, state, { reviewed, conflictDecided, canSignOff: gateCleared, manifest })}
     </main>
     <aside class="review-drawer" aria-label="Human review panel">
-      ${renderReviewDrawer(route, state, { reviewed, canSignOff: gateCleared })}
+      ${renderReviewDrawer(route, state, { reviewed, conflictDecided, canSignOff: gateCleared })}
     </aside>
   </div>`;
   root.setAttribute('aria-busy', 'false');
@@ -218,17 +280,17 @@ function render(requestedRoute = routeFromHash()) {
   }
 }
 
-function resetDemo() {
+async function resetDemo() {
   state = resetCase(fixture);
   window.history.replaceState(null, '', routeUrl('dashboard'));
-  render('dashboard');
+  await render('dashboard');
   announce('Demo reset. Three fields are pending evidence review.');
   focusRunButton();
 }
 
-function handleHashChange() {
+async function handleHashChange() {
   pendingFocus = true;
-  render(routeFromHash());
+  await render(routeFromHash());
 }
 
 document.querySelector('.skip-link').addEventListener('click', (event) => {
@@ -250,15 +312,20 @@ try {
       action: 'ACCEPT',
       candidateId: 'admin-committed',
       reviewer: 'Demo Reviewer',
-      reason: 'Board schedule is older than the administrator statement.',
+      reason: 'Administrator figure ties to the executed subscription register; earlier schedule superseded.',
       recordedAt: RECORDED_AT
+    });
+    state = recordSignOff(state, {
+      officerName: 'Demo Officer',
+      confirmed: true,
+      recordedAt: OFFICER_CONFIRMED_AT
     });
   }
   const initialRoute = capturePreset?.route ?? routeFromHash();
   if (capturePreset || !window.location.hash || !ROUTES.has(window.location.hash.slice(1))) {
     window.history.replaceState(null, '', routeUrl(initialRoute));
   }
-  render(initialRoute);
+  await render(initialRoute);
 } catch (error) {
   root.setAttribute('aria-busy', 'false');
   root.innerHTML = `<main class="loading-state"><h1>Local case unavailable</h1><p>${String(error.message)}</p></main>`;

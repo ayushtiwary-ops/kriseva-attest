@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/tez8ro",
-    "id": "tez8ro",
+    "aid": "sl/kvsfj6",
+    "id": "kvsfj6",
     "slide": 2,
-    "layoutId": "2752032a-23fa-440b-b894-62f7a90253fa",
+    "layoutId": "ef19debf-5ea8-4d56-81f6-c75b74b317a1",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+    "masterLayoutId": "d8ea7324-5969-4081-a45a-f7cccced84e6",
     "masterLayoutName": "Master",
     "backgroundColor": "#DED6C9",
     "frame": {
@@ -47,15 +47,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "2752032a-23fa-440b-b894-62f7a90253fa",
+      "id": "ef19debf-5ea8-4d56-81f6-c75b74b317a1",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "parentLayoutId": "d8ea7324-5969-4081-a45a-f7cccced84e6",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "id": "d8ea7324-5969-4081-a45a-f7cccced84e6",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -66,7 +66,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/snm5wrat",
+      "aid": "sh/mx4filsb",
       "id": "1",
       "name": "brand-2",
       "bbox": [
@@ -136,7 +136,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/7mdo3mt8",
+      "aid": "sh/90fedgrm",
       "id": "2",
       "name": "title-2",
       "bbox": [
@@ -203,7 +203,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/6l4nuhsn",
+      "aid": "sh/8z6xkva1",
       "id": "3",
       "name": "footer-rule-2",
       "bbox": [
@@ -220,7 +220,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/5kv61cb2",
+      "aid": "sh/zudw769k",
       "id": "4",
       "name": "footer-source-2",
       "bbox": [
@@ -287,7 +287,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/kjm5s7ux",
+      "aid": "sh/y94fe1sz",
       "id": "5",
       "name": "footer-page-2",
       "bbox": [
@@ -357,7 +357,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/jidoz2tc",
+      "aid": "sh/lwve9grq",
       "id": "6",
       "name": "accountability-divider",
       "bbox": [
@@ -374,7 +374,7 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ix4nqhcr",
+      "aid": "sh/0vmxgba5",
       "id": "7",
       "name": "accountability-label",
       "bbox": [
@@ -444,7 +444,7 @@
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/pgz6dgbm",
+      "aid": "sh/jqxwja9o",
       "id": "8",
       "name": "accountability-structured",
       "bbox": [
@@ -518,7 +518,7 @@
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4f6p4ba1",
+      "aid": "sh/ipofq5s3",
       "id": "9",
       "name": "accountability-question",
       "bbox": [
@@ -589,8 +589,78 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/65wjyhcn",
+      "aid": "sh/0r2dkz25",
       "id": "10",
+      "name": "footer-accountability-caption-1",
+      "bbox": [
+        760,
+        172,
+        200,
+        18
+      ],
+      "geometry": "rect",
+      "text": "STATEMENT",
+      "textPreview": "STATEMENT",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Courier New",
+        "color": "#A87229",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "STATEMENT"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "STATEMENT",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Courier New",
+            "color": "#A87229",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "STATEMENT",
+              "fontSize": 13,
+              "typeface": "Courier New",
+              "color": "#A87229",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1sbud43q",
+      "id": "11",
       "name": "accountability-source-rule-1",
       "bbox": [
         760,
@@ -603,11 +673,81 @@
       "lineWidth": 1
     },
     {
-      "order": 11,
+      "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/76pkrmt8",
-      "id": "11",
+      "aid": "sh/ep0vipkf",
+      "id": "12",
+      "name": "footer-accountability-caption-2",
+      "bbox": [
+        760,
+        238,
+        200,
+        18
+      ],
+      "geometry": "rect",
+      "text": "LEDGER",
+      "textPreview": "LEDGER",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Courier New",
+        "color": "#A87229",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "LEDGER"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "LEDGER",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Courier New",
+            "color": "#A87229",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "LEDGER",
+              "fontSize": 13,
+              "typeface": "Courier New",
+              "color": "#A87229",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zq9cbulk",
+      "id": "13",
       "name": "accountability-source-rule-2",
       "bbox": [
         760,
@@ -620,11 +760,81 @@
       "lineWidth": 1
     },
     {
-      "order": 12,
+      "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/s7y10rut",
-      "id": "12",
+      "aid": "sh/c3idgz29",
+      "id": "14",
+      "name": "footer-accountability-caption-3",
+      "bbox": [
+        760,
+        304,
+        200,
+        18
+      ],
+      "geometry": "rect",
+      "text": "SCHEDULE",
+      "textPreview": "SCHEDULE",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Courier New",
+        "color": "#A87229",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SCHEDULE"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SCHEDULE",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Courier New",
+            "color": "#A87229",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "SCHEDULE",
+              "fontSize": 13,
+              "typeface": "Courier New",
+              "color": "#A87229",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/doru9k3u",
+      "id": "15",
       "name": "accountability-source-rule-3",
       "bbox": [
         760,
@@ -637,11 +847,11 @@
       "lineWidth": 1
     },
     {
-      "order": 13,
+      "order": 16,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ts72twbe",
-      "id": "13",
+      "aid": "sh/q10vepk3",
+      "id": "16",
       "name": "accountability-evidence",
       "bbox": [
         760,
@@ -708,11 +918,11 @@
       "lineWidth": 0
     },
     {
-      "order": 14,
+      "order": 17,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/y1wjuhcr",
-      "id": "14",
+      "aid": "sh/r29c7ulo",
+      "id": "17",
       "name": "accountability-unknowns",
       "bbox": [
         760,

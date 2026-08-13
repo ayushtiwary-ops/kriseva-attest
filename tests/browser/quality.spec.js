@@ -21,6 +21,7 @@ const captureStates = {
   receipt: { route: 'evidence-receipt', reviewed: true, decision: true },
 };
 const fixedRecordedAt = '2026-08-12T12:00:00+05:30';
+const fixedOfficerConfirmedAt = '2026-08-12T12:10:00+05:30';
 const fixedGeneratedAt = '2026-08-12T12:05:00+05:30';
 
 async function openBoard(page) {
@@ -200,15 +201,22 @@ test('receipt downloads deterministic, bounded JSON and printable HTML with audi
     { id: 'investor-complaints-closed', status: 'UNSUPPORTED' },
   ]);
   expect(manifest.fields.find(({ id }) => id === 'committed-capital').candidates.map(({ value }) => value)).toEqual([
-    'INR 50,000,000',
-    'INR 48,000,000',
+    'USD 25,000,000',
+    'USD 24,000,000',
   ]);
   expect(manifest.humanDecisions).toEqual([expect.objectContaining({
     fieldId: 'committed-capital',
     reviewer: 'Demo Reviewer',
-    reason: 'Board schedule is older than the administrator statement.',
+    reason: 'Administrator figure ties to the executed subscription register; earlier schedule superseded.',
     recordedAt: fixedRecordedAt,
   })]);
+  expect(manifest.principalOfficerConfirmation).toEqual({
+    officerName: 'Demo Officer',
+    confirmed: true,
+    recordedAt: fixedOfficerConfirmedAt,
+  });
+  expect(manifest.integrity.algorithm).toBe('sha256');
+  expect(manifest.integrity.digest).toMatch(/^[0-9a-f]{64}$/u);
   expect(manifest.unresolvedItems.map(({ id, status }) => ({ id, status }))).toEqual([
     { id: 'committed-capital', status: 'CONFLICTING' },
     { id: 'investor-complaints-closed', status: 'UNSUPPORTED' },
@@ -218,12 +226,15 @@ test('receipt downloads deterministic, bounded JSON and printable HTML with audi
   expect(printable.startsWith('<!doctype html>')).toBe(true);
   for (const requiredText of [
     '@media print',
-    'INR 50,000,000',
-    'INR 48,000,000',
+    'USD 25,000,000',
+    'USD 24,000,000',
     'Demo Reviewer',
-    'Board schedule is older than the administrator statement.',
+    'Administrator figure ties to the executed subscription register; earlier schedule superseded.',
     'Investor complaints closed',
     'NOT A REGULATORY FILING',
+    'Demo Officer',
+    'Confirming Principal Officer',
+    manifest.integrity.digest,
   ]) expect(printable).toContain(requiredText);
   expect(printable).not.toMatch(/<script\b|https?:\/\/|data:|file:\/\/|\/Users\/|mailto:|tel:|(?:phone|mobile)\s*[:=]|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/iu);
 });
@@ -245,6 +256,12 @@ for (const [captureState, contract] of Object.entries(captureStates)) {
     if (contract.decision) {
       await expect(page.getByText('Demo Reviewer', { exact: true })).toBeVisible();
       await expect(page.getByText(fixedRecordedAt, { exact: true })).toBeVisible();
+      await expect(page.getByText('Demo Officer', { exact: true })).toBeVisible();
+      await expect(page.getByText(fixedOfficerConfirmedAt, { exact: true })).toBeVisible();
+      await expect(page.getByText('Deciding reviewer', { exact: true })).toBeVisible();
+      await expect(page.getByText('Confirming Principal Officer', { exact: true })).toBeVisible();
+      await expect(root.locator('#manifest-digest')).toHaveText(/^[0-9a-f]{16}$/u);
+      await expect(page.getByRole('button', { name: 'Download JSON evidence manifest' })).toBeEnabled();
     }
   });
 }

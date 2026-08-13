@@ -410,7 +410,8 @@ section {
 .method-section,
 .artifacts-section,
 .boundary-section,
-.team-section {
+.team-section,
+.faq-section {
   padding: clamp(56px, 7vw, 96px) 0;
 }
 
@@ -507,7 +508,8 @@ section {
 
 .method-grid,
 .artifact-grid,
-.boundary-grid {
+.boundary-grid,
+.faq-grid {
   display: grid;
   margin: 0;
   padding: 0;
@@ -529,7 +531,8 @@ section {
 
 .method-grid h3,
 .artifact-card h3,
-.boundary-grid h3 {
+.boundary-grid h3,
+.faq-card h3 {
   margin: 22px 0 12px;
   color: var(--kriseva-navy);
   font-family: Georgia, "Times New Roman", serif;
@@ -537,10 +540,15 @@ section {
   line-height: 1.12;
 }
 
+.faq-card h3 {
+  margin-top: 0;
+}
+
 .method-grid p,
 .artifact-description,
 .boundary-copy,
-.team-section p {
+.team-section p,
+.faq-card p {
   font-size: 17px;
 }
 
@@ -613,6 +621,19 @@ section {
   font-weight: 800;
 }
 
+.faq-grid {
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--kriseva-navy);
+  border-left: 1px solid var(--kriseva-navy);
+}
+
+.faq-card {
+  min-width: 0;
+  padding: 28px;
+  border-right: 1px solid var(--kriseva-navy);
+  border-bottom: 1px solid var(--kriseva-navy);
+}
+
 .team-section {
   display: grid;
   grid-template-columns: 0.45fr 1.1fr 0.8fr;
@@ -653,7 +674,8 @@ footer p {
   }
 
   .artifact-grid,
-  .boundary-grid {
+  .boundary-grid,
+  .faq-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -689,7 +711,8 @@ footer p {
   .conflict-figure,
   .method-grid,
   .artifact-grid,
-  .boundary-grid {
+  .boundary-grid,
+  .faq-grid {
     grid-template-columns: 1fr;
   }
 

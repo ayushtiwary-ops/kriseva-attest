@@ -44,6 +44,21 @@ test('root serves the complete six-artifact submission hub', async ({ page }) =>
   }
 });
 
+test('hub renders the hard-questions FAQ section with all six answered questions', async ({ page }) => {
+  await openHub(page);
+
+  await expect(page.getByRole('heading', { name: 'Hard questions, straight answers.' })).toBeVisible();
+  await expect(page.locator('.faq-card')).toHaveCount(6);
+  for (const question of [
+    'What is actually different here?',
+    "Why can't ChatGPT or Copilot do this?",
+    'Does DRR make this redundant?',
+    'Where is the agentic AI?',
+    'Is human-in-the-loop an admission the AI failed?',
+    'Why trust this team?',
+  ]) await expect(page.getByRole('heading', { name: question })).toBeVisible();
+});
+
 test('technical-notes action opens a readable same-origin page without downloading', async ({ page }) => {
   await openHub(page);
   const downloads = [];

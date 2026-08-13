@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/uutv2e",
-    "id": "uutv2e",
+    "aid": "sl/xz87d6",
+    "id": "xz87d6",
     "slide": 1,
-    "layoutId": "2752032a-23fa-440b-b894-62f7a90253fa",
+    "layoutId": "ef19debf-5ea8-4d56-81f6-c75b74b317a1",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+    "masterLayoutId": "d8ea7324-5969-4081-a45a-f7cccced84e6",
     "masterLayoutName": "Master",
     "backgroundColor": "#DED6C9",
     "frame": {
@@ -47,15 +47,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "2752032a-23fa-440b-b894-62f7a90253fa",
+      "id": "ef19debf-5ea8-4d56-81f6-c75b74b317a1",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "parentLayoutId": "d8ea7324-5969-4081-a45a-f7cccced84e6",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "id": "d8ea7324-5969-4081-a45a-f7cccced84e6",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -66,7 +66,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/9gf6h0j6",
+      "aid": "sh/dobi1kja",
       "id": "1",
       "name": "cover-navy-field",
       "bbox": [
@@ -84,7 +84,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/mdonm5kf",
+      "aid": "sh/6lkzq50z",
       "id": "2",
       "name": "cover-brass-spine",
       "bbox": [
@@ -101,7 +101,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/7exofa10",
+      "aid": "sh/rmt0za14",
       "id": "3",
       "name": "brand-1",
       "bbox": [
@@ -171,7 +171,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/kbm5kv29",
+      "aid": "sh/0r21wzi1",
       "id": "4",
       "name": "cover-title",
       "bbox": [
@@ -238,7 +238,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/lcv6d0ju",
+      "aid": "sh/1svi5kjm",
       "id": "5",
       "name": "cover-subtitle",
       "bbox": [
@@ -309,7 +309,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/y94nilkj",
+      "aid": "sh/epkjup0v",
       "id": "6",
       "name": "cover-rule",
       "bbox": [
@@ -326,18 +326,18 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/zadobq1o",
+      "aid": "sh/fqt03u1g",
       "id": "7",
       "name": "cover-lock",
       "bbox": [
         68,
         438,
         650,
-        38
+        96
       ],
       "geometry": "rect",
-      "text": "Application product lock. Company wedge not locked.",
-      "textPreview": "Application product lock. Company wedge not locked.",
+      "text": "This prototype is final for this application. Whether it becomes the company's product is deliberately still open.",
+      "textPreview": "This prototype is final for this application. Whether it becomes the company's product is deliberately still open.",
       "resolvedFontSize": 22,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -357,18 +357,22 @@
         }
       },
       "textLayout": {
-        "lineCount": 1,
+        "lineCount": 2,
         "lines": [
           {
             "index": 1,
-            "text": "Application product lock. Company wedge not locked."
+            "text": "This prototype is final for this application. Whether it"
+          },
+          {
+            "index": 2,
+            "text": "becomes the company's product is deliberately still open."
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "Application product lock. Company wedge not locked.",
+          "text": "This prototype is final for this application. Whether it becomes the company's product is deliberately still open.",
           "resolvedTextStyle": {
             "fontSize": 22,
             "typeface": "Arial",
@@ -379,7 +383,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "Application product lock. Company wedge not locked.",
+              "text": "This prototype is final for this application. Whether it becomes the company's product is deliberately still open.",
               "fontSize": 22,
               "typeface": "Arial",
               "color": "#0A1F44",
@@ -396,12 +400,12 @@
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/c7m5gb2d",
+      "aid": "sh/ofm10zix",
       "id": "8",
       "name": "cover-boundary",
       "bbox": [
         68,
-        510,
+        546,
         820,
         54
       ],
@@ -467,7 +471,7 @@
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/x8v69gjy",
+      "aid": "sh/pgvi94ji",
       "id": "9",
       "name": "cover-number",
       "bbox": [
@@ -534,7 +538,7 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/pcjuho3a",
+      "aid": "sh/5sn2dkny",
       "id": "10",
       "name": "cover-classification",
       "bbox": [
@@ -658,7 +662,7 @@
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/obado3mp",
+      "aid": "sh/47ulkfmd",
       "id": "11",
       "name": "cover-page",
       "bbox": [
@@ -711,6 +715,98 @@
               "index": 1,
               "text": "APPLICATION EVIDENCE",
               "fontSize": 14,
+              "typeface": "Courier New",
+              "color": "#F3EDE0",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/36lkba5s",
+      "id": "12",
+      "name": "footer-cover-url",
+      "bbox": [
+        1038,
+        660,
+        200,
+        40
+      ],
+      "geometry": "rect",
+      "text": "ayushtiwary-ops.github.io\n/kriseva-attest",
+      "textPreview": "ayushtiwary-ops.github.io | /kriseva-attest",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Courier New",
+        "color": "#F3EDE0",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ayushtiwary-ops.github.io"
+          },
+          {
+            "index": 2,
+            "text": "/kriseva-attest"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ayushtiwary-ops.github.io",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Courier New",
+            "color": "#F3EDE0",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ayushtiwary-ops.github.io",
+              "fontSize": 12,
+              "typeface": "Courier New",
+              "color": "#F3EDE0",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "/kriseva-attest",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Courier New",
+            "color": "#F3EDE0",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "/kriseva-attest",
+              "fontSize": 12,
               "typeface": "Courier New",
               "color": "#F3EDE0",
               "alignment": "left"

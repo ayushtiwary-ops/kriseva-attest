@@ -26,6 +26,7 @@
           <p class="eyebrow">Source-to-field review / bounded demonstration</p>
           <h1 id="hero-title">Show the evidence behind a reported field, and stop when the record disagrees.</h1>
           <p class="hero-summary">KRISEVA ATTEST is a human-reviewed evidence workbench for one fictional reporting case. The demonstration compares candidate values, exposes conflict or missing support, and records a named human decision.</p>
+          <p class="hero-summary">Built for compliance teams at fund management entities (FMEs) in GIFT IFSC assembling evidence for periodic IFSCA returns. Fields are illustrative of those reported in FME periodic returns under the IFSCA (Fund Management) Regulations, 2025.</p>
           <a class="primary-action" href="prototype/">Launch interactive prototype</a>
         </div>
 
@@ -50,7 +51,7 @@
           <figcaption>Committed capital / synthetic case extract</figcaption>
           <div class="source-card source-a">
             <p class="evidence-reference">SOURCE A · PAGE 2</p>
-            <strong>INR 50,000,000</strong>
+            <strong>USD 25,000,000</strong>
             <span>Administrator statement</span>
           </div>
           <div class="field-card">
@@ -60,8 +61,8 @@
           </div>
           <div class="source-card source-b">
             <p class="evidence-reference">SOURCE B · CELL C11</p>
-            <strong>INR 48,000,000</strong>
-            <span>Board schedule</span>
+            <strong>USD 24,000,000</strong>
+            <span>Subscription register extract</span>
           </div>
           <p class="visual-copy">Both candidates remain visible. The deterministic trace proposes no compliance judgment; a reviewer accepts, corrects, rejects, or defers with a reason.</p>
         </figure>
@@ -76,7 +77,7 @@
           <li>
             <span class="step-number">01 / COMPARE</span>
             <h3>Keep source and value together</h3>
-            <p>Three whitelisted fields resolve to supported, conflicting, or unsupported evidence states.</p>
+            <p>Three governed fields resolve to supported, conflicting, or unsupported evidence states.</p>
           </li>
           <li>
             <span class="step-number">02 / ESCALATE</span>
@@ -146,6 +147,7 @@
           <article><span>02</span><h3>No filing</h3><p class="boundary-copy">The prototype does not write or submit an official return.</p></article>
           <article><span>03</span><h3>No regulator connection</h3><p class="boundary-copy">It is not connected to IFSCA systems or DRR interfaces.</p></article>
           <article><span>04</span><h3>Human decision required</h3><p class="boundary-copy">Conflict remains unresolved until a named reviewer records a reason.</p></article>
+          <article><span>05</span><h3>Pilot agentic step</h3><p class="boundary-copy">Model-driven source extraction and candidate proposal, operating inside the same PROPOSE / ABSTAIN / DECIDE boundary shown by the deterministic trace.</p></article>
         </div>
       </section>
 
@@ -153,6 +155,39 @@
         <p class="eyebrow">Build responsibility</p>
         <h2 id="team-title">Founder-owned engineering and integration.</h2>
         <p>The repository, deterministic review logic, interface integration, verification, and publication gates remain founder-owned. No additional public team role is asserted on this surface.</p>
+      </section>
+
+      <section class="faq-section" aria-labelledby="faq-title">
+        <div class="section-heading compact-heading">
+          <p class="eyebrow">Anticipated challenge / answered in advance</p>
+          <h2 id="faq-title">Hard questions, straight answers.</h2>
+        </div>
+        <div class="faq-grid">
+          <article class="faq-card">
+            <h3>What is actually different here?</h3>
+            <p>Not a feature list: an accountability contract. Every reported value carries its exact source, competing candidates stay visible instead of being resolved silently, a named human must give a reason before a conflict closes, and the evidence exports as a portable manifest. We call this a hypothesis, not a validated moat.</p>
+          </article>
+          <article class="faq-card">
+            <h3>Why can't ChatGPT or Copilot do this?</h3>
+            <p>A generic assistant answers a prompt once. It does not persist a source binding, retain conflicting candidates, force a named decision before export, or emit a tool-independent manifest. That is a workflow-state design, not a model-quality gap.</p>
+          </article>
+          <article class="faq-card">
+            <h3>Does DRR make this redundant?</h3>
+            <p>DRR is submission-side infrastructure; ATTEST sits upstream, proving which source supported a field before it reaches a DRR form. We claim no gap: equivalent source-region provenance from DRR or an administrator is a pre-registered kill condition for this wedge.</p>
+          </article>
+          <article class="faq-card">
+            <h3>Where is the agentic AI?</h3>
+            <p>Nowhere in the running code today, and the screens say so. What exists is the contract any agent must obey: propose a value with exact references, abstain when evidence is missing, and let only a named human decide. Putting a model inside that boundary is the eight-week build target.</p>
+          </article>
+          <article class="faq-card">
+            <h3>Is human-in-the-loop an admission the AI failed?</h3>
+            <p>No. In regulated reporting the accountable human is the requirement, not a fallback: someone signs under their own name. The design makes that decision explicit, attributed, reasoned, and separately confirmed under maker-checker review.</p>
+          </article>
+          <article class="faq-card">
+            <h3>Why trust this team?</h3>
+            <p>KRISEVA already ships evidence-first, human-review procurement software in Indian defense today. That process discipline transfers: source binding, human sign-off, an auditable trail, under a demanding audit culture. Fintech domain knowledge is what the residency provides; the claim discipline here is machine-enforced.</p>
+          </article>
+        </div>
       </section>
     </main>
 

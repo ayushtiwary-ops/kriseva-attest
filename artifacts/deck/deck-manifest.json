@@ -44,10 +44,10 @@
       "title": "KRISEVA ATTEST",
       "body": [
         "A bounded source-to-field evidence workbench for human review.",
-        "Application product lock. Company wedge not locked.",
+        "This prototype is final for this application. Whether it becomes the company's product is deliberately still open.",
         "Research-stage prototype · synthetic data · no filing · no regulator connection"
       ],
-      "bodyWordCount": 24,
+      "bodyWordCount": 34,
       "sources": [
         "repo:docs/superpowers/specs/2026-08-12-attest-submission-system-design.md",
         "repo:docs/PRODUCT_DECISION.md"
@@ -75,13 +75,13 @@
       "title": "DRR targets submission; evidence starts upstream",
       "body": [
         "DRR",
-        "Structured reporting channels, validation and submission infrastructure",
+        "DRR (IFSCA's Digital Regulatory Reporting platform, procured 2026): structured reporting channels, validation and submission infrastructure.",
         "ATTEST",
         "Provider-neutral source references, disagreement and human review",
         "No filing. No DRR connection. No claimed gap.",
         "Public absence is not proof."
       ],
-      "bodyWordCount": 29,
+      "bodyWordCount": 37,
       "sources": [
         "https://www.ifsca.gov.in/Document/Tender/concept-note_drr-consultation_2003202520032025073433.pdf",
         "https://www.ifsca.gov.in/CommonDirect/ViewFile?fileName=Award_of_Contract_under_RFPs_for_DRR_Solution_and_ERP_System_20260309_0153.pdf&id=d575554ec59b09e7fde503d3a82787c7",
@@ -92,12 +92,12 @@
       "number": 4,
       "title": "One fictional case makes three evidence states visible",
       "body": [
-        "Meridian Horizon Fund Management IFSC Pvt Ltd · Q2 2026 · fictional",
-        "Closing NAV · SUPPORTED · INR 12.5M agrees across two sources",
-        "Committed capital · CONFLICTING · INR 50M vs INR 48M",
-        "Investor complaints closed · UNSUPPORTED · no candidate evidence"
+        "Meridian Horizon Fund I (Meridian Horizon Fund Management IFSC Pvt Ltd) · QE 30 Jun 2026 · fictional",
+        "Closing NAV · SUPPORTED · USD 12.4M agrees across two sources",
+        "Committed capital · CONFLICTING · USD 25M vs USD 24M",
+        "Complaints closed · UNSUPPORTED · no candidate evidence"
       ],
-      "bodyWordCount": 35,
+      "bodyWordCount": 40,
       "sources": [
         "repo:data/synthetic-case.json",
         "repo:src/case-engine.js"
@@ -124,13 +124,13 @@
       "number": 6,
       "title": "The prototype knows when to stop",
       "body": [
-        "RECORDED DETERMINISTIC PROTOTYPE TRACE",
+        "DETERMINISTIC TRACE",
         "PROPOSE · candidate evidence and exact references",
         "ABSTAIN · no candidate evidence; request more",
         "DECIDE · only a named human can accept, correct, reject or defer",
-        "No live model. No compliance conclusion."
+        "No live model. No compliance conclusion. Harness built and tested before any model enters."
       ],
-      "bodyWordCount": 33,
+      "bodyWordCount": 39,
       "sources": [
         "repo:prototype/app.js",
         "repo:artifacts/prototype-trace-1440.png",
@@ -159,14 +159,14 @@
       "title": "Revenue here is a sensitivity test, not a forecast",
       "body": [
         "ILLUSTRATIVE ARR SENSITIVITY",
-        "Entities · ₹3L · ₹6L · ₹12L",
-        "5 · ₹15L · ₹30L · ₹60L",
-        "20 · ₹60L · ₹1.2Cr · ₹2.4Cr",
-        "50 · ₹1.5Cr · ₹3Cr · ₹6Cr",
-        "Gates · buyer · bundling · legal · paid test · support economics",
-        "Not TAM, forecast or willingness-to-pay evidence."
+        "₹3L · ₹12L",
+        "5 · ₹15L · ₹60L",
+        "50 · ₹1.5Cr · ₹6Cr",
+        "Unproven gates: buyer, bundling risk, legal perimeter, paid test, support economics",
+        "If the wedge locks: the same evidence substrate extends to adjacent regulated-reporting workflows (hypothesis)",
+        "Not TAM/WTP."
       ],
-      "bodyWordCount": 36,
+      "bodyWordCount": 39,
       "sources": [
         "repo:docs/BUSINESS_VIABILITY.md",
         "repo:docs/superpowers/specs/2026-08-12-attest-submission-system-design.md"
@@ -174,15 +174,15 @@
     },
     {
       "number": 9,
-      "title": "Equal contribution means equal accountability",
+      "title": "One accountable founder. One defined finance lane.",
       "body": [
         "AYUSH TIWARY",
-        "Engineering, integration, test evidence and packaging.",
-        "FINANCE & BUSINESS ANALYSIS OWNER",
-        "Case consistency, buyer hypotheses, pricing research, workflow QA, pitch and demo contribution.",
+        "Engineering, integration, test evidence, packaging. KRISEVA ships evidence-first, human-review procurement software in Indian defense today.",
+        "FINANCE & BUSINESS ANALYSIS LANE",
+        "Case consistency, buyer hypotheses, pricing research, workflow QA.",
         "Proposed contributor · pending written acceptance and public attribution."
       ],
-      "bodyWordCount": 32,
+      "bodyWordCount": 37,
       "sources": [
         "repo:docs/CONTRIBUTOR_SCOPE.md",
         "repo:docs/superpowers/specs/2026-08-12-attest-submission-system-design.md"
@@ -192,8 +192,8 @@
       "number": 10,
       "title": "Use eight weeks to lock the wedge, or reject it",
       "body": [
-        "ACCESS · 2 FME officers + 2 administrators + 1 independent compliance provider",
-        "CHALLENGE · Is upstream evidence work outside DRR or bundled services?",
+        "ACCESS · 2 FME (fund management entity) officers + 2 administrators + 1 independent compliance provider",
+        "CHALLENGE · Is upstream evidence outside DRR/bundled services?",
         "TEST · One controlled synthetic workflow only if discovery survives",
         "DECIDE · Lock or reject by week 8",
         "Help us falsify quickly."
@@ -209,11 +209,11 @@
   "embeddedScreenshots": [
     {
       "path": "artifacts/prototype-conflict-1440.png",
-      "sha256": "d00471f0a294be593143897beae8cace63c04e9fd1e56bde90b84b73872e3ecd"
+      "sha256": "dada646b7271f87f0ec5bfeff83f15f6292a009d593763bef988836df08fe4f8"
     },
     {
       "path": "artifacts/prototype-receipt-1440.png",
-      "sha256": "de30b9b9ab01b318fe3977d354fd66350c3e83861af6026ec09a42a1b629c43a"
+      "sha256": "2504f780e6bcc0ee56741afdd0fe6f2c594852c37d3691dc48cf0edb83fdcf15"
     }
   ]
 }

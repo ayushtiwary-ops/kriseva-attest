@@ -32,6 +32,7 @@ The following are private founder handoff documents and are not included in a pu
 - `docs/MEETING_BRIEF_2026-08-12.md`
 - `docs/APPLICATION_UPDATE_BANK.md`
 - `docs/CLAUDE_CODE_HANDOFF.md`
+- `docs/DEFENSE_QA.md`
 - `docs/superpowers/`
 - `.superpowers/`
 

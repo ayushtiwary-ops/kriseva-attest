@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/9lathz",
-    "id": "9lathz",
+    "aid": "sl/wrad4v",
+    "id": "wrad4v",
     "slide": 6,
-    "layoutId": "2752032a-23fa-440b-b894-62f7a90253fa",
+    "layoutId": "ef19debf-5ea8-4d56-81f6-c75b74b317a1",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+    "masterLayoutId": "d8ea7324-5969-4081-a45a-f7cccced84e6",
     "masterLayoutName": "Master",
     "backgroundColor": "#0A1F44",
     "frame": {
@@ -46,15 +46,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "2752032a-23fa-440b-b894-62f7a90253fa",
+      "id": "ef19debf-5ea8-4d56-81f6-c75b74b317a1",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "parentLayoutId": "d8ea7324-5969-4081-a45a-f7cccced84e6",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "id": "d8ea7324-5969-4081-a45a-f7cccced84e6",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -65,7 +65,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/sby14rmt",
+      "aid": "sh/47uh4za1",
       "id": "1",
       "name": "brand-6",
       "bbox": [
@@ -135,7 +135,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/7ap0vm58",
+      "aid": "sh/j6lgvutg",
       "id": "2",
       "name": "title-6",
       "bbox": [
@@ -202,7 +202,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/69gz2h4n",
+      "aid": "sh/i5cz2psv",
       "id": "3",
       "name": "footer-rule-6",
       "bbox": [
@@ -219,7 +219,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/h0ri1gna",
+      "aid": "sh/tcny14by",
       "id": "4",
       "name": "footer-source-6",
       "bbox": [
@@ -286,7 +286,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/gzi18bmp",
+      "aid": "sh/sbeh8zad",
       "id": "5",
       "name": "footer-page-6",
       "bbox": [
@@ -356,7 +356,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/fy90z654",
+      "aid": "sh/ra5gzuts",
       "id": "6",
       "name": "agent-trace-label",
       "bbox": [
@@ -366,8 +366,8 @@
         28
       ],
       "geometry": "rect",
-      "text": "RECORDED DETERMINISTIC PROTOTYPE TRACE",
-      "textPreview": "RECORDED DETERMINISTIC PROTOTYPE TRACE",
+      "text": "DETERMINISTIC TRACE",
+      "textPreview": "DETERMINISTIC TRACE",
       "resolvedFontSize": 22,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -391,14 +391,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "RECORDED DETERMINISTIC PROTOTYPE TRACE"
+            "text": "DETERMINISTIC TRACE"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "RECORDED DETERMINISTIC PROTOTYPE TRACE",
+          "text": "DETERMINISTIC TRACE",
           "resolvedTextStyle": {
             "fontSize": 22,
             "typeface": "Courier New",
@@ -409,7 +409,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "RECORDED DETERMINISTIC PROTOTYPE TRACE",
+              "text": "DETERMINISTIC TRACE",
               "fontSize": 22,
               "typeface": "Courier New",
               "color": "#A87229",
@@ -426,7 +426,7 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ux0j614j",
+      "aid": "sh/69wz6ps7",
       "id": "7",
       "name": "agent-trace-spine",
       "bbox": [
@@ -443,7 +443,7 @@
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/p4bi5gn6",
+      "aid": "sh/9gjypkbe",
       "id": "8",
       "name": "agent-propose",
       "bbox": [
@@ -513,7 +513,7 @@
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/43i1cbml",
+      "aid": "sh/8faxwfat",
       "id": "9",
       "name": "agent-propose-copy",
       "bbox": [
@@ -580,7 +580,7 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/2l83mpgb",
+      "aid": "sh/ydkvqlsz",
       "id": "10",
       "name": "agent-abstain",
       "bbox": [
@@ -647,7 +647,7 @@
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/nmhkvuhw",
+      "aid": "sh/zetcjq9k",
       "id": "11",
       "name": "agent-abstain-copy",
       "bbox": [
@@ -714,7 +714,7 @@
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/onqlozy1",
+      "aid": "sh/0f2dsva5",
       "id": "12",
       "name": "agent-decide",
       "bbox": [
@@ -784,7 +784,7 @@
       "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/poj2x4zm",
+      "aid": "sh/lgvul0ra",
       "id": "13",
       "name": "agent-decide-copy",
       "bbox": [
@@ -855,7 +855,7 @@
       "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/aps3q9g7",
+      "aid": "sh/mh4vu5sv",
       "id": "14",
       "name": "agent-boundary-rule",
       "bbox": [
@@ -872,22 +872,22 @@
       "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/bq1kzehs",
+      "aid": "sh/n2dcna9g",
       "id": "15",
       "name": "agent-boundary-copy",
       "bbox": [
         856,
         256,
         300,
-        150
+        260
       ],
       "geometry": "rect",
-      "text": "No live model. No compliance conclusion.",
-      "textPreview": "No live model. No compliance conclusion.",
-      "resolvedFontSize": 30,
+      "text": "No live model. No compliance conclusion. Harness built and tested before any model enters.",
+      "textPreview": "No live model. No compliance conclusion. Harness built and tested before any model enters.",
+      "resolvedFontSize": 26,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 30,
+        "fontSize": 26,
         "typeface": "Georgia",
         "color": "#A87229",
         "alignment": "left",
@@ -902,7 +902,7 @@
         }
       },
       "textLayout": {
-        "lineCount": 3,
+        "lineCount": 4,
         "lines": [
           {
             "index": 1,
@@ -910,20 +910,24 @@
           },
           {
             "index": 2,
-            "text": "compliance"
+            "text": "compliance conclusion."
           },
           {
             "index": 3,
-            "text": "conclusion."
+            "text": "Harness built and tested"
+          },
+          {
+            "index": 4,
+            "text": "before any model enters."
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "No live model. No compliance conclusion.",
+          "text": "No live model. No compliance conclusion. Harness built and tested before any model enters.",
           "resolvedTextStyle": {
-            "fontSize": 30,
+            "fontSize": 26,
             "typeface": "Georgia",
             "color": "#A87229",
             "alignment": "left"
@@ -931,8 +935,8 @@
           "runs": [
             {
               "index": 1,
-              "text": "No live model. No compliance conclusion.",
-              "fontSize": 30,
+              "text": "No live model. No compliance conclusion. Harness built and tested before any model enters.",
+              "fontSize": 26,
               "typeface": "Georgia",
               "color": "#A87229",
               "alignment": "left"

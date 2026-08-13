@@ -15,8 +15,12 @@ source footers, and page labels are excluded from the 40-word body limit.
       "title": "KRISEVA ATTEST",
       "body": [
         "A bounded source-to-field evidence workbench for human review.",
-        "Application product lock. Company wedge not locked.",
+        "This prototype is final for this application. Whether it becomes the company's product is deliberately still open.",
         "Research-stage prototype · synthetic data · no filing · no regulator connection"
+      ],
+      "speakerNotes": [
+        "Superseded cover framing, retained for audit only (replaced 2026-08-13):",
+        "\"Application product lock. Company wedge not locked.\""
       ],
       "sources": [
         "repo:docs/superpowers/specs/2026-08-12-attest-submission-system-design.md",
@@ -46,7 +50,7 @@ source footers, and page labels are excluded from the 40-word body limit.
       "title": "DRR targets submission; evidence starts upstream",
       "body": [
         "DRR",
-        "Structured reporting channels, validation and submission infrastructure",
+        "DRR (IFSCA's Digital Regulatory Reporting platform, procured 2026): structured reporting channels, validation and submission infrastructure.",
         "ATTEST",
         "Provider-neutral source references, disagreement and human review",
         "No filing. No DRR connection. No claimed gap.",
@@ -63,10 +67,10 @@ source footers, and page labels are excluded from the 40-word body limit.
       "layout": "case-ledger",
       "title": "One fictional case makes three evidence states visible",
       "body": [
-        "Meridian Horizon Fund Management IFSC Pvt Ltd · Q2 2026 · fictional",
-        "Closing NAV · SUPPORTED · INR 12.5M agrees across two sources",
-        "Committed capital · CONFLICTING · INR 50M vs INR 48M",
-        "Investor complaints closed · UNSUPPORTED · no candidate evidence"
+        "Meridian Horizon Fund I (Meridian Horizon Fund Management IFSC Pvt Ltd) · QE 30 Jun 2026 · fictional",
+        "Closing NAV · SUPPORTED · USD 12.4M agrees across two sources",
+        "Committed capital · CONFLICTING · USD 25M vs USD 24M",
+        "Complaints closed · UNSUPPORTED · no candidate evidence"
       ],
       "sources": [
         "repo:data/synthetic-case.json",
@@ -95,11 +99,11 @@ source footers, and page labels are excluded from the 40-word body limit.
       "layout": "agent-boundary",
       "title": "The prototype knows when to stop",
       "body": [
-        "RECORDED DETERMINISTIC PROTOTYPE TRACE",
+        "DETERMINISTIC TRACE",
         "PROPOSE · candidate evidence and exact references",
         "ABSTAIN · no candidate evidence; request more",
         "DECIDE · only a named human can accept, correct, reject or defer",
-        "No live model. No compliance conclusion."
+        "No live model. No compliance conclusion. Harness built and tested before any model enters."
       ],
       "sources": [
         "repo:prototype/app.js",
@@ -130,12 +134,12 @@ source footers, and page labels are excluded from the 40-word body limit.
       "title": "Revenue here is a sensitivity test, not a forecast",
       "body": [
         "ILLUSTRATIVE ARR SENSITIVITY",
-        "Entities · ₹3L · ₹6L · ₹12L",
-        "5 · ₹15L · ₹30L · ₹60L",
-        "20 · ₹60L · ₹1.2Cr · ₹2.4Cr",
-        "50 · ₹1.5Cr · ₹3Cr · ₹6Cr",
-        "Gates · buyer · bundling · legal · paid test · support economics",
-        "Not TAM, forecast or willingness-to-pay evidence."
+        "₹3L · ₹12L",
+        "5 · ₹15L · ₹60L",
+        "50 · ₹1.5Cr · ₹6Cr",
+        "Unproven gates: buyer, bundling risk, legal perimeter, paid test, support economics",
+        "If the wedge locks: the same evidence substrate extends to adjacent regulated-reporting workflows (hypothesis)",
+        "Not TAM/WTP."
       ],
       "sources": [
         "repo:docs/BUSINESS_VIABILITY.md",
@@ -145,12 +149,12 @@ source footers, and page labels are excluded from the 40-word body limit.
     {
       "number": 9,
       "layout": "ownership",
-      "title": "Equal contribution means equal accountability",
+      "title": "One accountable founder. One defined finance lane.",
       "body": [
         "AYUSH TIWARY",
-        "Engineering, integration, test evidence and packaging.",
-        "FINANCE & BUSINESS ANALYSIS OWNER",
-        "Case consistency, buyer hypotheses, pricing research, workflow QA, pitch and demo contribution.",
+        "Engineering, integration, test evidence, packaging. KRISEVA ships evidence-first, human-review procurement software in Indian defense today.",
+        "FINANCE & BUSINESS ANALYSIS LANE",
+        "Case consistency, buyer hypotheses, pricing research, workflow QA.",
         "Proposed contributor · pending written acceptance and public attribution."
       ],
       "sources": [
@@ -163,8 +167,8 @@ source footers, and page labels are excluded from the 40-word body limit.
       "layout": "programme-ask",
       "title": "Use eight weeks to lock the wedge, or reject it",
       "body": [
-        "ACCESS · 2 FME officers + 2 administrators + 1 independent compliance provider",
-        "CHALLENGE · Is upstream evidence work outside DRR or bundled services?",
+        "ACCESS · 2 FME (fund management entity) officers + 2 administrators + 1 independent compliance provider",
+        "CHALLENGE · Is upstream evidence outside DRR/bundled services?",
         "TEST · One controlled synthetic workflow only if discovery survives",
         "DECIDE · Lock or reject by week 8",
         "Help us falsify quickly."

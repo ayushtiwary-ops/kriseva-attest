@@ -31,8 +31,15 @@ async function recordConflictDecision(page) {
   await page.getByLabel('Accept selected source').check();
   await page.getByLabel('Select source').selectOption('admin-committed');
   await page.getByLabel('Reviewer').fill('Demo Reviewer');
-  await page.getByLabel('Decision reason').fill('Board schedule is older than the administrator statement.');
+  await page.getByLabel('Decision reason').fill('Administrator figure ties to the executed subscription register; earlier schedule superseded.');
   await page.getByRole('button', { name: 'Record human decision' }).click();
+}
+
+async function confirmSignOff(page, officerName = 'Demo Officer') {
+  await page.getByRole('link', { name: 'Review and sign-off' }).click();
+  await page.getByLabel('Principal Officer (demo)').fill(officerName);
+  await page.getByLabel('I confirm the evidence record for all three fields has been reviewed').check();
+  await page.getByRole('button', { name: 'Confirm sign-off' }).click();
 }
 
 async function openConflictForm(page) {
@@ -42,7 +49,7 @@ async function openConflictForm(page) {
   await expect(page.getByRole('heading', { name: 'Record the conflict decision' })).toBeVisible();
 }
 
-test('reviewer can inspect a conflict, decide with reason, and reach receipt', async ({ page }) => {
+test('reviewer can inspect a conflict, decide with reason, confirm sign-off, and reach a fully signed receipt', async ({ page }) => {
   const response = await openPrototype(page);
   expect(response?.status()).toBe(200);
 
@@ -52,10 +59,62 @@ test('reviewer can inspect a conflict, decide with reason, and reach receipt', a
   await page.getByLabel('Accept selected source').check();
   await page.getByLabel('Select source').selectOption('admin-committed');
   await page.getByLabel('Reviewer').fill('Demo Reviewer');
-  await page.getByLabel('Decision reason').fill('Board schedule is older than the administrator statement.');
+  await page.getByLabel('Decision reason').fill('Administrator figure ties to the executed subscription register; earlier schedule superseded.');
   await page.getByRole('button', { name: 'Record human decision' }).click();
-  await page.getByRole('link', { name: 'Evidence receipt' }).click();
-  await expect(page.getByText('Human decision recorded')).toBeVisible();
+  await confirmSignOff(page, 'Demo Officer');
+  await page.locator('.screen-navigation a[href="#evidence-receipt"]').click();
+
+  const receipt = page.locator('.active-screen');
+  await expect(receipt.getByText('Human decision recorded')).toBeVisible();
+  await expect(receipt.getByText('Demo Reviewer', { exact: true })).toBeVisible();
+  await expect(receipt.getByText('Demo Officer', { exact: true })).toBeVisible();
+  await expect(receipt.getByText('Deciding reviewer', { exact: true })).toBeVisible();
+  await expect(receipt.getByText('Confirming Principal Officer', { exact: true })).toBeVisible();
+  await expect(receipt.locator('#manifest-digest')).toHaveText(/^[0-9a-f]{16}$/u);
+  await expect(page.getByRole('button', { name: 'Download JSON evidence manifest' })).toBeEnabled();
+  await expect(page.getByRole('button', { name: 'Download printable HTML evidence manifest' })).toBeEnabled();
+});
+
+test('Principal Officer confirmation is blocked until the conflict decision exists', async ({ page }) => {
+  await openPrototype(page);
+  await runReview(page);
+  await page.getByRole('link', { name: 'Review and sign-off' }).click();
+
+  await expect(page.getByLabel('Principal Officer (demo)')).toBeDisabled();
+  await expect(page.getByLabel('I confirm the evidence record for all three fields has been reviewed')).toBeDisabled();
+  await expect(page.getByRole('button', { name: 'Confirm sign-off' })).toBeDisabled();
+});
+
+test('maker-checker separation blocks a confirming officer who matches the deciding reviewer', async ({ page }) => {
+  await openPrototype(page);
+  await runReview(page);
+  await recordConflictDecision(page);
+  await page.getByRole('link', { name: 'Review and sign-off' }).click();
+
+  await page.getByLabel('Principal Officer (demo)').fill('  demo reviewer  ');
+  await page.getByLabel('I confirm the evidence record for all three fields has been reviewed').check();
+  await page.getByRole('button', { name: 'Confirm sign-off' }).click();
+
+  await expect(page.getByText('Maker-checker separation: the confirming officer must differ from the deciding reviewer.')).toBeVisible();
+  await expect(page.getByLabel('Principal Officer (demo)')).toBeFocused();
+  await page.locator('.screen-navigation a[href="#evidence-receipt"]').click();
+  await expect(page.getByRole('button', { name: 'Download JSON evidence manifest' })).toBeDisabled();
+});
+
+test('evidence receipt exports stay disabled until the Principal Officer sign-off is complete', async ({ page }) => {
+  await openPrototype(page);
+  await runReview(page);
+  await recordConflictDecision(page);
+  await page.locator('.screen-navigation a[href="#evidence-receipt"]').click();
+
+  await expect(page.getByRole('button', { name: 'Download JSON evidence manifest' })).toBeDisabled();
+  await expect(page.getByRole('button', { name: 'Download printable HTML evidence manifest' })).toBeDisabled();
+  await expect(page.getByText(/Principal Officer confirmation pending/i)).toBeVisible();
+
+  await confirmSignOff(page, 'Demo Officer');
+  await page.locator('.screen-navigation a[href="#evidence-receipt"]').click();
+  await expect(page.getByRole('button', { name: 'Download JSON evidence manifest' })).toBeEnabled();
+  await expect(page.getByRole('button', { name: 'Download printable HTML evidence manifest' })).toBeEnabled();
 });
 
 test('case begins with exactly three pending fields and protected routes redirect', async ({ page }) => {
@@ -106,7 +165,7 @@ test('conflict form has no defaults and focuses each missing control without mut
   await submit.click();
   await expect(page.getByLabel('Decision reason')).toBeFocused();
 
-  await page.getByLabel('Decision reason').fill('Board schedule is older than the administrator statement.');
+  await page.getByLabel('Decision reason').fill('Administrator figure ties to the executed subscription register; earlier schedule superseded.');
   await submit.click();
   await expect(page.locator('#announcement')).toHaveText('Decision saved. Conflict gate cleared.');
   await page.getByRole('link', { name: 'Review and sign-off' }).click();
@@ -158,7 +217,7 @@ for (const action of ['Defer pending evidence', 'Reject proposed field']) {
     await page.getByLabel('Reviewer').fill('Demo Reviewer');
     await page.getByLabel('Decision reason').fill('More evidence is required before choosing a source.');
     await page.getByRole('button', { name: 'Record human decision' }).click();
-    await page.getByRole('link', { name: 'Evidence receipt' }).click();
+    await page.locator('.screen-navigation a[href="#evidence-receipt"]').click();
     await expect(page.getByRole('heading', { name: 'Human decision recorded' })).toBeVisible();
     await expect(page.getByText('Selected source', { exact: true })).toHaveCount(0);
     await expect(page.getByText('admin-committed', { exact: true })).toHaveCount(0);
@@ -173,7 +232,7 @@ for (const action of ['Accept selected source', 'Correct with selected source'])
     await page.getByLabel('Reviewer').fill('Demo Reviewer');
     await page.getByLabel('Decision reason').fill('The selected source governs this synthetic decision.');
     await page.getByRole('button', { name: 'Record human decision' }).click();
-    await page.getByRole('link', { name: 'Evidence receipt' }).click();
+    await page.locator('.screen-navigation a[href="#evidence-receipt"]').click();
     await expect(page.getByText('Selected source', { exact: true })).toBeVisible();
     await expect(page.getByText('admin-committed', { exact: true })).toBeVisible();
   });
@@ -200,19 +259,34 @@ test('trace discloses deterministic behavior and abstains when evidence is absen
   await expect(page.getByText('RECORDED DETERMINISTIC PROTOTYPE TRACE · NO LIVE MODEL CALL', { exact: true })).toBeVisible();
   await expect(page.getByText('ABSTAIN', { exact: true })).toBeVisible();
   await expect(page.getByText(/No candidate evidence is present/)).toBeVisible();
+  await expect(page.getByText('Load three governed fields', { exact: true })).toBeVisible();
+  await expect(page.getByText('whitelisted', { exact: false })).toHaveCount(0);
+});
+
+test('field index and dashboard use governed-fields terminology and the conflict form explains ACCEPT vs CORRECT', async ({ page }) => {
+  await openPrototype(page);
+  await expect(page.getByText('Three governed fields', { exact: false })).toBeVisible();
+  await runReview(page);
+  await expect(page.getByText('Governed fields', { exact: true })).toBeVisible();
+  await page.getByRole('link', { name: /1 conflict/i }).click();
+  await expect(page.getByText(
+    "ACCEPT keeps the proposed value as evidenced by the selected source. CORRECT replaces it with the selected source's value.",
+    { exact: true }
+  )).toBeVisible();
 });
 
 test('receipt retains both candidates, reason, fingerprints, unsupported item, and decision marker', async ({ page }) => {
   await openPrototype(page);
   await runReview(page);
   await recordConflictDecision(page);
-  await page.getByRole('link', { name: 'Evidence receipt' }).click();
+  await confirmSignOff(page, 'Demo Officer');
+  await page.locator('.screen-navigation a[href="#evidence-receipt"]').click();
 
   const receipt = page.locator('.active-screen');
   await expect(receipt.getByRole('heading', { name: 'Human decision recorded' })).toBeVisible();
-  await expect(receipt.getByText('INR 50,000,000', { exact: true })).toBeVisible();
-  await expect(receipt.getByText('INR 48,000,000', { exact: true })).toBeVisible();
-  await expect(receipt.getByText('Board schedule is older than the administrator statement.', { exact: true })).toBeVisible();
+  await expect(receipt.getByText('USD 25,000,000', { exact: true })).toBeVisible();
+  await expect(receipt.getByText('USD 24,000,000', { exact: true })).toBeVisible();
+  await expect(receipt.getByText('Administrator figure ties to the executed subscription register; earlier schedule superseded.', { exact: true })).toBeVisible();
   await expect(receipt.getByText('Recorded at', { exact: true })).toBeVisible();
   await expect(receipt.getByText('2026-08-12T12:00:00+05:30', { exact: true })).toBeVisible();
   for (const fingerprint of [
@@ -224,6 +298,24 @@ test('receipt retains both candidates, reason, fingerprints, unsupported item, a
   }
   await expect(receipt.getByRole('heading', { name: 'Investor complaints closed' })).toBeVisible();
   await expect(receipt.getByText(/No candidate source. No value synthesized./)).toBeVisible();
+
+  await expect(receipt.getByText('Deciding reviewer', { exact: true })).toBeVisible();
+  await expect(receipt.getByText('Confirming Principal Officer', { exact: true })).toBeVisible();
+  await expect(receipt.getByText('Demo Officer', { exact: true })).toBeVisible();
+  const digestText = await receipt.locator('#manifest-digest').innerText();
+  expect(digestText).toMatch(/^[0-9a-f]{16}$/u);
+
+  // The receipt-visible digest must be the first 16 hex characters of the
+  // full digest in the exported JSON manifest.
+  const jsonDownloadPromise = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Download JSON evidence manifest' }).click();
+  const jsonDownload = await jsonDownloadPromise;
+  const stream = await jsonDownload.createReadStream();
+  const chunks = [];
+  for await (const chunk of stream) chunks.push(Buffer.from(chunk));
+  const manifest = JSON.parse(Buffer.concat(chunks).toString('utf8'));
+  expect(manifest.integrity.digest.slice(0, 16)).toBe(digestText);
+  expect(manifest.integrity.algorithm).toBe('sha256');
 });
 
 test('review ledger exposes the fixed synthetic decision timestamp', async ({ page }) => {
@@ -240,14 +332,14 @@ test('reset returns to dashboard, clears the decision, announces, and focuses re
   await openPrototype(page);
   await runReview(page);
   await recordConflictDecision(page);
-  await page.getByRole('link', { name: 'Evidence receipt' }).click();
+  await page.locator('.screen-navigation a[href="#evidence-receipt"]').click();
   await page.getByRole('button', { name: 'Reset demo' }).last().click();
 
   await expect(page).toHaveURL(/#dashboard$/u);
   await expect(page.locator('.field-index .status-pending')).toHaveCount(3);
   await expect(page.locator('#announcement')).toHaveText('Demo reset. Three fields are pending evidence review.');
   await expect(page.getByRole('button', { name: 'Run evidence review' })).toBeFocused();
-  await page.getByRole('link', { name: 'Evidence receipt' }).click();
+  await page.locator('.screen-navigation a[href="#evidence-receipt"]').click();
   await expect(page).toHaveURL(/#dashboard$/u);
 });
 
@@ -287,7 +379,7 @@ for (const width of [390, 768, 1440]) {
     await openPrototype(page);
     await runReview(page);
     await recordConflictDecision(page);
-    await page.getByRole('link', { name: 'Evidence receipt' }).click();
+    await page.locator('.screen-navigation a[href="#evidence-receipt"]').click();
     await expect(page.getByRole('heading', { name: 'Evidence receipt' })).toBeVisible();
 
     const geometry = await page.evaluate(() => {

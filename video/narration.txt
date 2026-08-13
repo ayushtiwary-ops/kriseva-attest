@@ -1,17 +1,20 @@
 [SCENE 1]
-Regulatory reporting is not only about the final field. Accountability depends on reconstructing which source supported the number, and what happened when the record did not agree.
+Two official records disagree. Which number goes to the regulator?
 
 [SCENE 2]
-KRISEVA ATTEST is a research-stage prototype: one fictional fund manager, three synthetic sources, three fields. It files nothing and has no IFSCA connection.
+The field is not the whole story. Accountability means reconstructing which source supported it, and staying answerable when records disagree.
 
 [SCENE 3]
-For closing NAV, two normalized values agree. The prototype labels the field supported while keeping the source references and fingerprints beside the candidate evidence.
+KRISEVA ATTEST is a research-stage prototype: one fictional fund manager, three synthetic sources, three fields. It files nothing and has no IFSCA connection.
 
 [SCENE 4]
-Committed capital is different. The administrator statement shows fifty million rupees; the board schedule shows forty-eight million. ATTEST preserves both, marks a conflict, and proposes no winner. When investor-complaint evidence is absent, the deterministic trace abstains instead of inventing a value.
+The administrator statement shows twenty-five million US dollars. The subscription register shows twenty-four million. ATTEST preserves both figures and proposes no winner. A named reviewer selects the administrator source, types a review reason, and submits the decision. Both candidates stay visible, before and after the choice.
 
 [SCENE 5]
-A named reviewer must choose an action, identify the source when required, and record a reason. The decision is explicit and attributed. This demonstration does not interpret regulation, determine compliance, or replace the accountable human.
+A second named role, the Principal Officer, confirms the record. The receipt keeps the reviewer, the officer, the reason, and a timestamp. An integrity digest fingerprints the manifest so the record cannot quietly change after the fact.
 
 [SCENE 6]
-The receipt retains fingerprints, both candidates, the human decision, and the unresolved request. Next is practitioner testing with fund managers and administrators before any decision to lock a company wedge.
+This is synthetic data. Nothing here files anything or reaches a regulator. The harness is built and tested before any model ever goes inside it.
+
+[SCENE 7]
+This demo used synthetic data. It is not a regulatory filing, and the narration was synthesized. Next is practitioner testing with real fund managers and administrators.

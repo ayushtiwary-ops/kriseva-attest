@@ -7,6 +7,10 @@ The repository is the published submission package for the GIFT IFIH Young Build
 - Live hub: `https://ayushtiwary-ops.github.io/kriseva-attest/`
 - Source: `https://github.com/ayushtiwary-ops/kriseva-attest`
 
+## Why this exists
+
+ATTEST is an audit-grade accountability contract for agent-assisted reporting: every proposed value binds to an exact source, disagreement stays visible instead of being resolved silently, and only a named human can decide. We built and test-hardened the harness before putting a model inside it. The honest boundary statements on every screen are not a promise; they are machine-enforced by the claims scanner and 150+ automated checks.
+
 ## Run locally
 
 Requirements: a current Node.js runtime and the declared npm dependencies.
@@ -61,7 +65,7 @@ The browser-facing code, synthetic fixture, deck source, video source, artifact 
 
 ## Publication state
 
-The verified video and deck are available only as local package links. No public GitHub or hosted-demo address is asserted in this repository. Publishing, deploying, uploading artifacts, accepting programme terms, and submitting the application remain founder actions.
+The hub (`https://ayushtiwary-ops.github.io/kriseva-attest/`) and repository (`https://github.com/ayushtiwary-ops/kriseva-attest`) are published with founder approval as of 12 August 2026. The demo video and deck ship inside this repository. Live application-form entry, programme terms acceptance, and final submission remain founder actions outside this repository.
 
 ## License scope
 

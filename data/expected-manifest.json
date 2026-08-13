@@ -2,8 +2,9 @@
   "product": "KRISEVA ATTEST",
   "case": {
     "id": "meridian-horizon-q2-2026",
-    "name": "Meridian Horizon Fund Management IFSC Pvt Ltd",
-    "reportingPeriod": "Q2 2026",
+    "name": "Meridian Horizon Fund I",
+    "fme": "Meridian Horizon Fund Management IFSC Pvt Ltd",
+    "reportingPeriod": "Quarter ended 30 June 2026",
     "synthetic": true,
     "dataMarker": "SYNTHETIC DEMO DATA"
   },
@@ -13,7 +14,6 @@
     "notARegulatoryFiling": true,
     "humanDecisionRequired": true
   },
-  "generatedAt": "2026-08-12T10:00:00.000Z",
   "sources": [
     {
       "id": "administrator-statement",
@@ -31,7 +31,7 @@
     },
     {
       "id": "board-schedule",
-      "label": "Board schedule",
+      "label": "Subscription register extract",
       "reference": "Schedule A, cell C11",
       "fingerprint": "synthetic:board-schedule:4f71aa",
       "dataMarker": "SYNTHETIC DEMO DATA"
@@ -60,15 +60,15 @@
         {
           "id": "admin-closing-nav",
           "sourceId": "administrator-statement",
-          "value": "INR 12,500,000",
-          "normalizedValue": "12500000",
+          "value": "USD 12,400,000",
+          "normalizedValue": "12400000",
           "reference": "Page 2, row Closing NAV"
         },
         {
           "id": "ledger-closing-nav",
           "sourceId": "internal-ledger",
-          "value": "12,500,000 INR",
-          "normalizedValue": "12500000",
+          "value": "12,400,000 USD",
+          "normalizedValue": "12400000",
           "reference": "NAV ledger, cell F18"
         }
       ],
@@ -83,15 +83,15 @@
         {
           "id": "admin-committed",
           "sourceId": "administrator-statement",
-          "value": "INR 50,000,000",
-          "normalizedValue": "50000000",
+          "value": "USD 25,000,000",
+          "normalizedValue": "25000000",
           "reference": "Page 2, row Committed capital"
         },
         {
           "id": "board-committed",
           "sourceId": "board-schedule",
-          "value": "INR 48,000,000",
-          "normalizedValue": "48000000",
+          "value": "USD 24,000,000",
+          "normalizedValue": "24000000",
           "reference": "Schedule A, cell C11"
         }
       ],
@@ -117,6 +117,11 @@
       "recordedAt": "2026-08-12T09:30:00.000Z"
     }
   ],
+  "principalOfficerConfirmation": {
+    "officerName": "Devika Nair",
+    "confirmed": true,
+    "recordedAt": "2026-08-12T09:45:00.000Z"
+  },
   "unresolvedItems": [
     {
       "id": "committed-capital",
@@ -126,15 +131,15 @@
         {
           "id": "admin-committed",
           "sourceId": "administrator-statement",
-          "value": "INR 50,000,000",
-          "normalizedValue": "50000000",
+          "value": "USD 25,000,000",
+          "normalizedValue": "25000000",
           "reference": "Page 2, row Committed capital"
         },
         {
           "id": "board-committed",
           "sourceId": "board-schedule",
-          "value": "INR 48,000,000",
-          "normalizedValue": "48000000",
+          "value": "USD 24,000,000",
+          "normalizedValue": "24000000",
           "reference": "Schedule A, cell C11"
         }
       ],
@@ -156,5 +161,10 @@
     "NOT A REGULATORY FILING",
     "NOT CONNECTED TO IFSCA SYSTEMS",
     "NAMED HUMAN DECISION REQUIRED"
-  ]
+  ],
+  "generatedAt": "2026-08-12T10:00:00.000Z",
+  "integrity": {
+    "algorithm": "sha256",
+    "digest": "db305b7d4a7a656c22403b49196b096cca3368b766eb71a6e949f17e442f23d8"
+  }
 }

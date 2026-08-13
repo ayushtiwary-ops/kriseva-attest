@@ -102,6 +102,7 @@ test('public release scan covers every shipped narrative and browser data class'
     'video/storyboard.md',
     'video/narration.txt',
     'video/captions.srt',
+    'video/captions-verbatim.srt',
     'artifacts/deck/deck-manifest.json',
     'ARTIFACT_INDEX.md',
     'docs/QA_REPORT.md',

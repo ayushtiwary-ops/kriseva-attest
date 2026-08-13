@@ -34,7 +34,7 @@ The release gate covers unit state and manifest behavior, browser interaction an
 - Wireframe release: desktop PNG, mobile PNG, and one-page PDF; same pinned-runtime hashes repeat.
 - Prototype release: five governed states at 390, 768, and 1440 pixels; JSON and printable HTML downloads retain source fingerprints, competing candidates, human action, and unresolved evidence.
 - Deck release: editable ten-slide PPTX, ten-page PDF, ten slide PNGs, source notes, and layout receipts. Visual and semantic consistency is the governed determinism boundary; container bytes may vary when the exporter writes metadata or relationship identifiers.
-- Video release: 1920 × 1080, H.264 High, AAC, 30 fps, exactly 2,700 frames, 90.021333 seconds, -18.1 LUFS, -2 dBTP, and no detected silence window longer than three seconds.
+- Video release: seven-scene, 1920 × 1080, H.264 High/BT.709, AAC stereo, 30 fps, exactly 2,700 frames, 90.000000 seconds, -15.9 LUFS, -1.4 dBTP, a continuous low-level pink-noise bed under the narration so no silence window is ever detected, and scenes 4-5 are a genuine recorded Playwright interaction against the local prototype (not a screenshot sequence).
 
 ## Claim and privacy boundary
 

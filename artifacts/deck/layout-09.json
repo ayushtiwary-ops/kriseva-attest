@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/o9c336",
-    "id": "o9c336",
+    "aid": "sl/wf26ai",
+    "id": "wf26ai",
     "slide": 9,
-    "layoutId": "2752032a-23fa-440b-b894-62f7a90253fa",
+    "layoutId": "ef19debf-5ea8-4d56-81f6-c75b74b317a1",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+    "masterLayoutId": "d8ea7324-5969-4081-a45a-f7cccced84e6",
     "masterLayoutName": "Master",
     "backgroundColor": "#DED6C9",
     "frame": {
@@ -47,15 +47,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "2752032a-23fa-440b-b894-62f7a90253fa",
+      "id": "ef19debf-5ea8-4d56-81f6-c75b74b317a1",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "parentLayoutId": "d8ea7324-5969-4081-a45a-f7cccced84e6",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "id": "d8ea7324-5969-4081-a45a-f7cccced84e6",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -66,7 +66,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/jqhgfytk",
+      "aid": "sh/zahcn698",
       "id": "1",
       "name": "brand-9",
       "bbox": [
@@ -136,7 +136,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4rqho3u5",
+      "aid": "sh/0bqtwbqt",
       "id": "2",
       "name": "title-9",
       "bbox": [
@@ -146,8 +146,8 @@
         62
       ],
       "geometry": "rect",
-      "text": "Equal contribution means equal accountability",
-      "textPreview": "Equal contribution means equal accountability",
+      "text": "One accountable founder. One defined finance lane.",
+      "textPreview": "One accountable founder. One defined finance lane.",
       "resolvedFontSize": 48,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -170,14 +170,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "Equal contribution means equal accountability"
+            "text": "One accountable founder. One defined finance lane."
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "Equal contribution means equal accountability",
+          "text": "One accountable founder. One defined finance lane.",
           "resolvedTextStyle": {
             "fontSize": 48,
             "typeface": "Georgia",
@@ -187,7 +187,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "Equal contribution means equal accountability",
+              "text": "One accountable founder. One defined finance lane.",
               "fontSize": 48,
               "typeface": "Georgia",
               "color": "#0A1F44",
@@ -203,7 +203,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/5szyhobq",
+      "aid": "sh/1czupgre",
       "id": "3",
       "name": "footer-rule-9",
       "bbox": [
@@ -220,7 +220,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/6d8zqtcb",
+      "aid": "sh/md8byl8j",
       "id": "4",
       "name": "footer-source-9",
       "bbox": [
@@ -287,7 +287,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/reh0jytw",
+      "aid": "sh/nehcrq94",
       "id": "5",
       "name": "footer-page-9",
       "bbox": [
@@ -357,7 +357,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/sfqhs3a1",
+      "aid": "sh/ofat0vqp",
       "id": "6",
       "name": "ownership-divider",
       "bbox": [
@@ -374,7 +374,7 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/tgjil8bm",
+      "aid": "sh/9gjutg7a",
       "id": "7",
       "name": "ownership-ayush-label",
       "bbox": [
@@ -444,22 +444,22 @@
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/mhoze9cr",
+      "aid": "sh/2hobmh8f",
       "id": "8",
       "name": "ownership-ayush-copy",
       "bbox": [
         66,
         244,
         500,
-        130
+        270
       ],
       "geometry": "rect",
-      "text": "Engineering, integration, test evidence and packaging.",
-      "textPreview": "Engineering, integration, test evidence and packaging.",
-      "resolvedFontSize": 32,
+      "text": "Engineering, integration, test evidence, packaging. KRISEVA ships evidence-first, human-review procurement software in Indian defense today.",
+      "textPreview": "Engineering, integration, test evidence, packaging. KRISEVA ships evidence-first, human-review procurement software in Indian defense today.",
+      "resolvedFontSize": 28,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 32,
+        "fontSize": 28,
         "typeface": "Georgia",
         "color": "#0A1F44",
         "alignment": "left",
@@ -474,24 +474,36 @@
         }
       },
       "textLayout": {
-        "lineCount": 2,
+        "lineCount": 5,
         "lines": [
           {
             "index": 1,
-            "text": "Engineering, integration, test"
+            "text": "Engineering, integration, test evidence,"
           },
           {
             "index": 2,
-            "text": "evidence and packaging."
+            "text": "packaging. KRISEVA ships"
+          },
+          {
+            "index": 3,
+            "text": "evidence-first, human-review"
+          },
+          {
+            "index": 4,
+            "text": "procurement software in Indian defense"
+          },
+          {
+            "index": 5,
+            "text": "today."
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "Engineering, integration, test evidence and packaging.",
+          "text": "Engineering, integration, test evidence, packaging. KRISEVA ships evidence-first, human-review procurement software in Indian defense today.",
           "resolvedTextStyle": {
-            "fontSize": 32,
+            "fontSize": 28,
             "typeface": "Georgia",
             "color": "#0A1F44",
             "alignment": "left"
@@ -499,8 +511,8 @@
           "runs": [
             {
               "index": 1,
-              "text": "Engineering, integration, test evidence and packaging.",
-              "fontSize": 32,
+              "text": "Engineering, integration, test evidence, packaging. KRISEVA ships evidence-first, human-review procurement software in Indian defense today.",
+              "fontSize": 28,
               "typeface": "Georgia",
               "color": "#0A1F44",
               "alignment": "left"
@@ -515,7 +527,7 @@
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/7ixg7etc",
+      "aid": "sh/3ixcfm90",
       "id": "9",
       "name": "ownership-finance-label",
       "bbox": [
@@ -525,8 +537,8 @@
         50
       ],
       "geometry": "rect",
-      "text": "FINANCE & BUSINESS ANALYSIS OWNER",
-      "textPreview": "FINANCE & BUSINESS ANALYSIS OWNER",
+      "text": "FINANCE & BUSINESS ANALYSIS LANE",
+      "textPreview": "FINANCE & BUSINESS ANALYSIS LANE",
       "resolvedFontSize": 22,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -550,14 +562,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "FINANCE & BUSINESS ANALYSIS OWNER"
+            "text": "FINANCE & BUSINESS ANALYSIS LANE"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "FINANCE & BUSINESS ANALYSIS OWNER",
+          "text": "FINANCE & BUSINESS ANALYSIS LANE",
           "resolvedTextStyle": {
             "fontSize": 22,
             "typeface": "Courier New",
@@ -568,7 +580,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "FINANCE & BUSINESS ANALYSIS OWNER",
+              "text": "FINANCE & BUSINESS ANALYSIS LANE",
               "fontSize": 22,
               "typeface": "Courier New",
               "color": "#A87229",
@@ -585,7 +597,7 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/jqx4n298",
+      "aid": "sh/b2hwjeh8",
       "id": "10",
       "name": "ownership-finance-copy",
       "bbox": [
@@ -595,8 +607,8 @@
         180
       ],
       "geometry": "rect",
-      "text": "Case consistency, buyer hypotheses, pricing research, workflow QA, pitch and demo contribution.",
-      "textPreview": "Case consistency, buyer hypotheses, pricing research, workflow QA, pitch and demo contribution.",
+      "text": "Case consistency, buyer hypotheses, pricing research, workflow QA.",
+      "textPreview": "Case consistency, buyer hypotheses, pricing research, workflow QA.",
       "resolvedFontSize": 29,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -615,7 +627,7 @@
         }
       },
       "textLayout": {
-        "lineCount": 3,
+        "lineCount": 2,
         "lines": [
           {
             "index": 1,
@@ -623,18 +635,14 @@
           },
           {
             "index": 2,
-            "text": "pricing research, workflow QA, pitch"
-          },
-          {
-            "index": 3,
-            "text": "and demo contribution."
+            "text": "pricing research, workflow QA."
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "Case consistency, buyer hypotheses, pricing research, workflow QA, pitch and demo contribution.",
+          "text": "Case consistency, buyer hypotheses, pricing research, workflow QA.",
           "resolvedTextStyle": {
             "fontSize": 29,
             "typeface": "Georgia",
@@ -644,7 +652,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "Case consistency, buyer hypotheses, pricing research, workflow QA, pitch and demo contribution.",
+              "text": "Case consistency, buyer hypotheses, pricing research, workflow QA.",
               "fontSize": 29,
               "typeface": "Georgia",
               "color": "#0A1F44",
@@ -660,7 +668,7 @@
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/y5o3uh8n",
+      "aid": "sh/a18vq9gn",
       "id": "11",
       "name": "ownership-gate-band",
       "bbox": [
@@ -678,7 +686,7 @@
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/lsfmpcry",
+      "aid": "sh/x4zelofy",
       "id": "12",
       "name": "ownership-gate",
       "bbox": [

@@ -1,8 +1,9 @@
 {
   "case": {
     "id": "meridian-horizon-q2-2026",
-    "name": "Meridian Horizon Fund Management IFSC Pvt Ltd",
-    "reportingPeriod": "Q2 2026",
+    "name": "Meridian Horizon Fund I",
+    "fme": "Meridian Horizon Fund Management IFSC Pvt Ltd",
+    "reportingPeriod": "Quarter ended 30 June 2026",
     "synthetic": true,
     "dataMarker": "SYNTHETIC DEMO DATA"
   },
@@ -23,7 +24,7 @@
     },
     {
       "id": "board-schedule",
-      "label": "Board schedule",
+      "label": "Subscription register extract",
       "reference": "Schedule A, cell C11",
       "fingerprint": "synthetic:board-schedule:4f71aa",
       "dataMarker": "SYNTHETIC DEMO DATA"
@@ -38,15 +39,15 @@
         {
           "id": "admin-closing-nav",
           "sourceId": "administrator-statement",
-          "value": "INR 12,500,000",
-          "normalizedValue": "12500000",
+          "value": "USD 12,400,000",
+          "normalizedValue": "12400000",
           "reference": "Page 2, row Closing NAV"
         },
         {
           "id": "ledger-closing-nav",
           "sourceId": "internal-ledger",
-          "value": "12,500,000 INR",
-          "normalizedValue": "12500000",
+          "value": "12,400,000 USD",
+          "normalizedValue": "12400000",
           "reference": "NAV ledger, cell F18"
         }
       ]
@@ -59,15 +60,15 @@
         {
           "id": "admin-committed",
           "sourceId": "administrator-statement",
-          "value": "INR 50,000,000",
-          "normalizedValue": "50000000",
+          "value": "USD 25,000,000",
+          "normalizedValue": "25000000",
           "reference": "Page 2, row Committed capital"
         },
         {
           "id": "board-committed",
           "sourceId": "board-schedule",
-          "value": "INR 48,000,000",
-          "normalizedValue": "48000000",
+          "value": "USD 24,000,000",
+          "normalizedValue": "24000000",
           "reference": "Schedule A, cell C11"
         }
       ]

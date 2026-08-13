@@ -214,6 +214,7 @@ test('deck builder resolves a clean checkout path containing spaces', () => {
     for (const image of ['prototype-conflict-1440.png', 'prototype-receipt-1440.png']) {
       fs.copyFileSync(resolve(projectRoot, 'artifacts', image), resolve(scratchRoot, 'artifacts', image));
     }
+    fs.symlinkSync(resolve(projectRoot, 'node_modules'), resolve(scratchRoot, 'node_modules'), 'dir');
 
     execFileSync(process.execPath, [resolve(scratchRoot, 'scripts/build-deck.mjs')], {
       cwd: scratchRoot,
@@ -233,14 +234,14 @@ test('deck builder resolves a clean checkout path containing spaces', () => {
 });
 
 test('programme ask preserves the approved five-interview discovery mix', async () => {
-  const expected = 'ACCESS · 2 FME officers + 2 administrators + 1 independent compliance provider';
+  const expected = 'ACCESS · 2 FME (fund management entity) officers + 2 administrators + 1 independent compliance provider';
   const contract = await loadContract();
   assert.equal(contract.slides.find(({ number }) => number === 10)?.body[0], expected);
 
   const shapes = textShapesFromSlideXml(zipText(pptxPath, 'ppt/slides/slide10.xml'));
   assert.equal(
     shapes.find(({ name }) => name === 'ask-access-copy')?.text,
-    '2 FME officers + 2 administrators + 1 independent compliance provider',
+    '2 FME (fund management entity) officers + 2 administrators + 1 independent compliance provider',
   );
 });
 

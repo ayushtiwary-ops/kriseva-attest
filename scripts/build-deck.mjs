@@ -4,6 +4,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 import { basename, dirname, isAbsolute, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import sharp from 'sharp';
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const contentPath = resolve(projectRoot, 'deck/DECK_CONTENT.md');
@@ -95,7 +96,11 @@ function resolveAsset(assetPath) {
   return isAbsolute(assetPath) ? assetPath : resolve(projectRoot, assetPath);
 }
 
-async function imageBytes(assetPath) {
+async function imageBytes(assetPath, pixelCrop) {
+  if (pixelCrop) {
+    const bytes = await sharp(resolveAsset(assetPath)).extract(pixelCrop).png().toBuffer();
+    return bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength);
+  }
   const bytes = await readFile(resolveAsset(assetPath));
   return bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength);
 }
@@ -186,12 +191,16 @@ function addText(slide, record, name, text, position, options = {}) {
 }
 
 async function addImage(slide, record, name, assetPath, position, options = {}) {
+  // NOTE: the presentation library's declarative `crop` (OOXML srcRect) is not
+  // honoured by this build's PNG/canvas export path, so any fractional crop set
+  // there is invisible in artifacts/deck/*.png and the montage. Crops are instead
+  // applied pixel-exact at build time with sharp before the bytes ever reach the
+  // slide, which renders correctly in every export path.
   const image = slide.images.add({
-    blob: await imageBytes(assetPath),
+    blob: await imageBytes(assetPath, options.pixelCrop),
     contentType: 'image/png',
     alt: options.alt,
     fit: options.fit ?? 'cover',
-    crop: options.crop,
     geometry: 'rect',
     borderRadius: 0,
     position,
@@ -243,8 +252,9 @@ function addTitle(slide, record, title, { inverse = false } = {}) {
   addFooter(slide, record, { inverse });
 }
 
-function addSources(slide, sources) {
+function addSources(slide, sources, extraNotes = []) {
   slide.speakerNotes.textFrame.setText([
+    ...extraNotes,
     '[Sources]',
     ...sources.map((source) => `- ${source}`),
     '[/Sources]',
@@ -270,10 +280,10 @@ async function buildCover(presentation, content) {
     size: 30, face: FONT.display, color: COLOR.ink,
   });
   addRule(slide, record, 'cover-rule', 68, 412, 560, { color: COLOR.brass, weight: 2 });
-  addText(slide, record, 'cover-lock', content.body[1], { left: 68, top: 438, width: 650, height: 38 }, {
+  addText(slide, record, 'cover-lock', content.body[1], { left: 68, top: 438, width: 650, height: 96 }, {
     size: 22, bold: true, color: COLOR.navy,
   });
-  addText(slide, record, 'cover-boundary', content.body[2], { left: 68, top: 510, width: 820, height: 54 }, {
+  addText(slide, record, 'cover-boundary', content.body[2], { left: 68, top: 546, width: 820, height: 54 }, {
     size: 18, face: FONT.mono, color: COLOR.muted,
   });
   addText(slide, record, 'cover-number', '01', { left: 1034, top: 164, width: 190, height: 128 }, {
@@ -285,7 +295,10 @@ async function buildCover(presentation, content) {
   addText(slide, record, 'cover-page', 'APPLICATION EVIDENCE', { left: 1038, top: 620, width: 190, height: 34 }, {
     size: 14, face: FONT.mono, color: COLOR.raised, role: 'footer',
   });
-  addSources(slide, content.sources);
+  addText(slide, record, 'footer-cover-url', 'ayushtiwary-ops.github.io\n/kriseva-attest', { left: 1038, top: 660, width: 200, height: 40 }, {
+    size: 12, face: FONT.mono, color: COLOR.raised, role: 'footer',
+  });
+  addSources(slide, content.sources, content.speakerNotes ?? []);
 }
 
 async function buildAccountability(presentation, content) {
@@ -303,8 +316,17 @@ async function buildAccountability(presentation, content) {
   addText(slide, record, 'accountability-question', content.body[2], { left: 64, top: 274, width: 580, height: 160 }, {
     size: 48, face: FONT.display, color: COLOR.ink,
   });
+  addText(slide, record, 'footer-accountability-caption-1', 'STATEMENT', { left: 760, top: 172, width: 200, height: 18 }, {
+    size: 13, face: FONT.mono, bold: true, color: COLOR.brass, role: 'footer',
+  });
   addRule(slide, record, 'accountability-source-rule-1', 760, 194, 400, { color: COLOR.rule });
+  addText(slide, record, 'footer-accountability-caption-2', 'LEDGER', { left: 760, top: 238, width: 200, height: 18 }, {
+    size: 13, face: FONT.mono, bold: true, color: COLOR.brass, role: 'footer',
+  });
   addRule(slide, record, 'accountability-source-rule-2', 760, 260, 400, { color: COLOR.rule });
+  addText(slide, record, 'footer-accountability-caption-3', 'SCHEDULE', { left: 760, top: 304, width: 200, height: 18 }, {
+    size: 13, face: FONT.mono, bold: true, color: COLOR.brass, role: 'footer',
+  });
   addRule(slide, record, 'accountability-source-rule-3', 760, 326, 400, { color: COLOR.rule });
   addText(slide, record, 'accountability-evidence', content.body[3], { left: 760, top: 360, width: 410, height: 96 }, {
     size: 24, face: FONT.display, color: COLOR.navy,
@@ -325,11 +347,8 @@ async function buildBoundary(presentation, content) {
   addText(slide, record, 'boundary-drr', content.body[0], { left: 62, top: 184, width: 500, height: 84 }, {
     size: 64, face: FONT.display, color: COLOR.raised,
   });
-  addText(slide, record, 'boundary-drr-copy', content.body[1], { left: 66, top: 292, width: 500, height: 120 }, {
-    size: 27, face: FONT.display, color: COLOR.raised,
-  });
-  addText(slide, record, 'boundary-absence', content.body[5], { left: 66, top: 520, width: 500, height: 48 }, {
-    size: 22, bold: true, color: COLOR.brass,
+  addText(slide, record, 'boundary-drr-copy', content.body[1], { left: 66, top: 292, width: 500, height: 230 }, {
+    size: 24, face: FONT.display, color: COLOR.raised,
   });
   addText(slide, record, 'boundary-attest', content.body[2], { left: 704, top: 184, width: 500, height: 84 }, {
     size: 64, face: FONT.display, color: COLOR.navy,
@@ -339,6 +358,9 @@ async function buildBoundary(presentation, content) {
   });
   addText(slide, record, 'boundary-limit', content.body[4], { left: 708, top: 478, width: 500, height: 78 }, {
     size: 22, bold: true, color: COLOR.rust,
+  });
+  addText(slide, record, 'boundary-absence', content.body[5], { left: 708, top: 566, width: 500, height: 48 }, {
+    size: 22, bold: true, color: COLOR.brass,
   });
   addSources(slide, content.sources);
 }
@@ -397,7 +419,6 @@ async function buildWorkflow(presentation, content) {
       size: 21,
       face: FONT.display,
       color: COLOR.navy,
-      bold: index === 4,
     });
   });
   addSources(slide, content.sources);
@@ -422,8 +443,8 @@ async function buildAgentBoundary(presentation, content) {
   addText(slide, record, 'agent-decide', decide, { left: 64, top: 506, width: 190, height: 34 }, { size: 20, face: FONT.mono, bold: true, color: COLOR.brass });
   addText(slide, record, 'agent-decide-copy', decideCopy, { left: 330, top: 494, width: 470, height: 84 }, { size: 25, face: FONT.display, color: COLOR.raised });
   addRule(slide, record, 'agent-boundary-rule', 856, 214, 300, { color: COLOR.brass, weight: 2 });
-  addText(slide, record, 'agent-boundary-copy', content.body[4], { left: 856, top: 256, width: 300, height: 150 }, {
-    size: 30, face: FONT.display, color: COLOR.brass,
+  addText(slide, record, 'agent-boundary-copy', content.body[4], { left: 856, top: 256, width: 300, height: 260 }, {
+    size: 26, face: FONT.display, color: COLOR.brass,
   });
   addSources(slide, content.sources);
 }
@@ -436,16 +457,16 @@ async function buildPrototypeProof(presentation, content) {
   addText(slide, record, 'prototype-proof-label', content.body[0], { left: 60, top: 134, width: 340, height: 24 }, {
     size: 16, face: FONT.mono, bold: true, color: COLOR.brass,
   });
-  await addImage(slide, record, 'prototype-conflict', 'repo:artifacts/prototype-conflict-1440.png', { left: 60, top: 170, width: 742, height: 378 }, {
-    alt: 'Current KRISEVA ATTEST conflict queue showing two synthetic source values and a named human decision form',
-    crop: { left: 0, top: 0, right: 0, bottom: 0.47 },
+  await addImage(slide, record, 'prototype-conflict', 'repo:artifacts/prototype-conflict-1440.png', { left: 103, top: 170, width: 378, height: 385 }, {
+    alt: 'Current KRISEVA ATTEST candidate comparison card showing both synthetic source values, their exact references and input fingerprints',
+    pixelCrop: { left: 337, top: 860, width: 695, height: 708 },
   });
-  addRect(slide, record, 'prototype-conflict-border', { left: 60, top: 170, width: 742, height: 378 }, { fill: 'none', line: COLOR.navy, width: 1, role: 'image-border' });
-  await addImage(slide, record, 'prototype-receipt', 'repo:artifacts/prototype-receipt-1440.png', { left: 830, top: 170, width: 390, height: 378 }, {
-    alt: 'Current KRISEVA ATTEST evidence receipt showing fingerprints, preserved candidates and unresolved evidence',
-    crop: { left: 0, top: 0, right: 0, bottom: 0.52 },
+  addRect(slide, record, 'prototype-conflict-border', { left: 103, top: 170, width: 378, height: 385 }, { fill: 'none', line: COLOR.navy, width: 1, role: 'image-border' });
+  await addImage(slide, record, 'prototype-receipt', 'repo:artifacts/prototype-receipt-1440.png', { left: 521, top: 170, width: 656, height: 385 }, {
+    alt: 'Current KRISEVA ATTEST evidence receipt showing the reviewer decision reason, recorded timestamp and Confirming Principal Officer confirmation',
+    pixelCrop: { left: 224, top: 1855, width: 750, height: 440 },
   });
-  addRect(slide, record, 'prototype-receipt-border', { left: 830, top: 170, width: 390, height: 378 }, { fill: 'none', line: COLOR.navy, width: 1, role: 'image-border' });
+  addRect(slide, record, 'prototype-receipt-border', { left: 521, top: 170, width: 656, height: 385 }, { fill: 'none', line: COLOR.navy, width: 1, role: 'image-border' });
   const calloutWidths = [210, 210, 340, 290];
   let left = 60;
   content.body.slice(1).forEach((copy, index) => {
@@ -479,18 +500,18 @@ async function buildSensitivity(presentation, content) {
   addText(slide, record, 'sensitivity-label', content.body[0], { left: 60, top: 142, width: 500, height: 26 }, {
     size: 16, face: FONT.mono, bold: true, color: COLOR.brass,
   });
-  const rows = content.body.slice(1, 5).map(splitDot);
-  const colWidths = [150, 150, 150, 150];
-  const rowHeight = 72;
+  const rows = [['ENTITIES', ...splitDot(content.body[1])], ...content.body.slice(2, 4).map(splitDot)];
+  const colWidths = [150, 200, 200];
+  const rowHeight = 84;
   const tableLeft = 60;
   const tableTop = 184;
   for (let row = 0; row < rows.length; row += 1) {
     const top = tableTop + (row * rowHeight);
-    addRule(slide, record, `sensitivity-row-${row}`, tableLeft, top + rowHeight, 600, { color: COLOR.rule });
+    addRule(slide, record, `sensitivity-row-${row}`, tableLeft, top + rowHeight, 550, { color: COLOR.rule });
     let left = tableLeft;
     rows[row].forEach((cell, col) => {
       addTableCell(slide, record, `sensitivity-${row}-${col}`, cell, left, top, colWidths[col], rowHeight, {
-        size: row === 0 ? 18 : 25,
+        size: row === 0 ? 18 : 30,
         face: row === 0 ? FONT.mono : FONT.display,
         bold: row === 0 || col === 0,
         color: row === 0 ? COLOR.muted : COLOR.navy,
@@ -500,11 +521,17 @@ async function buildSensitivity(presentation, content) {
     });
   }
   addRule(slide, record, 'sensitivity-divider', 714, 160, 0, { color: COLOR.brass, weight: 2, height: 410 });
-  addText(slide, record, 'sensitivity-gates', content.body[5], { left: 766, top: 190, width: 420, height: 176 }, {
-    size: 28, face: FONT.display, color: COLOR.navy,
+  addText(slide, record, 'sensitivity-gates', content.body[4], { left: 766, top: 190, width: 420, height: 140 }, {
+    size: 24, face: FONT.display, color: COLOR.navy,
   });
-  addText(slide, record, 'sensitivity-disclaimer', content.body[6], { left: 766, top: 420, width: 420, height: 104 }, {
-    size: 23, face: FONT.display, color: COLOR.rust,
+  addText(slide, record, 'footer-sensitivity-hypothesis-label', 'HYPOTHESIS', { left: 766, top: 344, width: 420, height: 20 }, {
+    size: 14, face: FONT.mono, bold: true, color: COLOR.rust, role: 'footer',
+  });
+  addText(slide, record, 'sensitivity-hypothesis', content.body[5], { left: 766, top: 368, width: 420, height: 110 }, {
+    size: 19, face: FONT.body, italic: true, color: COLOR.rust,
+  });
+  addText(slide, record, 'sensitivity-disclaimer', content.body[6], { left: 766, top: 494, width: 420, height: 44 }, {
+    size: 20, face: FONT.display, color: COLOR.muted,
   });
   addSources(slide, content.sources);
 }
@@ -518,8 +545,8 @@ async function buildOwnership(presentation, content) {
   addText(slide, record, 'ownership-ayush-label', content.body[0], { left: 66, top: 182, width: 500, height: 28 }, {
     size: 16, face: FONT.mono, bold: true, color: COLOR.brass,
   });
-  addText(slide, record, 'ownership-ayush-copy', content.body[1], { left: 66, top: 244, width: 500, height: 130 }, {
-    size: 32, face: FONT.display, color: COLOR.navy,
+  addText(slide, record, 'ownership-ayush-copy', content.body[1], { left: 66, top: 244, width: 500, height: 270 }, {
+    size: 28, face: FONT.display, color: COLOR.navy,
   });
   addText(slide, record, 'ownership-finance-label', content.body[2], { left: 700, top: 182, width: 500, height: 50 }, {
     size: 16, face: FONT.mono, bold: true, color: COLOR.brass,
@@ -545,7 +572,7 @@ async function buildProgrammeAsk(presentation, content) {
   const [testLabel, testCopy] = splitDot(content.body[2]);
   const [decide, decideCopy] = splitDot(content.body[3]);
   addText(slide, record, 'ask-access-label', access, { left: 62, top: 178, width: 420, height: 30 }, { size: 16, face: FONT.mono, bold: true, color: COLOR.brass });
-  addText(slide, record, 'ask-access-copy', accessCopy, { left: 62, top: 226, width: 420, height: 152 }, { size: 32, face: FONT.display, color: COLOR.raised });
+  addText(slide, record, 'ask-access-copy', accessCopy, { left: 62, top: 226, width: 420, height: 220 }, { size: 30, face: FONT.display, color: COLOR.raised });
   addText(slide, record, 'ask-falsify', content.body[4], { left: 62, top: 470, width: 400, height: 94 }, { size: 26, face: FONT.display, color: COLOR.raised });
   addText(slide, record, 'ask-challenge-label', challenge, { left: 602, top: 178, width: 560, height: 30 }, { size: 16, face: FONT.mono, bold: true, color: COLOR.brass });
   addText(slide, record, 'ask-challenge-copy', challengeCopy, { left: 602, top: 222, width: 580, height: 112 }, { size: 28, face: FONT.display, color: COLOR.raised });
@@ -553,6 +580,9 @@ async function buildProgrammeAsk(presentation, content) {
   addText(slide, record, 'ask-test-copy', testCopy, { left: 602, top: 408, width: 560, height: 74 }, { size: 23, color: COLOR.raised });
   addText(slide, record, 'ask-decide-label', decide, { left: 602, top: 520, width: 180, height: 30 }, { size: 16, face: FONT.mono, bold: true, color: COLOR.brass });
   addText(slide, record, 'ask-decide-copy', decideCopy, { left: 760, top: 514, width: 400, height: 50 }, { size: 28, face: FONT.display, color: COLOR.brass });
+  addText(slide, record, 'footer-ask-links', 'Live: ayushtiwary-ops.github.io/kriseva-attest  ·  Code: github.com/ayushtiwary-ops/kriseva-attest', { left: 62, top: 628, width: 1120, height: 24 }, {
+    size: 13, face: FONT.mono, color: COLOR.raised, role: 'footer',
+  });
   addSources(slide, content.sources);
 }
 

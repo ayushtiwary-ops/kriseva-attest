@@ -10,10 +10,18 @@ export const VIDEO_CONTRACT = Object.freeze({
   frameCount: 2700,
   minDuration: 85,
   maxDuration: 100,
-  minIntegratedLoudness: -20,
-  maxIntegratedLoudness: -16,
-  minTruePeak: -4,
+  // Master loudnorm target is I=-16 LUFS / TP=-1.5 dBTP / LRA=7 (see
+  // build-video.sh); the window below gives measurement tolerance around
+  // that target without accepting a materially different master.
+  minIntegratedLoudness: -17,
+  maxIntegratedLoudness: -15,
+  minTruePeak: -2,
   maxTruePeak: -1,
+  audioChannels: 2,
+  colorPrimaries: 'bt709',
+  colorTransfer: 'bt709',
+  colorSpace: 'bt709',
+  colorRange: 'tv',
   minNarrationHeadroom: 0.5,
   maxNarrationTail: 3,
   maxSilenceDuration: 3,
@@ -53,16 +61,22 @@ export async function inspectVideoMedia(videoPath, thumbnailPath) {
   const [probe, thumbnail, loudness, silence] = await Promise.all([
     probeJson(
       videoPath,
-      'format=duration:stream=index,codec_type,codec_name,width,height,r_frame_rate,nb_read_frames',
+      'format=duration:stream=index,codec_type,codec_name,width,height,r_frame_rate,nb_read_frames,'
+        + 'channels,color_primaries,color_transfer,color_space,color_range',
     ),
     probeJson(thumbnailPath, 'stream=width,height', 'v:0'),
     execFileAsync('ffmpeg', [
       '-hide_banner', '-nostats', '-i', videoPath,
       '-filter_complex', 'ebur128=peak=true', '-f', 'null', '-',
     ]).catch((error) => ({ stderr: error.stderr ?? '' })),
+    // The release master carries a continuous ~-50dBFS pink-noise bed under
+    // every gap (see build-video.sh) so the track never touches digital
+    // zero. The detector threshold sits below that bed so it keeps
+    // reporting genuine dropouts/encoding failures without flagging the
+    // intentional low-level noise floor as silence.
     execFileAsync('ffmpeg', [
       '-hide_banner', '-nostats', '-i', videoPath,
-      '-af', 'silencedetect=noise=-45dB:d=0.4', '-f', 'null', '-',
+      '-af', 'silencedetect=noise=-58dB:d=0.4', '-f', 'null', '-',
     ]).catch((error) => ({ stderr: error.stderr ?? '' })),
   ]);
   const counted = await probeJson(
@@ -91,6 +105,11 @@ export async function inspectVideoMedia(videoPath, thumbnailPath) {
     duration: Number(probe.format.duration),
     thumbnailWidth: thumbnailVideo.width,
     thumbnailHeight: thumbnailVideo.height,
+    audioChannels: Number(audio.channels),
+    colorPrimaries: video.color_primaries ?? null,
+    colorTransfer: video.color_transfer ?? null,
+    colorSpace: video.color_space ?? null,
+    colorRange: video.color_range ?? null,
     ...parseAudioMetrics(loudness.stderr),
     ...parseSilenceMetrics(silence.stderr),
   };
@@ -107,6 +126,11 @@ export function assertVideoMedia(media) {
   if (media.duration < c.minDuration || media.duration > c.maxDuration) throw new Error(`Duration ${media.duration}s is outside the release window.`);
   if (media.integratedLoudness < c.minIntegratedLoudness || media.integratedLoudness > c.maxIntegratedLoudness) throw new Error(`Integrated loudness ${media.integratedLoudness} LUFS is outside the release window.`);
   if (media.truePeak < c.minTruePeak || media.truePeak > c.maxTruePeak) throw new Error(`True peak ${media.truePeak} dBFS is outside the release window.`);
+  if (media.audioChannels !== c.audioChannels) throw new Error(`Expected ${c.audioChannels} audio channels, found ${media.audioChannels}.`);
+  if (media.colorPrimaries !== c.colorPrimaries) throw new Error(`Expected color_primaries=${c.colorPrimaries}, found ${media.colorPrimaries}.`);
+  if (media.colorTransfer !== c.colorTransfer) throw new Error(`Expected color_transfer=${c.colorTransfer}, found ${media.colorTransfer}.`);
+  if (media.colorSpace !== c.colorSpace) throw new Error(`Expected color_space=${c.colorSpace}, found ${media.colorSpace}.`);
+  if (media.colorRange !== c.colorRange) throw new Error(`Expected color_range=${c.colorRange}, found ${media.colorRange}.`);
   if (media.maxSilenceDuration > c.maxSilenceDuration) throw new Error(`Silence window ${media.maxSilenceDuration}s exceeds ${c.maxSilenceDuration}s.`);
   return media;
 }

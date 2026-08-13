@@ -1,8 +1,9 @@
 export const boardMeta = {
   title: 'KRISEVA ATTEST · evidence review wireframes',
   subtitle: 'Six low-fidelity screens for a bounded, human-reviewed evidence workbench.',
-  caseName: 'Meridian Horizon Fund Management IFSC Pvt Ltd',
-  period: 'Q2 2026',
+  caseName: 'Meridian Horizon Fund I',
+  fme: 'Meridian Horizon Fund Management IFSC Pvt Ltd',
+  period: 'Quarter ended 30 June 2026',
   marker: 'SYNTHETIC DEMO DATA',
   boundary: 'RESEARCH-STAGE INTERFACE · NOT A REGULATORY FILING · HUMAN DECISION REQUIRED',
 };
@@ -17,9 +18,9 @@ export const screens = [
     error: 'Before review: keep all three fields PENDING. Never infer progress from source count.',
     mobile: 'Collapse inventory below the field index; keep the human-decision boundary above the fold.',
     panels: [
-      { label: 'Case register', title: 'Q2 2026 · pre-submission evidence review', body: '3 synthetic sources · 3 whitelisted fields', meta: 'CASE / meridian-horizon-q2-2026' },
-      { label: 'Field index', title: '01 Closing NAV', body: 'SUPPORTED · two normalized values agree', meta: 'INR 12,500,000' },
-      { label: 'Field index', title: '02 Committed capital', body: 'CONFLICTING · no default winner', meta: 'INR 50,000,000 ≠ INR 48,000,000' },
+      { label: 'Case register', title: 'QE 30 Jun 2026 · pre-submission evidence review', body: '3 synthetic sources · 3 governed fields', meta: 'CASE / meridian-horizon-q2-2026' },
+      { label: 'Field index', title: '01 Closing NAV', body: 'SUPPORTED · two normalized values agree', meta: 'USD 12,400,000' },
+      { label: 'Field index', title: '02 Committed capital', body: 'CONFLICTING · no default winner', meta: 'USD 25,000,000 ≠ USD 24,000,000' },
       { label: 'Field index', title: '03 Investor complaints closed', body: 'UNSUPPORTED · evidence request required', meta: 'NO CANDIDATE SOURCE' },
     ],
   },
@@ -33,8 +34,8 @@ export const screens = [
     mobile: 'Show one source at a time; stack coordinates directly above the review action.',
     panels: [
       { label: 'Selected field', title: 'Committed capital', body: 'Agent path: deterministic evidence comparison', meta: 'STATUS / CONFLICTING' },
-      { label: 'Candidate A', title: 'INR 50,000,000', body: 'Administrator statement', meta: 'PAGE 2 · ROW COMMITTED CAPITAL' },
-      { label: 'Candidate B', title: 'INR 48,000,000', body: 'Board schedule', meta: 'SCHEDULE A · CELL C11' },
+      { label: 'Candidate A', title: 'USD 25,000,000', body: 'Administrator statement', meta: 'PAGE 2 · ROW COMMITTED CAPITAL' },
+      { label: 'Candidate B', title: 'USD 24,000,000', body: 'Subscription register extract', meta: 'SCHEDULE A · CELL C11' },
       { label: 'Source custody', title: 'Fingerprints retained', body: 'synthetic:admin-statement:9b2d7f', meta: 'synthetic:board-schedule:4f71aa' },
     ],
   },
@@ -48,8 +49,8 @@ export const screens = [
     mobile: 'Stack candidates without reordering; repeat each coordinate beside its value.',
     panels: [
       { label: 'Conflict 01 / 01', title: 'Two sources disagree', body: 'Committed capital has two unequal normalized values.', meta: 'NO DEFAULT WINNER' },
-      { label: 'Candidate A', title: 'INR 50,000,000', body: 'Administrator statement', meta: 'PAGE 2 · ROW COMMITTED CAPITAL' },
-      { label: 'Candidate B', title: 'INR 48,000,000', body: 'Board schedule', meta: 'SCHEDULE A · CELL C11' },
+      { label: 'Candidate A', title: 'USD 25,000,000', body: 'Administrator statement', meta: 'PAGE 2 · ROW COMMITTED CAPITAL' },
+      { label: 'Candidate B', title: 'USD 24,000,000', body: 'Subscription register extract', meta: 'SCHEDULE A · CELL C11' },
       { label: 'Decision record', title: 'Reviewer name required', body: 'Reason required · selection required', meta: 'ACCEPT / CORRECT / REJECT / DEFER' },
     ],
   },
@@ -62,7 +63,7 @@ export const screens = [
     error: 'If evidence is absent, end the trace at ABSTAIN. Do not synthesize a value or a source.',
     mobile: 'Render the trace as a numbered vertical record; never hide source fingerprints in a drawer.',
     panels: [
-      { label: 'Step 01 · intake', title: 'Load whitelisted fields', body: 'Closing NAV · Committed capital · Complaints closed', meta: 'FIXED SYNTHETIC CASE' },
+      { label: 'Step 01 · intake', title: 'Load governed fields', body: 'Closing NAV · Committed capital · Complaints closed', meta: 'FIXED SYNTHETIC CASE' },
       { label: 'Step 02 · compare', title: 'Normalize candidate values', body: 'Equality only; source count does not resolve disagreement.', meta: 'DETERMINISTIC PATH' },
       { label: 'Step 03 · propose', title: 'Surface support or conflict', body: 'Proposal only; no filing or compliance conclusion.', meta: 'HUMAN REVIEW BOUNDARY' },
       { label: 'Step 04 · abstain', title: 'Investor complaints closed', body: 'No candidate evidence is present.', meta: 'OUTPUT / UNSUPPORTED' },
@@ -80,7 +81,7 @@ export const screens = [
       { label: 'Decision ledger', title: 'Closing NAV', body: 'Awaiting human action', meta: 'SUPPORTED EVIDENCE · NOT SIGNED OFF' },
       { label: 'Decision ledger', title: 'Committed capital', body: 'Reviewer and reason missing', meta: 'BLOCKING CONFLICT' },
       { label: 'Decision ledger', title: 'Investor complaints closed', body: 'Evidence request remains open', meta: 'UNRESOLVED · NON-BLOCKING EXPORT' },
-      { label: 'Sign-off gate', title: 'Not ready for sign-off', body: 'Named human decision required for the conflict.', meta: 'EXPORT MAY RETAIN UNRESOLVED ITEMS' },
+      { label: 'Principal Officer confirmation', title: 'Second named role required', body: 'Officer (demo) name and confirmation checkbox. Blocked until the conflict is decided.', meta: 'MAKER-CHECKER SEPARATION REQUIRED' },
     ],
   },
   {

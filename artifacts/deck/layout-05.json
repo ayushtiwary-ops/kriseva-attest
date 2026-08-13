@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/nv9on0",
-    "id": "nv9on0",
+    "aid": "sl/nuk83h",
+    "id": "nuk83h",
     "slide": 5,
-    "layoutId": "2752032a-23fa-440b-b894-62f7a90253fa",
+    "layoutId": "ef19debf-5ea8-4d56-81f6-c75b74b317a1",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+    "masterLayoutId": "d8ea7324-5969-4081-a45a-f7cccced84e6",
     "masterLayoutName": "Master",
     "backgroundColor": "#DED6C9",
     "frame": {
@@ -46,15 +46,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "2752032a-23fa-440b-b894-62f7a90253fa",
+      "id": "ef19debf-5ea8-4d56-81f6-c75b74b317a1",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "parentLayoutId": "d8ea7324-5969-4081-a45a-f7cccced84e6",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "id": "d8ea7324-5969-4081-a45a-f7cccced84e6",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -65,7 +65,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/sry98r25",
+      "aid": "sh/54vadg7e",
       "id": "1",
       "name": "brand-5",
       "bbox": [
@@ -135,7 +135,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/rq58zm1k",
+      "aid": "sh/i1kb21o3",
       "id": "2",
       "name": "title-5",
       "bbox": [
@@ -202,7 +202,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/6pwr6hkz",
+      "aid": "sh/32dsb6po",
       "id": "3",
       "name": "footer-rule-5",
       "bbox": [
@@ -219,7 +219,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/1w7a5wjm",
+      "aid": "sh/srmt8b65",
       "id": "4",
       "name": "footer-source-5",
       "bbox": [
@@ -286,7 +286,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/gvy9cri1",
+      "aid": "sh/dsvahg7q",
       "id": "5",
       "name": "footer-page-5",
       "bbox": [
@@ -356,7 +356,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/fups3m1w",
+      "aid": "sh/q54b6loz",
       "id": "6",
       "name": "workflow-rail",
       "bbox": [
@@ -373,7 +373,7 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/etgra1kb",
+      "aid": "sh/rqdsf6pk",
       "id": "7",
       "name": "workflow-tick-1",
       "bbox": [
@@ -390,7 +390,7 @@
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/h0nqtcji",
+      "aid": "sh/8v29wr61",
       "id": "8",
       "name": "workflow-step-1",
       "bbox": [
@@ -461,7 +461,7 @@
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/wzu9072x",
+      "aid": "sh/9wba5w76",
       "id": "9",
       "name": "workflow-tick-2",
       "bbox": [
@@ -478,7 +478,7 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/i947yp8n",
+      "aid": "sh/9cfyxwnq",
       "id": "10",
       "name": "workflow-step-2",
       "bbox": [
@@ -553,7 +553,7 @@
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/jad8rups",
+      "aid": "sh/ob6x4rm5",
       "id": "11",
       "name": "workflow-tick-3",
       "bbox": [
@@ -570,7 +570,7 @@
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4b6p0zqd",
+      "aid": "sh/nadgv65k",
       "id": "12",
       "name": "workflow-step-3",
       "bbox": [
@@ -641,7 +641,7 @@
       "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/5cfqt47y",
+      "aid": "sh/294f214f",
       "id": "13",
       "name": "workflow-tick-4",
       "bbox": [
@@ -658,7 +658,7 @@
       "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/6do729oj",
+      "aid": "sh/xgfy1gn2",
       "id": "14",
       "name": "workflow-step-4",
       "bbox": [
@@ -729,7 +729,7 @@
       "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/rex8vep4",
+      "aid": "sh/wf6h8bmh",
       "id": "15",
       "name": "workflow-tick-5",
       "bbox": [
@@ -746,7 +746,7 @@
       "order": 16,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/sf6p4j6p",
+      "aid": "sh/bexgz65w",
       "id": "16",
       "name": "workflow-step-5",
       "bbox": [
@@ -764,7 +764,6 @@
         "fontSize": 22,
         "typeface": "Georgia",
         "color": "#0A1F44",
-        "bold": true,
         "alignment": "left",
         "verticalAlignment": "top",
         "wrap": "square",
@@ -777,7 +776,7 @@
         }
       },
       "textLayout": {
-        "lineCount": 4,
+        "lineCount": 3,
         "lines": [
           {
             "index": 1,
@@ -785,15 +784,11 @@
           },
           {
             "index": 2,
-            "text": "JSON and"
+            "text": "JSON and printable"
           },
           {
             "index": 3,
-            "text": "printable HTML"
-          },
-          {
-            "index": 4,
-            "text": "manifest"
+            "text": "HTML manifest"
           }
         ]
       },
@@ -805,7 +800,6 @@
             "fontSize": 22,
             "typeface": "Georgia",
             "color": "#0A1F44",
-            "bold": true,
             "alignment": "left"
           },
           "runs": [
@@ -815,7 +809,6 @@
               "fontSize": 22,
               "typeface": "Georgia",
               "color": "#0A1F44",
-              "bold": true,
               "alignment": "left"
             }
           ],

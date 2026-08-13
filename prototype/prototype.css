@@ -748,7 +748,8 @@ form .primary-action {
   border-left: 6px solid var(--kriseva-brass) !important;
 }
 
-.signoff-gate {
+.signoff-gate,
+.officer-confirmation {
   margin-bottom: 1.5rem;
 }
 
@@ -758,6 +759,90 @@ form .primary-action {
 
 .gate-cleared {
   border-left: 6px solid #205936;
+}
+
+.officer-confirmation {
+  background: var(--kriseva-paper-raised);
+  border: 1px solid var(--kriseva-navy);
+  padding: clamp(1.25rem, 2.5vw, 2.5rem);
+}
+
+.officer-confirmation form {
+  margin-top: 1rem;
+}
+
+.officer-confirmation form > label,
+.officer-confirmation form > input {
+  display: block;
+  width: 100%;
+}
+
+.officer-confirmation form > label {
+  font-weight: 800;
+  margin: 1.1rem 0 0.45rem;
+}
+
+.officer-confirmation form > label:first-child {
+  margin-top: 0;
+}
+
+.officer-confirmation form > input {
+  background: #fff;
+  border: 1px solid var(--kriseva-navy);
+  border-radius: var(--radius);
+  color: var(--kriseva-ink);
+  min-height: 48px;
+  padding: 0.65rem;
+}
+
+.officer-confirmation form > input:disabled {
+  background: #e5dfd4;
+  border-color: rgba(10, 31, 68, 0.4);
+  color: #4d4942;
+  cursor: not-allowed;
+}
+
+.officer-confirmation form > label.officer-checkbox {
+  align-items: center;
+  border: 1px solid var(--kriseva-navy);
+  cursor: pointer;
+  display: flex;
+  font-weight: 400;
+  gap: 0.7rem;
+  margin: 1rem 0;
+  min-height: 48px;
+  padding: 0.65rem;
+}
+
+.officer-checkbox input {
+  height: 20px;
+  margin: 0;
+  width: 20px;
+}
+
+.officer-checkbox input:disabled {
+  cursor: not-allowed;
+}
+
+.officer-confirmation .form-error {
+  color: #8a3f13;
+  font-weight: 800;
+  min-height: 1.5rem;
+}
+
+.officer-confirmation button:disabled,
+.receipt-export-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.manifest-integrity {
+  margin-top: 1rem;
+}
+
+.officer-pending {
+  color: #8a3f13;
+  font-weight: 700;
 }
 
 .decision-ledger {

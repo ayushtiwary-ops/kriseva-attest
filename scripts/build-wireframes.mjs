@@ -52,6 +52,7 @@ function renderScreen(screen) {
           <aside class="evidence-index" aria-label="Case context">
             <p class="case-line">${escapeHtml(boardMeta.marker)}</p>
             <p class="case-name">${escapeHtml(boardMeta.caseName)}</p>
+            <p class="case-name">${escapeHtml(boardMeta.fme)}</p>
             <p>${escapeHtml(boardMeta.period)}</p>
             <p class="status-line">${escapeHtml(boardMeta.boundary)}</p>
           </aside>

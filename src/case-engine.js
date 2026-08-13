@@ -36,7 +36,8 @@ export function loadCase(caseData) {
       status: 'PENDING',
       selectedCandidateId: null
     })),
-    decisions: []
+    decisions: [],
+    signOff: null
   };
 }
 
@@ -100,7 +101,11 @@ export function recordDecision(state, fieldId, decision) {
   };
 }
 
-export function canSignOff(state) {
+// The conflict-decision gate: true once evidence review has run and every
+// CONFLICTING field carries a materially complete decision (reviewer + reason).
+// This is the maker half of maker-checker and its semantics are unchanged from
+// the prior single-actor design.
+export function hasConflictDecision(state) {
   if (state.fields.some((field) => !['SUPPORTED', 'CONFLICTING', 'UNSUPPORTED'].includes(field.status))) {
     return false;
   }
@@ -114,6 +119,52 @@ export function canSignOff(state) {
         && MATERIAL_ACTIONS.has(latestDecision.action)
         && hasRequiredDecisionDetails(latestDecision);
     });
+}
+
+function latestConflictReviewer(state) {
+  const conflictField = state.fields.find((field) => field.status === 'CONFLICTING');
+  if (!conflictField) return '';
+  const decisions = state.decisions.filter((decision) => decision.fieldId === conflictField.id);
+  return decisions.at(-1)?.reviewer ?? '';
+}
+
+// The checker half of maker-checker: a second named role (the Principal
+// Officer) positively confirms the evidence record for all three fields.
+// Blocked until the conflict decision exists, and rejected if the confirming
+// officer is the same person as the deciding reviewer.
+export function recordSignOff(state, signOff) {
+  if (!hasConflictDecision(state)) {
+    throw new Error('Sign-off requires the conflict decision to be recorded first.');
+  }
+
+  const officerName = String(signOff?.officerName ?? '').trim();
+  if (!officerName) {
+    throw new Error('A Principal Officer name is required to confirm sign-off.');
+  }
+  if (!signOff?.confirmed) {
+    throw new Error('The Principal Officer confirmation checkbox must be checked to confirm sign-off.');
+  }
+
+  const reviewerName = latestConflictReviewer(state).trim();
+  if (officerName.toLowerCase() === reviewerName.toLowerCase()) {
+    throw new Error('Maker-checker separation: the confirming officer must differ from the deciding reviewer.');
+  }
+
+  const nextState = structuredClone(state);
+  return {
+    ...nextState,
+    signOff: {
+      officerName,
+      confirmed: true,
+      ...(signOff.recordedAt == null ? {} : { recordedAt: signOff.recordedAt })
+    }
+  };
+}
+
+// Full sign-off gate: the conflict decision AND a confirmed, distinct
+// Principal Officer record. The receipt screen and both exports require this.
+export function canSignOff(state) {
+  return hasConflictDecision(state) && Boolean(state.signOff?.confirmed);
 }
 
 export function resetCase(caseData) {

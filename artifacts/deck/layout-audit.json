@@ -7,10 +7,10 @@
     {
       "number": 1,
       "offCanvas": [],
-      "bodyWordCount": 24,
+      "bodyWordCount": 34,
       "titleFontSize": 76,
       "minimumBodyFontSize": 22,
-      "elementCount": 11
+      "elementCount": 12
     },
     {
       "number": 2,
@@ -18,12 +18,12 @@
       "bodyWordCount": 37,
       "titleFontSize": 48,
       "minimumBodyFontSize": 22,
-      "elementCount": 14
+      "elementCount": 17
     },
     {
       "number": 3,
       "offCanvas": [],
-      "bodyWordCount": 29,
+      "bodyWordCount": 37,
       "titleFontSize": 48,
       "minimumBodyFontSize": 22,
       "elementCount": 13
@@ -31,7 +31,7 @@
     {
       "number": 4,
       "offCanvas": [],
-      "bodyWordCount": 35,
+      "bodyWordCount": 40,
       "titleFontSize": 48,
       "minimumBodyFontSize": 22,
       "elementCount": 21
@@ -47,7 +47,7 @@
     {
       "number": 6,
       "offCanvas": [],
-      "bodyWordCount": 33,
+      "bodyWordCount": 39,
       "titleFontSize": 48,
       "minimumBodyFontSize": 22,
       "elementCount": 15
@@ -63,15 +63,15 @@
     {
       "number": 8,
       "offCanvas": [],
-      "bodyWordCount": 36,
+      "bodyWordCount": 39,
       "titleFontSize": 48,
       "minimumBodyFontSize": 22,
-      "elementCount": 29
+      "elementCount": 23
     },
     {
       "number": 9,
       "offCanvas": [],
-      "bodyWordCount": 32,
+      "bodyWordCount": 37,
       "titleFontSize": 48,
       "minimumBodyFontSize": 22,
       "elementCount": 12
@@ -82,7 +82,7 @@
       "bodyWordCount": 40,
       "titleFontSize": 48,
       "minimumBodyFontSize": 22,
-      "elementCount": 15
+      "elementCount": 16
     }
   ]
 }

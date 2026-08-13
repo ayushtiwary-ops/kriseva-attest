@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/ps7ugs",
-    "id": "ps7ugs",
+    "aid": "sl/t9x77j",
+    "id": "t9x77j",
     "slide": 3,
-    "layoutId": "2752032a-23fa-440b-b894-62f7a90253fa",
+    "layoutId": "ef19debf-5ea8-4d56-81f6-c75b74b317a1",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+    "masterLayoutId": "d8ea7324-5969-4081-a45a-f7cccced84e6",
     "masterLayoutName": "Master",
     "backgroundColor": "#DED6C9",
     "frame": {
@@ -47,15 +47,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "2752032a-23fa-440b-b894-62f7a90253fa",
+      "id": "ef19debf-5ea8-4d56-81f6-c75b74b317a1",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "parentLayoutId": "d8ea7324-5969-4081-a45a-f7cccced84e6",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "b38ad2d8-908d-4cb7-9946-25f2bfad0b05",
+      "id": "d8ea7324-5969-4081-a45a-f7cccced84e6",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -66,7 +66,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/v2dwfm9o",
+      "aid": "sh/jyp4nmxs",
       "id": "1",
       "name": "brand-3",
       "bbox": [
@@ -136,7 +136,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/w3md8rat",
+      "aid": "sh/kzy5w7ed",
       "id": "2",
       "name": "title-3",
       "bbox": [
@@ -203,7 +203,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/h4vehwre",
+      "aid": "sh/l076pcfi",
       "id": "3",
       "name": "footer-rule-3",
       "bbox": [
@@ -220,7 +220,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/i54va1sz",
+      "aid": "sh/atgnqxwv",
       "id": "4",
       "name": "footer-source-3",
       "bbox": [
@@ -287,7 +287,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/j6dwj69k",
+      "aid": "sh/bup4j2xg",
       "id": "5",
       "name": "footer-page-3",
       "bbox": [
@@ -357,7 +357,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/47mdcba5",
+      "aid": "sh/wvy5s7e1",
       "id": "6",
       "name": "boundary-left",
       "bbox": [
@@ -375,7 +375,7 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/58velgrq",
+      "aid": "sh/xw7mlcfm",
       "id": "7",
       "name": "boundary-spine",
       "bbox": [
@@ -392,7 +392,7 @@
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/69ovelsb",
+      "aid": "sh/m5wnmxwz",
       "id": "8",
       "name": "boundary-drr",
       "bbox": [
@@ -459,22 +459,22 @@
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ruxwn69g",
+      "aid": "sh/n654f2xk",
       "id": "9",
       "name": "boundary-drr-copy",
       "bbox": [
         66,
         292,
         500,
-        120
+        230
       ],
       "geometry": "rect",
-      "text": "Structured reporting channels, validation and submission infrastructure",
-      "textPreview": "Structured reporting channels, validation and submission infrastructure",
-      "resolvedFontSize": 27,
+      "text": "DRR (IFSCA's Digital Regulatory Reporting platform, procured 2026): structured reporting channels, validation and submission infrastructure.",
+      "textPreview": "DRR (IFSCA's Digital Regulatory Reporting platform, procured 2026): structured reporting channels, validation and submission infrastructure.",
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 27,
+        "fontSize": 24,
         "typeface": "Georgia",
         "color": "#F3EDE0",
         "alignment": "left",
@@ -489,24 +489,32 @@
         }
       },
       "textLayout": {
-        "lineCount": 2,
+        "lineCount": 4,
         "lines": [
           {
             "index": 1,
-            "text": "Structured reporting channels, validation"
+            "text": "DRR (IFSCA's Digital Regulatory Reporting"
           },
           {
             "index": 2,
-            "text": "and submission infrastructure"
+            "text": "platform, procured 2026): structured"
+          },
+          {
+            "index": 3,
+            "text": "reporting channels, validation and submission"
+          },
+          {
+            "index": 4,
+            "text": "infrastructure."
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "Structured reporting channels, validation and submission infrastructure",
+          "text": "DRR (IFSCA's Digital Regulatory Reporting platform, procured 2026): structured reporting channels, validation and submission infrastructure.",
           "resolvedTextStyle": {
-            "fontSize": 27,
+            "fontSize": 24,
             "typeface": "Georgia",
             "color": "#F3EDE0",
             "alignment": "left"
@@ -514,8 +522,8 @@
           "runs": [
             {
               "index": 1,
-              "text": "Structured reporting channels, validation and submission infrastructure",
-              "fontSize": 27,
+              "text": "DRR (IFSCA's Digital Regulatory Reporting platform, procured 2026): structured reporting channels, validation and submission infrastructure.",
+              "fontSize": 24,
               "typeface": "Georgia",
               "color": "#F3EDE0",
               "alignment": "left"
@@ -530,78 +538,8 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/7mtgju9s",
+      "aid": "sh/jatczmd8",
       "id": "10",
-      "name": "boundary-absence",
-      "bbox": [
-        66,
-        520,
-        500,
-        48
-      ],
-      "geometry": "rect",
-      "text": "Public absence is not proof.",
-      "textPreview": "Public absence is not proof.",
-      "resolvedFontSize": 22,
-      "resolvedTextStyle": {
-        "anchor": 1,
-        "fontSize": 22,
-        "typeface": "Arial",
-        "color": "#A87229",
-        "bold": true,
-        "alignment": "left",
-        "verticalAlignment": "top",
-        "wrap": "square",
-        "autoFit": "none",
-        "insets": {
-          "top": 0,
-          "right": 0,
-          "bottom": 0,
-          "left": 0
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "Public absence is not proof."
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "Public absence is not proof.",
-          "resolvedTextStyle": {
-            "fontSize": 22,
-            "typeface": "Arial",
-            "color": "#A87229",
-            "bold": true,
-            "alignment": "left"
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "Public absence is not proof.",
-              "fontSize": 22,
-              "typeface": "Arial",
-              "color": "#A87229",
-              "bold": true,
-              "alignment": "left"
-            }
-          ],
-          "marginLeft": 0
-        }
-      ],
-      "lineWidth": 0
-    },
-    {
-      "order": 11,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/6lkzqps7",
-      "id": "11",
       "name": "boundary-attest",
       "bbox": [
         704,
@@ -664,11 +602,11 @@
       "lineWidth": 0
     },
     {
-      "order": 12,
+      "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/tovyl4ry",
-      "id": "12",
+      "aid": "sh/y90b6hwn",
+      "id": "11",
       "name": "boundary-attest-copy",
       "bbox": [
         708,
@@ -735,11 +673,11 @@
       "lineWidth": 0
     },
     {
-      "order": 13,
+      "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/snmhszad",
-      "id": "13",
+      "aid": "sh/lcbu1wve",
+      "id": "12",
       "name": "boundary-limit",
       "bbox": [
         708,
@@ -795,6 +733,76 @@
               "fontSize": 22,
               "typeface": "Arial",
               "color": "#96491A",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kb2t8ret",
+      "id": "13",
+      "name": "boundary-absence",
+      "bbox": [
+        708,
+        566,
+        500,
+        48
+      ],
+      "geometry": "rect",
+      "text": "Public absence is not proof.",
+      "textPreview": "Public absence is not proof.",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Arial",
+        "color": "#A87229",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Public absence is not proof."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Public absence is not proof.",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Arial",
+            "color": "#A87229",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Public absence is not proof.",
+              "fontSize": 22,
+              "typeface": "Arial",
+              "color": "#A87229",
               "bold": true,
               "alignment": "left"
             }

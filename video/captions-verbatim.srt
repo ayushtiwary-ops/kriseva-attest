@@ -1,0 +1,110 @@
+1
+00:00:00,000 --> 00:00:01,850
+Two official records disagree.
+
+2
+00:00:01,850 --> 00:00:04,008
+Which number goes to the regulator?
+
+3
+00:00:06,000 --> 00:00:08,008
+The field is not the whole story.
+
+4
+00:00:08,008 --> 00:00:12,512
+Accountability means reconstructing which
+source supported it, and staying
+
+5
+00:00:12,512 --> 00:00:14,520
+answerable when records disagree.
+
+6
+00:00:16,000 --> 00:00:21,200
+KRISEVA ATTEST is a research-stage
+prototype: one fictional fund manager,
+
+7
+00:00:21,200 --> 00:00:23,907
+three synthetic sources, three fields.
+
+8
+00:00:23,907 --> 00:00:27,112
+It files nothing and has no IFSCA
+connection.
+
+9
+00:00:28,000 --> 00:00:32,182
+The administrator statement shows
+twenty-five million US dollars.
+
+10
+00:00:32,182 --> 00:00:35,528
+The subscription register shows
+twenty-four million.
+
+11
+00:00:35,528 --> 00:00:38,938
+ATTEST preserves both figures and proposes
+no winner.
+
+12
+00:00:38,938 --> 00:00:44,408
+A named reviewer selects the administrator
+source, types a review reason, and submits
+
+13
+00:00:44,408 --> 00:00:45,244
+the decision.
+
+14
+00:00:45,244 --> 00:00:48,976
+Both candidates stay visible, before and
+after the choice.
+
+15
+00:00:50,000 --> 00:00:54,166
+A second named role, the Principal
+Officer, confirms the record.
+
+16
+00:00:54,166 --> 00:00:58,919
+The receipt keeps the reviewer, the
+officer, the reason, and a timestamp.
+
+17
+00:00:58,919 --> 00:01:03,736
+An integrity digest fingerprints the
+manifest so the record cannot quietly
+
+18
+00:01:03,736 --> 00:01:05,168
+change after the fact.
+
+19
+00:01:06,000 --> 00:01:07,490
+This is synthetic data.
+
+20
+00:01:07,490 --> 00:01:10,794
+Nothing here files anything or reaches a
+regulator.
+
+21
+00:01:10,794 --> 00:01:15,264
+The harness is built and tested before any
+model ever goes inside it.
+
+22
+00:01:18,000 --> 00:01:19,957
+This demo used synthetic data.
+
+23
+00:01:19,957 --> 00:01:24,198
+It is not a regulatory filing, and the
+narration was synthesized.
+
+24
+00:01:24,198 --> 00:01:28,896
+Next is practitioner testing with real
+fund managers and administrators.
