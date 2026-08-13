@@ -110,6 +110,32 @@ async function writeBlob(outputPath, blob) {
   await writeFile(outputPath, Buffer.from(await blob.arrayBuffer()));
 }
 
+const deckWorkspace = resolve(projectRoot, '.tmp/deck-assets');
+
+// The canonical monogram is navy-on-transparent, so placing it directly on the
+// cover's navy sidebar would render invisible. Build a small raised-color badge
+// PNG at build time (sharp rasterizes the SVG, then composites it onto a paper
+// backing square) so the mark stays legible on the dark sidebar.
+async function buildCoverLogoBadge() {
+  const badgeSize = 92;
+  const logoSize = 62;
+  const inset = Math.round((badgeSize - logoSize) / 2);
+  const svgBuffer = await readFile(resolve(projectRoot, 'assets/kriseva-logo.svg'));
+  const logoPng = await sharp(svgBuffer, { density: 384 }).resize(logoSize, logoSize).png().toBuffer();
+  const badge = await sharp({
+    create: {
+      width: badgeSize,
+      height: badgeSize,
+      channels: 4,
+      background: COLOR.raised,
+    },
+  }).composite([{ input: logoPng, top: inset, left: inset }]).png().toBuffer();
+  await mkdir(deckWorkspace, { recursive: true });
+  const outputPath = resolve(deckWorkspace, 'kriseva-logo-badge.png');
+  await writeFile(outputPath, badge);
+  return { path: outputPath, size: badgeSize };
+}
+
 function beginSlide(number, background) {
   const record = { number, elements: [] };
   layoutRegistry.push(record);
@@ -273,6 +299,13 @@ async function buildCover(presentation, content) {
   addRect(slide, record, 'cover-navy-field', { left: 1008, top: 0, width: 272, height: 720 }, { fill: COLOR.navy, line: COLOR.navy, width: 0, role: 'background' });
   addRule(slide, record, 'cover-brass-spine', 1006, 0, 0, { color: COLOR.brass, weight: 2, height: 720 });
   addBrand(slide, record);
+  const logoBadge = await buildCoverLogoBadge();
+  await addImage(slide, record, 'cover-logo', logoBadge.path, {
+    left: 1008 + Math.round((272 - logoBadge.size) / 2),
+    top: 44,
+    width: logoBadge.size,
+    height: logoBadge.size,
+  }, { alt: 'KRISEVA monogram' });
   addText(slide, record, 'cover-title', content.title, { left: 64, top: 164, width: 850, height: 96 }, {
     size: 76, face: FONT.display, color: COLOR.navy, role: 'title',
   });

@@ -10,6 +10,7 @@ export const DEFAULT_PUBLIC_FILES = Object.freeze([
   'ARTIFACT_INDEX.md',
   'styles/tokens.css',
   'styles/hub.css',
+  'assets/kriseva-logo.svg',
   'prototype/index.html',
   'prototype/prototype.css',
   'prototype/app.js',

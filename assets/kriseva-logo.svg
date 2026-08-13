@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="KRISEVA monogram">
+  <circle cx="141" cy="42" r="11" fill="#C08A3E"/>
+  <rect x="44" y="69" width="214" height="15" rx="7.5" fill="#0A1F44"/>
+  <rect x="61" y="76" width="22" height="166" rx="9" fill="#0A1F44"/>
+  <g fill="#0A1F44">
+    <polygon points="73,137 219,81 229,107 83,163"/>
+    <polygon points="73,163 83,137 229,193 219,219"/>
+  </g>
+</svg>

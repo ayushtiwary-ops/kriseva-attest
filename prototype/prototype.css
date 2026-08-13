@@ -65,10 +65,17 @@ textarea:focus-visible,
 }
 
 .wordmark {
-  align-items: baseline;
+  align-items: center;
   display: flex;
   gap: 0.55rem;
   text-decoration: none;
+}
+
+.brand-logo {
+  display: block;
+  flex-shrink: 0;
+  height: 36px;
+  width: 36px;
 }
 
 .wordmark span,

@@ -34,6 +34,7 @@ export const PUBLIC_ROOT_FILES = Object.freeze([
 
 export const PUBLIC_DIRECTORIES = Object.freeze([
   'artifacts',
+  'assets',
   'data',
   'deck',
   'prototype',

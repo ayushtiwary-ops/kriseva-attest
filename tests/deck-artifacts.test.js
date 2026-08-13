@@ -209,11 +209,13 @@ test('deck builder resolves a clean checkout path containing spaces', () => {
     fs.mkdirSync(resolve(scratchRoot, 'scripts'), { recursive: true });
     fs.mkdirSync(resolve(scratchRoot, 'deck'), { recursive: true });
     fs.mkdirSync(resolve(scratchRoot, 'artifacts'), { recursive: true });
+    fs.mkdirSync(resolve(scratchRoot, 'assets'), { recursive: true });
     fs.copyFileSync(resolve(projectRoot, 'scripts/build-deck.mjs'), resolve(scratchRoot, 'scripts/build-deck.mjs'));
     fs.copyFileSync(contentPath, resolve(scratchRoot, 'deck/DECK_CONTENT.md'));
     for (const image of ['prototype-conflict-1440.png', 'prototype-receipt-1440.png']) {
       fs.copyFileSync(resolve(projectRoot, 'artifacts', image), resolve(scratchRoot, 'artifacts', image));
     }
+    fs.copyFileSync(resolve(projectRoot, 'assets/kriseva-logo.svg'), resolve(scratchRoot, 'assets/kriseva-logo.svg'));
     fs.symlinkSync(resolve(projectRoot, 'node_modules'), resolve(scratchRoot, 'node_modules'), 'dir');
 
     execFileSync(process.execPath, [resolve(scratchRoot, 'scripts/build-deck.mjs')], {
@@ -266,12 +268,14 @@ test('deck rebuilds preserve the declared visual-semantic contract without promi
     fs.mkdirSync(resolve(scratchRoot, 'scripts'), { recursive: true });
     fs.mkdirSync(resolve(scratchRoot, 'deck'), { recursive: true });
     fs.mkdirSync(resolve(scratchRoot, 'artifacts'), { recursive: true });
+    fs.mkdirSync(resolve(scratchRoot, 'assets'), { recursive: true });
     fs.copyFileSync(resolve(projectRoot, 'scripts/build-deck.mjs'), resolve(scratchRoot, 'scripts/build-deck.mjs'));
     fs.copyFileSync(resolve(projectRoot, 'scripts/render-deck.mjs'), resolve(scratchRoot, 'scripts/render-deck.mjs'));
     fs.copyFileSync(contentPath, resolve(scratchRoot, 'deck/DECK_CONTENT.md'));
     for (const image of ['prototype-conflict-1440.png', 'prototype-receipt-1440.png']) {
       fs.copyFileSync(resolve(projectRoot, 'artifacts', image), resolve(scratchRoot, 'artifacts', image));
     }
+    fs.copyFileSync(resolve(projectRoot, 'assets/kriseva-logo.svg'), resolve(scratchRoot, 'assets/kriseva-logo.svg'));
     fs.symlinkSync(resolve(projectRoot, 'node_modules'), resolve(scratchRoot, 'node_modules'), 'dir');
     const environment = { ...process.env, ATTEST_ARTIFACT_WORKSPACE: artifactWorkspace };
 

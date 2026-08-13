@@ -1,3 +1,5 @@
+<img src="assets/kriseva-logo.svg" alt="KRISEVA monogram" width="64">
+
 # KRISEVA ATTEST demo walkthrough
 
 RESEARCH-STAGE PROTOTYPE · SYNTHETIC DEMO DATA · NOT A REGULATORY FILING · NO REGULATOR CONNECTION

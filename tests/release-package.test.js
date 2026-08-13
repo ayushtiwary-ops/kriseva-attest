@@ -85,6 +85,7 @@ test('public release scan covers every shipped narrative and browser data class'
     'index.html',
     'technical-notes.html',
     'styles/hub.css',
+    'assets/kriseva-logo.svg',
     'prototype/index.html',
     'prototype/prototype.css',
     'prototype/app.js',
@@ -151,6 +152,7 @@ test('GitHub-ready export contains the release and excludes private founder hand
 
   for (const publicFile of [
     'index.html',
+    'assets/kriseva-logo.svg',
     'prototype/index.html',
     'wireframes/index.html',
     'deck/KRISEVA_ATTEST_GIFT_2026.pdf',

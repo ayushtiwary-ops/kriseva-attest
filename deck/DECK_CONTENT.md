@@ -30,7 +30,7 @@ source footers, and page labels are excluded from the 40-word body limit.
     {
       "number": 2,
       "layout": "accountability",
-      "title": "A human still owns the source question",
+      "title": "The problem: which source backs a reported field?",
       "body": [
         "ACCOUNTABILITY QUESTION",
         "Structured returns do not remove the source question.",
